@@ -1,4 +1,22 @@
 <section>
   <h1>About Me</h1>
-  <p>A little something about me.</p>
+  <p>I am a Code Monkey!</p>
+</section>
+<section class="googleplus">
+
+  	{% if site.twitter_user %}
+  		<h1>
+    		<a href="https://twitter.com/{{ site.twitter_user }}">
+      		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
+    		</a>
+    		<a href="https://plus.google.com/{{ site.googleplus_user }}?rel=author">
+      			<img src="/images/gprofile_button-48.png" width="48" height="48">
+    		</a>
+    		<a href="http://weibo.com/{{ site.weibo_user }}">
+      			<img src="/images/weibo_48x48.png" width="48" height="48">
+    		</a>
+  		</h1>
+  	{% endif %}
+	<section>
+	</section>
 </section>
