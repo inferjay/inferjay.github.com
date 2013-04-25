@@ -93,3 +93,6 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# jiathis
+jiathis_share: true
