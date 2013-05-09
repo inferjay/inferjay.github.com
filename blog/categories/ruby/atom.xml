@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Ruby | 脉脉不得语的技术博客]]></title>
+  <link href="http://inferjay.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
   <updated>2013-05-10T00:02:30+08:00</updated>
   <id>http://inferjay.github.io/</id>
@@ -56,11 +56,11 @@
 
 <p>在开始安装ruby前请确认你是否安装了gcc，如果你安装了Xcode，请检查是否安装了command line tools, 打开Xcode，在Xcode -&gt; Preference -&gt; Download下，查看“Command Line tools”这一项是否为“installed”
 如下图：
-<img src="http://inferjay.github.io/images/notes_images/xcode_download_info.png" alt="alt text" title="xcode_download_info" /></p>
+<img src="/images/notes_images/xcode_download_info.png" alt="alt text" title="xcode_download_info" /></p>
 
 <p>如果不是installed，点击install安装或者下载<a href="https://github.com/kennethreitz/osx-gcc-installer" title="OSX-GCC-Installer">OSX-GCC-Installer</a>来安装gcc，不然在安装ruby编译的时候会报误（每个人的环境不一样报的错误也会不一样），如下图：</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/install_ruby_error_info.png" alt="alt text" title="install_ruby_error_info" /></p>
+<p><img src="/images/notes_images/install_ruby_error_info.png" alt="alt text" title="install_ruby_error_info" /></p>
 
 <h6 id="ruby-1">查看所有可以安装的Ruby版本</h6>
 
@@ -99,30 +99,6 @@ gem uninstall rubygems-update
 gem sources -r http://rubygems.org/
 gem sources -a http://ruby.taobao.org
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello Octopress]]></title>
-    <link href="http://inferjay.github.io/blog/2013/04/24/hello-octopress/"/>
-    <updated>2013-04-24T17:20:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/04/24/hello-octopress</id>
-    <content type="html"><![CDATA[<h2 id="hello-octopress">Hello Octopress!</h2>
-
-<h3 id="octopress-">Octopress 简介</h3>
-
-<ul>
-  <li>基于Jekyll的内容管理工具，可以方便的搭建站点和发布静态页面。</li>
-  <li>使用 Markdown 标记语言书写源文件， 通过 Markdown 解析器转换为 HTML 文件。</li>
-  <li>写作的时候无需关心文章排版，享受写作的乐趣。</li>
-  <li><em>Octopress</em> 与 <em>Github</em> 完美结合，无需学习过多的git命令语法。</li>
-  <li><em>Octopress</em> 以 <em>rake</em> 任务的形式实现静态站点页面的生成以及将静态站点发布到_Github pages_，操作十分简单。</li>
-  <li>像写程序一样写博客，Github会为你保存你提交的每一个改动。</li>
-</ul>
-
-<h2 id="section"></h2>
-
-<h1 id="octopress">Octopress，我来了~~~</h1>
 ]]></content>
   </entry>
   
