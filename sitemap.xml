@@ -8,15 +8,19 @@
         <loc>
             http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/
         </loc>
-        <lastmod>2013-05-10T00:02:29+08:00</lastmod>
+        <lastmod>2013-05-10T19:52:38+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://inferjay.github.io/blog/2013/05/10/octopress-config/</loc>
+        <lastmod>2013-05-10T20:29:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/archives/</loc>
-        <lastmod>2013-05-10T00:02:29+08:00</lastmod>
+        <lastmod>2013-05-10T20:29:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/</loc>
-        <lastmod>2013-05-10T00:02:29+08:00</lastmod>
+        <lastmod>2013-05-10T20:29:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/robots.txt</loc>
