@@ -32,6 +32,8 @@ categories: Ruby
 
 	rvm 1.19.6 () by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> 	[https://rvm.io/]
 
+<!-- more -->
+
 ###第二步:安装ruby
 
 ######查看是否安装gcc编译器
