@@ -4,7 +4,7 @@
   <title><![CDATA[Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-07-20T23:20:55+08:00</updated>
+  <updated>2013-07-20T23:25:28+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -556,7 +556,8 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </span><span class="line">    system "#{editor} #{filename}"
 </span><span class="line">  end
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>######如图所示：</p>
+
+<h6 id="section-2">如图所示：</h6>
 
 <p><img src="http://inferjay.github.io/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
@@ -569,11 +570,12 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">system "sleep 2; open http://localhost:#{server_port}/"
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>######如图所示：</p>
+
+<h6 id="section-3">如图所示：</h6>
 
 <p><img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
-<h4 id="section-2">未完待续～～～</h4>
+<h4 id="section-4">未完待续～～～</h4>
 ]]></content>
   </entry>
   

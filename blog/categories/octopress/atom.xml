@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-07-20T23:20:55+08:00</updated>
+  <updated>2013-07-20T23:25:28+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -47,8 +47,9 @@
     system “#{editor} #{filename}”
   end</p>
 
-<p>```
-######如图所示：</p>
+<p>```</p>
+
+<h6 id="section-2">如图所示：</h6>
 
 <p><img src="/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
@@ -61,12 +62,13 @@
 <p>```
 system “sleep 2; open http://localhost:#{server_port}/”</p>
 
-<p>```
-######如图所示：</p>
+<p>```</p>
+
+<h6 id="section-3">如图所示：</h6>
 
 <p><img src="/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
-<h4 id="section-2">未完待续～～～</h4>
+<h4 id="section-4">未完待续～～～</h4>
 ]]></content>
   </entry>
   
