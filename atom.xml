@@ -4,7 +4,7 @@
   <title><![CDATA[Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-07-20T23:12:13+08:00</updated>
+  <updated>2013-07-20T23:20:55+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -545,7 +545,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 
 <h6 id="section-1">如图所示：</h6>
 
-<p>![alt text](/images/notes_images/set_open_editer.png “”) </p>
+<p><img src="http://inferjay.github.io/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
 
 <p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
 
@@ -558,7 +558,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>######如图所示：</p>
 
-<p>![alt text](/images/notes_images/set_open_editer_code.png “”) </p>
+<p><img src="http://inferjay.github.io/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
 <p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
 
@@ -571,7 +571,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>######如图所示：</p>
 
-<p>![alt text](/images/notes_images/set_auto_preview.png “”) </p>
+<p><img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
 <h4 id="section-2">未完待续～～～</h4>
 ]]></content>
