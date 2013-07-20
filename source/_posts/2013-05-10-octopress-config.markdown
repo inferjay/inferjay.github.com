@@ -35,6 +35,7 @@ categories: Octopress
   end
 
 ```
+
 ######如图所示：
 
 ![alt text](/images/notes_images/set_open_editer_code.png "set_open_editer_code") 
@@ -49,6 +50,7 @@ categories: Octopress
 system "sleep 2; open http://localhost:#{server_port}/"
 
 ```
+
 ######如图所示：
 
 ![alt text](/images/notes_images/set_auto_preview.png "set_auto_preview") 
