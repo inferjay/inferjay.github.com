@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Source | Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/blog/categories/source/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-07-18T22:38:31+08:00</updated>
+  <updated>2013-07-20T23:12:13+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -48,7 +48,8 @@
 </ul>
 
 <!--more-->
-<p>####Apache License 2.0</p>
+
+<h4 id="apache-license-20">Apache License 2.0</h4>
 
 <p>Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布(作为开源或商业软件)。需要满足的条件：</p>
 

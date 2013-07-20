@@ -9,8 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="首页只显示部分正文 在文章任意位置加入
-&lt;!--more--&gt; 这样首页只显示一部分正文，并在每篇文章底下加一个Read on超链接。 然后在_config.yml文件中修改excerpt_link的值Rade on为以你想要的，比如More ">
+  <meta name="description" content="首页只显示部分正文 在文章任意位置加入 &lt;!--more--&gt; 这样首页只显示一部分正文，并在每篇文章底下加一个Read on超链接。 然后在_config.yml文件中修改excerpt_link的值Rade on为以你想要的，比如More 设置使用指定的编辑器自动打开新建的blog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,13 +93,53 @@
 
 <div class="entry-content"><h3 id="section">首页只显示部分正文</h3>
 
-<p>在文章任意位置加入
-<code>&lt;!--more--&gt;</code></p>
+<p>在文章任意位置加入</p>
+
+<pre><code>&lt;!--more--&gt;
+</code></pre>
 
 <p>这样首页只显示一部分正文，并在每篇文章底下加一个<code>Read on</code>超链接。</p>
 
 <p>然后在<code>_config.yml</code>文件中修改<code>excerpt_link</code>的值<code>Rade on</code>为以你想要的，比如<code>More</code></p>
 
+<h3 id="blog">设置使用指定的编辑器自动打开新建的blog</h3>
+<p>每次用<code>rake　new_post</code>新建一篇blog后都要跑到<code>/source/_posts</code>找到新建的blog才能开始写blog，有木有赶脚很不爽，要是每次建完后自动用支持Markdown语法的编辑器打开那该多爽啊，google了一下还这有方法，试了式太爽了，Mark一下以免以后忘记了～～～</p>
+
+<p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
+
+<!--more-->
+
+<h6 id="section-1">如图所示：</h6>
+
+<p>![alt text](/images/notes_images/set_open_editer.png “”) </p>
+
+<p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">  if #{editor}
+</span><span class="line">    system "#{editor} #{filename}"
+</span><span class="line">  end
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>######如图所示：</p>
+
+<p>![alt text](/images/notes_images/set_open_editer_code.png “”) </p>
+
+<p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
+
+<h3 id="blog-1">设置自动打开浏览器预览生成的blog</h3>
+
+<p>打开<code>Rakefile</code>文件，找到<code>task :preview do</code>这段代码，在其中加入</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">system "sleep 2; open http://localhost:#{server_port}/"
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>######如图所示：</p>
+
+<p>![alt text](/images/notes_images/set_auto_preview.png “”) </p>
+
+<h4 id="section-2">未完待续～～～</h4>
 </div>
 
 

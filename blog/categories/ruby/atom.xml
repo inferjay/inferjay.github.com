@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-07-18T22:38:31+08:00</updated>
+  <updated>2013-07-20T23:12:13+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -50,7 +50,7 @@
 <pre><code>rvm 1.19.6 () by Wayne E. Seguin &lt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;mpapis@gmail.com&gt; 	[https://rvm.io/]
 </code></pre>
 
-<!-- more -->
+<!--more-->
 
 <h3 id="ruby">第二步:安装ruby</h3>
 
