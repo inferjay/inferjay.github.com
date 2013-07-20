@@ -30,7 +30,8 @@ categories: Open Source
 * Eclipse Public License
 * Creative Commons
 
-<!--more--> 
+<!--more-->
+
 ####Apache License 2.0
 
 Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布(作为开源或商业软件)。需要满足的条件：

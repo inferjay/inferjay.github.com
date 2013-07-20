@@ -26,7 +26,7 @@ categories: Java
 * 钻石型语法；
 * null值的自动处理。
 
-<!--more--> 
+<!--more-->
 
 ###Java Version SE 6 
 

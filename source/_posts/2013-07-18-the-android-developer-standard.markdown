@@ -16,6 +16,7 @@ categories: Android
 3.常量命名
 
 	只能包含字母和_，字母全部大写，单词之间用_隔开
+	
 4.layout中的id命名
 
 	命名模式为：view缩写_模块名称_view的逻辑名称
@@ -28,9 +29,9 @@ view的缩写详情如下:
 * ImageView:iv
 * ImageButton:im
 * Button:btn
-* …..
+* …...
 
-<!-- More -->
+<!--more-->
 
 5.activity中的view变量命名
 
