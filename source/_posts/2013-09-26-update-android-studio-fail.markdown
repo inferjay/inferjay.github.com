@@ -1,18 +1,18 @@
 ---
 layout: post
-title: "Update Android Studio Fail"
+title: "Mac下解决无法更新Android Studio的问题"
 date: 2013-09-26 12:53
 comments: true
 categories: Android
 ---
-
-##Mac下解决无法更新Android Studio的问题
 	
-昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示`Connection failed. Please check your network connection and try again`，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了解决办法。
+昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示`Connection failed. Please check your network connection and try again`，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。
 
 首先打开`Finder`在左边选择`Application`目录，在右边找到`Android Studio.app`,然后右击选择“显示包内容”如下图：
 
 ![alt text](/images/notes_images/android_studio_in_finder.png "android_studio_in_finder")
+
+<!--More-->
 
 接着用自己趁手的编辑器打开bin目录下的idea.vmoptions文件添加如下内容：
 
