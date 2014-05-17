@@ -1,12 +1,12 @@
 # ----------------------- #
 #      Main Configs       #
 # ----------------------- #
-
 url: http://inferjay.github.io
 title: Inferjay的技术博客
 subtitle: Android / iOS / Mobile App Development / Lift
 author: inferjay
 simple_search: http://google.com/search
+
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")

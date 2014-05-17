@@ -34,6 +34,11 @@ editor          = "open"
 # open -a Byword，使用Byword打开
 # subl, 使用Sublime Text2打开 
 
+if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+  puts '## Set the codepage to 65001 for Windows machines'
+  `chcp 65001`
+end
+
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
   if File.directory?(source_dir) || File.directory?("sass")
@@ -117,7 +122,8 @@ task :new_post, :title do |t, args|
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
-    post.puts "date: #{Time.now.localtime.strftime('%Y-%m-%d %H:%M')}"
+ #   post.puts "date: #{Time.now.localtime.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M:%S %z')}"
     post.puts "comments: true"
     post.puts "categories: "
     post.puts "---"
@@ -163,7 +169,7 @@ task :new_page, :filename do |t, args|
       page.puts "footer: true"
       page.puts "---"
     end
-    
+
     if #{editor}
       system "#{editor} #{filename}"
     end
@@ -202,8 +208,8 @@ task :update_style, :theme do |t, args|
   end
   mv "sass", "sass.old"
   puts "## Moved styles into sass.old/"
-  cp_r "#{themes_dir}/"+theme+"/sass/", "sass"
-  cp_r "sass.old/custom/.", "sass/custom"
+  cp_r "#{themes_dir}/"+theme+"/sass/", "sass", :remove_destination=>true
+  cp_r "sass.old/custom/.", "sass/custom/", :remove_destination=>true
   puts "## Updated Sass ##"
 end
 
@@ -266,18 +272,21 @@ end
 desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
+  puts "## Pulling any updates from Github Pages "
+  cd "#{deploy_dir}" do 
+    system "git pull"
+  end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
-  puts "\n## copying #{public_dir} to #{deploy_dir}"
+  puts "\n## Copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
-    system "git add ."
-    system "git add -u"
-    puts "\n## Commiting: Site updated at #{Time.now.localtime.utc}"
-    message = "Site updated at #{Time.now.localtime.utc}"
+    system "git add -A"
+    puts "\n## Committing: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch} --force"
+    system "git push origin #{deploy_branch}"
     puts "\n## Github Pages deploy complete"
   end
 end
@@ -323,10 +332,16 @@ task :setup_github_pages, :repo do |t, args|
     repo_url = args.repo
   else
     puts "Enter the read/write url for your repository"
-    puts "(For example, 'git@github.com:your_username/your_username.github.io)"
+    puts "(For example, 'git@github.com:your_username/your_username.github.io.git)"
+    puts "           or 'https://github.com/your_username/your_username.github.io')"
     repo_url = get_stdin("Repository url: ")
   end
-  user = repo_url.match(/:([^\/]+)/)[1]
+  protocol = (repo_url.match(/(^git)@/).nil?) ? 'https' : 'git'
+  if protocol == 'git'
+    user = repo_url.match(/:([^\/]+)/)[1]
+  else
+    user = repo_url.match(/github\.com\/([^\/]+)/)[1]
+  end
   branch = (repo_url.match(/\/[\w-]+\.github\.(?:io|com)/).nil?) ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
@@ -347,10 +362,8 @@ task :setup_github_pages, :repo do |t, args|
       end
     end
   end
-  url = "http://#{user}.github.io"
-  url += "/#{project}" unless project == ''
   jekyll_config = IO.read('_config.yml')
-  jekyll_config.sub!(/^url:.*$/, "url: #{url}")
+  jekyll_config.sub!(/^url:.*$/, "url: #{blog_url(user, project)}")
   File.open('_config.yml', 'w') do |f|
     f.write jekyll_config
   end
@@ -370,7 +383,7 @@ task :setup_github_pages, :repo do |t, args|
       f.write rakefile
     end
   end
-  puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
+  puts "\n---\n## Now you can deploy to #{repo_url} with `rake deploy` ##"
 end
 
 def ok_failed(condition)
@@ -393,6 +406,16 @@ def ask(message, valid_options)
     answer = get_stdin(message)
   end
   answer
+end
+
+def blog_url(user, project)
+  url = if File.exists?('source/CNAME')
+    "http://#{IO.read('source/CNAME').strip}"
+  else
+    "http://#{user}.github.io"
+  end
+  url += "/#{project}" unless project == ''
+  url
 end
 
 desc "list tasks"

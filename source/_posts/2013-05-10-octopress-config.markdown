@@ -22,9 +22,7 @@ categories: Octopress
 打开```Rakefile```文件，找到```## -- Misc Configs -- ##```这段注释，然后在```server_port```下面加入```editor = "open"```
 
 <!--more-->
-
 ######如图所示：
-
 ![alt text](/images/notes_images/set_open_editer.png "set_open_editer") 
 
 然后再找到```new_post```命令，在末尾加入如下代码：
@@ -35,9 +33,7 @@ categories: Octopress
   end
 
 ```
-
 ######如图所示：
-
 ![alt text](/images/notes_images/set_open_editer_code.png "set_open_editer_code") 
 
 这样每次用```rake　new_post```新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～
@@ -50,9 +46,7 @@ categories: Octopress
 system "sleep 2; open http://localhost:#{server_port}/"
 
 ```
-
 ######如图所示：
-
 ![alt text](/images/notes_images/set_auto_preview.png "set_auto_preview") 
 
 ####未完待续～～～
