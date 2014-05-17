@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-09-26T13:58:23+08:00</updated>
+  <updated>2014-05-17T23:59:37+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -35,10 +35,8 @@
 <p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
 
 <!--more-->
-
-<h6 id="section-1">如图所示：</h6>
-
-<p><img src="/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
+<p>######如图所示：
+<img src="/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
 
 <p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
 
@@ -47,11 +45,9 @@
     system “#{editor} #{filename}”
   end</p>
 
-<p>```</p>
-
-<h6 id="section-2">如图所示：</h6>
-
-<p><img src="/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
+<p>```
+######如图所示：
+<img src="/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
 <p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
 
@@ -62,13 +58,11 @@
 <p>```
 system “sleep 2; open http://localhost:#{server_port}/”</p>
 
-<p>```</p>
+<p>```
+######如图所示：
+<img src="/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
-<h6 id="section-3">如图所示：</h6>
-
-<p><img src="/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
-
-<h4 id="section-4">未完待续～～～</h4>
+<h4 id="section-1">未完待续～～～</h4>
 ]]></content>
   </entry>
   

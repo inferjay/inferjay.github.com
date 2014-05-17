@@ -2,52 +2,58 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://inferjay.github.io/blog/2013/04/24/hello-octopress/</loc>
-        <lastmod>2013-05-09T15:21:11+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/
         </loc>
-        <lastmod>2013-07-20T23:09:57+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/2013/05/10/octopress-config/</loc>
-        <lastmod>2013-07-20T23:25:12+08:00</lastmod>
+        <lastmod>2014-05-17T20:47:16+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/2013/06/24/open-source-licenses-are-collected/</loc>
-        <lastmod>2013-07-20T23:10:14+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://inferjay.github.io/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/
         </loc>
-        <lastmod>2013-07-20T23:10:33+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/2013/07/18/the-android-developer-standard/</loc>
-        <lastmod>2013-07-20T23:10:45+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>
             http://inferjay.github.io/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/
         </loc>
-        <lastmod>2013-08-04T11:58:17+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/2013/09/26/update-android-studio-fail/</loc>
-        <lastmod>2013-09-26T13:58:22+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/
+        </loc>
+        <lastmod>2014-05-17T23:59:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/blog/archives/</loc>
-        <lastmod>2013-09-26T13:58:22+08:00</lastmod>
+        <lastmod>2014-05-17T23:59:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/</loc>
-        <lastmod>2013-09-26T13:58:22+08:00</lastmod>
+        <lastmod>2014-05-17T23:59:36+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/robots.txt</loc>
-        <lastmod>2013-05-09T15:21:11+08:00</lastmod>
+        <lastmod>2014-05-17T20:34:17+08:00</lastmod>
     </url>
 </urlset>

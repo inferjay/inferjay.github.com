@@ -4,7 +4,7 @@
   <title><![CDATA[Inferjay的技术博客]]></title>
   <link href="http://inferjay.github.io/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2013-09-26T13:58:23+08:00</updated>
+  <updated>2014-05-17T23:59:37+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ubuntu下彻底卸载并重新安装MySQL]]></title>
+    <link href="http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
+    <updated>2014-05-17T18:45:00+08:00</updated>
+    <id>http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
+    <content type="html"><![CDATA[<h3 id="step1mysql">Step1.卸载MySQL</h3>
+<p>终端下依次输入以下命令卸载MySQL</p>
+
+<pre><code>sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get autoremove mysql-server
+sudo apt-get remove mysql-common(非常重要)
+sudo apt-get remove apparmor
+</code></pre>
+
+<p>上面的其实有一些是多余的，建议还是按照顺序执行一遍</p>
+
+<h3 id="step2">Step2.清理残留数据</h3>
+
+<pre><code>dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+</code></pre>
+
+<!--more-->
+<p>###Step3.删除残余目录
+	sudo rm /var/lib/mysql/ -R
+	sudo rm /etc/mysql/ -R</p>
+
+<h3 id="step4-mysql">Step4.安装 mysql</h3>
+<pre><code>sudo apt-get install mysql-server mysql-client
+sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起来 ) 
+</code></pre>
+
+<h3 id="step5">Step5.验证是否安装成功</h3>
+<p>一旦安装完成，MySQL 服务器应该自动启动。您可以在终端提示符后运行以下命令来检查 MySQL 服务器是否正在运行：</p>
+
+<pre><code>netstat -tap | grep mysql
+</code></pre>
+
+<p>当您运行该命令时，您可以看到类似下面的行：</p>
+
+<p><code>tcp 0 0 localhost.localdomain:mysql *:* LISTEN</code></p>
+
+<p>如果服务器不能正常运行，您可以通过下列命令启动它：</p>
+
+<pre><code>sudo /etc/init.d/mysql restart
+</code></pre>
+
+<h3 id="step6">Step6.配置管理员密码</h3>
+<p>进入mysql命令行模式</p>
+
+<pre><code>mysql -uroot -p 管理员密码
+</code></pre>
+
+<p>配置 MySQL 的管理员密码</p>
+
+<pre><code>mysqladmin -u root password newpassword
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mac下解决无法更新Android Studio的问题]]></title>
@@ -719,10 +779,8 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
 
 <!--more-->
-
-<h6 id="section-1">如图所示：</h6>
-
-<p><img src="http://inferjay.github.io/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
+<p>######如图所示：
+<img src="http://inferjay.github.io/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
 
 <p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
 
@@ -733,10 +791,8 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </span><span class="line">    system "#{editor} #{filename}"
 </span><span class="line">  end
 </span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h6 id="section-2">如图所示：</h6>
-
-<p><img src="http://inferjay.github.io/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
+<p>######如图所示：
+<img src="http://inferjay.github.io/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
 <p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
 
@@ -747,12 +803,10 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">system "sleep 2; open http://localhost:#{server_port}/"
 </span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>######如图所示：
+<img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
-<h6 id="section-3">如图所示：</h6>
-
-<p><img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
-
-<h4 id="section-4">未完待续～～～</h4>
+<h4 id="section-1">未完待续～～～</h4>
 ]]></content>
   </entry>
   
