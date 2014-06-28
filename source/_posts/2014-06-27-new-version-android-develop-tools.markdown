@@ -9,9 +9,10 @@ categories: Android Tools
 ##ADT Bundle
 ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，只需安装好Jdk即可开始开发，推荐初学者下载ADT Bundle，不用再折腾开发环境。
 
-| 版本号  | Windows                |      Max OSX       |          Linux         |
-|:----------:|:-------------:|:------:|:----------:|
-| 23.0.0 | [32位][adtb-23-win-32] [64位][adtb-23-win-64] |[64位][adtb-23-mac-64] | [32位][adtb-23-linux-32] [64位][adtb-23-linux-64] |
+| 版本号  | Windows | Max OSX | Linux    |
+|:------:|:-------:|:------:|:---------:|
+| ADT-23.0.0 | [32位][adtb-23-win-32] [64位][adtb-23-win-64] |[64位][adtb-23-mac-64] | [32位][adtb-23-linux-32] [64位][adtb-23-linux-64] |
+
 
 [adtb-23-win-32]:http://pan.baidu.com/s/1i39mvY1
 [adtb-23-win-64]:http://pan.baidu.com/s/1o65ExPS
@@ -22,7 +23,9 @@ ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，
 [adtb-23-linux-64]:http://pan.baidu.com/s/1qWJh4wk
 
 
+
 ##Android Studio
+
 | 版本号  |   Windows         |       Max OSX     |       Linux     |
 |:------:|:--------------:|:-----------------:|:------------------:|
 |  0.8.1 | [下载][0.8.1-win] | [下载][0.8.1-mac] | [下载][0.8.1-linux] |
@@ -59,13 +62,15 @@ ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，
 
 
 ##ADT Plugin
-离线安装ADT插件请戳[**项目wiki**](https://github.com/inferjay/AndroidDevTools/wiki/首页)
+
+离线安装ADT插件请戳[**这里**](https://github.com/inferjay/AndroidDevTools/wiki/首页)
 
 |    版本号   |
 |:----------:|
 |[ADT-23.0.0](http://pan.baidu.com/s/1sjArX7J)|
 |[ADT-22.6.3](http://pan.baidu.com/s/1jGMb5yQ)|
 |[AdT-22.6.1](http://pan.baidu.com/s/1pJ185Rl)|
+
 
 ##SDK Tools
 
@@ -80,6 +85,9 @@ ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，
 
 [android-sdk_r23-linux]:http://pan.baidu.com/s/1yBnSa
 
+
+
+<!--more-->
 
 ##SDK
 这是最新的Android L系统的sdk，下载解压后将解压出的整个文件夹复制或者移动到`your sdk 路径/platforms`下即可。
@@ -99,15 +107,15 @@ ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，
 | [20](http://pan.baidu.com/s/1o6OBlR8)   |
 
 ##NDK
+
 C/C++开发Android应用工具包
 
 | 版本号 	  | Windows              |          Max OSX        |          Linux         |
 |:----------:|:-------------:|:------:|:----------:|
 | ndk-r9d | [32位][r9d-win-32] [64位][r9d-win-64] | [32位][r9d-mac-32] [64位][r9d-mac-64] | [32位][r9d-linux-32] [64位][r9d-linux-64]  |
 
-|    版本号   |
-|:----------:|
-| [cxx-stl-libs-with-debug-info.zip](http://pan.baidu.com/s/1c0EMn8O) |
+
+[android-ndk-r9d-cxx-stl-libs-with-debug-info.zip](http://pan.baidu.com/s/1c0EMn8O) 
 
 [r9d-win-32]:http://pan.baidu.com/s/1dDxjl8t
 [r9d-win-64]:http://pan.baidu.com/s/1jGgecXw
@@ -158,9 +166,10 @@ C/C++开发Android应用工具包
 | [gradle-1.7-all.zip](http://pan.baidu.com/s/1pJnvyWz)  |
 
 ##Gradle User Guide
+
 |    版本号   |
-| :----------: |
-| [gradle 1.12](http://pan.baidu.com/s/1dD7sC2d)   |
+|:----------:|
+|[gradle 1.12](http://pan.baidu.com/s/1dD7sC2d)|
 
 ---
 版权声明：原创译文欢迎自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)
