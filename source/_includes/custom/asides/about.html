@@ -1,23 +1,38 @@
 <section>
   <h1>About Me</h1>
-  <p>I am a Code Monkey!</p>
+  <p>I am a Android Developer</p>
 </section>
 <section class="googleplus">
 
   	{% if site.twitter_user %}
   		<h1>
+        <a href="http://github.com/{{ site.github_user }}">
+            <img src="/images/GitHub-Mark-120px-plus.png" width="48" height="48">
+        </a>
+        <a href="https://plus.google.com/{{ site.googleplus_user }}?rel=author">
+            <img src="/images/gprofile_button-48.png" width="48" height="48">
+        </a>
     		<a href="https://twitter.com/{{ site.twitter_user }}">
       		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
     		</a>
-    		<a href="https://plus.google.com/{{ site.googleplus_user }}?rel=author">
-      			<img src="/images/gprofile_button-48.png" width="48" height="48">
-    		</a>
     		<a href="http://weibo.com/{{ site.weibo_user }}">
-      			<img src="/images/weibo_48x48.png" width="48" height="48">
+      			<img src="/images/weibo_64x64.png" width="48" height="48">
     		</a>
   		</h1>
-  	{% endif %}
-	<section>
-		<h1></h1>
-	</section>
+    {% endif %}
+    </br>
+    {% if site.twitter_user %}
+      <h1>
+        <a href="https://dribbble.com/{{ site.dribbble_user }}">
+          <img src="/images/dribbble-ball.png" width="48" height="48">
+        </a>
+        <a href="http://instagram.com/{{ site.dribbble_user }}">
+            <img src="/images/instagram_logo.png" width="48" height="48">
+        </a>
+      </h1>
+    {% endif %}
+
+    <section>
+        <h1></h1>
+    </section>
 </section>

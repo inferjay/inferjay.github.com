@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 url: http://inferjay.github.io
-title: Inferjay的技术博客
+title: 脉脉不得语的技术博客
 subtitle: 心无所恃，随遇而安
 author: inferjay
 simple_search: http://google.com/search
@@ -99,3 +99,12 @@ jiathis_share: true
 
 # weibo
 weibo_user: 234959219
+
+# github
+github_user: inferjay
+
+# dribbble
+dribbble_user: inferjay
+
+# instagram
+instagram_user: inferjay
