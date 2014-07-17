@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://inferjay.github.io/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2014-07-18T01:53:02+08:00</updated>
+  <updated>2014-07-18T02:06:56+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -169,15 +169,7 @@ http://groups.google.com/group/mongodb-user
 <p>哦耶！，成功进入MongoDB的命令行模式，到这里MongoDB就安装好了！:] :] :]……</p>
 
 <hr />
-
-<table>
-  <tbody>
-    <tr>
-      <td>版权声明：欢迎自由转载-非商用-非衍生-保持署名</td>
-      <td><a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></td>
-    </tr>
-  </tbody>
-</table>
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 
 ]]></content>
   </entry>
@@ -947,6 +939,10 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
 
 <pre><code>mysqladmin -u root password newpassword
 </code></pre>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+
 ]]></content>
   </entry>
   
@@ -976,6 +972,9 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
 <p><img src="http://inferjay.github.io/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
 
 <p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1121,9 +1120,8 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>前端时间偶然间看到了<code>Volley</code>，最近开始做一个新项目又重新去看了看I/O中关于<code>Volley</code>的介绍,感觉<code>Volley</code>很牛逼，于是就想在新项目中试试<code>Volley</code>,找来找去关于<code>Volley</code>的资料几乎没有，在Google中找到了这篇文章，看了觉得不错，于是就决定翻译一下，一来加深自己的理解，二来呢顺便补一下自己那惨不忍睹的英语。由于本人英语水平比较烂，翻译的时候有可能会曲解原作者的意思，建议英语好的大牛飘过此文去看作者的原文，欢迎大家吐槽和拍砖，觉得译文中有那些地方我翻译的不妥的地方欢迎回复指正，我们相互学习～～～</p>
 
-<h4 id="section-5">声明</h4>
-
-<p>转载须以超链接形式标明文章原始出处和作者信息及<a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">版权声明</a>.</p>
+<hr />
+<p>版权声明：原创译文欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1296,6 +1294,9 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 <h6 id="zhoujiyu0929">原文作者： zhoujiyu0929</h6>
 
 <h6 id="httpmyeoecnyyz168archive5551html">原文地址： http://my.eoe.cn/yyz168/archive/5551.html</h6>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1439,6 +1440,9 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>英文原文：javapapers ，编译：ImportNew  - 曹旭东
 译文地址： http://www.importnew.com/844.html</p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1631,6 +1635,9 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <h5 id="section-4">参考资料</h5>
 <p><a href="http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html">http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html</a>
 <a href="http://blog.csdn.net/zhulinu/article/details/7419068">http://blog.csdn.net/zhulinu/article/details/7419068</a></p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1684,6 +1691,9 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
 <h4 id="section-1">未完待续～～～</h4>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
@@ -1775,6 +1785,9 @@ gem uninstall rubygems-update
 gem sources -r http://rubygems.org/
 gem sources -a http://ruby.taobao.org
 </code></pre>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   

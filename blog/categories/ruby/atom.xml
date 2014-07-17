@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Ruby | 脉脉不得语的技术博客]]></title>
   <link href="http://inferjay.github.io/blog/categories/ruby/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2014-07-18T01:53:02+08:00</updated>
+  <updated>2014-07-18T02:06:56+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -101,6 +101,9 @@ gem uninstall rubygems-update
 gem sources -r http://rubygems.org/
 gem sources -a http://ruby.taobao.org
 </code></pre>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   
