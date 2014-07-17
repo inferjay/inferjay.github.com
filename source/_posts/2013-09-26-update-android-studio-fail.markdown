@@ -26,3 +26,8 @@ categories: Android
 ![alt text](/images/notes_images/check_update_info.png "check_update_info")
 
 如果仍然无效，将url里的修改`http`为`https`，然后重启点击Check Update试试~~~
+
+
+
+----
+版权声明：欢迎自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)

@@ -160,3 +160,7 @@ Creative Commons (CC) 并非严格意义上的开源许可，它主要用于设�
 #####参考资料
 [http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html](http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html)
 [http://blog.csdn.net/zhulinu/article/details/7419068](http://blog.csdn.net/zhulinu/article/details/7419068)
+
+
+----
+版权声明：欢迎自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)

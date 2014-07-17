@@ -143,6 +143,5 @@ MongoDB是一个介于关系数据库和非关系数据库之间的产品，是�
 哦耶！，成功进入MongoDB的命令行模式，到这里MongoDB就安装好了！:] :] :]......
 
 ----
-
 版权声明：欢迎自由转载-非商用-非衍生-保持署名 | [Creative Commons BY-NC-ND 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh)
 
