@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>如何在Mac OS X下升级Ruby到1.9.3版本 - 脉脉不得语的技术博客</title>
+  <title>Category: Issue#0 - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="安装环境 * Mac OSX 10.8.3
-* Xcode 4.6.1
-* Ruby 1.8.7 第一步:安装rvm 为什么要安装rvm呢，因为rvm可以让你拥有多个版本的ruby，并且可以在多个版本之间自由切换。安装方式有两种：单用户模式和多用户模式.而单用户和多用户的区别在于是否有root权限 &hellip;">
+  <meta name="description" content="Category: Issue#0">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx">
+  <link rel="canonical" href="http://inferjay.github.ioblog/categories/issue-number-0">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -79,180 +77,36 @@
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">如何在Mac OS X下升级Ruby到1.9.3版本</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-09T21:34:00+08:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Issue#0</h1>
     
   </header>
-
-
-<div class="entry-content"><h3 id="section">安装环境</h3>
-
-<pre><code>* Mac OSX 10.8.3
-* Xcode 4.6.1
-* Ruby 1.8.7
-</code></pre>
-
-<h3 id="rvm">第一步:安装rvm</h3>
-
-<p>为什么要安装rvm呢，因为rvm可以让你拥有多个版本的ruby，并且可以在多个版本之间自由切换。安装方式有两种：单用户模式和多用户模式.而单用户和多用户的区别在于是否有root权限，单用户模式rvm会安装在~/.rvm目录下,而多用户模式则会安装在/usr/local/rvm目录下。</p>
-
-<h6 id="section-1">单用户安装命令：</h6>
-
-<pre><code>bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
-</code></pre>
-
-<h6 id="section-2">多用户安装命令：</h6>
-
-<pre><code>sudo bash &lt; &lt;(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
-</code></pre>
-
-<p>单用户需要设置环境变量，多用户安装重启就行了，确认rvm安装是否成功
-在终端输入：</p>
-
-<pre><code>rvm -v
-</code></pre>
-
-<p>接着会看到rvm的版本信息如下：</p>
-
-<pre><code>rvm 1.19.6 () by Wayne E. Seguin &lt;wayneeseguin@gmail.com&gt;, Michal Papis &lt;mpapis@gmail.com&gt; 	[https://rvm.io/]
-</code></pre>
-
-<!--more-->
-
-<h3 id="ruby">第二步:安装ruby</h3>
-
-<h6 id="gcc">查看是否安装gcc编译器</h6>
-
-<p>在开始安装ruby前请确认你是否安装了gcc，如果你安装了Xcode，请检查是否安装了command line tools, 打开Xcode，在Xcode -&gt; Preference -&gt; Download下，查看“Command Line tools”这一项是否为“installed”
-如下图：
-<img src="/images/notes_images/xcode_download_info.png" alt="alt text" title="xcode_download_info" /></p>
-
-<p>如果不是installed，点击install安装或者下载<a href="https://github.com/kennethreitz/osx-gcc-installer" title="OSX-GCC-Installer">OSX-GCC-Installer</a>来安装gcc，不然在安装ruby编译的时候会报误（每个人的环境不一样报的错误也会不一样），如下图：</p>
-
-<p><img src="/images/notes_images/install_ruby_error_info.png" alt="alt text" title="install_ruby_error_info" /></p>
-
-<h6 id="ruby-1">查看所有可以安装的Ruby版本</h6>
-
-<pre><code>rvm list known
-</code></pre>
-
-<p>接着会看到各种版本的Ruby</p>
-
-<h6 id="ruby-2">安装Ruby</h6>
-
-<pre><code>rvm install ruby --head
-</code></pre>
-
-<h6 id="ruby193">设置Ruby默认版本为1.9.3版本</h6>
-
-<pre><code>rvm use 1.9.3 --default
-</code></pre>
-
-<h3 id="section-3">第三步:更换源</h3>
-
-<h6 id="section-4">查看已有的安装源</h6>
-
-<pre><code>gem source
-</code></pre>
-
-<p>显示如下：</p>
-
-<p>CURRENT SOURCES</p>
-
-<p>http://rubygems.org/</p>
-
-<h6 id="section-5">修改更新源</h6>
-
-<pre><code>gem update --system
-gem uninstall rubygems-update
-gem sources -r http://rubygems.org/
-gem sources -a http://ruby.taobao.org
-</code></pre>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2014</h2>
+
+<article>
+  
+<h1><a href="/blog/2014/09/15/android-weekly-issue-0/">Android Weekly Issue#0</a></h1>
+<time datetime="2014-09-15T10:35:31+08:00" pubdate><span class='month'>Sep</span> <span class='day'>15</span> <span class='year'>2014</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/androidweekly/'>AndroidWeekly</a>, <a class='category' href='/blog/categories/issue-number-0/'>Issue#0</a></span>
+</footer>
 
 
-<time datetime="2013-05-09T21:34:00+08:00" pubdate data-updated="true">May 9<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/ruby/'>Ruby</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/" data-via="inferjay" data-counturl="http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/" >Tweet</a>
-  
-  
-  <div class="g-plusone" data-size=""></div>
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/04/24/hello-octopress/" title="Previous Post: Hello Octopress">&laquo; Hello Octopress</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/05/10/octopress-config/" title="Next Post: 对Octopress做一些个性化配置">对Octopress做一些个性化配置 &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -382,10 +236,7 @@ gem sources -a http://ruby.taobao.org
       var disqus_shortname = 'inferjay';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/';
-        var disqus_url = 'http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
