@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Android Weekly Issue#0"
+title: "Android Dev Weekly Issue#0"
 date: 2014-09-15 10:35:31 +0800
 comments: true
-categories: AndroidWeekly Issue#0
+categories: AndroidDevWeekly Issue#0
 ---
 
 
@@ -90,26 +90,21 @@ categories: AndroidWeekly Issue#0
 
 	一个可以自定义各种形状的ImageView, 并且支持边框。
 	
-	<img height="640" width="384"src="https://github.com/siyamed/android-shape-imageview/raw/master/images/all-samples.png" />
-	
 4. [SecretTextView](https://github.com/matthewrkula/SecretTextView) 
 
 	实现了文字淡入/淡出效果.
 	
 	![image](https://camo.githubusercontent.com/bbb38412d3ae652f565556711e7aa6db67ebb4c7/68747470733a2f2f692e696d67666c69702e636f6d2f39356d39312e676966)
 	
-5. [LiveBlurListView](http://)
+5. [LiveBlurListView](https://github.com/xuchdeid/LiveBlurListView)
 
 	Sample to show how to implement live blur for Android ViewGroup。
-	
-	<img height="640" width="384"src="https://github.com/xuchdeid/LiveBlurListView/raw/master/screenshot/screenshot1.png?raw=true" />
 	
 6. [EtsyBlur](https://github.com/Manabu-GT/EtsyBlur) 
 
 	一个可以让你在自己的App里轻松实现毛玻璃模糊效果的库。
 
-	<img height="640" width="384"src="https://camo.githubusercontent.com/869db919cd0b1855e8b424d8460efb7dad4c1b4e/68747470733a2f2f7261772e6769746875622e636f6d2f4d616e6162752d47542f45747379426c75722f6d61737465722f6172742f726561646d655f64656d6f2e676966" />	
-
+	![image](https://raw.github.com/Manabu-GT/EtsyBlur/master/art/readme_demo.gif)	
 7. [WaterFallExt](https://github.com/dodola/WaterFallExt) 
 
 	增强版的瀑布流 扩展自StaggeredGridView.
