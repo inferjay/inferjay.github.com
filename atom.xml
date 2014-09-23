@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://inferjay.github.io/atom.xml" rel="self"/>
   <link href="http://inferjay.github.io/"/>
-  <updated>2014-09-15T14:14:55+08:00</updated>
+  <updated>2014-09-23T22:08:17+08:00</updated>
   <id>http://inferjay.github.io/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Keytool 错误 java.io.IOException: Incorrect AVA Format]]></title>
+    <link href="http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/"/>
+    <updated>2014-09-23T19:45:35+08:00</updated>
+    <id>http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error</id>
+    <content type="html"><![CDATA[<p>今天在打包的时候碰到了 <code>keytool 错误 java.io.IOException: incorrect AVA format</code> 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 <code>First and Last Name</code> 、<code>Organizational Unit</code> 、<code>Organization</code> 、 <code>City or Locality</code> 、<code>State or Province</code> 等信息中是不允许有 <code>,</code> 符号的，将这些信息中的逗号去掉后就可以了。</p>
+
+<p><img src="http://inferjay.github.io/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android Dev Weekly Issue#0]]></title>

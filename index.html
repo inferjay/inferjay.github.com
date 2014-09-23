@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 SEAndroid安全机制框架分析 Android apk动态加载机制的研究 Android View系统解析(上) Android View系统解析(下) Android仿QQ5.0侧滑菜单ResideMenu源码分析 Android ViewGroup事件分发机制 ANDROID内存优化 &hellip;">
+  <meta name="description" content="今天在打包的时候碰到了 keytool 错误 java.io.IOException: incorrect AVA format 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -24,7 +24,8 @@
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <link href="/atom.xml" rel="alternate" title="脉脉不得语的技术博客" type="application/atom+xml">
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- googleapis is fucked by gfw -->
+  <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
@@ -78,6 +79,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/23/android-keytool-incorrect-ava-format-error/">Keytool 错误 java.io.IOException: Incorrect AVA Format</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-23T19:45:35+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天在打包的时候碰到了 <code>keytool 错误 java.io.IOException: incorrect AVA format</code> 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 <code>First and Last Name</code> 、<code>Organizational Unit</code> 、<code>Organization</code> 、 <code>City or Locality</code> 、<code>State or Province</code> 等信息中是不允许有 <code>,</code> 符号的，将这些信息中的逗号去掉后就可以了。</p>
+
+<p><img src="/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -746,61 +785,6 @@ sudo apt-get remove apparmor
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/10/octopress-config/">对Octopress做一些个性化配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-10T20:11:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">首页只显示部分正文</h3>
-
-<p>在文章任意位置加入</p>
-
-<pre><code>&lt;!--more--&gt;
-</code></pre>
-
-<p>这样首页只显示一部分正文，并在每篇文章底下加一个<code>Read on</code>超链接。</p>
-
-<p>然后在<code>_config.yml</code>文件中修改<code>excerpt_link</code>的值<code>Rade on</code>为以你想要的，比如<code>More</code></p>
-
-<h3 id="blog">设置使用指定的编辑器自动打开新建的blog</h3>
-<p>每次用<code>rake　new_post</code>新建一篇blog后都要跑到<code>/source/_posts</code>找到新建的blog才能开始写blog，有木有赶脚很不爽，要是每次建完后自动用支持Markdown语法的编辑器打开那该多爽啊，google了一下还这有方法，试了式太爽了，Mark一下以免以后忘记了～～～</p>
-
-<p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/10/octopress-config/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -853,6 +837,10 @@ sudo apt-get remove apparmor
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/09/23/android-keytool-incorrect-ava-format-error/">Keytool 错误 java.io.IOException: Incorrect AVA Format</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/09/15/android-weekly-issue-0/">Android Dev Weekly Issue#0</a>
       </li>
     
@@ -866,10 +854,6 @@ sudo apt-get remove apparmor
     
       <li class="post">
         <a href="/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/">Ubuntu下彻底卸载并重新安装MySQL</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/26/update-android-studio-fail/">Mac下解决无法更新Android Studio的问题</a>
       </li>
     
   </ul>

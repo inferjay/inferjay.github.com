@@ -59,12 +59,18 @@
         <lastmod>2014-09-15T14:14:54+08:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/
+        </loc>
+        <lastmod>2014-09-23T22:08:17+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://inferjay.github.io/blog/archives/</loc>
-        <lastmod>2014-09-15T14:14:54+08:00</lastmod>
+        <lastmod>2014-09-23T22:08:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/</loc>
-        <lastmod>2014-09-15T14:14:54+08:00</lastmod>
+        <lastmod>2014-09-23T22:08:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://inferjay.github.io/robots.txt</loc>

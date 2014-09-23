@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: Tools - 脉脉不得语的技术博客</title>
+  <title>Keytool 错误 java.io.IOException: Incorrect AVA Format - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="Category: Tools">
+  <meta name="description" content="今天在打包的时候碰到了 keytool 错误 java.io.IOException: incorrect AVA format 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://inferjay.github.ioblog/categories/tools">
+  <link rel="canonical" href="http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -78,36 +78,89 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: Tools</h1>
+    
+      <h1 class="entry-title">Keytool 错误 java.io.IOException: Incorrect AVA Format</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-23T19:45:35+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
 
 
+<div class="entry-content"><p>今天在打包的时候碰到了 <code>keytool 错误 java.io.IOException: incorrect AVA format</code> 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 <code>First and Last Name</code> 、<code>Organizational Unit</code> 、<code>Organization</code> 、 <code>City or Locality</code> 、<code>State or Province</code> 等信息中是不允许有 <code>,</code> 符号的，将这些信息中的逗号去掉后就可以了。</p>
 
-  
-  <h2>2014</h2>
-
-<article>
-  
-<h1><a href="/blog/2014/06/27/new-version-android-develop-tools/">最新版Android开发工具</a></h1>
-<time datetime="2014-06-27T23:38:32+08:00" pubdate><span class='month'>Jun</span> <span class='day'>27</span> <span class='year'>2014</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/tools/'>Tools</a></span>
-</footer>
-
-
-</article>
-
+<p><img src="/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-23T19:45:35+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/" data-via="inferjay" data-counturl="http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size=""></div>
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/15/android-weekly-issue-0/" title="Previous Post: Android Dev Weekly Issue#0">&laquo; Android Dev Weekly Issue#0</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -237,7 +290,10 @@
       var disqus_shortname = 'inferjay';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/';
+        var disqus_url = 'http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
