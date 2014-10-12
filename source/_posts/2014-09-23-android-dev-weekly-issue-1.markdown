@@ -3,7 +3,7 @@ layout: post
 title: "Android开发周报 Issue#1"
 date: 2014-09-23 22:36:14 +0800
 comments: true
-categories: 
+categories: AndroidDevWeekly
 ---
 
 ### 文章
@@ -29,6 +29,8 @@ categories:
 	一个Android平台的 `key-value` 数据库，在 `读/写` 操作方面可以完胜 SQLite。 下图就是它们在 `读/写` 方面的对比测试结果：
 
 	![image](https://camo.githubusercontent.com/0f6193a1f84aa8a77d07ac18d3566b87bc89999b/687474703a2f2f736e6170707964622e636f6d2f696d672f62656e63686d61726b5f73716c6974655f776974685f7472616e73616374696f6e2e706e67)
+
+<!--more-->
 
 2. [AppRate-for-Android](https://github.com/kikoso/AppRate-for-Android) 
 

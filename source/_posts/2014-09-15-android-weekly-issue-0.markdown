@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Android Dev Weekly Issue#0"
+title: "Android开发周报 Issue#0"
 date: 2014-09-15 10:35:31 +0800
 comments: true
-categories: AndroidDevWeekly Issue#0
+categories: AndroidDevWeekly
 ---
 
 
