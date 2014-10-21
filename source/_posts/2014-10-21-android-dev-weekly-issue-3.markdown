@@ -67,7 +67,7 @@ categories:
 
 ### 小技巧
 
-1.一行命令检查代码是否有addJavascriptInterface安全隐患
+1.一行命令检查代码是否有addJavascriptInterface安全隐患([@杨辉__](http://weibo.com/p/1005051869137113))
 
 	grep -r -n -i --include=*.java addJavascriptInterface *  
 
