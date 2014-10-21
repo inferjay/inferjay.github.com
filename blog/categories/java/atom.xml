@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Java | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/java/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[转]Java 的版本历史与特性]]></title>
-    <link href="http://inferjay.github.io/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/"/>
+    <link href="http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/"/>
     <updated>2013-07-17T15:53:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/07/17/the-java-version-of-the-history-and-characteristics</id>
+    <id>http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics</id>
     <content type="html"><![CDATA[<p>一个比较流行的问题是，“Java下一个版本会有什么特性呢？” 。这是否是个好问题却有待商榷。在下面的内容里，我总结了至今为止的Java主要发行版中各自引入的新特性，这样做的目的是为了突出各个新特性是在哪个发行版中引入的。除了列出的特性外，每个发行版还做了很多优化和修复BUG的工作。</p>
 
 <h3 id="java-version-se-7">Java Version SE 7</h3>

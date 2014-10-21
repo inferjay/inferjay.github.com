@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: MongoDB | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/mongodb/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/mongodb/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac OSX 10.9.4下使用Homebrew安装MongoDB]]></title>
-    <link href="http://inferjay.github.io/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/"/>
+    <link href="http://www.inferjay.com/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/"/>
     <updated>2014-07-18T00:09:28+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4</id>
+    <id>http://www.inferjay.com/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4</id>
     <content type="html"><![CDATA[<h2 id="homebrew">安装Homebrew</h2>
 
 <blockquote>

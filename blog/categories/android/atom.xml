@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Android | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/android/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[最新版Android开发工具]]></title>
-    <link href="http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools/"/>
+    <link href="http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools/"/>
     <updated>2014-06-27T23:38:32+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools</id>
+    <id>http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools</id>
     <content type="html"><![CDATA[<h2 id="android-tools">Android Tools</h2>
 
 <h4 id="adt-bundle">ADT Bundle</h4>
@@ -723,9 +723,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mac下解决无法更新Android Studio的问题]]></title>
-    <link href="http://inferjay.github.io/blog/2013/09/26/update-android-studio-fail/"/>
+    <link href="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/"/>
     <updated>2013-09-26T12:53:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/09/26/update-android-studio-fail</id>
+    <id>http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail</id>
     <content type="html"><![CDATA[<p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
 
 <p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
@@ -754,9 +754,9 @@
   
   <entry>
     <title type="html"><![CDATA[[译]Google　I/O 2013:Volley 图片缓存教程]]></title>
-    <link href="http://inferjay.github.io/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/"/>
+    <link href="http://www.inferjay.com/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/"/>
     <updated>2013-08-03T11:28:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial</id>
+    <id>http://www.inferjay.com/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial</id>
     <content type="html"><![CDATA[<p>Gooogle I/O 2013已经结束了，并且对于Android开发的未来它给我们留下了更大的期望。令人非常兴奋的是在今年的I/O大会上展示了一个叫<a href="https://android.googlesource.com/platform/frameworks/volley/"><code>Volley</code></a>的库。<code>Volley</code>是一个处理和缓存网络请求的库，减少开发人员在实际的每一个应用中写同样的样板代码。写样板代码是很无聊的并且也增加了开发人员出错的几率。Google是出于这些考虑创建了<code>Volley</code>。</p>
 
 <p>如果你还没有看过<a href="https://developers.google.com/events/io/sessions/325304728">Gooogle　I/O中关于Volley的介绍</a>，在继续这篇文章之前我建议你先去看看关于<code>Volley</code>的介绍，对它有一些基本的理解。</p>
@@ -882,9 +882,9 @@ viewHolder.twitterUserImage.setImageUrl(tweet.getUserImageUrl(),ImageCacheManage
   
   <entry>
     <title type="html"><![CDATA[[转]Android开发规范]]></title>
-    <link href="http://inferjay.github.io/blog/2013/07/18/the-android-developer-standard/"/>
+    <link href="http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard/"/>
     <updated>2013-07-18T22:18:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/07/18/the-android-developer-standard</id>
+    <id>http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard</id>
     <content type="html"><![CDATA[<h3 id="android">一、Android编码规范</h3>
 
 <p>1.java代码中不出现中文，最多注释中可以出现中文</p>

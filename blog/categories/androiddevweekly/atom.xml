@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/androiddevweekly/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#2]]></title>
-    <link href="http://inferjay.github.io/blog/2014/10/12/android-dev-weekly-issue-2/"/>
+    <link href="http://www.inferjay.com/blog/2014/10/12/android-dev-weekly-issue-2/"/>
     <updated>2014-10-12T09:52:49+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/10/12/android-dev-weekly-issue-2</id>
+    <id>http://www.inferjay.com/blog/2014/10/12/android-dev-weekly-issue-2</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -253,9 +253,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#1]]></title>
-    <link href="http://inferjay.github.io/blog/2014/09/23/android-dev-weekly-issue-1/"/>
+    <link href="http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1/"/>
     <updated>2014-09-23T22:36:14+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/09/23/android-dev-weekly-issue-1</id>
+    <id>http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -443,9 +443,9 @@ http://get.jobdeer.com/744.get</p>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#0]]></title>
-    <link href="http://inferjay.github.io/blog/2014/09/15/android-weekly-issue-0/"/>
+    <link href="http://www.inferjay.com/blog/2014/09/15/android-weekly-issue-0/"/>
     <updated>2014-09-15T10:35:31+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/09/15/android-weekly-issue-0</id>
+    <id>http://www.inferjay.com/blog/2014/09/15/android-weekly-issue-0</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: MySQL | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/mysql/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/mysql/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ubuntu下彻底卸载并重新安装MySQL]]></title>
-    <link href="http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
+    <link href="http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
     <updated>2014-05-17T18:45:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
+    <id>http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
     <content type="html"><![CDATA[<h3 id="step1mysql">Step1.卸载MySQL</h3>
 <p>终端下依次输入以下命令卸载MySQL</p>
 

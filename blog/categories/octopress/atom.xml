@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Octopress | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[对Octopress做一些个性化配置]]></title>
-    <link href="http://inferjay.github.io/blog/2013/05/10/octopress-config/"/>
+    <link href="http://www.inferjay.com/blog/2013/05/10/octopress-config/"/>
     <updated>2013-05-10T20:11:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/05/10/octopress-config</id>
+    <id>http://www.inferjay.com/blog/2013/05/10/octopress-config</id>
     <content type="html"><![CDATA[<h3 id="section">首页只显示部分正文</h3>
 
 <p>在文章任意位置加入</p>

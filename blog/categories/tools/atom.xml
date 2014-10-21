@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Tools | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/tools/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[最新版Android开发工具]]></title>
-    <link href="http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools/"/>
+    <link href="http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools/"/>
     <updated>2014-06-27T23:38:32+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools</id>
+    <id>http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools</id>
     <content type="html"><![CDATA[<h2 id="android-tools">Android Tools</h2>
 
 <h4 id="adt-bundle">ADT Bundle</h4>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#3]]></title>
-    <link href="http://inferjay.github.io/blog/2014/10/21/android-dev-weekly-issue-3/"/>
+    <link href="http://www.inferjay.com/blog/2014/10/21/android-dev-weekly-issue-3/"/>
     <updated>2014-10-21T09:26:08+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/10/21/android-dev-weekly-issue-3</id>
+    <id>http://www.inferjay.com/blog/2014/10/21/android-dev-weekly-issue-3</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -100,7 +100,7 @@
 
 <h3 id="section-2">小技巧</h3>
 
-<p>1.一行命令检查代码是否有addJavascriptInterface安全隐患</p>
+<p>1.一行命令检查代码是否有addJavascriptInterface安全隐患(<a href="http://weibo.com/p/1005051869137113">@杨辉__</a>)</p>
 
 <pre><code>grep -r -n -i --include=*.java addJavascriptInterface *  
 </code></pre>
@@ -168,9 +168,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#2]]></title>
-    <link href="http://inferjay.github.io/blog/2014/10/12/android-dev-weekly-issue-2/"/>
+    <link href="http://www.inferjay.com/blog/2014/10/12/android-dev-weekly-issue-2/"/>
     <updated>2014-10-12T09:52:49+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/10/12/android-dev-weekly-issue-2</id>
+    <id>http://www.inferjay.com/blog/2014/10/12/android-dev-weekly-issue-2</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -406,9 +406,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#1]]></title>
-    <link href="http://inferjay.github.io/blog/2014/09/23/android-dev-weekly-issue-1/"/>
+    <link href="http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1/"/>
     <updated>2014-09-23T22:36:14+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/09/23/android-dev-weekly-issue-1</id>
+    <id>http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -596,20 +596,20 @@ http://get.jobdeer.com/744.get</p>
   
   <entry>
     <title type="html"><![CDATA[Keytool 错误 java.io.IOException: Incorrect AVA Format]]></title>
-    <link href="http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error/"/>
+    <link href="http://www.inferjay.com/blog/2014/09/23/android-keytool-incorrect-ava-format-error/"/>
     <updated>2014-09-23T19:45:35+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/09/23/android-keytool-incorrect-ava-format-error</id>
+    <id>http://www.inferjay.com/blog/2014/09/23/android-keytool-incorrect-ava-format-error</id>
     <content type="html"><![CDATA[<p>今天在打包的时候碰到了 <code>keytool 错误 java.io.IOException: incorrect AVA format</code> 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 <code>First and Last Name</code> 、<code>Organizational Unit</code> 、<code>Organization</code> 、 <code>City or Locality</code> 、<code>State or Province</code> 等信息中是不允许有 <code>,</code> 符号的，将这些信息中的逗号去掉后就可以了。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#0]]></title>
-    <link href="http://inferjay.github.io/blog/2014/09/15/android-weekly-issue-0/"/>
+    <link href="http://www.inferjay.com/blog/2014/09/15/android-weekly-issue-0/"/>
     <updated>2014-09-15T10:35:31+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/09/15/android-weekly-issue-0</id>
+    <id>http://www.inferjay.com/blog/2014/09/15/android-weekly-issue-0</id>
     <content type="html"><![CDATA[<h3 id="section">文章</h3>
 
 <ol>
@@ -744,9 +744,9 @@ http://get.jobdeer.com/744.get</p>
   
   <entry>
     <title type="html"><![CDATA[Mac OSX 10.9.4下使用Homebrew安装MongoDB]]></title>
-    <link href="http://inferjay.github.io/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/"/>
+    <link href="http://www.inferjay.com/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/"/>
     <updated>2014-07-18T00:09:28+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4</id>
+    <id>http://www.inferjay.com/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4</id>
     <content type="html"><![CDATA[<h2 id="homebrew">安装Homebrew</h2>
 
 <blockquote>
@@ -905,9 +905,9 @@ http://groups.google.com/group/mongodb-user
   
   <entry>
     <title type="html"><![CDATA[最新版Android开发工具]]></title>
-    <link href="http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools/"/>
+    <link href="http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools/"/>
     <updated>2014-06-27T23:38:32+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/06/27/new-version-android-develop-tools</id>
+    <id>http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools</id>
     <content type="html"><![CDATA[<h2 id="android-tools">Android Tools</h2>
 
 <h4 id="adt-bundle">ADT Bundle</h4>
@@ -1613,9 +1613,9 @@ http://groups.google.com/group/mongodb-user
   
   <entry>
     <title type="html"><![CDATA[Ubuntu下彻底卸载并重新安装MySQL]]></title>
-    <link href="http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
+    <link href="http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
     <updated>2014-05-17T18:45:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
+    <id>http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
     <content type="html"><![CDATA[<h3 id="step1mysql">Step1.卸载MySQL</h3>
 <p>终端下依次输入以下命令卸载MySQL</p>
 
@@ -1677,14 +1677,14 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
   
   <entry>
     <title type="html"><![CDATA[Mac下解决无法更新Android Studio的问题]]></title>
-    <link href="http://inferjay.github.io/blog/2013/09/26/update-android-studio-fail/"/>
+    <link href="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/"/>
     <updated>2013-09-26T12:53:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/09/26/update-android-studio-fail</id>
+    <id>http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail</id>
     <content type="html"><![CDATA[<p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
 
 <p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
 
 <!--More-->
 
@@ -1698,7 +1698,7 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
 </span><span class="line">-Didea.patches.url=http://dl.google.com/android/studio/patches/  </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>保存后，重新打开<code>Android Studio</code>点击Check Update就会弹出更新信息提示了</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
 
 <p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
 
@@ -1709,9 +1709,9 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
   
   <entry>
     <title type="html"><![CDATA[[译]Google　I/O 2013:Volley 图片缓存教程]]></title>
-    <link href="http://inferjay.github.io/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/"/>
+    <link href="http://www.inferjay.com/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/"/>
     <updated>2013-08-03T11:28:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial</id>
+    <id>http://www.inferjay.com/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial</id>
     <content type="html"><![CDATA[<p>Gooogle I/O 2013已经结束了，并且对于Android开发的未来它给我们留下了更大的期望。令人非常兴奋的是在今年的I/O大会上展示了一个叫<a href="https://android.googlesource.com/platform/frameworks/volley/"><code>Volley</code></a>的库。<code>Volley</code>是一个处理和缓存网络请求的库，减少开发人员在实际的每一个应用中写同样的样板代码。写样板代码是很无聊的并且也增加了开发人员出错的几率。Google是出于这些考虑创建了<code>Volley</code>。</p>
 
 <p>如果你还没有看过<a href="https://developers.google.com/events/io/sessions/325304728">Gooogle　I/O中关于Volley的介绍</a>，在继续这篇文章之前我建议你先去看看关于<code>Volley</code>的介绍，对它有一些基本的理解。</p>
@@ -1756,7 +1756,7 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
 
 <p>对于这个例子，我创建了<a href="https://github.com/rdrobinson3/VolleyImageCacheExample">一个简单的应用</a>，它从Twitter上搜索提取“CapTech”这个词的推文，并且把包含这个词的推文的用户名和照片显示在一个ListView中，在你滑动这个列表的时候将自动加载以前的记录，并根据需要从缓存中拉取图片。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/volley-example.png" alt="alt text" title="volley-example" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/volley-example.png" alt="alt text" title="volley-example" /></p>
 
 <p>例子里有２个可用的缓存实现。一个基于内存的LRU缓存。对于磁盘缓存实现我选择使用由Jake Wharton写的<a href="https://github.com/JakeWharton/DiskLruCache">DiskLruCache</a>。我只所以选择这个实现是因为他在Android社区中被经常使用和推荐的并且有一些人试图去改进它。使用一个基于磁盘的L1缓存有可能导致i/o阻塞的问题。<code>Volley</code>已经内置了一个磁盘L2缓存。磁盘L1缓存包括在内了，由于我原来不知道<code>Volley</code>是如何处理图片请求缓存的。</p>
 
@@ -1856,9 +1856,9 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
   
   <entry>
     <title type="html"><![CDATA[[转]Android开发规范]]></title>
-    <link href="http://inferjay.github.io/blog/2013/07/18/the-android-developer-standard/"/>
+    <link href="http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard/"/>
     <updated>2013-07-18T22:18:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/07/18/the-android-developer-standard</id>
+    <id>http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard</id>
     <content type="html"><![CDATA[<h3 id="android">一、Android编码规范</h3>
 
 <p>1.java代码中不出现中文，最多注释中可以出现中文</p>
@@ -2031,16 +2031,16 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
   
   <entry>
     <title type="html"><![CDATA[[转]Java 的版本历史与特性]]></title>
-    <link href="http://inferjay.github.io/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/"/>
+    <link href="http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/"/>
     <updated>2013-07-17T15:53:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/07/17/the-java-version-of-the-history-and-characteristics</id>
+    <id>http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics</id>
     <content type="html"><![CDATA[<p>一个比较流行的问题是，“Java下一个版本会有什么特性呢？” 。这是否是个好问题却有待商榷。在下面的内容里，我总结了至今为止的Java主要发行版中各自引入的新特性，这样做的目的是为了突出各个新特性是在哪个发行版中引入的。除了列出的特性外，每个发行版还做了很多优化和修复BUG的工作。</p>
 
 <h3 id="java-version-se-7">Java Version SE 7</h3>
 
 <p>开发代号是Dolphin（海豚），于2011-07-28发行。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/dolphin.png" alt="alt text" title="Dolphin" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/dolphin.png" alt="alt text" title="Dolphin" /></p>
 
 <p>引入的新特性包括：</p>
 
@@ -2062,7 +2062,7 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>开发代号为Mustang（野马），于2006-12-11发行。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/Mustang.png" alt="alt text" title="Mustang" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/Mustang.png" alt="alt text" title="Mustang" /></p>
 
 <p>引入的新特性包括：</p>
 
@@ -2080,7 +2080,7 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>开发代号为Tiger（老虎），于2004-09-30发行。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/tiger.jpg" alt="alt text" title="Tiger" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/tiger.jpg" alt="alt text" title="Tiger" /></p>
 
 <p>引入的新特性包括:</p>
 
@@ -2099,7 +2099,7 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>开发代号为Merlin（隼），于2004-02-06发行（首次在JCP下发行）。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/merlin.jpg" alt="alt text" title="Merlin" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/merlin.jpg" alt="alt text" title="Merlin" /></p>
 
 <p>引入的新特性包括:</p>
 
@@ -2121,7 +2121,7 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>开发代号为Kestrel（红隼），于2000-05-08发行。</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/Kestrel.jpg" alt="alt text" title="Kestrel" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/Kestrel.jpg" alt="alt text" title="Kestrel" /></p>
 
 <p>引入的新特性包括：</p>
 
@@ -2177,9 +2177,9 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
   
   <entry>
     <title type="html"><![CDATA[常用开源协议收集整理]]></title>
-    <link href="http://inferjay.github.io/blog/2013/06/24/open-source-licenses-are-collected/"/>
+    <link href="http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected/"/>
     <updated>2013-06-24T14:35:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/06/24/open-source-licenses-are-collected</id>
+    <id>http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected</id>
     <content type="html"><![CDATA[<h4 id="section">声明:本文大部分内容摘自网络这里仅做搜集整理以备自用！！</h4>
 
 <p>全球都在刮着开源风，开源软件在现如今的软件行业中也越来越重要了，从国外的Google code、Github、Sourceforge以及国内的Gitcafe等开源项目脱管网站就可以看出开源软件的火热程度，开源已经成为软件的发展趋势。而开源软件使用的许可协议也是层出不穷，如果不遵守这些协议规则可能会导致经济上的损失以及法律纠纷。</p>
@@ -2372,9 +2372,9 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
   
   <entry>
     <title type="html"><![CDATA[对Octopress做一些个性化配置]]></title>
-    <link href="http://inferjay.github.io/blog/2013/05/10/octopress-config/"/>
+    <link href="http://www.inferjay.com/blog/2013/05/10/octopress-config/"/>
     <updated>2013-05-10T20:11:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/05/10/octopress-config</id>
+    <id>http://www.inferjay.com/blog/2013/05/10/octopress-config</id>
     <content type="html"><![CDATA[<h3 id="section">首页只显示部分正文</h3>
 
 <p>在文章任意位置加入</p>
@@ -2393,7 +2393,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 
 <!--more-->
 <p>######如图所示：
-<img src="http://inferjay.github.io/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
+<img src="http://www.inferjay.com/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
 
 <p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
 
@@ -2405,7 +2405,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </span><span class="line">  end
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>######如图所示：
-<img src="http://inferjay.github.io/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
+<img src="http://www.inferjay.com/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
 
 <p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
 
@@ -2417,7 +2417,7 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 </pre></td><td class="code"><pre><code class=""><span class="line">system "sleep 2; open http://localhost:#{server_port}/"
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>######如图所示：
-<img src="http://inferjay.github.io/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
+<img src="http://www.inferjay.com/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
 
 <h4 id="section-1">未完待续～～～</h4>
 
@@ -2428,9 +2428,9 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
   
   <entry>
     <title type="html"><![CDATA[如何在Mac OS X下升级Ruby到1.9.3版本]]></title>
-    <link href="http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/"/>
+    <link href="http://www.inferjay.com/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/"/>
     <updated>2013-05-09T21:34:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx</id>
+    <id>http://www.inferjay.com/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx</id>
     <content type="html"><![CDATA[<h3 id="section">安装环境</h3>
 
 <pre><code>* Mac OSX 10.8.3
@@ -2471,11 +2471,11 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 
 <p>在开始安装ruby前请确认你是否安装了gcc，如果你安装了Xcode，请检查是否安装了command line tools, 打开Xcode，在Xcode -&gt; Preference -&gt; Download下，查看“Command Line tools”这一项是否为“installed”
 如下图：
-<img src="http://inferjay.github.io/images/notes_images/xcode_download_info.png" alt="alt text" title="xcode_download_info" /></p>
+<img src="http://www.inferjay.com/images/notes_images/xcode_download_info.png" alt="alt text" title="xcode_download_info" /></p>
 
 <p>如果不是installed，点击install安装或者下载<a href="https://github.com/kennethreitz/osx-gcc-installer" title="OSX-GCC-Installer">OSX-GCC-Installer</a>来安装gcc，不然在安装ruby编译的时候会报误（每个人的环境不一样报的错误也会不一样），如下图：</p>
 
-<p><img src="http://inferjay.github.io/images/notes_images/install_ruby_error_info.png" alt="alt text" title="install_ruby_error_info" /></p>
+<p><img src="http://www.inferjay.com/images/notes_images/install_ruby_error_info.png" alt="alt text" title="install_ruby_error_info" /></p>
 
 <h6 id="ruby-1">查看所有可以安装的Ruby版本</h6>
 
@@ -2522,9 +2522,9 @@ gem sources -a http://ruby.taobao.org
   
   <entry>
     <title type="html"><![CDATA[Hello Octopress]]></title>
-    <link href="http://inferjay.github.io/blog/2013/04/24/hello-octopress/"/>
+    <link href="http://www.inferjay.com/blog/2013/04/24/hello-octopress/"/>
     <updated>2013-04-24T17:20:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/04/24/hello-octopress</id>
+    <id>http://www.inferjay.com/blog/2013/04/24/hello-octopress</id>
     <content type="html"><![CDATA[<h2 id="hello-octopress">Hello Octopress!</h2>
 
 <h3 id="octopress-">Octopress 简介</h3>

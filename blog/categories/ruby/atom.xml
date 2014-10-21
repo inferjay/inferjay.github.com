@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Ruby | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/ruby/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[如何在Mac OS X下升级Ruby到1.9.3版本]]></title>
-    <link href="http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/"/>
+    <link href="http://www.inferjay.com/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx/"/>
     <updated>2013-05-09T21:34:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx</id>
+    <id>http://www.inferjay.com/blog/2013/05/09/how-to-install-ruby-1-dot-9-3-in-mac-osx</id>
     <content type="html"><![CDATA[<h3 id="section">安装环境</h3>
 
 <pre><code>* Mac OSX 10.8.3

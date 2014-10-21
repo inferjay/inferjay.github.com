@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Open | 脉脉不得语的技术博客]]></title>
-  <link href="http://inferjay.github.io/blog/categories/open/atom.xml" rel="self"/>
-  <link href="http://inferjay.github.io/"/>
-  <updated>2014-10-21T11:02:35+08:00</updated>
-  <id>http://inferjay.github.io/</id>
+  <link href="http://www.inferjay.com/blog/categories/open/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2014-10-21T17:25:08+08:00</updated>
+  <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[常用开源协议收集整理]]></title>
-    <link href="http://inferjay.github.io/blog/2013/06/24/open-source-licenses-are-collected/"/>
+    <link href="http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected/"/>
     <updated>2013-06-24T14:35:00+08:00</updated>
-    <id>http://inferjay.github.io/blog/2013/06/24/open-source-licenses-are-collected</id>
+    <id>http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected</id>
     <content type="html"><![CDATA[<h4 id="section">声明:本文大部分内容摘自网络这里仅做搜集整理以备自用！！</h4>
 
 <p>全球都在刮着开源风，开源软件在现如今的软件行业中也越来越重要了，从国外的Google code、Github、Sourceforge以及国内的Gitcafe等开源项目脱管网站就可以看出开源软件的火热程度，开源已经成为软件的发展趋势。而开源软件使用的许可协议也是层出不穷，如果不遵守这些协议规则可能会导致经济上的损失以及法律纠纷。</p>
