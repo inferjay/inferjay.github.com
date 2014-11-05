@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 Android系统性能调优工具介绍 在软件开发过程中，想必很多读者都遇到过系统性能问题。而解决系统性能问题的几个主要步骤是： 测评：对系统进行大量有针对性的测试，以得到合适的测试数据。 分析系统瓶颈：分析测试数据，找到其中的hotspot（热点，即bottleneck）。 性能优化： &hellip;">
+  <meta name="description" content="文章 进入Material Design时代 Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,74 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/11/05/android_dev_weekly_issue_5/">Android开发周报 Issue#5</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-05T17:45:47+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/xushuaic/article/details/40627389">进入Material Design时代</a></p>
+
+    <p>Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design，连续发了3篇文章，来帮助开发者如何在自己的App 中实现Material Design。并表示：expect Winter 2014 to be a big quarter for design on Android.</p>
+  </li>
+  <li>
+    <p><a href="http://www.liaohuqiu.net/cn/posts/how-does-android-caculate-the-size-of-child-view/">Android中View大小的确定过程</a></p>
+
+    <p>子View有一个期望的尺寸大小，父容器有尺寸大小约束，这两方面的约束协调，用来计算View的大小状态。根据父容器的尺寸状态，以及子View的LayoutParams，可以确定子View的大小和状态：MeasureSpec，并要求子View确定自身大小。调用子View的measure()方法，子View的onMeasure()方法也会被执行。子View在onMeasure()方法中，根据父容器给出的尺寸大小和约束，根据自身情况，确定最终的大小。父容器根据子View的确定的大小，最终确定自身大小。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ticmy.com/?p=329">ScheduledThreadPoolExecutor实现原理</a></p>
+
+    <p>自jdk1.5开始，Java开始提供ScheduledThreadPoolExecutor类来支持周期性任务的调度，在这之前，这些工作需要依靠Timer/TimerTask或者其它第三方工具来完成。但Timer有着不少缺陷，如Timer是单线程模式，调度多个周期性任务时，如果某个任务耗时较久就会影响其它任务的调度；如果某个任务出现异常而没有被catch则可能导致唯一的线程死掉而所有任务都不会再被调度。ScheduledThreadPoolExecutor解决了很多Timer存在的缺陷。</p>
+  </li>
+  <li>
+    <p><a href="http://mogu.io/android-im-design">Android-IM架构设计</a></p>
+
+    <p>文章介绍了蘑菇街开源的IM项目Android客户端的整体架构和消息流程。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/vipzjyno1/article/details/23542617">Android 命名规范（提高代码可以读性）</a>	
+ 刚接触android的时候，命名都是按照拼音来，所以有的时候想看懂命名的那个控件什么是什么用的，就要读一遍甚至好几遍才知道，这样的话，在代码的审查和修改过程中就会浪费不少不必要的时间。如果就是我一个人开发，一个人维护的话还好，可是如果一个项目是团队分工合作，这样让你的同事去看你的代码就更加吃力了，因为大家之间的编程方式不一样，所以，在开发过程中，命名规范统一尤为重要，最好是团队中统一好大家命名方法，这样对于日后的工作会轻松很多。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/11/05/android_dev_weekly_issue_5/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -796,51 +864,6 @@ sudo apt-get remove apparmor
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/09/26/update-android-studio-fail/">Mac下解决无法更新Android Studio的问题</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
-
-<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
-
-<p><img src="/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/09/26/update-android-studio-fail/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -893,6 +916,10 @@ sudo apt-get remove apparmor
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/05/android_dev_weekly_issue_5/">Android开发周报 Issue#5</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/10/27/android-dev-weekly-issue-4/">Android开发周报 Issue#4</a>
       </li>
     
@@ -906,10 +933,6 @@ sudo apt-get remove apparmor
     
       <li class="post">
         <a href="/blog/2014/09/23/android-dev-weekly-issue-1/">Android开发周报 Issue#1</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/android-keytool-incorrect-ava-format-error/">Keytool 错误 java.io.IOException: Incorrect AVA Format</a>
       </li>
     
   </ul>

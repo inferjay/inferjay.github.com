@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Android开发周报 Issue#4 - 脉脉不得语的技术博客</title>
+  <title>Android开发周报 Issue#5 - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 Android系统性能调优工具介绍 在软件开发过程中，想必很多读者都遇到过系统性能问题。而解决系统性能问题的几个主要步骤是： 测评：对系统进行大量有针对性的测试，以得到合适的测试数据。 分析系统瓶颈：分析测试数据，找到其中的hotspot（热点，即bottleneck）。 性能优化： &hellip;">
+  <meta name="description" content="文章 进入Material Design时代 Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.inferjay.com/blog/2014/10/27/android-dev-weekly-issue-4">
+  <link rel="canonical" href="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Android开发周报 Issue#4</h1>
+      <h1 class="entry-title">Android开发周报 Issue#5</h1>
     
     
       <p class="meta">
@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2014-10-27T15:42:14+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2014-11-05T17:45:47+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
         
       </p>
     
@@ -109,69 +109,82 @@
 
 <ol>
   <li>
-    <p><a href="http://blog.csdn.net/innost/article/details/9008691">Android系统性能调优工具介绍</a></p>
+    <p><a href="http://blog.csdn.net/xushuaic/article/details/40627389">进入Material Design时代</a></p>
 
-    <p>在软件开发过程中，想必很多读者都遇到过系统性能问题。而解决系统性能问题的几个主要步骤是：</p>
-
-    <ul>
-      <li>测评：对系统进行大量有针对性的测试，以得到合适的测试数据。</li>
-      <li>分析系统瓶颈：分析测试数据，找到其中的hotspot（热点，即bottleneck）。</li>
-      <li>性能优化：对hotspot相关的代码进行优化。</li>
-    </ul>
+    <p>Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design，连续发了3篇文章，来帮助开发者如何在自己的App 中实现Material Design。并表示：expect Winter 2014 to be a big quarter for design on Android.</p>
   </li>
   <li>
-    <p><a href="https://github.com/jsenjoy/introrx-chinese-edition">The introduction to Reactive Programming you’ve been missing – 中文版</a>	</p>
+    <p><a href="http://www.liaohuqiu.net/cn/posts/how-does-android-caculate-the-size-of-child-view/">Android中View大小的确定过程</a></p>
 
-    <p>什么是FRP?在互联网上有着一大堆糟糕的解释与定义。维基百科一如既往的空泛与理论化。Stackoverflow的权威答案明显不适合初学者。Reactive Manifesto看起来是你展示给你公司的项目经理或者老板们看的东西。微软的Rx terminology “Rx = Observables + LINQ + Schedulers” 过于重量级且微软味十足，只会让大部分人困惑</p>
+    <p>子View有一个期望的尺寸大小，父容器有尺寸大小约束，这两方面的约束协调，用来计算View的大小状态。根据父容器的尺寸状态，以及子View的LayoutParams，可以确定子View的大小和状态：MeasureSpec，并要求子View确定自身大小。调用子View的measure()方法，子View的onMeasure()方法也会被执行。子View在onMeasure()方法中，根据父容器给出的尺寸大小和约束，根据自身情况，确定最终的大小。父容器根据子View的确定的大小，最终确定自身大小。</p>
   </li>
   <li>
-    <p><a href="http://baoyz.com/android/2014/10/21/android-palette-use/">Android Lollipop 新特性 - Palette</a></p>
+    <p><a href="http://www.ticmy.com/?p=329">ScheduledThreadPoolExecutor实现原理</a></p>
 
-    <p>Palette 可以从一张图片中提取颜色，我们可以把提取的颜色融入到App UI中，可以使UI风格更加美观融洽。比如，我们可以从图片中提取颜色设置给ActionBar做背景颜色，这样ActionBar的颜色就会随着显示图片的变化而变化。</p>
+    <p>自jdk1.5开始，Java开始提供ScheduledThreadPoolExecutor类来支持周期性任务的调度，在这之前，这些工作需要依靠Timer/TimerTask或者其它第三方工具来完成。但Timer有着不少缺陷，如Timer是单线程模式，调度多个周期性任务时，如果某个任务耗时较久就会影响其它任务的调度；如果某个任务出现异常而没有被catch则可能导致唯一的线程死掉而所有任务都不会再被调度。ScheduledThreadPoolExecutor解决了很多Timer存在的缺陷。</p>
   </li>
   <li>
-    <p><a href="http://blog.csdn.net/t12x3456/article/details/39958755">Android 使用动态加载框架DL进行插件化开发</a></p>
+    <p><a href="http://mogu.io/android-im-design">Android-IM架构设计</a></p>
 
-    <p>随着应用的不断迭代，应用的体积不断增大,项目越来越臃肿,冗余增加.项目新功能的添加，无法确定与用户匹配性，发生严重异常往往牵一发而动全身,只能紧急发布补丁版本，强制用户进行更新.结果频繁的更新，反而容易降低用户使用黏性.或者是公司业务的不断发展,同系的应用越来越多,传统方式需要通过用户量最大的主项目进行引导下载并安装.</p>
+    <p>文章介绍了蘑菇街开源的IM项目Android客户端的整体架构和消息流程。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/vipzjyno1/article/details/23542617">Android 命名规范（提高代码可以读性）</a>	
+ 刚接触android的时候，命名都是按照拼音来，所以有的时候想看懂命名的那个控件什么是什么用的，就要读一遍甚至好几遍才知道，这样的话，在代码的审查和修改过程中就会浪费不少不必要的时间。如果就是我一个人开发，一个人维护的话还好，可是如果一个项目是团队分工合作，这样让你的同事去看你的代码就更加吃力了，因为大家之间的编程方式不一样，所以，在开发过程中，命名规范统一尤为重要，最好是团队中统一好大家命名方法，这样对于日后的工作会轻松很多。</p>
   </li>
 </ol>
+
+<!--more-->
 
 <h3 id="section-1">代码&amp;开源库</h3>
 
 <ol>
   <li>
-    <p><a href="https://github.com/mihaip/dex-method-counts">dex-method-counts</a></p>
+    <p><a href="https://github.com/liaohuqiu/android-GridViewWithHeaderAndFooter">android-GridViewWithHeaderAndFooter</a></p>
 
-    <p>一个可以统计 <code>.dex</code> 文件中方法个数的命令行工具。</p>
+    <p>在HeaderGridView的基础上做了更改，可以addHeaderView()和addFooterView()的GridView来了。用法和ListView一样.</p>
   </li>
   <li>
-    <p><a href="https://github.com/demitsuri/smali2java">smali2java</a></p>
+    <p><a href="https://github.com/torryharris/Skycons">Skycons</a></p>
 
-    <p>可以将smali代码转换为java代码的工具。</p>
-
-    <p><!--more--></p>
+    <p>一组自定义的天气图标View库。</p>
   </li>
   <li>
-    <p><a href="https://github.com/navasmdc/MaterialDesignLibrary">MaterialDesignLibrary</a></p>
+    <p><a href="https://github.com/PhilJay/ValueBar">ValueBar</a></p>
 
-    <p>可以让你在2.2系统上使用Android L系统才支持的控件效果的库。具体兼容的控件请看项目的介绍。</p>
+    <p>一个漂亮的自定义View。工作原理类似于Seeker。支持API level 11+.</p>
   </li>
   <li>
-    <p><a href="https://github.com/vinaysshenoy/enhanced-volley">enhanced-volley</a></p>
+    <p><a href="https://github.com/percolate/caffeine">caffeine</a></p>
 
-    <p>enhanced-volley是在Volley的基础上进行了扩展，添加了 <code>自定义Http头</code> 、<code>自定义GET请求的URL参数</code> 、<code>给ImageLoader添加了默认的BitmapLruCache实现</code> 、<code>添加了新的可以执行任意你想要的动画的AnimateImageView控件</code> 以及支持 <code>application/octet-stream MIME 类型的文件上传</code> 等功能。</p>
+    <p>一个可以加速Android开发的工具库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/mogutt">TeamTalk</a></p>
+
+    <p>蘑菇街开源的 IM 项目 TeamTalk，包括 Android、iOS、Win、Mac 客户端以及 Server端、管理后台、环境自动部署，大赞！支持文字、音频、图片、表情、文件传输、屏幕振动、分组等，做聊天的同学可以看看.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pedant/sweet-alert-dialog">sweet-alert-dialog</a></p>
+
+    <p>Android版的SweetAlert，清新文艺，快意灵动的甜心弹框。</p>
+
+    <p><img src="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/MobiDevelop/android-split-pane-layout">android-split-pane-layout</a></p>
+
+    <p>可以将2个子View之间的可用空间按照指定比例分割的自定义Layout。</p>
   </li>
 </ol>
 
-<h3 id="section-2">小技巧</h3>
+<h3 id="section-2">视频</h3>
 
 <ol>
   <li>
-    <p>Android Studio / Intellij Tip of the Day：显示最近更改的文件(@<a href="https://www.google.com/+PhilippeBreault">Philippe Breault</a>)</p>
+    <p><a href="https://github.com/KevinChen9117/ikevin">Android DevBytes and Google IO视频</a></p>
 
-    <p>快捷键（菜单）： 
- - Mac：Cmd的+ Shift键+ E 
- - Windows / Linux：CTRL + SHIFT + E </p>
+    <p>Youtube上的Google IO、跟Android相关的DevBytes、Android Design In Action和跟Android相关的DesignBytes视频，全部是720P的mp4. 包含英文字幕。</p>
   </li>
 </ol>
 
@@ -179,45 +192,27 @@
 
 <ol>
   <li>
-    <p><a href="https://github.com/castorflex/manifestreplace-plugin">manifestreplace-plugin</a></p>
+    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.0 Released</a></p>
 
-    <p>Gradle plugin to add more placeholders to your manifest.xml.</p>
+    <p>Android Studio 0.9.0 released to the canary channel! 
+ 这次发布添加了新版本的Android Gradle plugin 0.14.0，此外，修复了一些bug等。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/matheusjardimb/ios2android">ios2android</a></p>
+
+    <p>一个可以将iOS格式的切图转换为Android格式切图的Python脚本工具。</p>
   </li>
 </ol>
 
 <h3 id="section-4">设计</h3>
 
-<h4 id="section-5">文章</h4>
+<h4 id="section-5">工具&amp;资源</h4>
 
 <ol>
   <li>
-    <p><a href="http://www.ui.cn/project.php?id=28848">IOS机Android切图标注与命名规范</a></p>
+    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
 
-    <p>在项目迭代的过程中，会碰到很多切图替换的问题，怎么去命名？给几个分辨率合适？怎么去标注等。本文把我在版本迭代工作中的一些经验分享给大家，希望能对大家有所作用。</p>
-  </li>
-  <li>
-    <p><a href="http://cdc.tencent.com/?p=8239">图标设计初阶要先型</a></p>
-
-    <p>UI最重要组建之一就是图标，随着扁平化设计的发展趋势，越来越注重图标的简洁与寓意表达，平面图标已占主导地位。每位设计师所处的阶段所关注的要点是不一样的，我把图标设计分为2个阶段–初阶与高阶，这样分是为了有步骤性的学习和进阶的加强，当然，能人的话一步到位，对于新人来讲会较难，需要实际工作中辅导与自己经验总结。</p>
-  </li>
-</ol>
-
-<h4 id="section-6">工具&amp;资源</h4>
-
-<ol>
-  <li>
-    <p><a href="https://www.behance.net/gallery/20514895/Material-Design-UI-Kit">Material Design UI Kit for Sketch</a></p>
-
-    <p>A UI Kit for Google’s Material design. Essential if you’re designing for Android.</p>
-  </li>
-  <li>
-    <p><a href="http://icons8.com/app/">Icons8 App</a>	</p>
-
-    <ul>
-      <li>Quick search through the icons</li>
-      <li>Compatible with Photoshop, Xcode and more</li>
-      <li>5000 icons for iOS 7, Windows 8 and Android</li>
-    </ul>
+    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
   </li>
 </ol>
 
@@ -245,7 +240,7 @@
   
 
 
-<time datetime="2014-10-27T15:42:14+08:00" pubdate data-updated="true">Oct 27<span>th</span>, 2014</time>
+<time datetime="2014-11-05T17:45:47+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
       
 
 
@@ -253,7 +248,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.inferjay.com/blog/2014/10/27/android-dev-weekly-issue-4/" data-via="inferjay" data-counturl="http://www.inferjay.com/blog/2014/10/27/android-dev-weekly-issue-4/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/" data-via="inferjay" data-counturl="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/" >Tweet</a>
   
   
   <div class="g-plusone" data-size=""></div>
@@ -264,10 +259,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/21/android-dev-weekly-issue-3/" title="Previous Post: Android开发周报 Issue#3">&laquo; Android开发周报 Issue#3</a>
+        <a class="basic-alignment left" href="/blog/2014/10/27/android-dev-weekly-issue-4/" title="Previous Post: Android开发周报 Issue#4">&laquo; Android开发周报 Issue#4</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/11/05/android_dev_weekly_issue_5/" title="Next Post: Android开发周报 Issue#5">Android开发周报 Issue#5 &raquo;</a>
       
     </p>
   </footer>
@@ -408,8 +401,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.inferjay.com/blog/2014/10/27/android-dev-weekly-issue-4/';
-        var disqus_url = 'http://www.inferjay.com/blog/2014/10/27/android-dev-weekly-issue-4/';
+        var disqus_identifier = 'http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/';
+        var disqus_url = 'http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/';
         var disqus_script = 'embed.js';
       
     (function () {
