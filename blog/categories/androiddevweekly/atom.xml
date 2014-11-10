@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-11-05T17:47:23+08:00</updated>
+  <updated>2014-11-10T16:52:00+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,297 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#6]]></title>
+    <link href="http://www.inferjay.com/blog/2014/11/10/android-dev-weekly-issue-6/"/>
+    <updated>2014-11-10T16:45:18+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/11/10/android-dev-weekly-issue-6</id>
+    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://linux.cn/article-4172-1.html">Android 5.0 Lollipop源代码发布</a></p>
+
+    <p>Google将最新的Android 5.0 Lollipop系统源代码上传在公开的<a href="http://source.android.com/source/index.html">Android Open Source Project(AOSP) 库</a>。</p>
+  </li>
+  <li>
+    <p><a href="http://linux.cn/article-4168-1.html">Android 5.0 Lollipop 安全特性详解</a></p>
+
+    <p>Android 5.0 Lollipop 正式版发布在即，根据 Google 的说法，Android 5.0 是 Android 历史上最为重大的版本变更，带来了全新的设计风格，全新的软件运行环境，更好的续航能力以及大量的细节改进。可能关于 Material Design、ART 模式等等新特性你已经有所了解，但是我们今天要聊的是 5.0 的另一个重大变革，关于安全性的改进。</p>
+  </li>
+  <li>
+    <p><a href="http://www.pingwest.com/copresence-is-airdrop-between-android-ios/">Copresence: Google 正为 iOS 和 Android 之间数据通讯架设的桥梁</a></p>
+
+    <p>Google 最近被人发现正在开发的名为「Copresence」的功能，未来很有可能成为跨移动操作系统数据传输的最好解决方案。Copresence 的功能将允许 Android 和 iOS 操作系统设备之间互相传输文件、照片、发送导航定位、文字信息等多种类型的数据——并非通过互联网，而是更加本地化的点对点连接方式。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/AWCNTT/ArticleTranslateProject/blob/master/translated/Issue%23105/2014-11-06-Creating-a-Cards-UI-on-Android.md">在Android上创建卡片式UI</a></p>
+
+    <p>自从卡片式UI第一次在Google+ app上亮相，这种设计模式在Android社区上开始变得越来越火。很多人都热衷于这种设计模式并在他们的开发中使用。这不只归功于其时尚的外观，还有它实用之处。每张卡片拥有其相关的内容及其内容所触发的动作。换句话来说，每张卡片有它唯一的内容管理机制。</p>
+  </li>
+  <li>
+    <p><a href="http://www.codeceo.com/article/android-adb-shell.html">34个Android常用adb shell命令汇总</a></p>
+
+    <p>调试Android程序有时需要adb shell 命令，adb全称Android Debug Bridge ，就是起到调试桥的作用。通过adb我们可以在Eclipse中通过DDMS来调试Android程序，说白了就是debug工具。adb通过监听Socket TCP 5554等端口让IDE和Qemu通讯。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/isming/article/details/26985317"> 使用Gradle构建Android项目</a></p>
+
+    <p>Gradle是以Groovy为基础，面向java应用，基于DSL语法的自动化构建工具。是google引入，替换ant和maven的新工具，其依赖兼容maven和ivy。使用gradle的目的:更容易重用资源和代码；可以更容易创建不同的版本的程序，多个类型的apk包；更容易配置，扩展;更好的IDE集成;</p>
+  </li>
+  <li>
+    <p><a href="http://toughcoder.net/blog/2014/10/26/best-practices-to-support-multiple-screen/">适配多屏幕的最佳实践</a></p>
+
+    <p>对于Android应用开发来讲，比较头疼的，也是比较重要的一个工作就是要尽可能多的支持市场上的Android设备，由于Android的开放性，各种奇奇怪怪的设备都有，符合标准的，不符合标准的，行货，水货，山寨货鱼龙混杂，防不胜防。</p>
+  </li>
+  <li>
+    <p><a href="http://toughcoder.net/blog/2014/10/25/tricks-to-remove-duplicates/">如何有效的减少重复的代码</a></p>
+
+    <p>重复的代码一直都是可维护性的大敌，重构的重要任务之一也就是要去除掉重复的代码，有效的减少重复代码，可以大大提高软件的扩展性。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/isming/article/details/39404407">在android中画圆形图片的几种办法</a>	
+ 在开发中经常会有一些需求,比如显示头像，显示一些特殊的需求,将图片显示成圆角或者圆形或者其他的一些形状。但是往往我们手上的图片或者从服务器获取到的图片都是方形的。这时候就需要我们自己进行处理，将图片处理成所需要的形状。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/ajaysahani/MultiActionTextView">MultiActionTextView</a></p>
+
+    <p>MultiActionTextView 一个textview的开源库，可以分别给TextView中的某几个字设置点击事件。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/cymcsg/UltimateAndroid">UltimateAndroid</a></p>
+
+    <p>快速开发Android应用的框架，框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Md5处理、String处理,Https处理等常用工具类，还有超过100多种UI控件效果。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/MustafaFerhan/DebugLog">DebugLog</a></p>
+
+    <p>DebugLog可以帮你创建更简单和更容易理解的调试日志，能够友好的显示调试信息所在类和函数。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/rengwuxian/MaterialEditText">MaterialEditText</a></p>
+
+    <p>Material Design风格的EditText。虽然AppCompat v21中也提供了 Material Design 的控件外观支持，其中包括 EditText 。但 AppCompat 中的 EditText 实在有点难用，因为它是通过 colorAccent 来自动为控件着色的，并没有提供设置颜色的api，因此需要通过为控件定制theme的方式来实现自定义控件颜色。 另外，除了外观上的变化， AppCompat 没有提供任何 Google Material Design Spec 中提到的特性。  </p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://v.youku.com/v_show/id_XODE5NDI1MTI4.html">GoogleFit APIs for Android</a></p>
+
+    <p>来自Google美女工程师的DevBytes系列《GoogleFit APIs for Android》视频共两集,现已搬至优酷，关注Google Fit的可以看内容，不感兴趣内容可以看美女，程序猿们我懂你们的！！！</p>
+  </li>
+</ol>
+
+<h3 id="section-4">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/intrications/material-design-icons-adt-template">material-design-icons-adt-template</a></p>
+
+    <p>Android Studio / Eclipse ADT template for including icon resources from <a href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a> in your project.</p>
+  </li>
+  <li>
+    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.2 Released</a></p>
+
+    <p>Android Studio 0.9.1 released to the canary channel! </p>
+  </li>
+</ol>
+
+<h3 id="section-5">书</h3>
+
+<ol>
+  <li>
+    <p><a href="http://it-ebooks.info/book/646/">Pro Android Apps Performance Optimization</a></p>
+
+    <p>Today’s Android apps developers are often running into the need to refine, improve and optimize their apps performances. As more complex apps can be created, it is even more important for developers to deal with this critical issue. </p>
+  </li>
+</ol>
+
+<h3 id="section-6">设计</h3>
+
+<h4 id="section-7">文章</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=30796">熊氏切图法–一键导出App icon</a></p>
+
+    <p>做App设计的小伙伴有没有遇到这种情况呢，同一个icon要输出N种尺寸，用传统的方法批处理调整图片大小比较繁琐，不方便同时整体预览，如果后续修改了设计，又要重复一次这个批处理的过程，有没有一键输出所有尺寸的方法呢？本熊这就给大家推荐一种强大的技巧：智能对象+生成图像资源，是的，本熊不要脸的将其命名为“熊氏切图法”.</p>
+  </li>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=30921">UE+UI设计流程之一二三</a></p>
+
+    <p>在做移动端app的设计过程中，经常会碰到一些二次返工或者时间的浪费，在这里分享下自己在项目中的流程经验，供遇到问题的小伙伴们参考。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=30538">从Material UI得到的设计感悟</a></p>
+
+    <p>如果你读过Google的Material设计文档，你就会发现其对细节和深度的注重。在文档中你能学到很多东西。其中最为重要的一项，就是其证明了编写复杂视觉风格指南是完全可能的。尽管可能困难重重，但还是可能的。特别是对于Google复杂多样的产品组合来说。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=30540">APP规范实例(详细的UI设计方法</a></p>
+
+    <p>设计是无限的，可作为借鉴，这一套UI设计规范，包含了界面布局、颜色、文字规范、按钮规范、图标规范、图片规范、列表规范、控件规范、弹出浮层，超级详细。大家可以借鉴下，学会自己设计一套APP设计规范，成为高级设计师。但是不要生搬硬套，毕竟不是一个产品，总之可参考的价值很高。</p>
+  </li>
+</ol>
+
+<h4 id="section-8">工具&amp;资源</h4>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/romashamin/Size-Marks-PS">Size-Marks-PS</a></p>
+
+    <p>Photoshop Javascript插件，可以以新建图层的方式直接在PS中标注尺寸。</p>
+
+    <p><img src="http://ww1.sinaimg.cn/mw1024/4b4d632fgw1elyr9qvsipg20kf08jdjf.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
+
+    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#5]]></title>
+    <link href="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/"/>
+    <updated>2014-11-05T17:45:47+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5</id>
+    <content type="html"><![CDATA[<h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/xushuaic/article/details/40627389">进入Material Design时代</a></p>
+
+    <p>Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design，连续发了3篇文章，来帮助开发者如何在自己的App 中实现Material Design。并表示：expect Winter 2014 to be a big quarter for design on Android.</p>
+  </li>
+  <li>
+    <p><a href="http://www.liaohuqiu.net/cn/posts/how-does-android-caculate-the-size-of-child-view/">Android中View大小的确定过程</a></p>
+
+    <p>子View有一个期望的尺寸大小，父容器有尺寸大小约束，这两方面的约束协调，用来计算View的大小状态。根据父容器的尺寸状态，以及子View的LayoutParams，可以确定子View的大小和状态：MeasureSpec，并要求子View确定自身大小。调用子View的measure()方法，子View的onMeasure()方法也会被执行。子View在onMeasure()方法中，根据父容器给出的尺寸大小和约束，根据自身情况，确定最终的大小。父容器根据子View的确定的大小，最终确定自身大小。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ticmy.com/?p=329">ScheduledThreadPoolExecutor实现原理</a></p>
+
+    <p>自jdk1.5开始，Java开始提供ScheduledThreadPoolExecutor类来支持周期性任务的调度，在这之前，这些工作需要依靠Timer/TimerTask或者其它第三方工具来完成。但Timer有着不少缺陷，如Timer是单线程模式，调度多个周期性任务时，如果某个任务耗时较久就会影响其它任务的调度；如果某个任务出现异常而没有被catch则可能导致唯一的线程死掉而所有任务都不会再被调度。ScheduledThreadPoolExecutor解决了很多Timer存在的缺陷。</p>
+  </li>
+  <li>
+    <p><a href="http://mogu.io/android-im-design">Android-IM架构设计</a></p>
+
+    <p>文章介绍了蘑菇街开源的IM项目Android客户端的整体架构和消息流程。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/vipzjyno1/article/details/23542617">Android 命名规范（提高代码可以读性）</a>	
+ 刚接触android的时候，命名都是按照拼音来，所以有的时候想看懂命名的那个控件什么是什么用的，就要读一遍甚至好几遍才知道，这样的话，在代码的审查和修改过程中就会浪费不少不必要的时间。如果就是我一个人开发，一个人维护的话还好，可是如果一个项目是团队分工合作，这样让你的同事去看你的代码就更加吃力了，因为大家之间的编程方式不一样，所以，在开发过程中，命名规范统一尤为重要，最好是团队中统一好大家命名方法，这样对于日后的工作会轻松很多。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/liaohuqiu/android-GridViewWithHeaderAndFooter">android-GridViewWithHeaderAndFooter</a></p>
+
+    <p>在HeaderGridView的基础上做了更改，可以addHeaderView()和addFooterView()的GridView来了。用法和ListView一样.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/torryharris/Skycons">Skycons</a></p>
+
+    <p>一组自定义的天气图标View库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/PhilJay/ValueBar">ValueBar</a></p>
+
+    <p>一个漂亮的自定义View。工作原理类似于Seeker。支持API level 11+.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/percolate/caffeine">caffeine</a></p>
+
+    <p>一个可以加速Android开发的工具库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/mogutt">TeamTalk</a></p>
+
+    <p>蘑菇街开源的 IM 项目 TeamTalk，包括 Android、iOS、Win、Mac 客户端以及 Server端、管理后台、环境自动部署，大赞！支持文字、音频、图片、表情、文件传输、屏幕振动、分组等，做聊天的同学可以看看.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pedant/sweet-alert-dialog">sweet-alert-dialog</a></p>
+
+    <p>Android版的SweetAlert，清新文艺，快意灵动的甜心弹框。</p>
+
+    <p><img src="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/MobiDevelop/android-split-pane-layout">android-split-pane-layout</a></p>
+
+    <p>可以将2个子View之间的可用空间按照指定比例分割的自定义Layout。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/KevinChen9117/ikevin">Android DevBytes and Google IO视频</a></p>
+
+    <p>Youtube上的Google IO、跟Android相关的DevBytes、Android Design In Action和跟Android相关的DesignBytes视频，全部是720P的mp4. 包含英文字幕。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.0 Released</a></p>
+
+    <p>Android Studio 0.9.0 released to the canary channel! 
+ 这次发布添加了新版本的Android Gradle plugin 0.14.0，此外，修复了一些bug等。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/matheusjardimb/ios2android">ios2android</a></p>
+
+    <p>一个可以将iOS格式的切图转换为Android格式切图的Python脚本工具。</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h4 id="section-5">工具&amp;资源</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
+
+    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#2]]></title>

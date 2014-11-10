@@ -9,7 +9,10 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示Connection failed. Please check your network connection and try again，开始以为是由于G*W在捣乱 &hellip;">
+  <meta name="description" content="Step1.卸载MySQL
+终端下依次输入以下命令卸载MySQL sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get autoremove mysql- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +82,62 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/">Ubuntu下彻底卸载并重新安装MySQL</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-17T18:45:00+08:00" pubdate data-updated="true">May 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="step1mysql">Step1.卸载MySQL</h3>
+<p>终端下依次输入以下命令卸载MySQL</p>
+
+<pre><code>sudo apt-get autoremove --purge mysql-server-5.0
+sudo apt-get remove mysql-server
+sudo apt-get autoremove mysql-server
+sudo apt-get remove mysql-common(非常重要)
+sudo apt-get remove apparmor
+</code></pre>
+
+<p>上面的其实有一些是多余的，建议还是按照顺序执行一遍</p>
+
+<h3 id="step2">Step2.清理残留数据</h3>
+
+<pre><code>dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
+</code></pre>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -598,6 +657,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/05/android_dev_weekly_issue_5/">Android开发周报 Issue#5</a>
       </li>
     
@@ -611,10 +674,6 @@
     
       <li class="post">
         <a href="/blog/2014/10/12/android-dev-weekly-issue-2/">Android开发周报 Issue#2</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/09/23/android-dev-weekly-issue-1/">Android开发周报 Issue#1</a>
       </li>
     
   </ul>
