@@ -1,11 +1,15 @@
 <div class="sharing">
-  {% if site.twitter_tweet_button %}
+  {% if site.twitter_tweet_button and site.default_share %}
   <a href="//twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
   {% endif %}
-  {% if site.google_plus_one %}
+  {% if site.google_plus_one and site.default_share %}
   <div class="g-plusone" data-size="{{ site.google_plus_one_size }}"></div>
   {% endif %}
-  {% if site.facebook_like %}
+  {% if site.facebook_like and site.default_share %}
     <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
   {% endif %}
+
+  {% if site.jiathis_share %}   
+      {% include post/jiathis.html %}  
+  {% endif %} 
 </div>

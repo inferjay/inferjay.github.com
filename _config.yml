@@ -86,13 +86,16 @@ delicious_count: 3
 
 # Disqus Comments
 disqus_short_name: inferjay
-disqus_show_comment_count: false
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id: UA-52369435-1
 
 # Facebook Like
 facebook_like: false
+
+# default share
+default_share: false
 
 # jiathis
 jiathis_share: true
