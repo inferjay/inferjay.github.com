@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mac下解决无法更新Android Studio的问题 - 脉脉不得语的技术博客</title>
+  <title>脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示Connection failed. Please check your network connection and try again，开始以为是由于G*W在捣乱 &hellip;">
+  <meta name="description" content="Hello Octopress! Octopress 简介 基于Jekyll的内容管理工具，可以方便的搭建站点和发布静态页面。 使用 Markdown 标记语言书写源文件， 通过 Markdown 解析器转换为 HTML 文件。 写作的时候无需关心文章排版，享受写作的乐趣。 Octopress 与 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail">
+  <link rel="canonical" href="http://www.inferjay.com/blog/page/3">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -77,12 +77,15 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div>
-<article class="hentry" role="article">
+      <div class="blog-index">
   
+  
+  
+    <article>
+      
   <header>
     
-      <h1 class="entry-title">Mac下解决无法更新Android Studio的问题</h1>
+      <h1 class="entry-title"><a href="/blog/2013/04/24/hello-octopress/">Hello Octopress</a></h1>
     
     
       <p class="meta">
@@ -98,130 +101,47 @@
   
 
 
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
+<time datetime="2013-04-24T17:20:00+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2013</time>
         
-           | <a href="#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com">Comments</a>
+           | <a href="/blog/2013/04/24/hello-octopress/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2013/04/24/hello-octopress/">Comments</a>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
+  <div class="entry-content"><h2 id="hello-octopress">Hello Octopress!</h2>
 
-<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
+<h3 id="octopress-">Octopress 简介</h3>
 
-<p><img src="/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
+<ul>
+  <li>基于Jekyll的内容管理工具，可以方便的搭建站点和发布静态页面。</li>
+  <li>使用 Markdown 标记语言书写源文件， 通过 Markdown 解析器转换为 HTML 文件。</li>
+  <li>写作的时候无需关心文章排版，享受写作的乐趣。</li>
+  <li><em>Octopress</em> 与 <em>Github</em> 完美结合，无需学习过多的git命令语法。</li>
+  <li><em>Octopress</em> 以 <em>rake</em> 任务的形式实现静态站点页面的生成以及将静态站点发布到_Github pages_，操作十分简单。</li>
+  <li>像写程序一样写博客，Github会为你保存你提交的每一个改动。</li>
+</ul>
 
-<!--More-->
+<h2 id="section"></h2>
 
-<p>接着用自己趁手的编辑器打开bin目录下的idea.vmoptions文件添加如下内容：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">-Djava.net.preferIPv4Stack=true  
-</span><span class="line">-Didea.updates.url=http://dl.google.com/android/studio/patches/updates.xml  
-</span><span class="line">-Didea.patches.url=http://dl.google.com/android/studio/patches/  </span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>保存后，重新打开<code>Android Studio</code>点击Check Update就会弹出更新信息提示了</p>
-
-<p><img src="/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
-
-<p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+<h1 id="octopress">Octopress，我来了~~~</h1>
 </div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
-
-      
-
-
-
-
-
-
-
-
   
 
 
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
-      
-
-<span class="categories">
+    </article>
   
-    <a class='category' href='/blog/categories/android/'>Android</a>
-  
-</span>
-
-
-    </p>
+  <div class="pagination">
     
-      <div class="sharing">
-  
-  
-  
-
-     
-      <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-<span class="jiathis_txt">分享到：</span>
-<a class="jiathis_button_twitter">Twitter</a>
-<a class="jiathis_button_googleplus">Google+</a>
-<a class="jiathis_button_fb">Facebook</a>
-<a class="jiathis_button_tsina">新浪微博</a>
-<a class="jiathis_button_weixin">微信</a>
-<a class="jiathis_button_qzone">QQ空间</a>
-
-<a href="http://www.jiathis.com/share?uid=1983796" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
-<a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript" >
-var jiathis_config={
-	data_track_clickback:true,
-	summary:"",
-	ralateuid:{
-		"tsina":"234959219"
-	},
-	shortUrl:true,
-	hideMore:false
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1983796" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-  
-   
-</div>
-
+    <a href="/blog/archives">Blog Archives</a>
     
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/" title="Previous Post: [译]Google　I/O 2013:Volley 图片缓存教程">&laquo; [译]Google　I/O 2013:Volley 图片缓存教程</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/" title="Next Post: Ubuntu下彻底卸载并重新安装MySQL">Ubuntu下彻底卸载并重新安装MySQL &raquo;</a>
-      
-    </p>
-  </footer>
-</article>
-
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
+    
+  </div>
 </div>
-  </section>
-
-</div>
-
 <aside class="sidebar">
   
     <section>
@@ -291,7 +211,7 @@ var jiathis_config={
 <section>
   <h1>GitHub Repos</h1>
   <ul id="gh_repos">
-    <li class="loading">Status updating...</li>
+    <li class="loading">Status updating&#8230;</li>
   </ul>
   
   <a href="https://github.com/inferjay">@inferjay</a> on GitHub
@@ -333,7 +253,6 @@ var jiathis_config={
   
 </aside>
 
-
     </div>
   </div>
   <footer role="contentinfo"><p>
@@ -348,10 +267,7 @@ var jiathis_config={
       var disqus_shortname = 'inferjay';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/';
-        var disqus_url = 'http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

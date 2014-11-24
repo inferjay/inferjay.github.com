@@ -9,8 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="Android Tools ADT Bundle
-ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，只需安装好Jdk即可开始开发，推荐初学者下载ADT Bundle，不用再折腾开发环境。 版本号 Windows Max OSX Linux ADT-23 &hellip;">
+  <meta name="description" content="安装Homebrew Homebrew是Mac OSX下一个包依赖管理工具，用它来安装软件非常的方便只需要brew install 软件名这一条命令就可以将你所需要的软件安装好，不用再操心安装过程中软件的依赖问题，这些问题Homebrew统统帮你搞定，Homebrew的官网：http://brew &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +79,77 @@ ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/">Mac OSX 10.9.4下使用Homebrew安装MongoDB</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-18T00:09:28+08:00" pubdate data-updated="true">Jul 18<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="homebrew">安装Homebrew</h2>
+
+<blockquote>
+  <p>Homebrew是Mac OSX下一个包依赖管理工具，用它来安装软件非常的方便只需要<code>brew install 软件名</code>这一条命令就可以将你所需要的软件安装好，不用再操心安装过程中软件的依赖问题，这些问题Homebrew统统帮你搞定，Homebrew的官网：<a href="http://brew.sh/">http://brew.sh/</a>  在官网上对Homebrew的安装和用法有详细的描述这里就不多扯了。如果你还没有安装，还等什么赶紧动手安装吧！:]</p>
+</blockquote>
+
+<p>Homebrew安装方法也很简单：打开终端，然后输入命令</p>
+
+<pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+</code></pre>
+
+<p>对，就是这么简单一条命令就可以将神器Homebrew安装好.</p>
+
+<h2 id="mongodb">安装MongoDB</h2>
+
+<blockquote>
+  <p>MongoDB是一个基于分布式文件存储的数据库。由C++语言编写。旨在为WEB应用提供可扩展的高性能数据存储解决方案。
+MongoDB是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。他支持的数据结构非常松散，是类似json的bson格式，因此可以存储比较复杂的数据类型。Mongo最大的特点是他支持的查询语言非常强大，其语法有点类似于面向对象的查询语言，几乎可以实现类似关系数据库单表查询的绝大部分功能，而且还支持对数据建立索引.</p>
+</blockquote>
+
+<p>进入正题开始用Homebrew安装主角MongoDB～～～</p>
+
+<p>在终端输入如下命令即可安装MongoDB</p>
+
+<pre><code>brew install mongodb
+</code></pre>
+
+<p>用Homebrew安装软件是不是很爽，耐心等待一会儿MongoDB就会安装好了……</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/07/18/use-homebrew-install-mongodb-at-the-mac-osx-10.9.4/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -742,61 +812,9 @@ sudo apt-get remove apparmor
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/24/hello-octopress/">Hello Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-24T17:20:00+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/04/24/hello-octopress/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2013/04/24/hello-octopress/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="hello-octopress">Hello Octopress!</h2>
-
-<h3 id="octopress-">Octopress 简介</h3>
-
-<ul>
-  <li>基于Jekyll的内容管理工具，可以方便的搭建站点和发布静态页面。</li>
-  <li>使用 Markdown 标记语言书写源文件， 通过 Markdown 解析器转换为 HTML 文件。</li>
-  <li>写作的时候无需关心文章排版，享受写作的乐趣。</li>
-  <li><em>Octopress</em> 与 <em>Github</em> 完美结合，无需学习过多的git命令语法。</li>
-  <li><em>Octopress</em> 以 <em>rake</em> 任务的形式实现静态站点页面的生成以及将静态站点发布到_Github pages_，操作十分简单。</li>
-  <li>像写程序一样写博客，Github会为你保存你提交的每一个改动。</li>
-</ul>
-
-<h2 id="section"></h2>
-
-<h1 id="octopress">Octopress，我来了~~~</h1>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/3/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -848,6 +866,10 @@ sudo apt-get remove apparmor
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/11/24/android-dev-weekly-issue-8/">Android开发周报 Issue#8</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/11/17/android-dev-weekly-issue-7/">Android开发周报 Issue#7</a>
       </li>
     
@@ -861,10 +883,6 @@ sudo apt-get remove apparmor
     
       <li class="post">
         <a href="/blog/2014/10/27/android-dev-weekly-issue-4/">Android开发周报 Issue#4</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/10/21/android-dev-weekly-issue-3/">Android开发周报 Issue#3</a>
       </li>
     
   </ul>
