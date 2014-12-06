@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mac下解决无法更新Android Studio的问题 - 脉脉不得语的技术博客</title>
+  <title>Android Studio 自动更新失败解决办法 - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail">
+  <link rel="canonical" href="http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Mac下解决无法更新Android Studio的问题</h1>
+      <h1 class="entry-title">Android Studio 自动更新失败解决办法</h1>
     
     
       <p class="meta">
@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
+<time datetime="2014-12-26T12:53:00+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://www.inferjay.com">Comments</a>
@@ -108,15 +108,32 @@
   </header>
 
 
-<div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
+<div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是打开VPN后还是无法更新，然后开始Google了一下找到了下面的解决办法。</p>
 
+<p><img src="/images/notes_images/android-studio-update-error.png" alt="image" title="android-studio-update-error" /></p>
+
+<h3 id="mac-osx">Mac OSX</h3>
 <p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
 
 <p><img src="/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
 
 <!--More-->
 
-<p>接着用自己趁手的编辑器打开bin目录下的idea.vmoptions文件添加如下内容：</p>
+<p>然后找到 <code>Contents/bin/</code> 目录下的 <code>.vmoptions</code> 后缀的文件</p>
+
+<p><img src="/images/notes_images/mac-studio-vmoptions.png" alt="image" title="mac-studio-vmoptions" /></p>
+
+<h3 id="linux">Linux</h3>
+<p>找到 <code>bin/</code> 目录下的 <code>studio.vmoptions</code> (32位系统) 或者 <code>studio64.vmoptions</code> (64位系统)文件</p>
+
+<p><img src="/images/notes_images/linux-studio-vmoptions.png" alt="image" title="linux-studio-vmoptions" /></p>
+
+<h3 id="windows">Windows</h3>
+<p>找到 <code>bin/</code> 目录下的 <code>studio.vmoptions</code> (32位系统) 或者 <code>studio64.exe.vmoptions</code> (64位系统)文件</p>
+
+<p><img src="/images/notes_images/windows-studio-vmoptions.png" alt="image" title="windows-studio-vmoptions" /></p>
+
+<p>接着用自己趁手的编辑器打开 <code>idea.vmoptions</code> 或者 <code>studio.vmoptions/studio64.vmoptions</code> 或者 <code>studio.exe.vmoptions/studio64.exe.vmoptions</code> 文件添加如下内容：</p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
@@ -126,7 +143,7 @@
 </span><span class="line">-Didea.patches.url=http://dl.google.com/android/studio/patches/  </span></code></pre></td></tr></table></div></figure></notextile></div>
 <p>保存后，重新打开<code>Android Studio</code>点击Check Update就会弹出更新信息提示了</p>
 
-<p><img src="/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
+<p><img src="/images/notes_images/android-studio-update-info.jpg" alt="alt text" title="android-studio-update-info" /></p>
 
 <p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
 
@@ -154,7 +171,7 @@
   
 
 
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
+<time datetime="2014-12-26T12:53:00+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2014</time>
       
 
 <span class="categories">
@@ -205,10 +222,8 @@ var jiathis_config={
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/" title="Previous Post: [译]Google　I/O 2013:Volley 图片缓存教程">&laquo; [译]Google　I/O 2013:Volley 图片缓存教程</a>
+        <a class="basic-alignment left" href="/blog/2014/12/01/android-dev-weekly-issue-9/" title="Previous Post: Android开发周报 Issue#9">&laquo; Android开发周报 Issue#9</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/" title="Next Post: Ubuntu下彻底卸载并重新安装MySQL">Ubuntu下彻底卸载并重新安装MySQL &raquo;</a>
       
     </p>
   </footer>
@@ -266,6 +281,10 @@ var jiathis_config={
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
       </li>
     
@@ -279,10 +298,6 @@ var jiathis_config={
     
       <li class="post">
         <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/05/android_dev_weekly_issue_5/">Android开发周报 Issue#5</a>
       </li>
     
   </ul>
@@ -349,8 +364,8 @@ var jiathis_config={
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/';
-        var disqus_url = 'http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/';
+        var disqus_identifier = 'http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail/';
+        var disqus_url = 'http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail/';
         var disqus_script = 'embed.js';
       
     (function () {

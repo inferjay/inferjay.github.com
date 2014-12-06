@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-12-01T12:50:07+08:00</updated>
+  <updated>2014-12-06T18:18:07+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android Studio 自动更新失败解决办法]]></title>
+    <link href="http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail/"/>
+    <updated>2014-12-26T12:53:00+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail</id>
+    <content type="html"><![CDATA[<p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是打开VPN后还是无法更新，然后开始Google了一下找到了下面的解决办法。</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/android-studio-update-error.png" alt="image" title="android-studio-update-error" /></p>
+
+<h3 id="mac-osx">Mac OSX</h3>
+<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
+
+<!--More-->
+
+<p>然后找到 <code>Contents/bin/</code> 目录下的 <code>.vmoptions</code> 后缀的文件</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/mac-studio-vmoptions.png" alt="image" title="mac-studio-vmoptions" /></p>
+
+<h3 id="linux">Linux</h3>
+<p>找到 <code>bin/</code> 目录下的 <code>studio.vmoptions</code> (32位系统) 或者 <code>studio64.vmoptions</code> (64位系统)文件</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/linux-studio-vmoptions.png" alt="image" title="linux-studio-vmoptions" /></p>
+
+<h3 id="windows">Windows</h3>
+<p>找到 <code>bin/</code> 目录下的 <code>studio.vmoptions</code> (32位系统) 或者 <code>studio64.exe.vmoptions</code> (64位系统)文件</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/windows-studio-vmoptions.png" alt="image" title="windows-studio-vmoptions" /></p>
+
+<p>接着用自己趁手的编辑器打开 <code>idea.vmoptions</code> 或者 <code>studio.vmoptions/studio64.vmoptions</code> 或者 <code>studio.exe.vmoptions/studio64.exe.vmoptions</code> 文件添加如下内容：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">-Djava.net.preferIPv4Stack=true  
+</span><span class="line">-Didea.updates.url=http://dl.google.com/android/studio/patches/updates.xml  
+</span><span class="line">-Didea.patches.url=http://dl.google.com/android/studio/patches/  </span></code></pre></td></tr></table></div></figure></notextile></div>
+<p>保存后，重新打开<code>Android Studio</code>点击Check Update就会弹出更新信息提示了</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/android-studio-update-info.jpg" alt="alt text" title="android-studio-update-info" /></p>
+
+<p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#9]]></title>
@@ -2585,38 +2634,6 @@ sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起�
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mac下解决无法更新Android Studio的问题]]></title>
-    <link href="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/"/>
-    <updated>2013-09-26T12:53:00+08:00</updated>
-    <id>http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail</id>
-    <content type="html"><![CDATA[<p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
-
-<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
-
-<p><img src="http://www.inferjay.com/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
-
-<!--More-->
-
-<p>接着用自己趁手的编辑器打开bin目录下的idea.vmoptions文件添加如下内容：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">-Djava.net.preferIPv4Stack=true  
-</span><span class="line">-Didea.updates.url=http://dl.google.com/android/studio/patches/updates.xml  
-</span><span class="line">-Didea.patches.url=http://dl.google.com/android/studio/patches/  </span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>保存后，重新打开<code>Android Studio</code>点击Check Update就会弹出更新信息提示了</p>
-
-<p><img src="http://www.inferjay.com/images/notes_images/check_update_info.png" alt="alt text" title="check_update_info" /></p>
-
-<p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   

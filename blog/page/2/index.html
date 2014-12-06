@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 SEAndroid安全机制框架分析 Android apk动态加载机制的研究 Android View系统解析(上) Android View系统解析(下) Android仿QQ5.0侧滑菜单ResideMenu源码分析 Android ViewGroup事件分发机制 ANDROID内存优化 &hellip;">
+  <meta name="description" content="今天在打包的时候碰到了 keytool 错误 java.io.IOException: incorrect AVA format 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,47 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/23/android-keytool-incorrect-ava-format-error/">Keytool 错误 java.io.IOException: Incorrect AVA Format</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-23T19:45:35+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+        
+           | <a href="/blog/2014/09/23/android-keytool-incorrect-ava-format-error/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/09/23/android-keytool-incorrect-ava-format-error/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>今天在打包的时候碰到了 <code>keytool 错误 java.io.IOException: incorrect AVA format</code> 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 <code>First and Last Name</code> 、<code>Organizational Unit</code> 、<code>Organization</code> 、 <code>City or Locality</code> 、<code>State or Province</code> 等信息中是不允许有 <code>,</code> 符号的，将这些信息中的逗号去掉后就可以了。</p>
+
+<p><img src="/images/notes_images/incorrect-AVA-format-error.png" alt="image" title="incorrect AVA format Error" /></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -475,54 +516,6 @@ sudo apt-get remove apparmor
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/09/26/update-android-studio-fail/">Mac下解决无法更新Android Studio的问题</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-09-26T12:53:00+08:00" pubdate data-updated="true">Sep 26<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/09/26/update-android-studio-fail/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2013/09/26/update-android-studio-fail/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是设置了Proxy后还是无法更新，然后开始问谷哥找到了下面的解决办法。</p>
-
-<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
-
-<p><img src="/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/09/26/update-android-studio-fail/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/">[译]Google　I/O 2013:Volley 图片缓存教程</a></h1>
     
     
@@ -886,6 +879,10 @@ sudo apt-get remove apparmor
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
       </li>
     
@@ -899,10 +896,6 @@ sudo apt-get remove apparmor
     
       <li class="post">
         <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/05/android_dev_weekly_issue_5/">Android开发周报 Issue#5</a>
       </li>
     
   </ul>
