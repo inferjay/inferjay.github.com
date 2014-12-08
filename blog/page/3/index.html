@@ -9,9 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="安装环境 * Mac OSX 10.8.3
-* Xcode 4.6.1
-* Ruby 1.8.7 第一步:安装rvm 为什么要安装rvm呢，因为rvm可以让你拥有多个版本的ruby，并且可以在多个版本之间自由切换。安装方式有两种：单用户模式和多用户模式.而单用户和多用户的区别在于是否有root权限 &hellip;">
+  <meta name="description" content="首页只显示部分正文 在文章任意位置加入 &lt;!--more--&gt; 这样首页只显示一部分正文，并在每篇文章底下加一个Read on超链接。 然后在_config.yml文件中修改excerpt_link的值Rade on为以你想要的，比如More 设置使用指定的编辑器自动打开新建的blog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -81,6 +79,64 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/10/octopress-config/">对Octopress做一些个性化配置</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-10T20:11:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
+        
+           | <a href="/blog/2013/05/10/octopress-config/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2013/05/10/octopress-config/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">首页只显示部分正文</h3>
+
+<p>在文章任意位置加入</p>
+
+<pre><code>&lt;!--more--&gt;
+</code></pre>
+
+<p>这样首页只显示一部分正文，并在每篇文章底下加一个<code>Read on</code>超链接。</p>
+
+<p>然后在<code>_config.yml</code>文件中修改<code>excerpt_link</code>的值<code>Rade on</code>为以你想要的，比如<code>More</code></p>
+
+<h3 id="blog">设置使用指定的编辑器自动打开新建的blog</h3>
+<p>每次用<code>rake　new_post</code>新建一篇blog后都要跑到<code>/source/_posts</code>找到新建的blog才能开始写blog，有木有赶脚很不爽，要是每次建完后自动用支持Markdown语法的编辑器打开那该多爽啊，google了一下还这有方法，试了式太爽了，Mark一下以免以后忘记了～～～</p>
+
+<p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/05/10/octopress-config/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -266,6 +322,10 @@
       </li>
     
       <li class="post">
+        <a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
       </li>
     
@@ -275,10 +335,6 @@
     
       <li class="post">
         <a href="/blog/2014/11/17/android-dev-weekly-issue-7/">Android开发周报 Issue#7</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
       </li>
     
   </ul>

@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-12-06T18:18:07+08:00</updated>
+  <updated>2014-12-08T11:12:51+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -56,6 +56,120 @@
 <p><img src="http://www.inferjay.com/images/notes_images/android-studio-update-info.jpg" alt="alt text" title="android-studio-update-info" /></p>
 
 <p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#10]]></title>
+    <link href="http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10/"/>
+    <updated>2014-12-08T11:10:12+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10</id>
+    <content type="html"><![CDATA[<h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">Android Apk 拆分机制</a></p>
+
+    <p>拆分机制比起使用 flavors，能让应用程序更有效地构建一些形式的多个apk。多 apk 只支持以下类型: 1.
+屏幕密度 2.ABI.使用新的拆分机制，构建同一个应用程序的hdpi版本和mdpi版本，能够共享很多的任务 （如 javac，dx，proguard）。此外，它会被认为是一个单一的variant，并且同一个测试程序将会被用来测试每​​个多APK。</p>
+  </li>
+  <li>
+    <p><a href="http://relex.me/using-manifestplaceholders/">使用manifestPlaceholders</a></p>
+
+    <p>在项目中我需要打包不同渠道的APK，需要在AndroidManifest中定义渠道名称，以便在java中调用。以前ant或gradle打包时动态改变渠道的思路是：正则AndroidManifest的特定字符然后替换.</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/xushuaic/article/details/40424379">Property Anim详解</a></p>
+
+    <p>本篇文章将对PropertyAnimation进行全面深入的探讨，本篇文章可以分为两大块，从第六部分可以作为分界点。前五部分着重讲解了PropertyAnim的动画值的计算过程，ValueAnimator与ObjectAnimator以及TimeInterpolation与TypeEvaluator之间的介绍和比较，这几点是比较重要的，从第六部分开始是通过源码的角度分析了整个动画计算以及内部的处理细节，以及引出了对JakeWharton大神的NineOldAndroids 开源库的分析，如果你觉得太多，可以分开来看，有理解不准确的地方，欢迎大家指正。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://stormzhang.com/posts.html#AndroidStudio">Android Studio系列教程</a></p>
+
+    <p>相信大家对Android Studio已经不陌生了，Android Studio是Google于2013 I/O大会针对Android开发推出的新的开发工具，目前很多开源项目都已经在采用，Google的更新速度也很快，明显能感觉到这是Android开发的未来，那么我们还有什么理由不去拥抱未来呢？虽然推出了很久，但是国内貌似普及的程度并不高，鉴于很多朋友求studio的详细教程，那么今天我就手把手教大家下载、安装、使用，Studio之路从这里开始。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
+
+    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/googlesamples">Google Samples</a></p>
+
+    <p>Google在Github上发布了大量Demo，针对不同的特性，也包含了最新的API 21 (Lollipop),学习的好资料/</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Rogero0o/MatchView">MatchView</a></p>
+
+    <p>TextView中的文字由类似火柴棍分散组合的效果。</p>
+
+    <p><img src="https://camo.githubusercontent.com/a71e9d26a7f90ea70270b3681d99785a29f83be5/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f6136393561636465677731656d79746e6b347334356732306567306d6b3439302e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Musenkishi/wally">Wally</a></p>
+
+    <p>Wally is a fast and efficient open source wallpaper application for Android.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/kyze8439690/FolderLayout">FolderLayout</a></p>
+
+    <p>A layout like a stack of files and you can choose one to open. Just imitate the UI of Tencent’s QQ手机管家.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Malinskiy/android-material-icons">android-material-icons</a></p>
+
+    <p>一个让你方便的在Android开发中使用Google发布出来的Material Design风格图标的库。	</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/quiqueqs/BabushkaText">BabushkaText</a></p>
+
+    <p>A simpler way to style your TextViews</p>
+
+    <p><img src="https://github.com/quiqueqs/BabushkaText/raw/master/images/example.png" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.chinagdg.com/thread-6053-1-1.html">Google 技术资源离线版</a></p>
+
+    <p>Google 发布了一套4张 DVD，将 Google Developers 上的在线技术文档和视频打包到离线文件中。内容很丰富，如 Android 官方文档和SDK、Google Cloud 文档和视频、Web Fundamentals 文档、I/O 大会和 Dev Bytes 视频、Google Udacity 课程视频 等等。</p>
+  </li>
+  <li>
+    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0 Release Candidate 4</a></p>
+
+    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a></p>
+  </li>
+</ol>
+
+<h3 id="section-3">设计</h3>
+
+<h4 id="section-4">文章</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=33849">中国移动应用设计趋势解读</a></p>
+
+    <p>铺天盖地的二维码、丧心病狂的小红点，还有繁花似锦的安卓ROMs…</p>
+
+    <p>——老外对中国式App设计趋势的分析  by  Dan Grover (微信产品经理) </p>
+  </li>
+</ol>
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
@@ -3294,62 +3408,6 @@ GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的�
 <h5 id="section-4">参考资料</h5>
 <p><a href="http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html">http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html</a>
 <a href="http://blog.csdn.net/zhulinu/article/details/7419068">http://blog.csdn.net/zhulinu/article/details/7419068</a></p>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[对Octopress做一些个性化配置]]></title>
-    <link href="http://www.inferjay.com/blog/2013/05/10/octopress-config/"/>
-    <updated>2013-05-10T20:11:00+08:00</updated>
-    <id>http://www.inferjay.com/blog/2013/05/10/octopress-config</id>
-    <content type="html"><![CDATA[<h3 id="section">首页只显示部分正文</h3>
-
-<p>在文章任意位置加入</p>
-
-<pre><code>&lt;!--more--&gt;
-</code></pre>
-
-<p>这样首页只显示一部分正文，并在每篇文章底下加一个<code>Read on</code>超链接。</p>
-
-<p>然后在<code>_config.yml</code>文件中修改<code>excerpt_link</code>的值<code>Rade on</code>为以你想要的，比如<code>More</code></p>
-
-<h3 id="blog">设置使用指定的编辑器自动打开新建的blog</h3>
-<p>每次用<code>rake　new_post</code>新建一篇blog后都要跑到<code>/source/_posts</code>找到新建的blog才能开始写blog，有木有赶脚很不爽，要是每次建完后自动用支持Markdown语法的编辑器打开那该多爽啊，google了一下还这有方法，试了式太爽了，Mark一下以免以后忘记了～～～</p>
-
-<p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
-
-<!--more-->
-<p>######如图所示：
-<img src="http://www.inferjay.com/images/notes_images/set_open_editer.png" alt="alt text" title="set_open_editer" /> </p>
-
-<p>然后再找到<code>new_post</code>命令，在末尾加入如下代码：</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">  if #{editor}
-</span><span class="line">    system "#{editor} #{filename}"
-</span><span class="line">  end
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>######如图所示：
-<img src="http://www.inferjay.com/images/notes_images/set_open_editer_code.png" alt="alt text" title="set_open_editer_code" /> </p>
-
-<p>这样每次用<code>rake　new_post</code>新建一篇blog的时候就会自动用指定的编辑器打开直接写blog了～～～</p>
-
-<h3 id="blog-1">设置自动打开浏览器预览生成的blog</h3>
-
-<p>打开<code>Rakefile</code>文件，找到<code>task :preview do</code>这段代码，在其中加入</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">system "sleep 2; open http://localhost:#{server_port}/"
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>######如图所示：
-<img src="http://www.inferjay.com/images/notes_images/set_auto_preview.png" alt="alt text" title="set_auto_preview" /> </p>
-
-<h4 id="section-1">未完待续～～～</h4>
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>

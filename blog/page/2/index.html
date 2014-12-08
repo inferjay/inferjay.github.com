@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="今天在打包的时候碰到了 keytool 错误 java.io.IOException: incorrect AVA format 错误，还以为是混淆规则加的有问题导致的，看日志窗口也没有任何错误日志，只好请出Google大神，Google的一下错误信息，发现是有由于在创建Keystore时填写的 &hellip;">
+  <meta name="description" content="文章 HTTP2协议中英对照版 HTTP 全称为 HyperText Transfer Protocol，中文叫做超文本传输协议。用于 Web 应用层传输，是 Web 架构的核心，它至今公布有 3 个版本：HTTP 0.9、HTTP 1.0、HTTP 1.1，作为与时俱进的我们，有必要去了解和学习 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,83 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/23/android-dev-weekly-issue-1/">Android开发周报 Issue#1</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-23T22:36:14+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
+        
+           | <a href="/blog/2014/09/23/android-dev-weekly-issue-1/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/fex-team/http2-spec/blob/master/HTTP2中英对照版(06-29).md">HTTP2协议中英对照版</a></p>
+
+    <p>HTTP 全称为 HyperText Transfer Protocol，中文叫做超文本传输协议。用于 Web 应用层传输，是 Web 架构的核心，它至今公布有 3 个版本：HTTP 0.9、HTTP 1.0、HTTP 1.1，作为与时俱进的我们，有必要去了解和学习 HTTP 2，它对我们未来 Web 性能优化工作起到很重要的作用，是一切优化的基础。现 Chrome 里也已使用 SPDY。</p>
+
+    <p>由百度FEX团队的 zhangtao 等同学们，业余花费近半年时间翻译的 HTTP 2 草案发布。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/morgan_xww/article/details/9372285#comments">Android TouchEvent事件传递机制</a></p>
+
+    <p>作者通过列举通俗易懂的例子和打印日志的方式讲解了Android TouchEvent事件传递机制。		</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/guolin_blog/article/details/9097463">Android事件分发机制完全解析，带你从源码的角度彻底理解(上)</a>	</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/loongggdroid/article/details/19118475">Android事件分发机制完全解析，带你从源码的角度彻底理解(下)</a></p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/nhachicha/SnappyDB">SnappyDB</a></p>
+
+    <p>一个Android平台的 <code>key-value</code> 数据库，在 <code>读/写</code> 操作方面可以完胜 SQLite。 下图就是它们在 <code>读/写</code> 方面的对比测试结果：</p>
+
+    <p><img src="https://camo.githubusercontent.com/0f6193a1f84aa8a77d07ac18d3566b87bc89999b/687474703a2f2f736e6170707964622e636f6d2f696d672f62656e63686d61726b5f73716c6974655f776974685f7472616e73616374696f6e2e706e67" alt="image" /></p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/09/23/android-dev-weekly-issue-1/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -767,64 +844,6 @@ sudo apt-get remove apparmor
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/05/10/octopress-config/">对Octopress做一些个性化配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-05-10T20:11:00+08:00" pubdate data-updated="true">May 10<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/05/10/octopress-config/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2013/05/10/octopress-config/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">首页只显示部分正文</h3>
-
-<p>在文章任意位置加入</p>
-
-<pre><code>&lt;!--more--&gt;
-</code></pre>
-
-<p>这样首页只显示一部分正文，并在每篇文章底下加一个<code>Read on</code>超链接。</p>
-
-<p>然后在<code>_config.yml</code>文件中修改<code>excerpt_link</code>的值<code>Rade on</code>为以你想要的，比如<code>More</code></p>
-
-<h3 id="blog">设置使用指定的编辑器自动打开新建的blog</h3>
-<p>每次用<code>rake　new_post</code>新建一篇blog后都要跑到<code>/source/_posts</code>找到新建的blog才能开始写blog，有木有赶脚很不爽，要是每次建完后自动用支持Markdown语法的编辑器打开那该多爽啊，google了一下还这有方法，试了式太爽了，Mark一下以免以后忘记了～～～</p>
-
-<p>打开<code>Rakefile</code>文件，找到<code>## -- Misc Configs -- ##</code>这段注释，然后在<code>server_port</code>下面加入<code>editor = "open"</code></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/05/10/octopress-config/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -883,6 +902,10 @@ sudo apt-get remove apparmor
       </li>
     
       <li class="post">
+        <a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
       </li>
     
@@ -892,10 +915,6 @@ sudo apt-get remove apparmor
     
       <li class="post">
         <a href="/blog/2014/11/17/android-dev-weekly-issue-7/">Android开发周报 Issue#7</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
       </li>
     
   </ul>

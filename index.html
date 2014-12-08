@@ -136,6 +136,69 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-08T11:10:12+08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/12/08/android-dev-weekly-issue-10/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">Android Apk 拆分机制</a></p>
+
+    <p>拆分机制比起使用 flavors，能让应用程序更有效地构建一些形式的多个apk。多 apk 只支持以下类型: 1.
+屏幕密度 2.ABI.使用新的拆分机制，构建同一个应用程序的hdpi版本和mdpi版本，能够共享很多的任务 （如 javac，dx，proguard）。此外，它会被认为是一个单一的variant，并且同一个测试程序将会被用来测试每​​个多APK。</p>
+  </li>
+  <li>
+    <p><a href="http://relex.me/using-manifestplaceholders/">使用manifestPlaceholders</a></p>
+
+    <p>在项目中我需要打包不同渠道的APK，需要在AndroidManifest中定义渠道名称，以便在java中调用。以前ant或gradle打包时动态改变渠道的思路是：正则AndroidManifest的特定字符然后替换.</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/xushuaic/article/details/40424379">Property Anim详解</a></p>
+
+    <p>本篇文章将对PropertyAnimation进行全面深入的探讨，本篇文章可以分为两大块，从第六部分可以作为分界点。前五部分着重讲解了PropertyAnim的动画值的计算过程，ValueAnimator与ObjectAnimator以及TimeInterpolation与TypeEvaluator之间的介绍和比较，这几点是比较重要的，从第六部分开始是通过源码的角度分析了整个动画计算以及内部的处理细节，以及引出了对JakeWharton大神的NineOldAndroids 开源库的分析，如果你觉得太多，可以分开来看，有理解不准确的地方，欢迎大家指正。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/12/08/android-dev-weekly-issue-10/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a></h1>
     
     
@@ -748,83 +811,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/09/23/android-dev-weekly-issue-1/">Android开发周报 Issue#1</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-23T22:36:14+08:00" pubdate data-updated="true">Sep 23<span>rd</span>, 2014</time>
-        
-           | <a href="/blog/2014/09/23/android-dev-weekly-issue-1/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/09/23/android-dev-weekly-issue-1/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/fex-team/http2-spec/blob/master/HTTP2中英对照版(06-29).md">HTTP2协议中英对照版</a></p>
-
-    <p>HTTP 全称为 HyperText Transfer Protocol，中文叫做超文本传输协议。用于 Web 应用层传输，是 Web 架构的核心，它至今公布有 3 个版本：HTTP 0.9、HTTP 1.0、HTTP 1.1，作为与时俱进的我们，有必要去了解和学习 HTTP 2，它对我们未来 Web 性能优化工作起到很重要的作用，是一切优化的基础。现 Chrome 里也已使用 SPDY。</p>
-
-    <p>由百度FEX团队的 zhangtao 等同学们，业余花费近半年时间翻译的 HTTP 2 草案发布。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/morgan_xww/article/details/9372285#comments">Android TouchEvent事件传递机制</a></p>
-
-    <p>作者通过列举通俗易懂的例子和打印日志的方式讲解了Android TouchEvent事件传递机制。		</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/guolin_blog/article/details/9097463">Android事件分发机制完全解析，带你从源码的角度彻底理解(上)</a>	</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/loongggdroid/article/details/19118475">Android事件分发机制完全解析，带你从源码的角度彻底理解(下)</a></p>
-  </li>
-</ol>
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/nhachicha/SnappyDB">SnappyDB</a></p>
-
-    <p>一个Android平台的 <code>key-value</code> 数据库，在 <code>读/写</code> 操作方面可以完胜 SQLite。 下图就是它们在 <code>读/写</code> 方面的对比测试结果：</p>
-
-    <p><img src="https://camo.githubusercontent.com/0f6193a1f84aa8a77d07ac18d3566b87bc89999b/687474703a2f2f736e6170707964622e636f6d2f696d672f62656e63686d61726b5f73716c6974655f776974685f7472616e73616374696f6e2e706e67" alt="image" /></p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/09/23/android-dev-weekly-issue-1/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -881,6 +867,10 @@
       </li>
     
       <li class="post">
+        <a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
       </li>
     
@@ -890,10 +880,6 @@
     
       <li class="post">
         <a href="/blog/2014/11/17/android-dev-weekly-issue-7/">Android开发周报 Issue#7</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a>
       </li>
     
   </ul>
