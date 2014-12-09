@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-12-08T11:12:51+08:00</updated>
+  <updated>2014-12-09T16:55:45+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -59,6 +59,49 @@
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Androoid Stidio 1.0正式版和SDK Tools R24下载地址]]></title>
+    <link href="http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/"/>
+    <updated>2014-12-09T16:26:58+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>提示：所有链接复制到迅雷里就可以下载<strong>无需翻墙</strong></p>
+</blockquote>
+
+<h2 id="sdk-tools">SDK Tools下载地址</h2>
+
+<h4 id="windows">Windows</h4>
+
+<p>安装版(官方推荐)：<a href="http://dl.google.com/android/installer_r24-windows.exe">http://dl.google.com/android/installer_r24-windows.exe</a></p>
+
+<p>绿色版：<a href="http://dl.google.com/android/android-sdk_r24-windows.zip">http://dl.google.com/android/android-sdk_r24-windows.zip</a></p>
+
+<h4 id="mac-os-x">Mac OS X</h4>
+<p><a href="http://dl.google.com/android/android-sdk_r24-macosx.zip">http://dl.google.com/android/android-sdk_r24-macosx.zip</a></p>
+
+<h4 id="linux">Linux</h4>
+<p><a href="http://dl.google.com/android/android-sdk_r24-linux.tgz">http://dl.google.com/android/android-sdk_r24-linux.tgz</a></p>
+
+<h2 id="android-studio">Android Studio下载地址</h2>
+
+<!-- More -->
+
+<h4 id="windows-1">Windows</h4>
+
+<p>官方推荐下载安装版(包含SDT Tools)：<a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-bundle-135.1629389.exe">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-bundle-135.1629389.exe</a></p>
+
+<p>安装版(不包含SDT Tools)：<a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.exe">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.exe</a></p>
+
+<p>绿色版： <a href="http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-windows.zip">http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-windows.zip</a></p>
+
+<h4 id="mac-os-x-1">Mac OS X</h4>
+<p><a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.dmg">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.dmg</a></p>
+
+<h4 id="linux-1">Linux</h4>
+<p><a href="http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-linux.zip">http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-linux.zip</a></p>
 ]]></content>
   </entry>
   
@@ -3213,201 +3256,6 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <p>英文原文：javapapers ，编译：ImportNew  - 曹旭东
 译文地址： http://www.importnew.com/844.html</p>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[常用开源协议收集整理]]></title>
-    <link href="http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected/"/>
-    <updated>2013-06-24T14:35:00+08:00</updated>
-    <id>http://www.inferjay.com/blog/2013/06/24/open-source-licenses-are-collected</id>
-    <content type="html"><![CDATA[<h4 id="section">声明:本文大部分内容摘自网络这里仅做搜集整理以备自用！！</h4>
-
-<p>全球都在刮着开源风，开源软件在现如今的软件行业中也越来越重要了，从国外的Google code、Github、Sourceforge以及国内的Gitcafe等开源项目脱管网站就可以看出开源软件的火热程度，开源已经成为软件的发展趋势。而开源软件使用的许可协议也是层出不穷，如果不遵守这些协议规则可能会导致经济上的损失以及法律纠纷。</p>
-
-<h4 id="section-1">目前，现有软件主要分为如下四类：</h4>
-
-<ul>
-  <li>专有软件：需要购买，然后才能使用，且只能使用该软件而不能作其他用途。如修改、分享、再发布等。</li>
-  <li>共享软件：基本上就是专有软件，但你能在实际购买前试用。</li>
-  <li>免费软件：你可以自由的分享和使用该软件，但你无法修改该软件，因为该软件的源代码不是公开的。</li>
-  <li>开源软件/自由软件：你能够自由分享该软件与其源代码、使用该软件并可随意修改该软件源码 - 这给予了你最大的自主权。</li>
-</ul>
-
-<p>对于商业软件（专有、共享、免费软件）没什么好说的，只能使用而不允许修改及修改后销售，所以其License差别不大，然而对于开源软件，由于涉及到源代码、版权及其再发布问题，衍生出了若干Licenses，通过OSI(Open Source Initiative)组织批准的开源协议已达61种。如果要发布开源软件，最好是选择这些已被批准的开源协议。</p>
-
-<h4 id="section-2">常见的开源协议有：</h4>
-<ul>
-  <li>Apache License 2.0</li>
-  <li>New and Simplified BSD licenses</li>
-  <li>GNU General Public License (GPL)</li>
-  <li>GNU Library or “Lesser” General Public License (LGPL)</li>
-  <li>MIT license</li>
-  <li>Mozilla Public License 1.1 (MPL)</li>
-  <li>Common Development and Distribution License</li>
-  <li>Common Public License 1.0</li>
-  <li>Eclipse Public License</li>
-  <li>Creative Commons</li>
-</ul>
-
-<!--more-->
-
-<h4 id="apache-license-20">Apache License 2.0</h4>
-
-<p>Apache Licence是著名的非盈利开源组织Apache采用的协议。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布(作为开源或商业软件)。需要满足的条件：</p>
-
-<ul>
-  <li>需要给代码的用户一份Apache License</li>
-  <li>如果你修改了代码，需要在被修改的文件中说明。</li>
-  <li>在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。</li>
-  <li>如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache License。你可以在Notice中增加自己的许可，但不可以表现为对Apache License构成更改。</li>
-</ul>
-
-<p>Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。</p>
-
-<p><em>要点：商业软件可以使用，也可以修改使用Apache协议的代码。</em></p>
-
-<h4 id="new-and-simplified-bsd-licenses">New and Simplified BSD licenses</h4>
-
-<p>BSD开源协议是一个给于使用者很大自由的协议。可以自由的使用，修改源代码，也可以将修改后的代码作为开源或者专有软件再发布。当你发布使用了BSD协议的代码，或则以BSD协议代码为基础做二次开发自己的产品时，需要满足三个条件：</p>
-
-<ul>
-  <li>如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议。</li>
-  <li>如果再发布的只是二进制类库/软件，则需要在类库/软件的文档和版权声明中包含原来代码中的BSD协议。</li>
-  <li>不可以用开源代码的作者/机构名字和原来产品的名字做市场推广。</li>
-</ul>
-
-<p>BSD代码鼓励代码共享，但需要尊重代码作者的著作权。BSD由于允许使用者修改和重新发布代码，也允许使用或在BSD代码上开发商业软件发布和销售，因此是对商业集成很友好的协议。而很多的公司企业在选用开源产品的时候都首选BSD协议，因为可以完全控制这些第三方的代码，在必要的时候可以修改或者二次开发。</p>
-
-<p><em>要点：商业软件可以使用，也可以修改使用BSD协议的代码。</em></p>
-
-<h4 id="gnu-general-public-license-gpl">GNU General Public License (GPL)</h4>
-
-<p>GNU通用公共许可证（简称为GPL），是由自由软件基金会发行的用于计算机软件的许可证。最初由Richard Stallman为GNU计划而撰写。目前大多数的GNU程序和超过半数的自由软件使用此许可证。此许可证最新版本为“版本2”，1991年发布。GNU 宽松通用公共许可证（简称LGPL）是由GPL衍生出的许可证。我们很熟悉的Linux就是采用了GPL。</p>
-
-<p>GPL协议和BSD、Apache License等鼓励代码重用的许可很不一样。
-GPL 的出发点是代码的开源/免费使用和引用/修改/衍生代码的开源/免费使用，但不允许修改后和衍生的代码做为闭源的商业软件发布和销售。</p>
-
-<p>GPL协议的主要内容是只要在一个软件中使用GPL协议的产品，则该软件产品必须也采用GPL协议，既必须也是开源和免费。GPL协议的产品作为一个单独的产品使用没有任何问题，还可以享受免费的优势。</p>
-
-<p>当一个自由软件使用GPL声明时，该软件的使用者有权重新发布、修改该软件，并得到该软件的源代码；但只要使用者在其程序中使用了该自由软件，或者是使用修改后的软件，那么使用者的程序也必须公布其源代码，同时允许别人发布、修改。也就是说，使用GPL声明下的的自由软件开发出来的新软件也一定是自由软件。</p>
-
-<p>由于GPL严格要求使用了GPL类库的软件产品必须使用GPL协议，所以商业软件就不适合采用使用GPL协议的开源代码。</p>
-
-<p><em>要点：商业软件不能使用GPL协议的代码。</em></p>
-
-<h4 id="gnu-library-or-lesser-general-public-license-lgpl">GNU Library or “Lesser” General Public License (LGPL)</h4>
-
-<p>LGPL是GPL的变种，也是GNU为了得到更多的甚至是商用软件开发商的支持而提出的。与GPL的最大不同是，可以私有使用LGPL授权的自由软件，开发出来的新软件可以是私有的而不需要是自由软件。所以任何公司在使用自由软件之前应该保证在LGPL或其它GPL变种的授权下。</p>
-
-<p>LGPL是GPL的一个为主要为类库使用设计的开源协议。和GPL要求任何使用GPL类库的的软件必须采用GPL协议不同。 LGPL允许商业软件通过类库引用(link)的方式使用LGPL类库而不需要开源商业软件的代码。</p>
-
-<p>但是如果要修改LGPL协议的代码，则涉及修改部分的额外代码和衍生的代码都必须采用LGPL协议。因此LGPL不适合以LGPL协议代码为基础进行二次开发的商业软件。</p>
-
-<p><em>要点：商业软件可以使用，但不能修改LGPL协议的代码。</em></p>
-
-<h4 id="mit-license">MIT license</h4>
-
-<p>MIT是和BSD一样宽松的许可协议,作者只想保留版权,而无任何其他的限制.也就是说,你必须在你的发行版里包含原许可协议的声明,无论你是以二进制发布的还是以源代码发布的.MIT 协议可能是几大开源协议中最宽松的一个，核心条款是：
-该软件及其相关文档对所有人免费，可以任意处置，包括使用，复制，修改，合并，发表，分发，再授权，或者销售。唯一的限制是，软件中必须包含上述版 权和许可提示。</p>
-
-<p>这意味着：</p>
-
-<ul>
-  <li>你可以自由使用，复制，修改，可以用于自己的项目。</li>
-  <li>可以免费分发或用来盈利。</li>
-  <li>唯一的限制是必须包含许可声明。</li>
-  <li>MIT 协议是所有开源许可中最宽松的一个，除了必须包含许可声明外，再无任何限制。</li>
-</ul>
-
-<p><em>要点：商业软件可以使用，也可以修改MIT协议的代码，甚至可以出售MIT协议的代码。</em></p>
-
-<h4 id="mozilla-public-license-11-mpl">Mozilla Public License 1.1 (MPL)</h4>
-
-<p>MPL协议允许免费重发布、免费修改，但要求修改后的代码版权归软件的发起者。这种授权维护了商业软件的利益，，它要求基于这种软件得修改无偿贡献版权给该软件。这样，围绕该软件得所有代码得版权都集中在发起开发人得手中。但MPL是允许修改，无偿使用得。MPL软件对链接没有要求。</p>
-
-<p><em>要点：商业软件可以使用，也可以修改MPL协议的代码，但修改后的代码版权归软件的发起者。</em></p>
-
-<h4 id="common-development-and-distribution-license">Common Development and Distribution License</h4>
-
-<p>CDDL（Common Development and Distribution License，通用开发与销售许可）开源协议，是MPL（Mozilla Public License）的扩展协议，它允许公共版权使用，无专利费，并提供专利保护，可集成于商业软件中，允许自行发布许可。
-<em>要点：商业软件可以使用，也可以修改CDDL协议的代码。</em></p>
-
-<h4 id="common-public-license-10">Common Public License 1.0</h4>
-
-<p>Common许可证有一些细节性的规定值得参考:</p>
-
-<ul>
-  <li>明确了专利授权。一般的开源软件都明确源代码的版权人将自己的修改权、复制权等版权权利向公众许可，但保留署名权，而Common许可证在此基础上还明确假如源代码中含有专利权，源代码专利权人将复制、使用的专有权利向公众许可。</li>
-  <li>规定可以将源代码及修改过的源代码与其他类型的不受本许可证约束的代码结合，以新产品的形式发布，只要其中经该许可证获得的源代码及修改过的源代码能按该许可证的要求发布即可。 </li>
-  <li>细化了该许可证终止的情形，包括发生专利侵权诉讼。 </li>
-  <li>明确了一个独立承担责任的原则，就是假如按该许可证使用源代码的使用者将获得的源代码应用于商业使用，那么他就要对在商业应用中出现的由于使用该源代码程序而产生的侵权诉讼承担完全责任。这一条规定是比较特殊的，绝大多数开源软件许可证都不这么要求。</li>
-</ul>
-
-<p><em>要点：商业软件可以使用，也可以修改Common协议的代码，但要承担代码产生的侵权责任。</em></p>
-
-<h4 id="eclipse-public-license">Eclipse Public License</h4>
-
-<p>EPL是一个与CPL相类似的许可证，任何扩展自Eclipse源码的代码也必须是开源的。</p>
-
-<h4 id="creative-commons">Creative Commons</h4>
-
-<p>Creative Commons (CC) 并非严格意义上的开源许可，它主要用于设计。Creative Commons 有多种协议，每种都提供了相应授权模式，CC 协议主要包含 4 种基本形式：</p>
-
-<ul>
-  <li>
-    <p>署名权</p>
-
-    <p>必须为原始作者署名，然后才可以修改，分发，复制。</p>
-  </li>
-  <li>
-    <p>保持一致</p>
-
-    <p>作品同样可以在 CC 协议基础上修改，分发，复制。</p>
-  </li>
-  <li>
-    <p>非商业</p>
-
-    <p>作品可以被修改，分发，复制，但不能用于商业用途。但商业的定义有些模糊，比如，有的人认为非商业用途指的是不能销售，有的认为是甚至不能放在有广告的网 站，也有人认为非商业的意思是非盈利。</p>
-  </li>
-  <li>
-    <p>不能衍生新作品</p>
-
-    <p>你可以复制，分发，但不能修改，也不能以此为基础创作自己的作品。</p>
-  </li>
-</ul>
-
-<p>这些许可形式可以结合起来用，其中最严厉的组合是“署名，非商用，不能衍生新作品”，意味着，你可以分享作品，但不能改动或以此盈利，而且必须为原 作者署名。在这种许可模式下，原始作者对作品还拥有完全的控制权，而最宽松的组合是“署名”，意味着，只要为原始作者署名了，就可以自由处置。</p>
-
-<h4 id="section-3">总结：</h4>
-
-<p>目前开源软件比较常使用前5中协议，cc在互联网是也是比较流行的虽然它并非严格意义上的开源协议，并且多见于一些个人博客网站的文章授权声明。
-按照使用条件的不同，开源软件许可证可以分为三类（严苛程度递减）</p>
-
-<ul>
-  <li>
-    <p>使用该开源软件的代码再散布（redistribute）时，源码也必须以相同许可证公开。</p>
-
-    <p>代表许可类型：GPL， AGPL　　</p>
-  </li>
-  <li>
-    <p>使用该开源软件的代码并且对开源代码有所修改后再散布时，源码必须以相同许可证公开。</p>
-
-    <p>代表许可类型：LGPL， CPL，CDDL， CPL，MPL等　　</p>
-  </li>
-  <li>
-    <p>使用该开源软件的代码（包括修改）再散布（redistribute）时，没有特殊限制，只需要明记许可。</p>
-
-    <p>代表许可类型：ASL， BSD，MIT等</p>
-  </li>
-</ul>
-
-<h5 id="section-4">参考资料</h5>
-<p><a href="http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html">http://www.cnblogs.com/magic_evan/archive/2011/02/12/1952528.html</a>
-<a href="http://blog.csdn.net/zhulinu/article/details/7419068">http://blog.csdn.net/zhulinu/article/details/7419068</a></p>
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
