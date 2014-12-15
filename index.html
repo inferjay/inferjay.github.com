@@ -136,6 +136,73 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-15T13:56:36+08:00" pubdate data-updated="true">Dec 15<span>th</span>, 2014</time>
+        
+           | <a href="/blog/2014/12/15/android-dev-weekly-issue-11/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://droidyue.com/blog/2014/11/29/why-onsharedpreferencechangelistener-was-not-called/">Google为何这样设计OnSharedPreferenceChangeListener</a></p>
+
+    <p>之前使用OnSharedPreferenceChangeListener，遇到了点小问题，就是有些时候OnSharedPreferenceChangeListener没有被触发。最近花了点时间研究了一下，小做整理。本文将会介绍监听器不被触发的原因，解决方法，以及其中隐含的一些技术细节。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.isming.me/2014/12/12/import-library-to-android-studio/">导入开源库到基于Android Studio构建的项目中</a></p>
+
+    <p>前两天，谷歌发布了Android Studio 1.0的正式版，也有更多的人开始迁移到Android Studio进行开发。然而，网上很多的开源库,控件等还是以前的基于Eclipse进行开发，很多人不知道怎么导入到自己的基于Android Studio项目中来，微博上也有人私信我，让我来写写，正好今天回来的比较早，就写写吧。主要介绍一下常见的一些导包的场景。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/ct2011/p/4152323.html">Android批量打包提速 - 1分钟900个市场不是梦</a></p>
+
+    <p>使用Ant或者Gradle来给程序进行多渠道批量打包，通常都是在manifest文件中写入一个meta标签：<code>&lt;meta-data android:name="CHANNEL" android:value="xxx" /&gt;</code> meta的key值固定，通过循环改变meta中的value值来实现市场渠道的写入。Ant批量打包实现相对麻烦，以前写的时候多亏了<a href="http://www.cnblogs.com/qianxudetianxia/archive/2012/07/04/2573687.html">谦虚的天下-《App自动化之使用Ant编译项目多渠道打包》</a> 。如果没有这篇帖子，真不知道当时Ant要折腾多少回才能写好。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">上传Android或Java库到Maven central repository</a></p>
+
+    <p>主要介绍利用Sonatype将jar或aar提交到Maven的中央仓库。是不是希望将自己的jar或是aar传到maven官方库中，在The Central Repository中可以被其他人搜索使用呢，是的话，往下看吧。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/12/15/android-dev-weekly-issue-11/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a></h1>
     
     
@@ -724,78 +791,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/21/android-dev-weekly-issue-3/">Android开发周报 Issue#3</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-21T09:26:08+08:00" pubdate data-updated="true">Oct 21<span>st</span>, 2014</time>
-        
-           | <a href="/blog/2014/10/21/android-dev-weekly-issue-3/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/10/21/android-dev-weekly-issue-3/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.csdn.net/article/2014-10-05/2821953-instagram-improved-their-apps-performance">Instagram工程师教你如何改善App的性能</a></p>
-
-    <p>扁平化设计由于其简洁的外表，更少的按钮和选项使得界面干净整齐，从而减少认知障碍的产生。扁平化设计更是功能上的简化于与重组，相比于拟物化而言，扁平风格的一个优势就在于它可以更加简单直接的将信息和事物的工作方式展示出来。本文来自Instagram一名工程师的分享。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40212327">AppCompat V21：将 Materia Design 兼容到5.0之前的设备</a></p>
-
-    <p>本篇文章翻译自Chris Banes(就职于Google，工作内容 Android Developer Relations team)，android 5.0今天发布。在很多很棒的更新中，包括了新的UI组件和创建 Material Design 主题的能力。为了使你能够将新的设计中更新到旧的系统中，我们同时更新了包含 AppCompat 的support libraries。在这篇文章中，我将总体说明一下appCompat的新特性并介绍一下如何应用于你的app中。</p>
-  </li>
-  <li>
-    <p><a href="http://www.codeceo.com/article/android-activity-start.html">Android中Activity启动过程探究</a></p>
-
-    <p>文章从源码一步步分析了Android中Activity的启动过程，步骤很详细。</p>
-  </li>
-  <li>
-    <p><a href="http://www.yangzhiping.com/tech/github.html">如何高效利用GitHub</a></p>
-
-    <p>正是Github，让社会化编程成为现实。本文尝试谈谈GitHub的文化、技巧与影响。</p>
-  </li>
-  <li>
-    <p><a href="http://slides.ngot.me/emoji/index.html#0">跨终端Emoji</a></p>
-
-    <p>由孢子社区 - 庄恒飞分享了饱子社区在跨终端Emoji表情上的一些实践经验。	</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/10/21/android-dev-weekly-issue-3/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -852,6 +847,10 @@
       </li>
     
       <li class="post">
+        <a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a>
       </li>
     
@@ -861,10 +860,6 @@
     
       <li class="post">
         <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/24/android-dev-weekly-issue-8/">Android开发周报 Issue#8</a>
       </li>
     
   </ul>

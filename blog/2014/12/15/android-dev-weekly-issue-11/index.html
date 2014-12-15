@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android开发周报 Issue#11 - 脉脉不得语的技术博客</title>
+  <meta name="author" content="inferjay">
+
+  
+  <meta name="description" content="文章 Google为何这样设计OnSharedPreferenceChangeListener 之前使用OnSharedPreferenceChangeListener，遇到了点小问题，就是有些时候OnSharedPreferenceChangeListener没有被触发。最近花了点时间研究了一下 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="脉脉不得语的技术博客" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <!-- googleapis is fucked by gfw -->
+  <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52369435-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">脉脉不得语的技术博客</a></h1>
+  
+    <h2>心无所恃，随遇而安</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.inferjay.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Android开发周报 Issue#11</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-15T13:56:36+08:00" pubdate data-updated="true">Dec 15<span>th</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://droidyue.com/blog/2014/11/29/why-onsharedpreferencechangelistener-was-not-called/">Google为何这样设计OnSharedPreferenceChangeListener</a></p>
+
+    <p>之前使用OnSharedPreferenceChangeListener，遇到了点小问题，就是有些时候OnSharedPreferenceChangeListener没有被触发。最近花了点时间研究了一下，小做整理。本文将会介绍监听器不被触发的原因，解决方法，以及其中隐含的一些技术细节。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.isming.me/2014/12/12/import-library-to-android-studio/">导入开源库到基于Android Studio构建的项目中</a></p>
+
+    <p>前两天，谷歌发布了Android Studio 1.0的正式版，也有更多的人开始迁移到Android Studio进行开发。然而，网上很多的开源库,控件等还是以前的基于Eclipse进行开发，很多人不知道怎么导入到自己的基于Android Studio项目中来，微博上也有人私信我，让我来写写，正好今天回来的比较早，就写写吧。主要介绍一下常见的一些导包的场景。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/ct2011/p/4152323.html">Android批量打包提速 - 1分钟900个市场不是梦</a></p>
+
+    <p>使用Ant或者Gradle来给程序进行多渠道批量打包，通常都是在manifest文件中写入一个meta标签：<code>&lt;meta-data android:name="CHANNEL" android:value="xxx" /&gt;</code> meta的key值固定，通过循环改变meta中的value值来实现市场渠道的写入。Ant批量打包实现相对麻烦，以前写的时候多亏了<a href="http://www.cnblogs.com/qianxudetianxia/archive/2012/07/04/2573687.html">谦虚的天下-《App自动化之使用Ant编译项目多渠道打包》</a> 。如果没有这篇帖子，真不知道当时Ant要折腾多少回才能写好。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">上传Android或Java库到Maven central repository</a></p>
+
+    <p>主要介绍利用Sonatype将jar或aar提交到Maven的中央仓库。是不是希望将自己的jar或是aar传到maven官方库中，在The Central Repository中可以被其他人搜索使用呢，是的话，往下看吧。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/android-custom-layout/">深入解析Android的自定义布局</a></p>
+
+    <p>这篇文章是前Firefox Android工程师（现在跳槽去Facebook了） Lucas Rocha所写，文中对Android中常用的四种自定义布局方案进行了很好地分析，并结合这四种Android自定义布局方案所写的示例项目讲解了它们各自的优劣以及四种方案之间的比较。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/java-faster-less-jvm-garbage/">Linkedin工程师是如何优化他们的Java代码的</a></p>
+
+    <p>最近在刷各大公司的技术博客的时候，我在Linkedin的技术博客上面发现了一篇很不错博文。这篇博文介绍了Linkedin信息流中间层Feed Mixer，它为Linkedin的Web主页，大学主页，公司主页以及客户端等多个分发渠道提供支撑（如下图所示）。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/column/details/android5.html">跟着ym学习Android5.0</a></p>
+
+    <p>跟着作者一步步学习Android 5.0开发。从创建模拟器开始，再到Material主题、Palette、AnimatedVectorDrawable、RecyclerView、CardView、Activity过渡动画、如何定义阴影等。</p>
+  </li>
+  <li>
+    <p><a href="http://qichaochen.github.io/2014/12/08/108-Android-Toolbar-DrawerLayout-01/">[Material Design]使用Toolbar + DrawerLayout快速实现高大上菜单侧滑</a></p>
+
+    <p>如果你有在关注一些遵循最新的Material Design设计规范的应用的话（如果没有，假设你有！），也许会发现有很多使用了看起来很舒服、很高大上的侧滑菜单动画效果。</p>
+  </li>
+  <li>
+    <p><a href="http://www.dgtle.com/article-5885-1.html">安卓中的 Cydia — Xposed 框架插件专题</a></p>
+
+    <p>大名鼎鼎的 Xposed，相信不少经常泡在各类安卓论坛的安卓粉们都听说过。在安卓进入 4.0 的时代后，不少“大神”也都会在自己做的 Rom 中添加这个 Xposed 软件。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/chrisbatt/AndroidFastImageProcessing">AndroidFastImageProcessing</a></p>
+
+    <p>A framework for speeding up image processing on android devices by taking advantage of shaders on the GPU.	</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/stephanenicolas/loglifecycle">loglifecycle</a></p>
+
+    <p>Logs all lifecycle methods of annotated Activities, Fragments, Services, Views, etc.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Narfss/ParallaxEverywhere">ParallaxEverywhere</a></p>
+
+    <p>Parallax everywhere is a library with alternative android widgets with parallax effects.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/adnan-SM/TimelyTextView">TimelyTextView</a></p>
+
+    <p>Animated TextView like Timely app.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Manabu-GT/ExpandableTextView">ExpandableTextView</a></p>
+
+    <p>ExpandableTextView是一个可以使开发人员能够轻松地创建可扩展/折叠的TextView效果，就像Google Play里用于显示App描述的TextView一样.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/googlesamples">Google Samples</a></p>
+
+    <p>Google在Github上发布了大量Demo，针对不同的特性，也包含了最新的API 21 (Lollipop).</p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0正式版发布啦</a></p>
+
+    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a>	 	 </p>
+  </li>
+  <li>
+    <p><a href="https://github.com/airk000/gologcat">gologcat</a></p>
+
+    <p>一个由golang编写，可以在终端中彩色输出logcat的实用工具，支持自定义颜色。</p>
+  </li>
+  <li>
+    <p><a href="http://inloop.github.io/shadow4android/">Android 9-patch shadow generator</a></p>
+
+    <p>Android点9图片阴影生成器。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://v.youku.com/v_show/id_XODQ1MjI2MDQ0.html?f=23088492">精通Android触摸系统(中英字幕)</a></p>
+
+    <p><a href="http://www.weibo.com/oceancx?from=feed&amp;loc=nickname">@Ocean-藏心</a>同学历经3周的翻译,将1小时18分钟的视频,终于完成了. 简介:<a href="http://t.cn/RzxZs6E">的姊妹篇</a>，详细讲解了Android自定义事件处理的方方面面。配合<a href="http://blog.csdn.net/guolin_blog/">guolin</a> 大神CSDN的博客和上一个视频，让你对开发Android 自定义控件游刃有余。此外还有<a href="http://">@Trinea</a>大神的<a href="http://www.trinea.cn/android/touch-event-delivery-mechanism/">Android Touch事件传递机制</a>简略解读。</p>
+
+    <p>视频中用到的PPT(PDF版)下载地址：<a href="http://wugengxin.cn/download/pdf/android/PRE_andevcon_mastering-the-android-touch-system.pdf">http://wugengxin.cn/download/pdf/android/PRE_andevcon_mastering-the-android-touch-system.pdf</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.jikexueyuan.com/course/396.html">Android Studio 1.0 (稳定版)的使用</a></p>
+
+    <p>经过 2 年时间的研发，Google 终于在近日正式发布了面向 Android 开发者的集成开发环境 Android Studio 1.0（稳定版）。Android Studio 是 Google 开发的一款面向 Android 开发者的 IDE，支持 Windows、Mac、Linux 等操作系统，基于流行的 Java 语言集成开发环境 IntelliJ 搭建而成。该 IDE 在 2013 年 5 月的 Google I/O 开发者大会上首次露面，此间推出了若干个测试版，12 月 8 日发布的版本是 Android Studio 的首个稳定版。Google 称，相对于其他开发工具，Android Studio 更快、更具生产力，Android Studio 1.0 推出后，Google 将逐步放弃对原来主要的 Android 开发工具 Eclipse ADT 的支持。</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h4 id="section-5">文章</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.jianshu.com/p/a3b2422b5465?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weibo">关于Material Design，做到这四点便足以让用户惊喜</a></p>
+
+    <p>Material Design 主张将现实世界中的交互体验，应用到界面设计中来，以求用户的经验能够迁移，并更快习惯新系统。Teambition 已经根据 Material Design 重新设计了旗下所有的 Android 客户端产品。在实践过程中，设计和产品团队总结了一些值得分析的要点，与大家分享。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cocoachina.com/special/design/">给程序员的设计学习指南</a></p>
+
+    <p>这是给 移动开发者 准备的设计学习指南。在这里你将接触到三大平台的设计规范、基础设计理论，以及设计实践，还有一些学习设计的资源。程序员为什么需要学习设计？理解设计能让程序员更上一层楼，能让TA与设计师的交流协作更高效愉快，甚至拥有独立开发面向大众的APP的能力。 <a href="http://www.cocoachina.com/programmer/20141113/10214.html">《程序员需要学习设计的5大理由》</a>。</p>
+  </li>
+  <li>
+    <p><a href="http://zhuanlan.zhihu.com/zhezhexiong/19565895">[无线手册-4] dp、sp、px傻傻分不清楚[完整]</a></p>
+
+    <p>做移动设计的同学，不管是原生app或者web app，应该对字体字号都是很头痛的问题。根本原因是，我们用唯一分辨率的电脑，设计各个不同尺寸大小分辨率的设备，那简直要疯掉了。 <a href="http://zhuanlan.zhihu.com/zhezhexiong/1956455">[无线手册-2]不得不说的icon-font</a> 	<a href="http://zhuanlan.zhihu.com/zhezhexiong/1956）4893">[无线手册-3] 移动App上的动画们</a></p>
+  </li>
+</ol>
+
+<h4 id="section-6">资源</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.androidicons.com/">250 free icons in 5 sizes and 14 colors</a></p>
+
+    <p>包含5种尺寸和14种颜色的250个免费icons。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-15T13:56:36+08:00" pubdate data-updated="true">Dec 15<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/androiddevweekly/'>AndroidDevWeekly</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+
+     
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_googleplus">Google+</a>
+<a class="jiathis_button_fb">Facebook</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+
+<a href="http://www.jiathis.com/share?uid=1983796" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	ralateuid:{
+		"tsina":"234959219"
+	},
+	shortUrl:true,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1983796" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  
+   
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/" title="Previous Post: Androoid Stidio 1.0正式版和SDK Tools r24下载地址">&laquo; Androoid Stidio 1.0正式版和SDK Tools r24下载地址</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/12/26/update-android-studio-fail/" title="Next Post: Android Studio 自动更新失败解决办法">Android Studio 自动更新失败解决办法 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am a Android Developer</p>
+</section>
+<section class="googleplus">
+
+  	
+  		<h1>
+        <a href="http://github.com/inferjay">
+            <img src="/images/GitHub-Mark-120px-plus.png" width="48" height="48">
+        </a>
+        <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+            <img src="/images/gprofile_button-48.png" width="48" height="48">
+        </a>
+    		<a href="https://twitter.com/inferjay">
+      		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
+    		</a>
+    		<a href="http://weibo.com/234959219">
+      			<img src="/images/weibo_64x64.png" width="48" height="48">
+    		</a>
+  		</h1>
+    
+    </br>
+    
+      <h1>
+        <a href="https://dribbble.com/inferjay/likes">
+          <img src="/images/dribbble-ball.png" width="48" height="48">
+        </a>
+        <a href="http://instagram.com/inferjay">
+            <img src="/images/instagram_logo.png" width="48" height="48">
+        </a>
+      </h1>
+    
+
+    <section>
+        <h1></h1>
+    </section>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/inferjay">@inferjay</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'inferjay',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - inferjay -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'inferjay';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11/';
+        var disqus_url = 'http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
