@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-12-15T14:02:16+08:00</updated>
+  <updated>2014-12-22T10:00:39+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -56,6 +56,144 @@
 <p><img src="http://www.inferjay.com/images/notes_images/android-studio-update-info.jpg" alt="alt text" title="android-studio-update-info" /></p>
 
 <p>如果仍然无效，将url里的修改<code>http</code>为<code>https</code>，然后重启点击Check Update试试~~~</p>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#12]]></title>
+    <link href="http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12/"/>
+    <updated>2014-12-22T09:54:44+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12</id>
+    <content type="html"><![CDATA[<h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41822747">Dalvik虚拟机垃圾收集（GC）过程分析</a></p>
+
+    <p>前面我们分析了Dalvivk虚拟机堆的创建过程，以及Java对象在堆上的分配过程。这些知识是理解Dalvik虚拟机垃圾收集过程的基础。垃圾收集是一个复杂的过程，它要将那些不再被引用的对象进行回收。一方面要求Dalvik虚拟机能够标记出哪些对象是不再被引用的。另一方面要求Dalvik虚拟机尽快地回收内存，避免应用程序长时间停顿。本文就将详细分析Dalvik虚拟机是如何解决上述问题完成垃圾收集过程的。</p>
+  </li>
+  <li>
+    <p><a href="http://www.jianshu.com/p/c85984cf99e2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=writer_share&amp;utm_source=weibo">使用Android Studio查看Android Lollipop源码</a></p>
+
+    <p>作为Google的亲儿子,Nexus手机系列所收到的待遇大家有目共睹.Android5.0出来之后,Nexus5第一时间就升级到了最新的系统.那么作为Google亲儿子的Android Studio同样备受Google的重视,我也是第一时间从Eclipse转投到了Android Studio的怀抱中,从最初的测试版本一路升级到现在的1.0正式版本(今天发布了1.0.2,果断已经升级了),关于Android Studio的好处我就不用说了…</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devnews/facebook-engineer-improve-android-app/">Facebook工程师是如何改进他们Android客户端的</a></p>
+
+    <p>作为世界上最大的社交网络，Facebook的Android客户端面临着各种各样的使用环境（地理环境、Android设备以及移动网络等环境的差异）。也正是这个原因，为了检测自家Android客户端在发展中国家的性能表现，Android的产品经理、工程师在2013年的时候去了一趟非洲。当时我看到这个新闻的时候觉得有点怪异，后来看到他们这篇博客才有点理解他们这样做的原因了。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/i-dont-need-your-permission/">你的Android应用完全不需要那么多的权限</a></p>
+
+    <p>Android系统的权限从用户的角度来看有时候的确有点让人摸不着头脑。有时候可能你只需要做一些简单的事情（对联系人的信息进行编辑），却申请了远超你应用所需的权限（比如访问所有联系人信息的权限）。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/about-android-dex-method-number-limit/">关于 Android Dex 方法限制的一些总结</a></p>
+
+    <p>在了解这个问题之前我们先要来看看Android 应用编译的过程:1. IDE中的资源打包工具 (Android Asset Packaging Tool ，即图中的aapt) 会将应用中的资源文件进行编译，这些资源文件包括 AndroidManifest.xml文件，为Activity定义的 XML 文件等等。在这个编译过程中也会产生一个 R.java 文件，这样你就可以在你的Java代码中引用这些资源了。</p>
+  </li>
+  <li>
+    <p><a href="http://bobao.360.cn/learning/detail/122.html">安卓Hacking科普系列</a></p>
+
+    <p>本系列科普文章包含：<a href="http://bobao.360.cn/learning/detail/122.html">Part 1: 应用组件攻防</a>、<a href="http://bobao.360.cn/learning/detail/127.html">Part 2: Content Provider攻防</a>、<a href="http://bobao.360.cn/learning/detail/126.html">Part 3：Broadcast Receivers攻防</a>、<a href="http://bobao.360.cn/learning/detail/133.html">Part 4:非预期的信息泄露（边信道信息泄露）</a>、<a href="http://bobao.360.cn/learning/detail/138.html">Part 5:使用JDB调试Java应用</a>、<a href="http://bobao.360.cn/learning/detail/140.html">Part 6：调试Android应用</a>、<a href="http://bobao.360.cn/learning/detail/142.html">Part 7:攻击WebView</a>、<a href="http://bobao.360.cn/learning/detail/144.html">Part 8:Root的检测和绕过</a>、<a href="http://bobao.360.cn/learning/detail/150.html">Part9: 不安全的本地存储：Shared Preferences</a>、<a href="http://bobao.360.cn/learning/detail/152.html">Part 10:不安全的本地存储</a>等，还在更新中。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/golang/mobile">Go on Android</a></p>
+
+    <p>The Go mobile repository holds packages and build tools for using Go on Android.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/KeithYokoma/AccountAutoCompleteEditText">AccountAutoCompleteEditText</a></p>
+
+    <p>Just a simple implementation for use of auto complete text view with device account suggestion.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pungrue26/SelectableRoundedImageView">SelectableRoundedImageView</a></p>
+
+    <p>Android ImageView that supports different radiuses on each corner. It also supports oval(and circle) shape and border. This would be especially useful for using inside CardView which should be rounded only top left and top right corners(Don’t forget to call setPreventCornerOverlap(false) on your cardview).</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ObjectLayout/ObjectLayout">ObjectLayout</a></p>
+
+    <p>Java classes designed with optimizable object layout in mind 
+<a href="http://objectlayout.github.com/ObjectLayout/">http://objectlayout.github.com/ObjectLayout/</a>。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/glomadrian/MvpCleanArchitecture">MvpCleanArchitecture</a></p>
+
+    <p>A sample project using Clean architecture and MVP in Android。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/paveldudka/ViewStateSaveDemo">ViewStateSaveDemo</a></p>
+
+    <p>Simple Demo of how do you save View’s state in Android。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/jmolsmobile/LandscapeVideoCamera">LandscapeVideoCamera</a></p>
+
+    <p>Powerful custom Android Camera with granular control over the video quality and filesize, restricting recordings to landscape only.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/andkulikov/transitions-everywhere">transitions-everywhere</a></p>
+
+    <p>Backport of Transitions API from Android KitKat and Lollipop. Compatible with Android 2.2+。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/krschultz/android-proguard-snippets">android-proguard-snippets</a></p>
+
+    <p>Example Proguard configurations for common Android libraries。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0.2</a></p>
+
+    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a>	 	 </p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://v.youku.com/v_show/id_XODUxODEzMDQ4.html?f=23217955">Android DevBytes</a></p>
+
+    <p>墙内DevBytes视频更新啦！包括最新的《Android Vector Graphics》（难得有个华裔面孔！）、《Introducing Route 85》（Google面向iOS开发即将推出一系列视频）以及Auto和Wear（有车有表！）</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h4 id="section-5">工具</h4>
+
+<ol>
+  <li>
+    <p><a href="http://www.materialpalette.com">Material Design Color Palette Generator - Material Palette</a></p>
+
+    <p>一个可以快速搭配Material Design主题颜色的并且提供下载的在线网站.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/t32k/material-design-color-palette-sketch-plugin">material-design-color-palette-sketch-plugin</a></p>
+
+    <p>Sketch app plugin for displaying Google material design color palette.</p>
+  </li>
+</ol>
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
@@ -3107,181 +3245,6 @@ NetworkImageView’s的setUrl(String string , Listener listener, ErrorListener e
 
 <hr />
 <p>版权声明：原创译文欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[转]Android开发规范]]></title>
-    <link href="http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard/"/>
-    <updated>2013-07-18T22:18:00+08:00</updated>
-    <id>http://www.inferjay.com/blog/2013/07/18/the-android-developer-standard</id>
-    <content type="html"><![CDATA[<h3 id="android">一、Android编码规范</h3>
-
-<p>1.java代码中不出现中文，最多注释中可以出现中文</p>
-
-<p>2.局部变量命名、静态成员变量命名</p>
-
-<pre><code>只能包含字母，单词首字母出第一个外，都为大写，其他字母都为小写
-</code></pre>
-
-<p>3.常量命名</p>
-
-<pre><code>只能包含字母和_，字母全部大写，单词之间用_隔开
-</code></pre>
-
-<p>4.layout中的id命名</p>
-
-<pre><code>命名模式为：view缩写_模块名称_view的逻辑名称
-</code></pre>
-
-<p>view的缩写详情如下:</p>
-
-<ul>
-  <li>LayoutView：lv</li>
-  <li>RelativeView:rv</li>
-  <li>TextView:tv</li>
-  <li>ImageView:iv</li>
-  <li>ImageButton:im</li>
-  <li>Button:btn</li>
-  <li>……</li>
-</ul>
-
-<!--more-->
-
-<p>5.activity中的view变量命名</p>
-
-<pre><code>命名模式为：逻辑名称+view缩写
-</code></pre>
-
-<h6 id="section">建议:</h6>
-<p>如果layout文件很复杂，建议将layout分成多个模块，每个模块定义一个moduleViewHolder，其成员变量包含所属view</p>
-
-<p>6.strings.xml中的id命名</p>
-
-<pre><code>命名模式：activity名称_功能模块名称_逻辑名称/activity名称_逻辑名称/common_逻辑名称
-</code></pre>
-
-<p>strings.xml中，使用activity名称注释，将文件内容区分开来</p>
-
-<p>7.drawable中的图片命名</p>
-
-<pre><code>命名模式：activity名称_逻辑名称/common_逻辑名称
-</code></pre>
-
-<p>8.styles.xml</p>
-
-<p>将layout中不断重现的style提炼出通用的style通用组件，放到styles.xml中；</p>
-
-<p>9.使用layer-list和selector</p>
-
-<p>10.图片尽量分拆成多个可重用的图片</p>
-
-<p>11.服务端可以实现的，就不要放在客户端</p>
-
-<p>12.引用第三方库要慎重，避免应用大容量的第三方库，导致客户端包非常大</p>
-
-<p>13.处理应用全局异常和错误，将错误以邮件的形式发送给服务端</p>
-
-<p>14.图片的.9处理</p>
-
-<p>15.使用静态变量方式实现界面间共享要慎重</p>
-
-<p>16.Log(系统名称 模块名称 接口名称，详细描述)</p>
-
-<p>17.单元测试（逻辑测试、界面测试）</p>
-
-<p>18.不要重用父类的handler，对应一个类的handler也不应该让其子类用到，否则会导致message.what冲突</p>
-
-<p>19.activity中在一个View.OnClickListener中处理所有的逻辑</p>
-
-<p>19.strings.xml中使用%1$s实现字符串的通配</p>
-
-<p>21.如果多个Activity中包含共同的UI处理，那么可以提炼一个CommonActivity，把通用部分叫由它来处理，其他activity只要继承它即可</p>
-
-<p>22.使用button+activitgroup实现tab效果时，使用Button.setSelected(true)，确保按钮处于选择状态，并使activitygroup的当前activity与该button对应</p>
-
-<p>23.如果所开发的为通用组件，为避免冲突，将drawable/layout/menu/values目录下的文件名增加前缀</p>
-
-<p>24.数据一定要效验</p>
-
-<pre><code>例如:字符型转数字型，如果转换失败一定要有缺省值；服务端响应数据是否有效判断；
-</code></pre>
-
-<h3 id="android-1">二、Android性能优化</h3>
-
-<p>1.http用gzip压缩，设置连接超时时间和响应超时时间</p>
-
-<p>http请求按照业务需求，分为是否可以缓存和不可缓存，那么在无网络的环境中，仍然通过缓存的httpresponse浏览部分数据，实现离线阅读。</p>
-
-<p>2.listview 性能优化</p>
-
-<ul>
-  <li>
-    <p>复用convertView</p>
-
-    <p>在getItemView中，判断convertView是否为空，如果不为空，可复用。如果couvertview中的view需要添加listerner，代码一定要在if(convertView==null){}之外。</p>
-  </li>
-  <li>
-    <p>异步加载图片</p>
-
-    <p>item中如果包含有webimage，那么最好异步加载</p>
-  </li>
-  <li>
-    <p>快速滑动时不显示图片</p>
-
-    <p>当快速滑动列表时（SCROLL_STATE_FLING），item中的图片或获取需要消耗资源的view，可以不显示出来；而处于其他两种状态（SCROLL_STATE_IDLE 和SCROLL_STATE_TOUCH_SCROLL），则将那些view显示出来</p>
-  </li>
-</ul>
-
-<p>3.使用线程池，分为核心线程池和普通线程池，下载图片等耗时任务放置在普通线程池，避免耗时任务阻塞线程池后，导致所有异步任务都必须等待</p>
-
-<p>4.异步任务，分为核心任务和普通任务，只有核心任务中出现的系统级错误才会报错，异步任务的ui操作需要判断原activity是否处于激活状态</p>
-
-<p>5.尽量避免static成员变量引用资源耗费过多的实例,比如Context</p>
-
-<p>6.使用WeakReference代替强引用，弱引用可以让您保持对对象的引用，同时允许GC在必要时释放对象，回收内存。对于那些创建便宜但耗费大量内存的对象，即希望保持该对象，又要在应用程序需要时使用，同时希望GC必要时回收时，可以考虑使用弱引用。</p>
-
-<p>7.超级大胖子Bitmap</p>
-
-<ul>
-  <li>及时的销毁(Activity的onDestroy时，将bitmap回收)</li>
-  <li>设置一定的采样率</li>
-  <li>巧妙的运用软引用</li>
-  <li>drawable对应resid的资源，bitmap对应其他资源8.保证Cursor 占用的内存被及时的释放掉，而不是等待GC来处理。并且 Android明显是倾向于编程者手动的将Cursor close掉</li>
-</ul>
-
-<p>9.线程也是造成内存泄露的一个重要的源头。线程产生内存泄露的主要原因在于线程生命周期的不可控</p>
-
-<p>10.如果ImageView的图片是来自网络，进行异步加载</p>
-
-<p>11.应用开发中自定义View的时候，交互部分，千万不要写成线程不断刷新界面显示，而是根据TouchListener事件主动触发界面的更新</p>
-
-<h3 id="androidui">三、AndroidUI优化</h3>
-
-<p>1.layout组件化，尽量使用merge及include复用</p>
-
-<p>2.使用styles，复用样式定义</p>
-
-<p>3.软键盘的弹出控制，不要让其覆盖输入框</p>
-
-<p>4.数字、字母和汉字混排占位问题：将数字和字母全角化。由于现在大多数情况下我们的输入都是半角，所以 字母和数字的占位无法确定，但是一旦全角化之后，数字、字母的占位就和一个汉字的占位相同了，这样就可以避免由于占位导致的排版问题。</p>
-
-<p>5.英文文档排版：textview自动换行时要保持单词的完整性，解决方案是计算字符串长度，然后手动设定每一行显示多少个字母并加上‘n‘</p>
-
-<p>6.复杂布局使用RelativeLayout</p>
-
-<p>7.自适应屏幕，使用dp替代pix</p>
-
-<p>8.使用android:layout_weight或者TableLayout制作等分布局</p>
-
-<p>9.使用animation-list制作动画效果</p>
-
-<h6 id="zhoujiyu0929">原文作者： zhoujiyu0929</h6>
-
-<h6 id="httpmyeoecnyyz168archive5551html">原文地址： http://my.eoe.cn/yyz168/archive/5551.html</h6>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   

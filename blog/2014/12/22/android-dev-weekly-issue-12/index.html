@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Android开发周报 Issue#5 - 脉脉不得语的技术博客</title>
+  <title>Android开发周报 Issue#12 - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 进入Material Design时代 Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design， &hellip;">
+  <meta name="description" content="文章 Dalvik虚拟机垃圾收集（GC）过程分析 前面我们分析了Dalvivk虚拟机堆的创建过程，以及Java对象在堆上的分配过程。这些知识是理解Dalvik虚拟机垃圾收集过程的基础。垃圾收集是一个复杂的过程，它要将那些不再被引用的对象进行回收。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5">
+  <link rel="canonical" href="http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">Android开发周报 Issue#5</h1>
+      <h1 class="entry-title">Android开发周报 Issue#12</h1>
     
     
       <p class="meta">
@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2014-11-05T17:45:47+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
+<time datetime="2014-12-22T09:54:44+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://www.inferjay.com">Comments</a>
@@ -112,110 +112,127 @@
 
 <ol>
   <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40627389">进入Material Design时代</a></p>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41822747">Dalvik虚拟机垃圾收集（GC）过程分析</a></p>
 
-    <p>Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design，连续发了3篇文章，来帮助开发者如何在自己的App 中实现Material Design。并表示：expect Winter 2014 to be a big quarter for design on Android.</p>
+    <p>前面我们分析了Dalvivk虚拟机堆的创建过程，以及Java对象在堆上的分配过程。这些知识是理解Dalvik虚拟机垃圾收集过程的基础。垃圾收集是一个复杂的过程，它要将那些不再被引用的对象进行回收。一方面要求Dalvik虚拟机能够标记出哪些对象是不再被引用的。另一方面要求Dalvik虚拟机尽快地回收内存，避免应用程序长时间停顿。本文就将详细分析Dalvik虚拟机是如何解决上述问题完成垃圾收集过程的。</p>
   </li>
   <li>
-    <p><a href="http://www.liaohuqiu.net/cn/posts/how-does-android-caculate-the-size-of-child-view/">Android中View大小的确定过程</a></p>
+    <p><a href="http://www.jianshu.com/p/c85984cf99e2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=writer_share&amp;utm_source=weibo">使用Android Studio查看Android Lollipop源码</a></p>
 
-    <p>子View有一个期望的尺寸大小，父容器有尺寸大小约束，这两方面的约束协调，用来计算View的大小状态。根据父容器的尺寸状态，以及子View的LayoutParams，可以确定子View的大小和状态：MeasureSpec，并要求子View确定自身大小。调用子View的measure()方法，子View的onMeasure()方法也会被执行。子View在onMeasure()方法中，根据父容器给出的尺寸大小和约束，根据自身情况，确定最终的大小。父容器根据子View的确定的大小，最终确定自身大小。</p>
+    <p>作为Google的亲儿子,Nexus手机系列所收到的待遇大家有目共睹.Android5.0出来之后,Nexus5第一时间就升级到了最新的系统.那么作为Google亲儿子的Android Studio同样备受Google的重视,我也是第一时间从Eclipse转投到了Android Studio的怀抱中,从最初的测试版本一路升级到现在的1.0正式版本(今天发布了1.0.2,果断已经升级了),关于Android Studio的好处我就不用说了…</p>
   </li>
   <li>
-    <p><a href="http://www.ticmy.com/?p=329">ScheduledThreadPoolExecutor实现原理</a></p>
+    <p><a href="http://greenrobot.me/devnews/facebook-engineer-improve-android-app/">Facebook工程师是如何改进他们Android客户端的</a></p>
 
-    <p>自jdk1.5开始，Java开始提供ScheduledThreadPoolExecutor类来支持周期性任务的调度，在这之前，这些工作需要依靠Timer/TimerTask或者其它第三方工具来完成。但Timer有着不少缺陷，如Timer是单线程模式，调度多个周期性任务时，如果某个任务耗时较久就会影响其它任务的调度；如果某个任务出现异常而没有被catch则可能导致唯一的线程死掉而所有任务都不会再被调度。ScheduledThreadPoolExecutor解决了很多Timer存在的缺陷。</p>
+    <p>作为世界上最大的社交网络，Facebook的Android客户端面临着各种各样的使用环境（地理环境、Android设备以及移动网络等环境的差异）。也正是这个原因，为了检测自家Android客户端在发展中国家的性能表现，Android的产品经理、工程师在2013年的时候去了一趟非洲。当时我看到这个新闻的时候觉得有点怪异，后来看到他们这篇博客才有点理解他们这样做的原因了。</p>
   </li>
   <li>
-    <p><a href="http://mogu.io/android-im-design">Android-IM架构设计</a></p>
+    <p><a href="http://greenrobot.me/devpost/i-dont-need-your-permission/">你的Android应用完全不需要那么多的权限</a></p>
 
-    <p>文章介绍了蘑菇街开源的IM项目Android客户端的整体架构和消息流程。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/vipzjyno1/article/details/23542617">Android 命名规范（提高代码可以读性）</a>	
- 刚接触android的时候，命名都是按照拼音来，所以有的时候想看懂命名的那个控件什么是什么用的，就要读一遍甚至好几遍才知道，这样的话，在代码的审查和修改过程中就会浪费不少不必要的时间。如果就是我一个人开发，一个人维护的话还好，可是如果一个项目是团队分工合作，这样让你的同事去看你的代码就更加吃力了，因为大家之间的编程方式不一样，所以，在开发过程中，命名规范统一尤为重要，最好是团队中统一好大家命名方法，这样对于日后的工作会轻松很多。</p>
+    <p>Android系统的权限从用户的角度来看有时候的确有点让人摸不着头脑。有时候可能你只需要做一些简单的事情（对联系人的信息进行编辑），却申请了远超你应用所需的权限（比如访问所有联系人信息的权限）。</p>
   </li>
 </ol>
 
 <!--more-->
 
+<ol>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/about-android-dex-method-number-limit/">关于 Android Dex 方法限制的一些总结</a></p>
+
+    <p>在了解这个问题之前我们先要来看看Android 应用编译的过程:1. IDE中的资源打包工具 (Android Asset Packaging Tool ，即图中的aapt) 会将应用中的资源文件进行编译，这些资源文件包括 AndroidManifest.xml文件，为Activity定义的 XML 文件等等。在这个编译过程中也会产生一个 R.java 文件，这样你就可以在你的Java代码中引用这些资源了。</p>
+  </li>
+  <li>
+    <p><a href="http://bobao.360.cn/learning/detail/122.html">安卓Hacking科普系列</a></p>
+
+    <p>本系列科普文章包含：<a href="http://bobao.360.cn/learning/detail/122.html">Part 1: 应用组件攻防</a>、<a href="http://bobao.360.cn/learning/detail/127.html">Part 2: Content Provider攻防</a>、<a href="http://bobao.360.cn/learning/detail/126.html">Part 3：Broadcast Receivers攻防</a>、<a href="http://bobao.360.cn/learning/detail/133.html">Part 4:非预期的信息泄露（边信道信息泄露）</a>、<a href="http://bobao.360.cn/learning/detail/138.html">Part 5:使用JDB调试Java应用</a>、<a href="http://bobao.360.cn/learning/detail/140.html">Part 6：调试Android应用</a>、<a href="http://bobao.360.cn/learning/detail/142.html">Part 7:攻击WebView</a>、<a href="http://bobao.360.cn/learning/detail/144.html">Part 8:Root的检测和绕过</a>、<a href="http://bobao.360.cn/learning/detail/150.html">Part9: 不安全的本地存储：Shared Preferences</a>、<a href="http://bobao.360.cn/learning/detail/152.html">Part 10:不安全的本地存储</a>等，还在更新中。</p>
+  </li>
+</ol>
+
 <h3 id="section-1">代码&amp;开源库</h3>
 
 <ol>
   <li>
-    <p><a href="https://github.com/liaohuqiu/android-GridViewWithHeaderAndFooter">android-GridViewWithHeaderAndFooter</a></p>
+    <p><a href="https://github.com/golang/mobile">Go on Android</a></p>
 
-    <p>在HeaderGridView的基础上做了更改，可以addHeaderView()和addFooterView()的GridView来了。用法和ListView一样.</p>
+    <p>The Go mobile repository holds packages and build tools for using Go on Android.</p>
   </li>
   <li>
-    <p><a href="https://github.com/torryharris/Skycons">Skycons</a></p>
+    <p><a href="https://github.com/KeithYokoma/AccountAutoCompleteEditText">AccountAutoCompleteEditText</a></p>
 
-    <p>一组自定义的天气图标View库。</p>
+    <p>Just a simple implementation for use of auto complete text view with device account suggestion.</p>
   </li>
   <li>
-    <p><a href="https://github.com/PhilJay/ValueBar">ValueBar</a></p>
+    <p><a href="https://github.com/pungrue26/SelectableRoundedImageView">SelectableRoundedImageView</a></p>
 
-    <p>一个漂亮的自定义View。工作原理类似于Seeker。支持API level 11+.</p>
+    <p>Android ImageView that supports different radiuses on each corner. It also supports oval(and circle) shape and border. This would be especially useful for using inside CardView which should be rounded only top left and top right corners(Don’t forget to call setPreventCornerOverlap(false) on your cardview).</p>
   </li>
   <li>
-    <p><a href="https://github.com/percolate/caffeine">caffeine</a></p>
+    <p><a href="https://github.com/ObjectLayout/ObjectLayout">ObjectLayout</a></p>
 
-    <p>一个可以加速Android开发的工具库。</p>
+    <p>Java classes designed with optimizable object layout in mind 
+<a href="http://objectlayout.github.com/ObjectLayout/">http://objectlayout.github.com/ObjectLayout/</a>。</p>
   </li>
   <li>
-    <p><a href="https://github.com/mogutt">TeamTalk</a></p>
+    <p><a href="https://github.com/glomadrian/MvpCleanArchitecture">MvpCleanArchitecture</a></p>
 
-    <p>蘑菇街开源的 IM 项目 TeamTalk，包括 Android、iOS、Win、Mac 客户端以及 Server端、管理后台、环境自动部署，大赞！支持文字、音频、图片、表情、文件传输、屏幕振动、分组等，做聊天的同学可以看看.</p>
+    <p>A sample project using Clean architecture and MVP in Android。</p>
   </li>
   <li>
-    <p><a href="https://github.com/pedant/sweet-alert-dialog">sweet-alert-dialog</a></p>
+    <p><a href="https://github.com/paveldudka/ViewStateSaveDemo">ViewStateSaveDemo</a></p>
 
-    <p>Android版的SweetAlert，清新文艺，快意灵动的甜心弹框。</p>
-
-    <p><img src="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif" alt="image" /></p>
+    <p>Simple Demo of how do you save View’s state in Android。</p>
   </li>
   <li>
-    <p><a href="https://github.com/MobiDevelop/android-split-pane-layout">android-split-pane-layout</a></p>
+    <p><a href="https://github.com/jmolsmobile/LandscapeVideoCamera">LandscapeVideoCamera</a></p>
 
-    <p>可以将2个子View之间的可用空间按照指定比例分割的自定义Layout。</p>
+    <p>Powerful custom Android Camera with granular control over the video quality and filesize, restricting recordings to landscape only.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/andkulikov/transitions-everywhere">transitions-everywhere</a></p>
+
+    <p>Backport of Transitions API from Android KitKat and Lollipop. Compatible with Android 2.2+。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/krschultz/android-proguard-snippets">android-proguard-snippets</a></p>
+
+    <p>Example Proguard configurations for common Android libraries。</p>
   </li>
 </ol>
 
-<h3 id="section-2">视频</h3>
+<h3 id="section-2">工具</h3>
 
 <ol>
   <li>
-    <p><a href="https://github.com/KevinChen9117/ikevin">Android DevBytes and Google IO视频</a></p>
+    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0.2</a></p>
 
-    <p>Youtube上的Google IO、跟Android相关的DevBytes、Android Design In Action和跟Android相关的DesignBytes视频，全部是720P的mp4. 包含英文字幕。</p>
+    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a>	 	 </p>
   </li>
 </ol>
 
-<h3 id="section-3">工具</h3>
+<h3 id="section-3">视频</h3>
 
 <ol>
   <li>
-    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.0 Released</a></p>
+    <p><a href="http://v.youku.com/v_show/id_XODUxODEzMDQ4.html?f=23217955">Android DevBytes</a></p>
 
-    <p>Android Studio 0.9.0 released to the canary channel! 
- 这次发布添加了新版本的Android Gradle plugin 0.14.0，此外，修复了一些bug等。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/matheusjardimb/ios2android">ios2android</a></p>
-
-    <p>一个可以将iOS格式的切图转换为Android格式切图的Python脚本工具。</p>
+    <p>墙内DevBytes视频更新啦！包括最新的《Android Vector Graphics》（难得有个华裔面孔！）、《Introducing Route 85》（Google面向iOS开发即将推出一系列视频）以及Auto和Wear（有车有表！）</p>
   </li>
 </ol>
 
 <h3 id="section-4">设计</h3>
 
-<h4 id="section-5">工具&amp;资源</h4>
+<h4 id="section-5">工具</h4>
 
 <ol>
   <li>
-    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
+    <p><a href="http://www.materialpalette.com">Material Design Color Palette Generator - Material Palette</a></p>
 
-    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
+    <p>一个可以快速搭配Material Design主题颜色的并且提供下载的在线网站.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/t32k/material-design-color-palette-sketch-plugin">material-design-color-palette-sketch-plugin</a></p>
+
+    <p>Sketch app plugin for displaying Google material design color palette.</p>
   </li>
 </ol>
 
@@ -243,7 +260,7 @@
   
 
 
-<time datetime="2014-11-05T17:45:47+08:00" pubdate data-updated="true">Nov 5<span>th</span>, 2014</time>
+<time datetime="2014-12-22T09:54:44+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
       
 
 <span class="categories">
@@ -294,10 +311,10 @@ var jiathis_config={
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/27/android-dev-weekly-issue-4/" title="Previous Post: Android开发周报 Issue#4">&laquo; Android开发周报 Issue#4</a>
+        <a class="basic-alignment left" href="/blog/2014/12/15/android-dev-weekly-issue-11/" title="Previous Post: Android开发周报 Issue#11">&laquo; Android开发周报 Issue#11</a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/11/10/android-dev-weekly-issue-6/" title="Next Post: Android开发周报 Issue#6">Android开发周报 Issue#6 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/12/26/update-android-studio-fail/" title="Next Post: Android Studio 自动更新失败解决办法">Android Studio 自动更新失败解决办法 &raquo;</a>
       
     </p>
   </footer>
@@ -438,8 +455,8 @@ var jiathis_config={
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/';
-        var disqus_url = 'http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/';
+        var disqus_identifier = 'http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12/';
+        var disqus_url = 'http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12/';
         var disqus_script = 'embed.js';
       
     (function () {
