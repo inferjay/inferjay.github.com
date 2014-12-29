@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android开发周报 Issue#13 - 脉脉不得语的技术博客</title>
+  <meta name="author" content="inferjay">
+
+  
+  <meta name="description" content="新闻 Oracle开始从Java运行时中移除JAR包 早在2012年8月，在Java平台首席架构师Mark Reinhold宣布模块化项目Jigsaw之后不久，JEP 162这一题为“准备模块化”的提案就指出，在Jigsaw项目中为模块化系统开发的代码不会集成到JDK 8中。 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="脉脉不得语的技术博客" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <!-- googleapis is fucked by gfw -->
+  <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52369435-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">脉脉不得语的技术博客</a></h1>
+  
+    <h2>心无所恃，随遇而安</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.inferjay.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Android开发周报 Issue#13</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-29T10:18:59+08:00" pubdate data-updated="true">Dec 29<span>th</span>, 2014</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3 id="section">新闻</h3>
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2014/12/oracle-java-jar-package">Oracle开始从Java运行时中移除JAR包</a></p>
+
+    <p>早在2012年8月，在Java平台首席架构师Mark Reinhold宣布<a href="http://openjdk.java.net/projects/jigsaw/">模块化项目Jigsaw</a>之后不久，<a href="http://openjdk.java.net/jeps/162">JEP 162</a>这一题为“准备模块化”的提案就指出，在Jigsaw项目中为模块化系统开发的代码不会集成到JDK 8中。那次延期直接将模块化支持推迟到JDK 9，最早也得到2016年。</p>
+  </li>
+  <li>
+    <p><a href="http://www.eoeandroid.com/thread-558758-1-1.html">android5.0让位，Android 6.0曝光这是神马情况？</a></p>
+
+    <p>　Android 5.0刚和我们见面没多久，下一代操作系统Android 6.0就曝光了。外媒报道称，谷歌另一个开发小组已经着手进行一款代号为“M”的系统的研发工作，而这个“M”很有可能就是Android 6.0的代号。据猜测，Android 6.0最主要的变化将会是优化车载表现，可直接安装在汽车当中，这样用户无需智能手机即可直接控制汽车。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.cnblogs.com/ct2011/p/4183553.html">将Eclipse代码导入到AndroidStudio的两种方式</a></p>
+
+    <p>说到使用AndroidStudio，除了新建的项目，我们都会面临的问题是原先Eclipse的代码该怎么导入到AndroidStudio中使用。Google为了让我们更加方便的使用AndroidStudio，提供了两种导入Eclipse代码的方式：一种兼容Eclipse，一种是全新的Android Gradle Project.</p>
+  </li>
+  <li>
+    <p><a href="http://www.importnew.com/14227.html">Java 注解指导手册 – 终极向导</a></p>
+
+    <p>在这篇文章中我们将阐述什么是Java注解，它们如何工作，怎么使用它们。我们将揭开Java注解的面纱，包括内建注解或称元注解，还将讨论Java8中与之相关的的新特性。最后，我们将实现自定义的注解，编写一个使用注解的处理程序（消费器），它通过java反射使用注解。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.jobbole.com/30940/">缓存、缓存算法和缓存框架简介</a></p>
+
+    <p>我们都听过 cache，当你问他们是什么是缓存的时候，他们会给你一个完美的答案，可是他们不知道缓存是怎么构建的，或者没有告诉你应该采用什么标准去选择缓存框架。在这篇文章，我们会去讨论缓存，缓存算法，缓存框架以及哪个缓存框架会更好。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2014/12/qq-mobile-practice">手机QQ的移动化实践之路</a></p>
+
+    <p>手机QQ的移动化实践之路】在刚刚结束的AS北京上，腾讯即时通讯平台部技术总监范瑞彬做了题为《手机QQ的移动化实践之路》的演讲，从移动环境的特点、如何做好接入、架构设计理念三个方面分享了手Q一路走来的诸多经验。演讲PPT下载：<a href="http://pan.baidu.com/s/1mgIDMtU">http://pan.baidu.com/s/1mgIDMtU</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2014/12/taobao-app-evolution">手机淘宝构架演化实践</a></p>
+
+    <p>阿里心石：手机淘宝构架演化实践】在本届ArchSummit中，来自阿里无线事业部的高级专家李敏（花名心石 @allblue_华丽地低调 ）与我们分享了《手机淘宝架构演化实践》，畅谈阿里巴巴无线从开始之初到成为日活上亿级别电商应用技术变迁和积累。演讲PPT下载：<a href="http://pan.baidu.com/s/1kTgMfMv">http://pan.baidu.com/s/1kTgMfMv</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.testerhome.com/topics/1718">Gradle 学习专辑</a></p>
+
+    <p>该学习专辑包含：gradle 初步构建（一）、Java Project Gradle Emma、Android Project Gradle jacoco、Android Gradle Espresso tests、自由的使用 gradle 构建你的应用、Groovy 初探（一）、gradle 集成修改 Android Manifest.xml 打多个包实践和Gradle 编译交互小技巧等，并且还在持续更新中。</p>
+  </li>
+  <li>
+    <p><a href="http://tech.glowing.com/cn/dai-ma-gui-fan-he-androidxiang-mu-zhong-de-xie-ke-yong-gong-ju/">代码规范和Android项目中的一些可用工具</a></p>
+
+    <p>这里主要讲一下关于代码规范的相关问题，和在Android项目中如何利用一些工具进行规范和检查。代码规范不是一个Android项目特有的问题，所以前部分内容是不单针对Android的。</p>
+  </li>
+  <li>
+    <p><a href="http://stormzhang.gitcafe.com/devtools/2014/12/18/android-studio-tutorial4/">Android Studio系列教程四–Gradle基础</a></p>
+
+    <p><a href="http://weibo.com/zhangqi8">googdev</a>结合Stduio 1.0正式版与最新的Gradle语法通过自己的开源项目 <a href="https://github.com/stormzhang/9GAG">9GAG</a> 讲解了Gradle相关的知识，后续会介绍一种我常用的快速方便的编译查看第三方开源项目的方法，如何导入Android Studio，Gradle常用基本命令，多渠道打包配置等。</p>
+  </li>
+  <li>
+    <p><a href="http://top.jobbole.com/17733/">每个程序员至少阅读两次的 10 篇技术论文</a></p>
+
+    <p>这10篇论文包括：编程语言中的基本概念、为什么函数式编程重要、计算机编程的公理基础、分布式系统中的时间、时钟和事件顺序、理解类型、数据抽象和多态、符号表达式的递归函数，及其机器计算等。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/oli107/material-range-bar">MaterialRangeBar</a></p>
+
+    <p>Android widget for selecting a range of values.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/StanKocken/SVG2Drawable">SVG2Drawable</a></p>
+
+    <p>Use a jar executable to create a Drawable class to display a SVG on Android.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/kageiit/gradle-robojava-plugin">gradle-robojava-plugin</a></p>
+
+    <p>Gradle plugin to integrate Robolectric tests into Android Studio。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/westlinkin/AndroidLocalizationer">AndroidLocalizationer</a></p>
+
+    <p>This is a Android Studio/ IntelliJ IDEA plugin to localize your Android app, translate your string resources automactically. <a href="https://plugins.jetbrains.com/plugin/7629">https://plugins.jetbrains.com/plugin/7629</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/telly/MrVector">MrVector</a></p>
+
+    <p>AKA VectorDrawableCompat: A 14+ backport of VectorDrawable.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/frogermcs/HelloMultidex">HelloMultidex</a></p>
+
+    <p>Example project for multi-dex project in Android.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/jasonpolites/gesture-imageview">gesture-imageview</a></p>
+
+    <p>Implements pinch-zoom, rotate, pan as an ImageView for Android 2.1+.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/nispok/slidingtabs">slidingtabs</a></p>
+
+    <p>Gradle port of Google’s SlidingTabLayout to display a custom ViewPager title strip.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Malinskiy/SuperRecyclerView">SuperRecyclerView</a></p>
+
+    <p>Pumped up RecyclerView.This is an attempt to make RecyclerView easier to use.</p>
+
+    <p>Features built in:</p>
+
+    <ul>
+      <li>ProgressBar while adapter hasn’t been set</li>
+      <li>EmptyView if adapter is empty</li>
+      <li>SwipeRefreshLayout (Google’s one)</li>
+      <li>Infinite scrolling, when you reach the X last item, load more of them.</li>
+      <li>Swipe To Dismiss</li>
+      <li>Sticky headers (via <a href="https://github.com/eowise/recyclerview-stickyheaders">Eowise</a>, see sample)</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://github.com/aicaprio/CurtainView">CurtainView</a></p>
+
+    <p>An android view,which can layer on any gravity for swiping.</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li>
+    <p>国内几个Android SDK镜像</p>
+
+    <p>大连东软信息学院镜像服务器的地址: <code>http://mirrors.neusoft.edu.cn</code> 端口：80</p>
+
+    <pre><code>北京化工大学镜像服务器的地址: 
+1. IPv4: `http://ubuntu.buct.edu.cn/` 端口：80
+2. IPv4: `http://ubuntu.buct.cn/`   端口：80
+3. IPv6: `http://ubuntu.buct6.edu.cn/`  端口：80
+</code></pre>
+
+    <p>上海GDG镜像服务器地址:<code>http://sdk.gdgshanghai.com </code>  端口：8000</p>
+
+    <p><strong>使用方法</strong>：</p>
+
+    <ol>
+      <li>启动 Android SDK Manager ，打开主界面，依次选择『<strong>Tools</strong>』、『<strong>Options…</strong>』，弹出『<strong>Android SDK Manager - Settings</strong>』窗口；</li>
+      <li>在『<strong>Android SDK Manager - Settings</strong>』窗口中，在『<strong>HTTP Proxy Server」和「HTTP Proxy Port</strong>』输入框内填入上面镜像服务器地址和端口，并且选中『<strong>Force https://… sources to be fetched using http://…</strong>』复选框。设置完成后单击『<strong>Close</strong>』按钮关闭『<strong>Android SDK Manager - Settings</strong>』窗口返回到主界面；</li>
+      <li>依次选择『<strong>Packages</strong>』、『<strong>Reload</strong>』。</li>
+    </ol>
+  </li>
+  <li>
+    <p><a href="https://github.com/mcxiaoke/gradle-packer-plugin">gradle-packer-plugin Android 多渠道打包工具</a></p>
+
+    <p>gradle-packer-plugin 是Android多渠道打包工具Gradle插件，可方便的于自动化构建系统集成，通过很少的配置可实现如下功能 ：</p>
+
+    <ul>
+      <li>支持自动替换AndroidManifest文件中的meta-data字段实现多渠道打包</li>
+      <li>支持自定义多渠道打包输出的存放目录和最终APK文件名</li>
+      <li>支持自动修改versionName中的build版本号，实现版本号自动增长</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://gitter.im">Gitter.im</a></p>
+
+    <p>Chat, for GitHub.</p>
+
+    <p><img src="http://ww4.sinaimg.cn/bmiddle/005GSHYzjw1eniqp77z75j31kw0w74ii.jpg" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-4">视频</h3>
+
+<ol>
+  <li><a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html">阿里技术沙龙第十六期《android插件化及动态部署—ATLAS 》伯奎</a></li>
+</ol>
+
+<h3 id="section-5">设计</h3>
+
+<h3 id="section-6">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://zhuanlan.zhihu.com/rijing/19845226">Sketch 制作扁平图标</a></p>
+
+    <p>用Sketch一步一步教你制作扁平图标，步骤很详细</p>
+  </li>
+  <li>
+    <p><a href="http://leonpd.lofter.com/post/20f397_4cb74d1">动效软件 Form 教程：概览与基础 patch 介绍</a></p>
+
+    <p>都说产品设计师的设计可以用 Axure + Sketch + Origami三者联动，完成原型、视觉和动效的一条龙工作，前一段时间也抽空学习了一下 Quartz Composer（以下简称 QC） + Origami，虽然有一定的上手难度，但是确实能够做出非常逼真的效果。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-29T10:18:59+08:00" pubdate data-updated="true">Dec 29<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/androiddevweekly/'>AndroidDevWeekly</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+
+     
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_googleplus">Google+</a>
+<a class="jiathis_button_fb">Facebook</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+
+<a href="http://www.jiathis.com/share?uid=1983796" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	ralateuid:{
+		"tsina":"234959219"
+	},
+	shortUrl:true,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1983796" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  
+   
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/12/26/update-android-studio-fail/" title="Previous Post: Android Studio 自动更新失败解决办法">&laquo; Android Studio 自动更新失败解决办法</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am a Android Developer</p>
+</section>
+<section class="googleplus">
+
+  	
+  		<h1>
+        <a href="http://github.com/inferjay">
+            <img src="/images/GitHub-Mark-120px-plus.png" width="48" height="48">
+        </a>
+        <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+            <img src="/images/gprofile_button-48.png" width="48" height="48">
+        </a>
+    		<a href="https://twitter.com/inferjay">
+      		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
+    		</a>
+    		<a href="http://weibo.com/234959219">
+      			<img src="/images/weibo_64x64.png" width="48" height="48">
+    		</a>
+  		</h1>
+    
+    </br>
+    
+      <h1>
+        <a href="https://dribbble.com/inferjay/likes">
+          <img src="/images/dribbble-ball.png" width="48" height="48">
+        </a>
+        <a href="http://instagram.com/inferjay">
+            <img src="/images/instagram_logo.png" width="48" height="48">
+        </a>
+      </h1>
+    
+
+    <section>
+        <h1></h1>
+    </section>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/12/29/android-dev-weekly-issue-13/">Android开发周报 Issue#13</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/22/android-dev-weekly-issue-12/">Android开发周报 Issue#12</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/inferjay">@inferjay</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'inferjay',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - inferjay -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'inferjay';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13/';
+        var disqus_url = 'http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
