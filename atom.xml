@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2014-12-29T11:40:34+08:00</updated>
+  <updated>2015-01-05T09:05:16+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -2468,7 +2468,7 @@ MongoDB是一个介于关系数据库和非关系数据库之间的产品，是�
 
 <p>首先在终端输入<code>cd /</code>命令返回到磁盘根目录</p>
 
-<p>然后输入<code>mddir -p /data/db</code>创建<code>/data/db</code></p>
+<p>然后输入<code>mkdir -p /data/db</code>创建<code>/data/db</code></p>
 
 <p>再次输入<code>mongos</code>命令启动MongoDB的服务，服务又退出了返回一堆信息如下：</p>
 
