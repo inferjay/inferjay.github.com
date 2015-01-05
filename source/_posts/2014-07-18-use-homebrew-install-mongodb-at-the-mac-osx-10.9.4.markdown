@@ -80,7 +80,7 @@ MongoDB是一个介于关系数据库和非关系数据库之间的产品，是�
 
 首先在终端输入`cd /`命令返回到磁盘根目录
 
-然后输入`mddir -p /data/db`创建`/data/db`
+然后输入`mkdir -p /data/db`创建`/data/db`
 
 再次输入`mongos`命令启动MongoDB的服务，服务又退出了返回一堆信息如下：
 
