@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>[转]Java 的版本历史与特性 - 脉脉不得语的技术博客</title>
+  <title>Android开发周报 Issue#14 - 脉脉不得语的技术博客</title>
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="一个比较流行的问题是，“Java下一个版本会有什么特性呢？” 。这是否是个好问题却有待商榷。在下面的内容里，我总结了至今为止的Java主要发行版中各自引入的新特性，这样做的目的是为了突出各个新特性是在哪个发行版中引入的。除了列出的特性外，每个发行版还做了很多优化和修复BUG的工作。 Java &hellip;">
+  <meta name="description" content="新闻 慎用Java日期格式化 这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。 教程 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics">
+  <link rel="canonical" href="http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
@@ -82,7 +82,7 @@
   
   <header>
     
-      <h1 class="entry-title">[转]Java 的版本历史与特性</h1>
+      <h1 class="entry-title">Android开发周报 Issue#14</h1>
     
     
       <p class="meta">
@@ -98,7 +98,7 @@
   
 
 
-<time datetime="2013-07-17T15:53:00+08:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+<time datetime="2015-01-05T23:41:36+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2015</time>
         
            | <a href="#disqus_thread"
              data-disqus-identifier="http://www.inferjay.com">Comments</a>
@@ -108,141 +108,114 @@
   </header>
 
 
-<div class="entry-content"><p>一个比较流行的问题是，“Java下一个版本会有什么特性呢？” 。这是否是个好问题却有待商榷。在下面的内容里，我总结了至今为止的Java主要发行版中各自引入的新特性，这样做的目的是为了突出各个新特性是在哪个发行版中引入的。除了列出的特性外，每个发行版还做了很多优化和修复BUG的工作。</p>
+<div class="entry-content"><h3 id="section">新闻</h3>
 
-<h3 id="java-version-se-7">Java Version SE 7</h3>
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/java-date-format-with-caution">慎用Java日期格式化</a></p>
 
-<p>开发代号是Dolphin（海豚），于2011-07-28发行。</p>
+    <p>这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。</p>
+  </li>
+</ol>
 
-<p><img src="/images/notes_images/dolphin.png" alt="alt text" title="Dolphin" /></p>
+<h3 id="section-1">教程</h3>
 
-<p>引入的新特性包括：</p>
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42072975">ART运行时垃圾收集机制简要介绍和学习计划</a></p>
 
-<ul>
-  <li>switch语句块中允许以字符串作为分支条件；</li>
-  <li>在创建泛型对象时应用类型推断；</li>
-  <li>在一个语句块中捕获多种异常；</li>
-  <li>支持动态语言；</li>
-  <li>支持try-with-resources；</li>
-  <li>引入Java NIO.2开发包；</li>
-  <li>数值类型可以用2进制字符串表示，并且可以在字符串表示中添加下划线；</li>
-  <li>钻石型语法；</li>
-  <li>null值的自动处理。</li>
-</ul>
+    <p>为了学习ART运行时的垃圾收集机制，我们先把Dalvik虚拟机的垃圾收集机制研究了一遍。这是因为两者都使用到了Mark-Sweep算法，因此它们在概念上有很多一致的地方。然而在实现上，Dalvik虚拟机的垃圾收集机制要简单一些。这样我们就可以先从简单的Dalvik虚拟机垃圾收集机制入手，然后再逐步深入地学习复杂的ART运行时垃圾收集机制。</p>
+  </li>
+  <li>
+    <p><a href="http://www.jianshu.com/p/6c2b7d261e1a">Material Design in Action — 猿题库</a></p>
+
+    <p>猿题库很早之前就发布了 Android 版本的客户端，但猿题库的联合创始人，郭常圳 先生，并不认同 Android Design （或者现在的 Material Design），而且认为应用程序的设计规范，应当由开发商来规定。然而当我试用猿题库的时候发现，这个应用对其进行 Material Design 的适配，其实并不困难。因此就有了对其进行重新设计的念头。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.jobbole.com/78995/">正确使用Android性能分析工具——TraceView</a></p>
+
+    <p>最近公司app中有些列表在滑动的时候会有卡顿现象，我就开始着手解决这些问题，解决问题之前首先要分析列表滑动的性能瓶颈在什么地方。因为之前不会正确使用TraceView这个工具，主要是看不懂TraceView界面下方数据指标的值代表什么意思…以前我用StopWatch类来分析性能，现在觉得弱爆了…不过有些地方StopWatch工具类还是很简单好用的~</p>
+  </li>
+</ol>
 
 <!--more-->
 
-<h3 id="java-version-se-6">Java Version SE 6</h3>
+<ol>
+  <li>
+    <p><a href="http://testerhome.com/topics/1756">Gradle 中的 task 依赖</a></p>
 
-<p>开发代号为Mustang（野马），于2006-12-11发行。</p>
+    <p>文章讲解了如何自定义Gradle的task，以及怎样定义task之间的依赖关系。</p>
+  </li>
+  <li>
+    <p><a href="http://www.lightskystreet.com/2014/12/15/viewpager-anim/">动画系列 - ViewPger动画</a></p>
 
-<p><img src="/images/notes_images/Mustang.png" alt="alt text" title="Mustang" /></p>
+    <p>本篇文章介绍的ViewPager动画，可以分为两类，第一类是针对于ViewPager的界面滑动动画(这个是PageTransformer的真正用途)，分析并比较了AndroidImageSlider和JazzyViewPager两种实现，第二类是对ViewPager中的内容进行动画处理，这个是这个是PageTransformer的巧妙应用，处理好了可以达到很棒的交互效果，示例是Yahoo天气的视差效果。</p>
+  </li>
+  <li>
+    <p><a href="http://www.csdn.net/article/2014-12-30/2823366-Locate-Android-NDK">如何定位Android NDK开发中遇到的错误</a></p>
 
-<p>引入的新特性包括：</p>
+    <p>Android NDK中的错误定位对很多开发者来说是一件头疼的事，本文通过一个Demo程序详细讲解了NDK的错误是如何产生的，以及如何通过命令行工具定位NDK的问题所在。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/sunzn/archive/2013/05/10/3064129.html">Android 编程下 Touch 事件的分发和消费机制</a></p>
 
-<ul>
-  <li>支持脚本语言；</li>
-  <li>引入JDBC 4.0 API；</li>
-  <li>引入Java Compiler API；</li>
-  <li>可插拔注解；</li>
-  <li>增加对Native PKI(Public Key Infrastructure)、Java GSS(Generic Security Service)、Kerberos和LDAP(Lightweight Directory Access Protocol)的支持；</li>
-  <li>继承Web Services；</li>
-  <li>做了很多优化。</li>
-</ul>
+    <p>Android 中与 Touch 事件相关的方法包括：dispatchTouchEvent(MotionEvent ev)、onInterceptTouchEvent(MotionEvent ev)、onTouchEvent(MotionEvent ev)；能够响应这些方法的控件包括：ViewGroup、View、Activity。</p>
+  </li>
+  <li>
+    <p><a href="http://weibo.com/p/1001603793195556321741">Android源码下载和编译总结</a></p>
 
-<h3 id="java-version-se-50">Java Version SE 5.0</h3>
+    <p>前几天常用的笔记本电脑挂了，要拿去维修，于是就准备用另一台备用电脑来重新下载和编译一下Android源码，以便工作研究之用。鉴于最近一直都有人问下载和编译Android源码的问题，并且我上一次写Android源码编译的文章已经是2011年的事情，于是就趁这个机会写篇文章总结一下。</p>
+  </li>
+</ol>
 
-<p>开发代号为Tiger（老虎），于2004-09-30发行。</p>
+<h3 id="section-2">代码&amp;开源库</h3>
 
-<p><img src="/images/notes_images/tiger.jpg" alt="alt text" title="Tiger" /></p>
+<ol>
+  <li>
+    <p><a href="https://github.com/wasabeef/awesome-android-ui">awesome-android-ui</a></p>
 
-<p>引入的新特性包括:</p>
+    <p>A curated list of awesome Android UI/UX libraries https://twitter.com/wasabeef_jp</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/nhachicha/android-native-dependencies">android-native-dependencies</a></p>
 
-<ul>
-  <li>引入泛型；</li>
-  <li>增强循环，可以使用迭代方式；</li>
-  <li>自动装箱与自动拆箱；</li>
-  <li>类型安全的枚举；</li>
-  <li>可变参数；</li>
-  <li>静态引入；</li>
-  <li>元数据（注解）；</li>
-  <li>引入Instrumentation。</li>
-</ul>
+    <p>Gradle plugin for resolving and downloading Android native dependencies (.so)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/xiprox/ErrorView">ErrorView</a></p>
 
-<h3 id="j2se-version-14">J2SE Version 1.4</h3>
+    <p>A custom view that displays an error image, a title, and a subtitle given an HTTP status code.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wangjiegulu/DraggableFlagView">DraggableFlagView</a></p>
 
-<p>开发代号为Merlin（隼），于2004-02-06发行（首次在JCP下发行）。</p>
+    <p>可拖拽的红点，（仿新版QQ，tab下面拖拽标记为已读的效果），拖拽一定的距离可以消失回调。</p>
+  </li>
+</ol>
 
-<p><img src="/images/notes_images/merlin.jpg" alt="alt text" title="Merlin" /></p>
+<h3 id="section-3">工具</h3>
 
-<p>引入的新特性包括:</p>
+<ol>
+  <li>
+    <p><a href="https://hyperfox.org/">Hyperfox</a></p>
 
-<ul>
-  <li>XML处理；</li>
-  <li>Java打印服务；</li>
-  <li>引入Logging API；</li>
-  <li>引入Java Web Start；</li>
-  <li>引入JDBC 3.0 API；</li>
-  <li>引入断言；</li>
-  <li>引入Preferences API；</li>
-  <li>引入链式异常处理；</li>
-  <li>支持IPv6；</li>
-  <li>支持正则表达式；</li>
-  <li>引入Image I/O slot machine API。</li>
-</ul>
+    <p>一个用Go 语言写的强悍的抓包工具！可以抓取https协议的！</p>
 
-<h3 id="j2se-version-13">J2SE Version 1.3</h3>
+    <p><img src="https://hyperfox.org/images/hyperfox-diagram.png" alt="image" /></p>
+  </li>
+</ol>
 
-<p>开发代号为Kestrel（红隼），于2000-05-08发行。</p>
+<h3 id="section-4">设计</h3>
 
-<p><img src="/images/notes_images/Kestrel.jpg" alt="alt text" title="Kestrel" /></p>
+<h3 id="section-5">教程</h3>
 
-<p>引入的新特性包括：</p>
+<ol>
+  <li>
+    <p><a href="http://www.tuyiyi.com/w/36011.html">大屏手机时代，如何重塑界面交互</a></p>
 
-<ul>
-  <li>引入Java Sound API；</li>
-  <li>jar文件索引；</li>
-  <li>对Java的各个方面都做了大量优化和增强。</li>
-</ul>
-
-<h3 id="j2se-version-12">J2SE Version 1.2</h3>
-
-<p>开发代号为Playground（操场），于1998-12-08发行。</p>
-
-<p>引入的新特性包括：</p>
-
-<ul>
-  <li>引入集合（Collection）框架；</li>
-  <li>对字符串常量做内存映射；</li>
-  <li>引入JIT（Just In Time）编译器；</li>
-  <li>引入对打包的Java文件进行数字签名；</li>
-  <li>引入控制授权访问系统资源的策略工具；</li>
-  <li>引入JFC（Java Foundation Classes），包括Swing 1.0、拖放和Java 2D类库；</li>
-  <li>引入Java 插件；</li>
-  <li>在JDBC中引入可滚动结果集、BLOB、CLOB、批量更新和用户自定义类型；</li>
-  <li>在Applet中添加声音支持。</li>
-</ul>
-
-<h3 id="jdk-version-11">JDK Version 1.1</h3>
-
-<p>于1997-02-19发行。</p>
-
-<p>引入的新特性包括：</p>
-
-<ul>
-  <li>引入JDBC（Java Database Connectivity）；</li>
-  <li>支持内部类；</li>
-  <li>引入Java Bean；</li>
-  <li>引入RMI（Remote Method Invocation）；</li>
-  <li>引入反射（仅用于内省）。</li>
-</ul>
-
-<h3 id="jdk-version-10">JDK Version 1.0</h3>
-
-<p>开发代号为Oak（橡树），于1996-01-23发行。</p>
-
-<p>英文原文：javapapers ，编译：ImportNew  - 曹旭东
-译文地址： http://www.importnew.com/844.html</p>
+    <p>这是一个大屏手机的时代。强调这件事情的意义在于，这已经成为事实。Medium上存在一份个人统计。在过去7年，新上市的手机屏幕尺寸越来越大。</p>
+  </li>
+</ol>
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
@@ -268,12 +241,12 @@
   
 
 
-<time datetime="2013-07-17T15:53:00+08:00" pubdate data-updated="true">Jul 17<span>th</span>, 2013</time>
+<time datetime="2015-01-05T23:41:36+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/java/'>Java</a>
+    <a class='category' href='/blog/categories/androiddevweekly/'>AndroidDevWeekly</a>
   
 </span>
 
@@ -319,10 +292,8 @@ var jiathis_config={
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/06/24/open-source-licenses-are-collected/" title="Previous Post: 常用开源协议收集整理">&laquo; 常用开源协议收集整理</a>
+        <a class="basic-alignment left" href="/blog/2014/12/29/android-dev-weekly-issue-13/" title="Previous Post: Android开发周报 Issue#13">&laquo; Android开发周报 Issue#13</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/07/18/the-android-developer-standard/" title="Next Post: [转]Android开发规范">[转]Android开发规范 &raquo;</a>
       
     </p>
   </footer>
@@ -463,8 +434,8 @@ var jiathis_config={
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/';
-        var disqus_url = 'http://www.inferjay.com/blog/2013/07/17/the-java-version-of-the-history-and-characteristics/';
+        var disqus_identifier = 'http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/';
+        var disqus_url = 'http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/';
         var disqus_script = 'embed.js';
       
     (function () {

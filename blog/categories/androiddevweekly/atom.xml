@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-05T09:05:16+08:00</updated>
+  <updated>2015-01-05T23:49:47+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,125 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#14]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/"/>
+    <updated>2015-01-05T23:41:36+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14</id>
+    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/java-date-format-with-caution">慎用Java日期格式化</a></p>
+
+    <p>这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42072975">ART运行时垃圾收集机制简要介绍和学习计划</a></p>
+
+    <p>为了学习ART运行时的垃圾收集机制，我们先把Dalvik虚拟机的垃圾收集机制研究了一遍。这是因为两者都使用到了Mark-Sweep算法，因此它们在概念上有很多一致的地方。然而在实现上，Dalvik虚拟机的垃圾收集机制要简单一些。这样我们就可以先从简单的Dalvik虚拟机垃圾收集机制入手，然后再逐步深入地学习复杂的ART运行时垃圾收集机制。</p>
+  </li>
+  <li>
+    <p><a href="http://www.jianshu.com/p/6c2b7d261e1a">Material Design in Action — 猿题库</a></p>
+
+    <p>猿题库很早之前就发布了 Android 版本的客户端，但猿题库的联合创始人，郭常圳 先生，并不认同 Android Design （或者现在的 Material Design），而且认为应用程序的设计规范，应当由开发商来规定。然而当我试用猿题库的时候发现，这个应用对其进行 Material Design 的适配，其实并不困难。因此就有了对其进行重新设计的念头。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.jobbole.com/78995/">正确使用Android性能分析工具——TraceView</a></p>
+
+    <p>最近公司app中有些列表在滑动的时候会有卡顿现象，我就开始着手解决这些问题，解决问题之前首先要分析列表滑动的性能瓶颈在什么地方。因为之前不会正确使用TraceView这个工具，主要是看不懂TraceView界面下方数据指标的值代表什么意思…以前我用StopWatch类来分析性能，现在觉得弱爆了…不过有些地方StopWatch工具类还是很简单好用的~</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://testerhome.com/topics/1756">Gradle 中的 task 依赖</a></p>
+
+    <p>文章讲解了如何自定义Gradle的task，以及怎样定义task之间的依赖关系。</p>
+  </li>
+  <li>
+    <p><a href="http://www.lightskystreet.com/2014/12/15/viewpager-anim/">动画系列 - ViewPger动画</a></p>
+
+    <p>本篇文章介绍的ViewPager动画，可以分为两类，第一类是针对于ViewPager的界面滑动动画(这个是PageTransformer的真正用途)，分析并比较了AndroidImageSlider和JazzyViewPager两种实现，第二类是对ViewPager中的内容进行动画处理，这个是这个是PageTransformer的巧妙应用，处理好了可以达到很棒的交互效果，示例是Yahoo天气的视差效果。</p>
+  </li>
+  <li>
+    <p><a href="http://www.csdn.net/article/2014-12-30/2823366-Locate-Android-NDK">如何定位Android NDK开发中遇到的错误</a></p>
+
+    <p>Android NDK中的错误定位对很多开发者来说是一件头疼的事，本文通过一个Demo程序详细讲解了NDK的错误是如何产生的，以及如何通过命令行工具定位NDK的问题所在。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/sunzn/archive/2013/05/10/3064129.html">Android 编程下 Touch 事件的分发和消费机制</a></p>
+
+    <p>Android 中与 Touch 事件相关的方法包括：dispatchTouchEvent(MotionEvent ev)、onInterceptTouchEvent(MotionEvent ev)、onTouchEvent(MotionEvent ev)；能够响应这些方法的控件包括：ViewGroup、View、Activity。</p>
+  </li>
+  <li>
+    <p><a href="http://weibo.com/p/1001603793195556321741">Android源码下载和编译总结</a></p>
+
+    <p>前几天常用的笔记本电脑挂了，要拿去维修，于是就准备用另一台备用电脑来重新下载和编译一下Android源码，以便工作研究之用。鉴于最近一直都有人问下载和编译Android源码的问题，并且我上一次写Android源码编译的文章已经是2011年的事情，于是就趁这个机会写篇文章总结一下。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/wasabeef/awesome-android-ui">awesome-android-ui</a></p>
+
+    <p>A curated list of awesome Android UI/UX libraries https://twitter.com/wasabeef_jp</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/nhachicha/android-native-dependencies">android-native-dependencies</a></p>
+
+    <p>Gradle plugin for resolving and downloading Android native dependencies (.so)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/xiprox/ErrorView">ErrorView</a></p>
+
+    <p>A custom view that displays an error image, a title, and a subtitle given an HTTP status code.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wangjiegulu/DraggableFlagView">DraggableFlagView</a></p>
+
+    <p>可拖拽的红点，（仿新版QQ，tab下面拖拽标记为已读的效果），拖拽一定的距离可以消失回调。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://hyperfox.org/">Hyperfox</a></p>
+
+    <p>一个用Go 语言写的强悍的抓包工具！可以抓取https协议的！</p>
+
+    <p><img src="https://hyperfox.org/images/hyperfox-diagram.png" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h3 id="section-5">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.tuyiyi.com/w/36011.html">大屏手机时代，如何重塑界面交互</a></p>
+
+    <p>这是一个大屏手机的时代。强调这件事情的意义在于，这已经成为事实。Medium上存在一份个人统计。在过去7年，新上市的手机屏幕尺寸越来越大。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#13]]></title>
@@ -638,153 +757,6 @@
     <p>铺天盖地的二维码、丧心病狂的小红点，还有繁花似锦的安卓ROMs…</p>
 
     <p>——老外对中国式App设计趋势的分析  by  Dan Grover (微信产品经理) </p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#9]]></title>
-    <link href="http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9/"/>
-    <updated>2014-12-01T12:42:08+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9</id>
-    <content type="html"><![CDATA[<h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
-
-    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
-  </li>
-  <li>
-    <p><a href="http://www.kuqin.com/shuoit/20140826/341828.html?url_type=39&amp;object_type=crawler&amp;pos=1">为什么Android的图片质量会比iPhone的差？</a></p>
-
-    <p>经常看到有人问：“安卓版微信发出去的图片怎么那么渣！比iPhone的差远了！”。不只是微信，很多应用安卓版的图片质量就是要比iPhone版逊色很多，这到底是怎么回事？</p>
-  </li>
-  <li>
-    <p><a href="http://qichaochen.github.io/2014/11/21/107-Facebook-Rebound-Demo/">[Material Design]使用Fackbook Rebound快速实现弹簧动画效果</a></p>
-
-    <p>Rebound是Facebook推出的一款Android的物理和动画库，于2013年10月在Mobile@Scale大会上正式发布，旨在解决笨重、缓慢的传统移动网络界面。Rebound不是一款通用物理库，但其弹簧模型在应用程序中引入了现实世界的物理，易于集成，创建的动画能够让人感觉到非常自然，并且可以和Material Design的设计原则呼应，可用于滚动条、切换开关、呼叫等场景下。</p>
-  </li>
-  <li>
-    <p><a href="http://stormzhang.com/devtools/2014/11/07/use-curl-debug/">使用curl来调试你的应用</a></p>
-
-    <p>我们在客户端开发过程中总免不了和后端进行api对接，有时候需要对返回的数据格式进行调试，有时候每次运行客户端来发送请求，这个未免效率太低，这里就来介绍一个好用的工具–curl。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://www.codeceo.com/article/android-taskaffinity.html">Android taskAffinity属性使用详解</a></p>
-
-    <p>Activity的归属，也就是Activity应该在哪个Task中，Activity与Task的吸附关系。我们知道，一般情况下在同一个应用中，启 动的Activity都在同一个Task中，它们在该Task中度过自己的生命周期，这些Activity是从一而终的好榜样。</p>
-  </li>
-  <li>
-    <p><a href="http://www.codeceo.com/article/android-memory-manage.html">每个Android开发者必须知道的内存管理知识</a></p>
-
-    <p>相信一步步走过来的Android从业者，每个人都会遇到OOM的情况。如何避免和防范OOM的出现，对于每一个程序员来说确实是一门必不可少的能力。今天我们就谈谈在Android平台下内存的管理之道，开始今天的主题之前，先再次回顾两个概念。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh">android-Ultra-Pull-To-Refresh</a></p>
-
-    <p>很炫的下拉刷新效果库。</p>
-
-    <p><img src="https://camo.githubusercontent.com/588a2ef2cdcfb6c71e88437df486226dd15605b3/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f73746f72652d686f7573652d737472696e672d61727261792e676966" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/AnderWeb/discreteSeekBar">discreteSeekBar</a></p>
-
-    <p><img src="https://camo.githubusercontent.com/e717e2597779d1ddc980ace6f3943f62483d8a8c/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d376e62565058785568596b2f56472d724f3634704d57492f414141414141414148734d2f614d52676c7432567a726b2f773633392d683438302f616e696d6174696f6e2e676966" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/frogermcs/InstaMaterial">InstaMaterial</a></p>
-
-    <p>Material Design风格的Instagram的客户端。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/pnikosis/materialish-progress">materialish-progress</a></p>
-
-    <p>Material Design风格的圆形进度条，最低支持到2.3的系统。</p>
-
-    <p><img src="https://github.com/pnikosis/materialish-progress/raw/master/spinningwheel.gif" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/inaka/galgo">galgo</a></p>
-
-    <p>Android日志工具库，可以把log显示在屏幕上。</p>
-
-    <p><img src="https://camo.githubusercontent.com/1e2d3b204a0898b697876817cc19ab4a2fef5de2/687474703a2f2f6936312e74696e797069632e636f6d2f327177336279302e676966" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/cookpad/puree-android">puree-android</a></p>
-
-    <p>一个Log日志收集框架。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/gdpancheng/LoonAndroid">LoonAndroid</a></p>
-
-    <p>一个ioc（依赖注入）框架，但是整个框架式不同于androidannotations，Roboguice等ioc框架，这是一个类似spring的实现方式。在整应用的生命周期中找到切入点，然后对activity的生命周期进行拦截，然后插入自己的功能。</p>
-  </li>
-</ol>
-
-<h3 id="section-2">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary/1-0rc2">Android Studio 1.0 Release Candidate 2</a></p>
-
-    <p>本次Release没有添加什么新的特性，只是修复了一些Bug，如果你之前已经升级到了RC1建议更新到RC2版。另外本次Release还针对Windows用户推出了包含SDK的安装包。</p>
-
-    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a></p>
-  </li>
-</ol>
-
-<h3 id="section-3">设计</h3>
-
-<h4 id="section-4">文章</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.oschina.net/news/57379/what-is-good-ui-design#0-tsina-1-76379-397232819ff9a47a7b7e80a40613cfe1">什么才是优秀的用户界面设计</a></p>
-
-    <p>本文分享一些 Good UI 在一些项目中获取的设计以及运营策略等方面的经验。Good UI 是一家研究用户体验的设计机构。我们知道成功的页面设计不仅有很高的转化率更便于用户使用，既能满足商业目标更能为用户带来良好的体验。</p>
-  </li>
-  <li>
-    <p><a href="https://medium.com/sebs-top-tips/material-navigation-drawer-sizing-558aea1ad266">Material Navigation Drawer sizing</a></p>
-
-    <p>本文分析了Material的抽屉导航的大小到底多少才最符合设计规范和美观。</p>
-  </li>
-</ol>
-
-<h4 id="section-5">素材</h4>
-
-<ol>
-  <li>
-    <p><a href="https://dribbble.com/shots/1683873-Android-L-GUI-KIT">Android L GUI KIT</a></p>
-
-    <p>Android L GUI KIT。</p>
-  </li>
-</ol>
-
-<h4 id="section-6">工具</h4>
-
-<ol>
-  <li>
-    <p><a href="http://oven.chrometaphore.com">OVEN</a></p>
-
-    <p>A BETTER ASSETS WORKFLOW For Photoshop CC / 2014。</p>
-
-    <p><img src="http://oven.chrometaphore.com/assets/oven_panel_screenshot@2x.png" alt="image" /></p>
   </li>
 </ol>
 

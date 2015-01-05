@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-05T09:05:16+08:00</updated>
+  <updated>2015-01-05T23:49:47+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,125 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发周报 Issue#14]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/"/>
+    <updated>2015-01-05T23:41:36+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14</id>
+    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/java-date-format-with-caution">慎用Java日期格式化</a></p>
+
+    <p>这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42072975">ART运行时垃圾收集机制简要介绍和学习计划</a></p>
+
+    <p>为了学习ART运行时的垃圾收集机制，我们先把Dalvik虚拟机的垃圾收集机制研究了一遍。这是因为两者都使用到了Mark-Sweep算法，因此它们在概念上有很多一致的地方。然而在实现上，Dalvik虚拟机的垃圾收集机制要简单一些。这样我们就可以先从简单的Dalvik虚拟机垃圾收集机制入手，然后再逐步深入地学习复杂的ART运行时垃圾收集机制。</p>
+  </li>
+  <li>
+    <p><a href="http://www.jianshu.com/p/6c2b7d261e1a">Material Design in Action — 猿题库</a></p>
+
+    <p>猿题库很早之前就发布了 Android 版本的客户端，但猿题库的联合创始人，郭常圳 先生，并不认同 Android Design （或者现在的 Material Design），而且认为应用程序的设计规范，应当由开发商来规定。然而当我试用猿题库的时候发现，这个应用对其进行 Material Design 的适配，其实并不困难。因此就有了对其进行重新设计的念头。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.jobbole.com/78995/">正确使用Android性能分析工具——TraceView</a></p>
+
+    <p>最近公司app中有些列表在滑动的时候会有卡顿现象，我就开始着手解决这些问题，解决问题之前首先要分析列表滑动的性能瓶颈在什么地方。因为之前不会正确使用TraceView这个工具，主要是看不懂TraceView界面下方数据指标的值代表什么意思…以前我用StopWatch类来分析性能，现在觉得弱爆了…不过有些地方StopWatch工具类还是很简单好用的~</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://testerhome.com/topics/1756">Gradle 中的 task 依赖</a></p>
+
+    <p>文章讲解了如何自定义Gradle的task，以及怎样定义task之间的依赖关系。</p>
+  </li>
+  <li>
+    <p><a href="http://www.lightskystreet.com/2014/12/15/viewpager-anim/">动画系列 - ViewPger动画</a></p>
+
+    <p>本篇文章介绍的ViewPager动画，可以分为两类，第一类是针对于ViewPager的界面滑动动画(这个是PageTransformer的真正用途)，分析并比较了AndroidImageSlider和JazzyViewPager两种实现，第二类是对ViewPager中的内容进行动画处理，这个是这个是PageTransformer的巧妙应用，处理好了可以达到很棒的交互效果，示例是Yahoo天气的视差效果。</p>
+  </li>
+  <li>
+    <p><a href="http://www.csdn.net/article/2014-12-30/2823366-Locate-Android-NDK">如何定位Android NDK开发中遇到的错误</a></p>
+
+    <p>Android NDK中的错误定位对很多开发者来说是一件头疼的事，本文通过一个Demo程序详细讲解了NDK的错误是如何产生的，以及如何通过命令行工具定位NDK的问题所在。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/sunzn/archive/2013/05/10/3064129.html">Android 编程下 Touch 事件的分发和消费机制</a></p>
+
+    <p>Android 中与 Touch 事件相关的方法包括：dispatchTouchEvent(MotionEvent ev)、onInterceptTouchEvent(MotionEvent ev)、onTouchEvent(MotionEvent ev)；能够响应这些方法的控件包括：ViewGroup、View、Activity。</p>
+  </li>
+  <li>
+    <p><a href="http://weibo.com/p/1001603793195556321741">Android源码下载和编译总结</a></p>
+
+    <p>前几天常用的笔记本电脑挂了，要拿去维修，于是就准备用另一台备用电脑来重新下载和编译一下Android源码，以便工作研究之用。鉴于最近一直都有人问下载和编译Android源码的问题，并且我上一次写Android源码编译的文章已经是2011年的事情，于是就趁这个机会写篇文章总结一下。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/wasabeef/awesome-android-ui">awesome-android-ui</a></p>
+
+    <p>A curated list of awesome Android UI/UX libraries https://twitter.com/wasabeef_jp</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/nhachicha/android-native-dependencies">android-native-dependencies</a></p>
+
+    <p>Gradle plugin for resolving and downloading Android native dependencies (.so)</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/xiprox/ErrorView">ErrorView</a></p>
+
+    <p>A custom view that displays an error image, a title, and a subtitle given an HTTP status code.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wangjiegulu/DraggableFlagView">DraggableFlagView</a></p>
+
+    <p>可拖拽的红点，（仿新版QQ，tab下面拖拽标记为已读的效果），拖拽一定的距离可以消失回调。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://hyperfox.org/">Hyperfox</a></p>
+
+    <p>一个用Go 语言写的强悍的抓包工具！可以抓取https协议的！</p>
+
+    <p><img src="https://hyperfox.org/images/hyperfox-diagram.png" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h3 id="section-5">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.tuyiyi.com/w/36011.html">大屏手机时代，如何重塑界面交互</a></p>
+
+    <p>这是一个大屏手机的时代。强调这件事情的意义在于，这已经成为事实。Medium上存在一份个人统计。在过去7年，新上市的手机屏幕尺寸越来越大。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#13]]></title>
@@ -3246,70 +3365,6 @@ http://groups.google.com/group/mongodb-user
 <hr />
 <p>#License
 版权声明：版权归原作者所有，这里仅做收集整理，欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Ubuntu下彻底卸载并重新安装MySQL]]></title>
-    <link href="http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu/"/>
-    <updated>2014-05-17T18:45:00+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/05/17/completely-uninstall-mysql-in-the-ubuntu</id>
-    <content type="html"><![CDATA[<h3 id="step1mysql">Step1.卸载MySQL</h3>
-<p>终端下依次输入以下命令卸载MySQL</p>
-
-<pre><code>sudo apt-get autoremove --purge mysql-server-5.0
-sudo apt-get remove mysql-server
-sudo apt-get autoremove mysql-server
-sudo apt-get remove mysql-common(非常重要)
-sudo apt-get remove apparmor
-</code></pre>
-
-<p>上面的其实有一些是多余的，建议还是按照顺序执行一遍</p>
-
-<h3 id="step2">Step2.清理残留数据</h3>
-
-<pre><code>dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P
-</code></pre>
-
-<!--more-->
-<p>###Step3.删除残余目录
-	sudo rm /var/lib/mysql/ -R
-	sudo rm /etc/mysql/ -R</p>
-
-<h3 id="step4-mysql">Step4.安装 mysql</h3>
-<pre><code>sudo apt-get install mysql-server mysql-client
-sudo apt-get install php5-mysql 	//(安装php5-mysql 是将php和mysql连接起来 ) 
-</code></pre>
-
-<h3 id="step5">Step5.验证是否安装成功</h3>
-<p>一旦安装完成，MySQL 服务器应该自动启动。您可以在终端提示符后运行以下命令来检查 MySQL 服务器是否正在运行：</p>
-
-<pre><code>netstat -tap | grep mysql
-</code></pre>
-
-<p>当您运行该命令时，您可以看到类似下面的行：</p>
-
-<p><code>tcp 0 0 localhost.localdomain:mysql *:* LISTEN</code></p>
-
-<p>如果服务器不能正常运行，您可以通过下列命令启动它：</p>
-
-<pre><code>sudo /etc/init.d/mysql restart
-</code></pre>
-
-<h3 id="step6">Step6.配置管理员密码</h3>
-<p>进入mysql命令行模式</p>
-
-<pre><code>mysql -uroot -p 管理员密码
-</code></pre>
-
-<p>配置 MySQL 的管理员密码</p>
-
-<pre><code>mysqladmin -u root password newpassword
-</code></pre>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-
 ]]></content>
   </entry>
   

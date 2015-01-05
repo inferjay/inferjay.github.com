@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="新闻 Oracle开始从Java运行时中移除JAR包 早在2012年8月，在Java平台首席架构师Mark Reinhold宣布模块化项目Jigsaw之后不久，JEP 162这一题为“准备模块化”的提案就指出，在Jigsaw项目中为模块化系统开发的代码不会集成到JDK 8中。 &hellip;">
+  <meta name="description" content="新闻 慎用Java日期格式化 这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。 教程 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,78 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/05/android-dev-weekly-issue-14/">Android开发周报 Issue#14</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-05T23:41:36+08:00" pubdate data-updated="true">Jan 5<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/01/05/android-dev-weekly-issue-14/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/java-date-format-with-caution">慎用Java日期格式化</a></p>
+
+    <p>这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42072975">ART运行时垃圾收集机制简要介绍和学习计划</a></p>
+
+    <p>为了学习ART运行时的垃圾收集机制，我们先把Dalvik虚拟机的垃圾收集机制研究了一遍。这是因为两者都使用到了Mark-Sweep算法，因此它们在概念上有很多一致的地方。然而在实现上，Dalvik虚拟机的垃圾收集机制要简单一些。这样我们就可以先从简单的Dalvik虚拟机垃圾收集机制入手，然后再逐步深入地学习复杂的ART运行时垃圾收集机制。</p>
+  </li>
+  <li>
+    <p><a href="http://www.jianshu.com/p/6c2b7d261e1a">Material Design in Action — 猿题库</a></p>
+
+    <p>猿题库很早之前就发布了 Android 版本的客户端，但猿题库的联合创始人，郭常圳 先生，并不认同 Android Design （或者现在的 Material Design），而且认为应用程序的设计规范，应当由开发商来规定。然而当我试用猿题库的时候发现，这个应用对其进行 Material Design 的适配，其实并不困难。因此就有了对其进行重新设计的念头。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.jobbole.com/78995/">正确使用Android性能分析工具——TraceView</a></p>
+
+    <p>最近公司app中有些列表在滑动的时候会有卡顿现象，我就开始着手解决这些问题，解决问题之前首先要分析列表滑动的性能瓶颈在什么地方。因为之前不会正确使用TraceView这个工具，主要是看不懂TraceView界面下方数据指标的值代表什么意思…以前我用StopWatch类来分析性能，现在觉得弱爆了…不过有些地方StopWatch工具类还是很简单好用的~</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/05/android-dev-weekly-issue-14/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -681,102 +753,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/10/android-dev-weekly-issue-6/">Android开发周报 Issue#6</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-10T16:45:18+08:00" pubdate data-updated="true">Nov 10<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/11/10/android-dev-weekly-issue-6/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/11/10/android-dev-weekly-issue-6/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">新闻</h3>
-
-<ol>
-  <li>
-    <p><a href="http://linux.cn/article-4172-1.html">Android 5.0 Lollipop源代码发布</a></p>
-
-    <p>Google将最新的Android 5.0 Lollipop系统源代码上传在公开的<a href="http://source.android.com/source/index.html">Android Open Source Project(AOSP) 库</a>。</p>
-  </li>
-  <li>
-    <p><a href="http://linux.cn/article-4168-1.html">Android 5.0 Lollipop 安全特性详解</a></p>
-
-    <p>Android 5.0 Lollipop 正式版发布在即，根据 Google 的说法，Android 5.0 是 Android 历史上最为重大的版本变更，带来了全新的设计风格，全新的软件运行环境，更好的续航能力以及大量的细节改进。可能关于 Material Design、ART 模式等等新特性你已经有所了解，但是我们今天要聊的是 5.0 的另一个重大变革，关于安全性的改进。</p>
-  </li>
-  <li>
-    <p><a href="http://www.pingwest.com/copresence-is-airdrop-between-android-ios/">Copresence: Google 正为 iOS 和 Android 之间数据通讯架设的桥梁</a></p>
-
-    <p>Google 最近被人发现正在开发的名为「Copresence」的功能，未来很有可能成为跨移动操作系统数据传输的最好解决方案。Copresence 的功能将允许 Android 和 iOS 操作系统设备之间互相传输文件、照片、发送导航定位、文字信息等多种类型的数据——并非通过互联网，而是更加本地化的点对点连接方式。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/AWCNTT/ArticleTranslateProject/blob/master/translated/Issue%23105/2014-11-06-Creating-a-Cards-UI-on-Android.md">在Android上创建卡片式UI</a></p>
-
-    <p>自从卡片式UI第一次在Google+ app上亮相，这种设计模式在Android社区上开始变得越来越火。很多人都热衷于这种设计模式并在他们的开发中使用。这不只归功于其时尚的外观，还有它实用之处。每张卡片拥有其相关的内容及其内容所触发的动作。换句话来说，每张卡片有它唯一的内容管理机制。</p>
-  </li>
-  <li>
-    <p><a href="http://www.codeceo.com/article/android-adb-shell.html">34个Android常用adb shell命令汇总</a></p>
-
-    <p>调试Android程序有时需要adb shell 命令，adb全称Android Debug Bridge ，就是起到调试桥的作用。通过adb我们可以在Eclipse中通过DDMS来调试Android程序，说白了就是debug工具。adb通过监听Socket TCP 5554等端口让IDE和Qemu通讯。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/isming/article/details/26985317"> 使用Gradle构建Android项目</a></p>
-
-    <p>Gradle是以Groovy为基础，面向java应用，基于DSL语法的自动化构建工具。是google引入，替换ant和maven的新工具，其依赖兼容maven和ivy。使用gradle的目的:更容易重用资源和代码；可以更容易创建不同的版本的程序，多个类型的apk包；更容易配置，扩展;更好的IDE集成;</p>
-  </li>
-  <li>
-    <p><a href="http://toughcoder.net/blog/2014/10/26/best-practices-to-support-multiple-screen/">适配多屏幕的最佳实践</a></p>
-
-    <p>对于Android应用开发来讲，比较头疼的，也是比较重要的一个工作就是要尽可能多的支持市场上的Android设备，由于Android的开放性，各种奇奇怪怪的设备都有，符合标准的，不符合标准的，行货，水货，山寨货鱼龙混杂，防不胜防。</p>
-  </li>
-  <li>
-    <p><a href="http://toughcoder.net/blog/2014/10/25/tricks-to-remove-duplicates/">如何有效的减少重复的代码</a></p>
-
-    <p>重复的代码一直都是可维护性的大敌，重构的重要任务之一也就是要去除掉重复的代码，有效的减少重复代码，可以大大提高软件的扩展性。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/isming/article/details/39404407">在android中画圆形图片的几种办法</a>	
- 在开发中经常会有一些需求,比如显示头像，显示一些特殊的需求,将图片显示成圆角或者圆形或者其他的一些形状。但是往往我们手上的图片或者从服务器获取到的图片都是方形的。这时候就需要我们自己进行处理，将图片处理成所需要的形状。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/11/10/android-dev-weekly-issue-6/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -829,6 +805,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/05/android-dev-weekly-issue-14/">Android开发周报 Issue#14</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/29/android-dev-weekly-issue-13/">Android开发周报 Issue#13</a>
       </li>
     
@@ -842,10 +822,6 @@
     
       <li class="post">
         <a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a>
       </li>
     
   </ul>
