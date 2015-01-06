@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-05T23:49:47+08:00</updated>
+  <updated>2015-01-06T10:07:27+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -84,17 +84,19 @@
   <li>
     <p><a href="https://github.com/wasabeef/awesome-android-ui">awesome-android-ui</a></p>
 
-    <p>A curated list of awesome Android UI/UX libraries https://twitter.com/wasabeef_jp</p>
+    <p>一些 Android UI/UX 库的集合列表。</p>
   </li>
   <li>
     <p><a href="https://github.com/nhachicha/android-native-dependencies">android-native-dependencies</a></p>
 
-    <p>Gradle plugin for resolving and downloading Android native dependencies (.so)</p>
+    <p>一个解析和下载Android native 依赖的Gradle插件。</p>
   </li>
   <li>
     <p><a href="https://github.com/xiprox/ErrorView">ErrorView</a></p>
 
-    <p>A custom view that displays an error image, a title, and a subtitle given an HTTP status code.</p>
+    <p>一个用来显示错误信息的自定义View，包含图标、主标题、自标题和重试按钮。</p>
+
+    <p><img src="https://raw.githubusercontent.com/xiprox/ErrorView/master/graphics/screenshots/ss_01.png" alt="image" /></p>
   </li>
   <li>
     <p><a href="https://github.com/wangjiegulu/DraggableFlagView">DraggableFlagView</a></p>
