@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-09T22:49:24+08:00</updated>
+  <updated>2015-01-12T10:09:50+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,193 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#15]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/12/android-dev-weekly-issue-15/"/>
+    <updated>2015-01-12T09:59:10+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/12/android-dev-weekly-issue-15</id>
+    <content type="html"><![CDATA[<h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://stormzhang.com/devtools/2015/01/05/android-studio-tutorial5/">Android Studio系列教程五–Gradle命令详解与导入第三方包</a></p>
+
+    <p>Android Studio + Gradle的组合用起来非常方便，很多第三方开源项目也早都迁移到了Studio，为此今天就来介绍下查看、编译并导入第三方开源项目的方法。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/qiujuer/article/details/42471119">打造极致Material Design动画风格Button</a></p>
+
+    <p>在我的文章中曾经有两篇关于Material Design风格的按钮实现。在第一章中只是简单的实现了动画的波纹效果，而在第二篇中对此进行了一定的扩充与优化，最后实现可以自动移动到中心位置的动画；虽然两者都可用，但是在我的使用中却发现了一定的问题，如有些位置点击会出现波纹速度的运算上的问题。</p>
+  </li>
+  <li>
+    <p><a href="http://www.osforce.cn/group/9/thread/1065?fr=weibo&amp;mu=140910XRNWcD">Android开发-API指南-AIDL</a></p>
+
+    <p>Android 接口定义语言 AIDL（Android Interface Definition Language）与其他已有的 IDL 很类似。 客户端和服务端可以通过由它定义的编程接口来达成共识，以便通过进程间通讯（IPC）完成相互通讯。 在 Android 系统中，通常一个进程不允许直接访问另一个进程的内存。 因此为了能够实现对话，进程需要把对象分解为操作系统可以识别的原生数据，在跨越进程边界后再组装起来。 实现组装的代码非常枯燥无趣，因此 Android 通过 AIDL 可有助于完成这一过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.osforce.cn/group/9/thread/1053?fr=weibo&amp;mu=140910XRNWcD">Android Proguard 详解</a></p>
+
+    <p>Java代码是非常容易反编译的。为了很好的保护Java源代码，我们往往会对编译好的class文件进行混淆处理。ProGuard是一个混淆代码的开源项目。它的主要作用就是混淆，当然它还能对字节码进行缩减体积、优化等，但那些对于我们来说都算是次要的功能。官网网址是：http://proguard.sourceforge.net/</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://www.importnew.com/14347.html">设计模式问答2</a></p>
+
+    <p>这是设计模式问答1的连载。在这个系列，我们将覆盖到解释器、迭代器、调停者、备忘录和观察者模式。</p>
+  </li>
+  <li>
+    <p><a href="http://www.importnew.com/14410.html">Java不同压缩算法的性能比较</a></p>
+
+    <p>本文将会对常用的几个压缩算法的性能作一下比较。结果表明，某些算法在极端苛刻的CPU限制下仍能正常工作。文中进行比较的算有：JDK GZIP、JDK deflate、LZ4压缩算法的Java实现和Snappy。</p>
+  </li>
+  <li>
+    <p><a href="http://www.programmer.com.cn/15036/">Android软件安全开发实践（上）</a></p>
+
+    <p>Android开发是当前最火的话题之一，但很少有人讨论这个领域的安全问题。本系列将分两期，探讨Android开发中常见的安全隐患和解决方案。第一期将从数据存储、网络通信、密码和认证策略这三个角度，带你走上Android软件安全开发实践之旅。</p>
+  </li>
+  <li>
+    <p><a href="http://www.programmer.com.cn/15273/">Android软件安全开发实践（下）</a></p>
+
+    <p>在《Android软件安全开发实践（上）》中我们讨论了数据存储、网络通信、密码和认证策略等安全问题和解决方案，本期将继续从组件间通信、数据验证和保全保护等方面来实践Android软件安全开发之路。</p>
+  </li>
+  <li>
+    <p><a href="http://www.freebuf.com/tools/55392.html">深度：针对超强手机木马DenDroid的分析与测试</a></p>
+
+    <p>赛门铁克的研究人员就在手机移动领域发现了一种新的名为Dendroid木马，可以轻松实现对手机远程恶意操控。而在此前赛门铁克发现了一个名为AndroidRAT的android远程管理软件被认为是第一个恶意绑定软件。然而这款最新发现的运行在http上的Dendroid具有更强功能。</p>
+  </li>
+  <li>
+    <p><a href="http://www.importnew.com/14260.html">解析IntelliJ IDEA内部设计</a></p>
+
+    <p>IntelliJ IDEA第一版发布于2001年1月，这是第一款集成了高级代码导航和代码重构功能的Java IDE。2009年，JetBrains开源了其社区版。从那时开始，就新出现了许多基于其社区版的IDE，如Google的Android Studio。本文使用JArchitect作为工具，深入了解Intellij IDEA社区版，探索其中使用的一些内部设计决策。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/Jhuster/ImageCropper">ImageCropper</a></p>
+
+    <p>一个Android图片剪裁库,特性:1.支持通过手势移动和缩放剪裁窗口, 2支持固定剪裁窗口大小、固定窗口的长宽比率, 3.支持设置最大的窗口长和宽, 4.支持剪裁图片的旋转。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/JakeWharton/Telecine">Telecine</a></p>
+
+    <p>JakeWharton大神开发的一款录屏App。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ismoli/DynamicRecyclerView">DynamicRecyclerView</a></p>
+
+    <p>对RecyclerView进行了扩展，天就拖拽排序功能。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/tajchert/BusWear">BusWear</a></p>
+
+    <p>BusWear是一个简单的支持Android Wear设备的EventBus（事件总线）库。仅需要一行代码就可获得异步的事件总线（synchronized event buses）在Wear和移动平台之间。</p>
+
+    <p><img src="https://raw.githubusercontent.com/tajchert/BusWear/master/docs/diagram_simple.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/TonicArtos/SuperSLiM">SuperSLiM</a></p>
+
+    <p>SuperSLiM为RecyclerView提供了一个布局管理器允许您创建垂直列表和每节标题和布局。 </p>
+
+    <p><img src="https://camo.githubusercontent.com/3a55cfd0bbfd28e72aa875f4905cc23cc37a87f4/68747470733a2f2f342e62702e626c6f6773706f742e636f6d2f2d657034364a4b70476138342f564a685831706c575743492f4141414141414141585a592f394131417272563361336b2f73313630302f5375706572534c694d2d44656d6f2d736d616c6c2e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/AChep/Header2ActionBar">Header2ActionBar</a></p>
+
+    <p>Header2ActionBar是一个实现了像Play Music and Google Newspaper应用中褪色（fading）Action Bar效果的Action Bar。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wasabeef/recyclerview-animators">recyclerview-animators</a></p>
+
+    <p>一个方便你给RecyclerView items添加item动画的库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Raizlabs/Singleton">Singleton</a></p>
+
+    <p>一个非常简洁的库，可以帮助你方便将一个对象存储在磁盘。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/JoanZapata/android-asyncservice">android-asyncservice</a></p>
+
+    <p>AsyncService使用注释来缩短开始异步长时间运行的任务所需的代码,并返回结果。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/sakebook/Reachability">Reachability</a></p>
+
+    <p>类似于iPhone 6 &amp; 6 Plus的下拉悬停从而方便你操作屏幕的顶部。</p>
+
+    <p><img src="https://raw.githubusercontent.com/sakebook/Reachability/master/images/demo.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/twotoasters/SectionCursorAdapter">SectionCursorAdapter</a></p>
+
+    <p>对CursorAdapter进行了扩展，添加sections和快速滚动滑块。</p>
+
+    <p><img src="https://raw.githubusercontent.com/twotoasters/SectionCursorAdapter/master/screenshots/sections.png" alt="image" /><img src="https://raw.githubusercontent.com/twotoasters/SectionCursorAdapter/master/screenshots/dialog.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/phishman3579/android-quick-response-code">android-quick-response-code</a></p>
+
+    <p>Android QR码编码解码库。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/tmiyamon/gradle-mdicons">gradle-mdicons</a></p>
+
+    <p>一个帮助你管理google’s official material design图标的插件。</p>
+
+    <p><img src="https://raw.githubusercontent.com/tmiyamon/gradle-mdicons/master/gradle-mdicons-result.png" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://i.youku.com/chinagdg">ChinaGDG 视频中心</a></p>
+
+    <p>ChinaGDG 视频中心。第一时间同步 Google Developers 的各种技术视频，如 Android、Web 等技术，方便国内开发者学习。视频已包含英文字幕，部分视频还有来自国内志愿者提供的中文翻译字幕。</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/RZJaz5I">Android性能模式</a></p>
+
+    <p>老美新年放假归来，官方更新了16集与Android性能优化相关的视频《 Android Performance Patterns》视频已运至墙内，主题为“New year, new initiative” 详细查看<a href="http://t.cn/RZt1F4S">G+社区</a> 和 <a href="http://www.infoq.com/cn/news/2015/01/google-android-performance?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global&amp;utm_reader=feedly#0-tsina-1-92503-397232819ff9a47a7b7e80a40613cfe1">Google探讨Android性能模式的16个视频总结</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/237?from=itblog">打造Android流式布局和热门标签</a></p>
+
+    <p>本课程将带大家通过自定义ViewGroup实现流式布局，课程详细介绍了自定义控件需要掌握的步骤，每个步骤相关方法的作用、调用时机的讲解以及编写。在完成自定义ViewGroup编写后，实战应用于热门标签（包括动态添加）的显示。</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h3 id="section-5">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/abynim/SketchSquares">SketchSquares</a></p>
+
+    <p>一个将Sketch的layers自动替换为Instagram照片的插件。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#14]]></title>
@@ -2659,714 +2846,6 @@ http://groups.google.com/group/mongodb-user
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[最新版Android开发工具]]></title>
-    <link href="http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools/"/>
-    <updated>2014-06-27T23:38:32+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/06/27/new-version-android-develop-tools</id>
-    <content type="html"><![CDATA[<h2 id="android-tools">Android Tools</h2>
-
-<h4 id="adt-bundle">ADT Bundle</h4>
-<p>ADT Bundle包含了Eclipse、ADT插件和SDK Tools，是已经集成好的IDE，只需安装好Jdk即可开始开发，推荐初学者下载ADT Bundle，不用再折腾开发环境。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">ADT-23.0.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i39mvY1">32位</a> <a href="http://pan.baidu.com/s/1o65ExPS">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqvHkry">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1mgoh41q">32位</a> <a href="http://pan.baidu.com/s/1qWJh4wk">64位</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="android-studio">Android Studio</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">0.8.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQ1ln14">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJkDQHl">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0ncknA">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.8.1</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o6LTxVG">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dD5qHjF">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kTqlzxH">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.8 0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQ5oGaI">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kTHpLyR">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0qzDao">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.6.1</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqqX2ba">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWjpB9y">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWBFTiG">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.6.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1sjJf0Pf">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jcixK">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqpB7As">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.5.9</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dDw3oYl">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c08a8y0">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqeMmVU">下载</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">0.5.8</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWLPqd2">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3ECc9f">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i37QxBf">下载</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="adt-plugin">ADT Plugin</h4>
-<p>离线安装ADT插件请戳<a href="https://github.com/inferjay/AndroidDevTools/wiki/首页"><strong>项目wiki</strong></a></p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1sjArX7J">ADT-23.0.0</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGMb5yQ">ADT-22.6.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJ185Rl">AdT-22.6.1</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="sdk-tools">SDK Tools</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">sdk-tools-r23</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nt5Gwhb">installer_r23-windows.exe</a> <a href="http://pan.baidu.com/s/1kTC6akZ">android-sdk_r23-windows.zip</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gdj7X3l">android-sdk_r23-macosx.zip</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1yBnSa">android-sdk_r23-linux.tgz</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- More -->
-
-<h4 id="sdk">SDK</h4>
-<p>这是Android开发所需的sdk，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/platforms</code>文件夹下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">android L</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3tDDvZ">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1ntHmhYx">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.4W</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eYPGE">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nt5GKWh">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.4.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kT60PGN">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c03XoL6">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dDrJWit">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3mmidn">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.2.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3tDDvZ">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGLvX6Q">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.1.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0D0Fok">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJ4qMb5">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQekIzS">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQH0vHC">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGBmAjW">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nt7cEDF">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGLvX6A">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWqH9Q8">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.1</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJ0naTP">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jG62PSy">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJ0naTP">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bn2Duub">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 2.3.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1ngubc">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGge2bk">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 2.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qW8YzY8">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1ntmJVmD">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="sdk-system-images">SDK System images</h4>
-<p>这是在创建模拟器时需要的system image，也就是在创建模拟器时<code>CPU/ABI</code>项需要选择的，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/system-images</code>文件夹下即可， 如果没有<code>system-images</code>目录就先创建此文件夹。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">android L</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqIcqhA">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1ntFQlRV">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.4W</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1mgJVZfE">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1GmAE6">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.4.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3Jwhed">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qW0QWdm">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1guLaQ">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJPp6dX">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.2.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJO99hD">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kTyZo27">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.1.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nMr4E">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kT2xdxd">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1i3Fsx6H">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gdnCh2b">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gd3lhYF">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqoWcNM">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="googlemap-apis-sdk">GoogleMap APIs SDK</h4>
-<p>这是GoogleMap APIs SDK，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/add-ons</code>文件夹下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">android 4.4.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bno0mFt">下载ARM版</a> <a href="http://pan.baidu.com/s/1jGgKyZc">下载x86版</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bngsIkB">下载ARM版</a> <a href="http://pan.baidu.com/s/1eQDwCpG">下载x86版</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bnb9at5">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gdJ0mqR">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.2.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGl4hZw">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dDmurr7">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.1.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1ntK9Urf">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1mgIAcpa">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bnEiHiB">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqBWAIo">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gd68WtP">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqBWAIo">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o6Dgtse">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1gdf49Jt">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.1</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o6Dgtse">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGBS4rO">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 3.0</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0CKIFA">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0iY68w">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 2.3.3</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqHwsHA">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dDvhHOt">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 2.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWJNPyk">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQEc8SU">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="google-glass-sdk">Google Glass SDK</h4>
-<p>这是GDK，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/add-ons</code>文件夹下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">android 4.4.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1fENeu">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQpGaA2">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">android 4.0.3</td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqikzUs">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="google-tv-addon">Google TV Addon</h4>
-<p>这是Google TV Addon，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/add-ons</code>文件夹下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">android 3.2</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1qWLPFfm">下载</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQFy1KA">下载</a></td>
-      <td style="text-align: center"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="android-framework-source-code">Android Framework Source Code</h4>
-<p>这是Android Framework Source Code，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/sources</code>文件夹下即可，这样当你在Eclipse里面按住<code>Ctrl</code>键点击某个系统类时就可以打开该类的源码文件查看源码了。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1eQf6F0Q">android 4.4W</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1hqGGrVA">android 4.4.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1pJI3YrD">android 4.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1qWlXS9u">android 4.2.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1qWv1spm">android 4.1.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1jGGCpuu">android 4.0.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1o61AZwQ">android 4.0</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1pJt14En">android 3.0</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1eQekIPW">android 2.3.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1bny9E2b">android 2.2</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="support-library">Support Library</h4>
-<p>包含supportive、v7和v13，下载解压后将解压出的整个文件夹复制或者移动到<code>your sdk 路径/extras</code>下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o6OBlR8">20</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="sdk-samples">SDK Samples</h4>
-<p>这是Android SDK自带的示例代码，下载并解压后，将解压出的整个文件夹复制或者移动到<code>your sdk 路径/samples</code>文件夹下即可。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">系统版本</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1gdpEan5">android L</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1ntLVN9B">android 4.4W</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1dDeSKt7">android 4.4.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1pJHicjx">android 4.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1hqGavMc">android 4.2.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1eYPL8">android 4.1.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1i3mScXv">android 4.0.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1kTiKqZP">android 4.0</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1eQpafgI">android 3.2</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1haIPw">android 3.1</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1ntx9qFR">android 3.0</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1hqiQw1Q">android 2.3.3</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1ntv7wut">android 2.2</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="ndk">NDK</h4>
-<p>C/C++开发Android应用工具包</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">ndk-r9d</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dDxjl8t">32位</a> <a href="http://pan.baidu.com/s/1jGgecXw">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQnDNEE">32位</a> <a href="http://pan.baidu.com/s/1i3l5L8T">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1jGr9w4A">32位</a> <a href="http://pan.baidu.com/s/1sjAXS41">64位</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1c0EMn8O">cxx-stl-libs-with-debug-info.zip</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="android-l-preview-system-image">Android L Preview System Image</h4>
-<p>这个是Android L Preview系统的刷机镜像。</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">设备</th>
-      <th style="text-align: center">下载</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">Nexus 5 (GSM/LTE) “hammerhead”</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1kTsnxsF">hammerhead-lpv79-preview-ac1d8a8e.tgz</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">Nexus 7 (Wifi) “razor”</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1mgn1CyG">razor-lpv79-preview-d0ddf8ce.tgz</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="jdk">JDK</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-      <th style="text-align: center">Windows</th>
-      <th style="text-align: center">Max OSX</th>
-      <th style="text-align: center">Linux</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">1.8 u5</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1bn2CVIB">32位</a> <a href="http://pan.baidu.com/s/1eQtJyGq">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJkD78R">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o64s0pc">32位</a> <a href="http://pan.baidu.com/s/1jG3KBjg">64位</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1.7 u60</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nt5a3jj">32位</a> <a href="http://pan.baidu.com/s/1o61AAHc">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1nt0qGfn">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1eQd4wVK">32位</a> <a href="http://pan.baidu.com/s/1jGzGQLw">64位</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1.6 u45</td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1o67aooM">32位</a> <a href="http://pan.baidu.com/s/1dDmtSZJ">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1hqpB7Nm">64位</a></td>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1pJJj5Ib">32位</a> <a href="http://pan.baidu.com/s/1dDck3O9">64位</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="gradle">Gradle</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">版本号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1dDzleTV">gradle-2.0-rc-2-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1Gmlx8">gradle-1.12-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1c0hCmdE">gradle-1.11-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1qWtzaGW">gradle-1.10-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1dDeSuXV">gradle-1.9-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1o6Npqqe">gradle-1.8-all.zip</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left"><a href="http://pan.baidu.com/s/1pJnvyWz">gradle-1.7-all.zip</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h4 id="gradle-user-guide">Gradle User Guide</h4>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">版本号</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><a href="http://pan.baidu.com/s/1dD7sC2d">gradle 1.12</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="course">Course</h2>
-
-<h4 id="google-android">Google Android官方培训课程中文版</h4>
-
-<p>地址：<a href="http://hukai.me/android-training-course-in-chinese/index.html">http://hukai.me/android-training-course-in-chinese/index.html</a></p>
-
-<h2 id="design">Design</h2>
-
-<h4 id="android">Android设计指南非官方简体中文版</h4>
-
-<p>Topfun镜像地址：<a href="http://www.topfun.us/adchs/index.html">http://www.topfun.us/adchs/index.html</a></p>
-
-<p>Github镜像地址：<a href="http://adchs.github.io">http://adchs.github.io</a></p>
-
-<p>ApkBus镜像地址：<a href="http://www.apkbus.com/design/">http://www.apkbus.com/design/</a></p>
-
-<p>Segmentfault镜像地址：<a href="http://mirrors.segmentfault.com/adchs/">http://mirrors.segmentfault.com/adchs/</a></p>
-
-<p>多看阅读镜像地址：<a href="http://www.duokan.com/book/47790">http://www.duokan.com/book/47790</a></p>
-
-<h4 id="android-cheatsheet-for-graphic-designers">Android Cheatsheet for Graphic Designers</h4>
-
-<p>地址:<a href="http://petrnohejl.github.io/Android-Cheatsheet-For-Graphic-Designers/">http://petrnohejl.github.io/Android-Cheatsheet-For-Graphic-Designers/</a></p>
-
-<h4 id="google-material-design-">Google Material Design 中文版</h4>
-
-<p>地址：<a href="http://design.1sters.com">http://design.1sters.com</a></p>
-
-<h4 id="google-material-design--1">Google Material Design 素材</h4>
-
-<p><a href="http://pan.baidu.com/s/1i35iBNv">素材下载</a>(感谢 <a href="http://weibo.com/sanityd">@SanityD</a>)</p>
-
-<hr />
-<p>#License
-版权声明：版权归原作者所有，这里仅做收集整理，欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   

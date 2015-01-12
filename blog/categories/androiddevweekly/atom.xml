@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-09T22:49:24+08:00</updated>
+  <updated>2015-01-12T10:09:50+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,193 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#15]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/12/android-dev-weekly-issue-15/"/>
+    <updated>2015-01-12T09:59:10+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/12/android-dev-weekly-issue-15</id>
+    <content type="html"><![CDATA[<h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://stormzhang.com/devtools/2015/01/05/android-studio-tutorial5/">Android Studio系列教程五–Gradle命令详解与导入第三方包</a></p>
+
+    <p>Android Studio + Gradle的组合用起来非常方便，很多第三方开源项目也早都迁移到了Studio，为此今天就来介绍下查看、编译并导入第三方开源项目的方法。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/qiujuer/article/details/42471119">打造极致Material Design动画风格Button</a></p>
+
+    <p>在我的文章中曾经有两篇关于Material Design风格的按钮实现。在第一章中只是简单的实现了动画的波纹效果，而在第二篇中对此进行了一定的扩充与优化，最后实现可以自动移动到中心位置的动画；虽然两者都可用，但是在我的使用中却发现了一定的问题，如有些位置点击会出现波纹速度的运算上的问题。</p>
+  </li>
+  <li>
+    <p><a href="http://www.osforce.cn/group/9/thread/1065?fr=weibo&amp;mu=140910XRNWcD">Android开发-API指南-AIDL</a></p>
+
+    <p>Android 接口定义语言 AIDL（Android Interface Definition Language）与其他已有的 IDL 很类似。 客户端和服务端可以通过由它定义的编程接口来达成共识，以便通过进程间通讯（IPC）完成相互通讯。 在 Android 系统中，通常一个进程不允许直接访问另一个进程的内存。 因此为了能够实现对话，进程需要把对象分解为操作系统可以识别的原生数据，在跨越进程边界后再组装起来。 实现组装的代码非常枯燥无趣，因此 Android 通过 AIDL 可有助于完成这一过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.osforce.cn/group/9/thread/1053?fr=weibo&amp;mu=140910XRNWcD">Android Proguard 详解</a></p>
+
+    <p>Java代码是非常容易反编译的。为了很好的保护Java源代码，我们往往会对编译好的class文件进行混淆处理。ProGuard是一个混淆代码的开源项目。它的主要作用就是混淆，当然它还能对字节码进行缩减体积、优化等，但那些对于我们来说都算是次要的功能。官网网址是：http://proguard.sourceforge.net/</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://www.importnew.com/14347.html">设计模式问答2</a></p>
+
+    <p>这是设计模式问答1的连载。在这个系列，我们将覆盖到解释器、迭代器、调停者、备忘录和观察者模式。</p>
+  </li>
+  <li>
+    <p><a href="http://www.importnew.com/14410.html">Java不同压缩算法的性能比较</a></p>
+
+    <p>本文将会对常用的几个压缩算法的性能作一下比较。结果表明，某些算法在极端苛刻的CPU限制下仍能正常工作。文中进行比较的算有：JDK GZIP、JDK deflate、LZ4压缩算法的Java实现和Snappy。</p>
+  </li>
+  <li>
+    <p><a href="http://www.programmer.com.cn/15036/">Android软件安全开发实践（上）</a></p>
+
+    <p>Android开发是当前最火的话题之一，但很少有人讨论这个领域的安全问题。本系列将分两期，探讨Android开发中常见的安全隐患和解决方案。第一期将从数据存储、网络通信、密码和认证策略这三个角度，带你走上Android软件安全开发实践之旅。</p>
+  </li>
+  <li>
+    <p><a href="http://www.programmer.com.cn/15273/">Android软件安全开发实践（下）</a></p>
+
+    <p>在《Android软件安全开发实践（上）》中我们讨论了数据存储、网络通信、密码和认证策略等安全问题和解决方案，本期将继续从组件间通信、数据验证和保全保护等方面来实践Android软件安全开发之路。</p>
+  </li>
+  <li>
+    <p><a href="http://www.freebuf.com/tools/55392.html">深度：针对超强手机木马DenDroid的分析与测试</a></p>
+
+    <p>赛门铁克的研究人员就在手机移动领域发现了一种新的名为Dendroid木马，可以轻松实现对手机远程恶意操控。而在此前赛门铁克发现了一个名为AndroidRAT的android远程管理软件被认为是第一个恶意绑定软件。然而这款最新发现的运行在http上的Dendroid具有更强功能。</p>
+  </li>
+  <li>
+    <p><a href="http://www.importnew.com/14260.html">解析IntelliJ IDEA内部设计</a></p>
+
+    <p>IntelliJ IDEA第一版发布于2001年1月，这是第一款集成了高级代码导航和代码重构功能的Java IDE。2009年，JetBrains开源了其社区版。从那时开始，就新出现了许多基于其社区版的IDE，如Google的Android Studio。本文使用JArchitect作为工具，深入了解Intellij IDEA社区版，探索其中使用的一些内部设计决策。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/Jhuster/ImageCropper">ImageCropper</a></p>
+
+    <p>一个Android图片剪裁库,特性:1.支持通过手势移动和缩放剪裁窗口, 2支持固定剪裁窗口大小、固定窗口的长宽比率, 3.支持设置最大的窗口长和宽, 4.支持剪裁图片的旋转。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/JakeWharton/Telecine">Telecine</a></p>
+
+    <p>JakeWharton大神开发的一款录屏App。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ismoli/DynamicRecyclerView">DynamicRecyclerView</a></p>
+
+    <p>对RecyclerView进行了扩展，天就拖拽排序功能。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/tajchert/BusWear">BusWear</a></p>
+
+    <p>BusWear是一个简单的支持Android Wear设备的EventBus（事件总线）库。仅需要一行代码就可获得异步的事件总线（synchronized event buses）在Wear和移动平台之间。</p>
+
+    <p><img src="https://raw.githubusercontent.com/tajchert/BusWear/master/docs/diagram_simple.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/TonicArtos/SuperSLiM">SuperSLiM</a></p>
+
+    <p>SuperSLiM为RecyclerView提供了一个布局管理器允许您创建垂直列表和每节标题和布局。 </p>
+
+    <p><img src="https://camo.githubusercontent.com/3a55cfd0bbfd28e72aa875f4905cc23cc37a87f4/68747470733a2f2f342e62702e626c6f6773706f742e636f6d2f2d657034364a4b70476138342f564a685831706c575743492f4141414141414141585a592f394131417272563361336b2f73313630302f5375706572534c694d2d44656d6f2d736d616c6c2e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/AChep/Header2ActionBar">Header2ActionBar</a></p>
+
+    <p>Header2ActionBar是一个实现了像Play Music and Google Newspaper应用中褪色（fading）Action Bar效果的Action Bar。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wasabeef/recyclerview-animators">recyclerview-animators</a></p>
+
+    <p>一个方便你给RecyclerView items添加item动画的库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Raizlabs/Singleton">Singleton</a></p>
+
+    <p>一个非常简洁的库，可以帮助你方便将一个对象存储在磁盘。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/JoanZapata/android-asyncservice">android-asyncservice</a></p>
+
+    <p>AsyncService使用注释来缩短开始异步长时间运行的任务所需的代码,并返回结果。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/sakebook/Reachability">Reachability</a></p>
+
+    <p>类似于iPhone 6 &amp; 6 Plus的下拉悬停从而方便你操作屏幕的顶部。</p>
+
+    <p><img src="https://raw.githubusercontent.com/sakebook/Reachability/master/images/demo.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/twotoasters/SectionCursorAdapter">SectionCursorAdapter</a></p>
+
+    <p>对CursorAdapter进行了扩展，添加sections和快速滚动滑块。</p>
+
+    <p><img src="https://raw.githubusercontent.com/twotoasters/SectionCursorAdapter/master/screenshots/sections.png" alt="image" /><img src="https://raw.githubusercontent.com/twotoasters/SectionCursorAdapter/master/screenshots/dialog.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/phishman3579/android-quick-response-code">android-quick-response-code</a></p>
+
+    <p>Android QR码编码解码库。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/tmiyamon/gradle-mdicons">gradle-mdicons</a></p>
+
+    <p>一个帮助你管理google’s official material design图标的插件。</p>
+
+    <p><img src="https://raw.githubusercontent.com/tmiyamon/gradle-mdicons/master/gradle-mdicons-result.png" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://i.youku.com/chinagdg">ChinaGDG 视频中心</a></p>
+
+    <p>ChinaGDG 视频中心。第一时间同步 Google Developers 的各种技术视频，如 Android、Web 等技术，方便国内开发者学习。视频已包含英文字幕，部分视频还有来自国内志愿者提供的中文翻译字幕。</p>
+  </li>
+  <li>
+    <p><a href="http://t.cn/RZJaz5I">Android性能模式</a></p>
+
+    <p>老美新年放假归来，官方更新了16集与Android性能优化相关的视频《 Android Performance Patterns》视频已运至墙内，主题为“New year, new initiative” 详细查看<a href="http://t.cn/RZt1F4S">G+社区</a> 和 <a href="http://www.infoq.com/cn/news/2015/01/google-android-performance?utm_campaign=infoq_content&amp;utm_source=infoq&amp;utm_medium=feed&amp;utm_term=global&amp;utm_reader=feedly#0-tsina-1-92503-397232819ff9a47a7b7e80a40613cfe1">Google探讨Android性能模式的16个视频总结</a></p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/237?from=itblog">打造Android流式布局和热门标签</a></p>
+
+    <p>本课程将带大家通过自定义ViewGroup实现流式布局，课程详细介绍了自定义控件需要掌握的步骤，每个步骤相关方法的作用、调用时机的讲解以及编写。在完成自定义ViewGroup编写后，实战应用于热门标签（包括动态添加）的显示。</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h3 id="section-5">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/abynim/SketchSquares">SketchSquares</a></p>
+
+    <p>一个将Sketch的layers自动替换为Instagram照片的插件。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发周报 Issue#14]]></title>
@@ -645,120 +832,6 @@
     <p><a href="http://www.androidicons.com/">250 free icons in 5 sizes and 14 colors</a></p>
 
     <p>包含5种尺寸和14种颜色的250个免费icons。</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#10]]></title>
-    <link href="http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10/"/>
-    <updated>2014-12-08T11:10:12+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10</id>
-    <content type="html"><![CDATA[<h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">Android Apk 拆分机制</a></p>
-
-    <p>拆分机制比起使用 flavors，能让应用程序更有效地构建一些形式的多个apk。多 apk 只支持以下类型: 1.
-屏幕密度 2.ABI.使用新的拆分机制，构建同一个应用程序的hdpi版本和mdpi版本，能够共享很多的任务 （如 javac，dx，proguard）。此外，它会被认为是一个单一的variant，并且同一个测试程序将会被用来测试每​​个多APK。</p>
-  </li>
-  <li>
-    <p><a href="http://relex.me/using-manifestplaceholders/">使用manifestPlaceholders</a></p>
-
-    <p>在项目中我需要打包不同渠道的APK，需要在AndroidManifest中定义渠道名称，以便在java中调用。以前ant或gradle打包时动态改变渠道的思路是：正则AndroidManifest的特定字符然后替换.</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40424379">Property Anim详解</a></p>
-
-    <p>本篇文章将对PropertyAnimation进行全面深入的探讨，本篇文章可以分为两大块，从第六部分可以作为分界点。前五部分着重讲解了PropertyAnim的动画值的计算过程，ValueAnimator与ObjectAnimator以及TimeInterpolation与TypeEvaluator之间的介绍和比较，这几点是比较重要的，从第六部分开始是通过源码的角度分析了整个动画计算以及内部的处理细节，以及引出了对JakeWharton大神的NineOldAndroids 开源库的分析，如果你觉得太多，可以分开来看，有理解不准确的地方，欢迎大家指正。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://stormzhang.com/posts.html#AndroidStudio">Android Studio系列教程</a></p>
-
-    <p>相信大家对Android Studio已经不陌生了，Android Studio是Google于2013 I/O大会针对Android开发推出的新的开发工具，目前很多开源项目都已经在采用，Google的更新速度也很快，明显能感觉到这是Android开发的未来，那么我们还有什么理由不去拥抱未来呢？虽然推出了很久，但是国内貌似普及的程度并不高，鉴于很多朋友求studio的详细教程，那么今天我就手把手教大家下载、安装、使用，Studio之路从这里开始。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
-
-    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/googlesamples">Google Samples</a></p>
-
-    <p>Google在Github上发布了大量Demo，针对不同的特性，也包含了最新的API 21 (Lollipop),学习的好资料/</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Rogero0o/MatchView">MatchView</a></p>
-
-    <p>TextView中的文字由类似火柴棍分散组合的效果。</p>
-
-    <p><img src="https://camo.githubusercontent.com/a71e9d26a7f90ea70270b3681d99785a29f83be5/687474703a2f2f7777312e73696e61696d672e636e2f6d773639302f6136393561636465677731656d79746e6b347334356732306567306d6b3439302e676966" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Musenkishi/wally">Wally</a></p>
-
-    <p>Wally is a fast and efficient open source wallpaper application for Android.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/kyze8439690/FolderLayout">FolderLayout</a></p>
-
-    <p>A layout like a stack of files and you can choose one to open. Just imitate the UI of Tencent’s QQ手机管家.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Malinskiy/android-material-icons">android-material-icons</a></p>
-
-    <p>一个让你方便的在Android开发中使用Google发布出来的Material Design风格图标的库。	</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/quiqueqs/BabushkaText">BabushkaText</a></p>
-
-    <p>A simpler way to style your TextViews</p>
-
-    <p><img src="https://github.com/quiqueqs/BabushkaText/raw/master/images/example.png" alt="image" /></p>
-  </li>
-</ol>
-
-<h3 id="section-2">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.chinagdg.com/thread-6053-1-1.html">Google 技术资源离线版</a></p>
-
-    <p>Google 发布了一套4张 DVD，将 Google Developers 上的在线技术文档和视频打包到离线文件中。内容很丰富，如 Android 官方文档和SDK、Google Cloud 文档和视频、Web Fundamentals 文档、I/O 大会和 Dev Bytes 视频、Google Udacity 课程视频 等等。</p>
-  </li>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0 Release Candidate 4</a></p>
-
-    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a></p>
-  </li>
-</ol>
-
-<h3 id="section-3">设计</h3>
-
-<h4 id="section-4">文章</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.ui.cn/project.php?id=33849">中国移动应用设计趋势解读</a></p>
-
-    <p>铺天盖地的二维码、丧心病狂的小红点，还有繁花似锦的安卓ROMs…</p>
-
-    <p>——老外对中国式App设计趋势的分析  by  Dan Grover (微信产品经理) </p>
   </li>
 </ol>
 
