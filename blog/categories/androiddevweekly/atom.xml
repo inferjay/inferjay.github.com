@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-12T10:09:50+08:00</updated>
+  <updated>2015-01-19T15:53:58+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,186 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#16]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-16/"/>
+    <updated>2015-01-19T13:48:42+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-16</id>
+    <content type="html"><![CDATA[<h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androidperformance.com/android-performance-optimization-overdraw-1.html">Android性能优化之过渡绘制(一)</a></p>
+
+    <p>首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。</p>
+  </li>
+  <li>
+    <p><a href="http://www.androidperformance.com/android-performance-optimization-overdraw-2.html">Android性能优化之过渡绘制(二)</a></p>
+
+    <p>这篇文章从实战的角度，讲解了一个过渡绘制的优化过程。当然这里用到的只是很少的一部分，毕竟每个应用差别很大，优化方式也各不一样。所以这篇文章仅供参考，想把这块做好还是要下功夫的。不过令我比较欣慰的是，在公司内推行这个优化之后，我们Flyme内部的自带应用已经做得很好了，当然还是有不少界面有优化的空间，但总体还是比较满意的。</p>
+  </li>
+  <li>
+    <p><a href="http://stormzhang.com/devtools/2015/01/15/android-studio-tutorial6/">Android Studio系列教程六–Gradle多渠道打包</a></p>
+
+    <p>由于国内Android市场众多渠道，为了统计每个渠道的下载及其它数据统计，就需要我们针对每个渠道单独打包，如果让你打几十个市场的包岂不烦死了，不过有了Gradle，这再也不是事了</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://www.kuqin.com/shuoit/20141118/343265.html">你不可不知的10个Github功能</a></p>
+
+    <p>Github深受开发者们喜爱，不过有很多Github功能还是不为大多数人熟知，有的，你可能从来没用过；有的，可能见过，却从未正真了解过。这里慧都控件网为大家收集了10个不可不知的Github功能。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/wenda/detail/243880">ListView小知识整理：滑动背景、Item间隙等</a></p>
+
+    <p>在Android中，ListView是最常用的一个控件，在做UI设计的时候，很多人希望能够改变一下它的背景，使他能够符合整体的UI设计，改变背景很简单只需要准备一张图片，然后指定属性 android:background=”@drawable/bg”，不过不要高兴地太早，当你这么做以后，发现背景是变了，但是当你拖动，或者点击 list空白位置的时候发现ListItem都变成黑色的了，破坏了整体效果，这是为什么呢？</p>
+  </li>
+  <li>
+    <p><a href="http://lzyblog.com/2015/01/13/Android性能优化课程翻译（一）：渲染性能/">Android性能优化课程翻译（一）：渲染性能</a></p>
+
+    <p>渲染性能意味着你可以有多快的速度绘制你的activity并让它在屏幕上刷新出来。这里的性能良好指的是你的用户感觉你的应用程序是流畅的，并且是快速响应的，这意味着你必须在16ms甚至更少的时间来完成所有的逻辑和渲染操作，但实际上这可能比你想象的要困难一些。</p>
+  </li>
+  <li>
+    <p><a href="http://lzyblog.com/2015/01/09/Android应用监听自己是否被卸载，做反馈统计/">Android应用监听自己是否被卸载，做反馈统计</a></p>
+
+    <p>最近做项目的时候碰到这样一个需求：用户卸载应用后提供反馈信息以便更好的改进软件，并统计卸载量。Android可以监听卸载广播，得到什么应用被卸载了，但是系统并没有提供监听自己卸载的方法，于是乎，在网上找了一些方法，根据自己需求做了些修改，最后完成这个需求。</p>
+  </li>
+  <li>
+    <p><a href="http://lzyblog.com/tags/OkHttp/">Square开源库OkHttp的分析和使用系列教程</a></p>
+
+    <p>HTTP是目前很多应用的网络连接方式，通过它我们可以交换数据和媒体。有效的使用HTTP会使你的应用获得更快的加载速度，并且更节约带宽。OKHttp就是为这个目标应运而生的。</p>
+  </li>
+  <li>
+    <p><a href="http://www.oschina.net/translate/what-every-programmer-should-know-about-memory-part1?print">每个程序员都应该了解的内存知识【第一部分】</a></p>
+
+    <p>早期计算机比现在更为简单。系统的各种组件例如CPU，内存，大容量存储器和网口，由于被共同开发因而有非常均衡的表现。例如，内存和网口并不比CPU在提供数据的时候更（特别的）快。曾今计算机稳定的基本结构悄然改变，硬件开发人员开始致力于优化单个子系统。于是电脑一些组件的性能大大的落后因而成为了瓶颈。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/Yalantis/Pull-to-Refresh.Rentals-Android">Pull-to-Refresh.Rentals-Android</a></p>
+
+    <p>一个动画效果很赞的下拉刷新的控件。</p>
+
+    <p><img src="https://camo.githubusercontent.com/d406ac5a03a2b1fa5cf41fadc8d2408cb8709bdc/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313635303331372f7265616c6573746174652d70756c6c5f312d322d332e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Yalantis/Side-Menu.Android">Side-Menu.Android</a></p>
+
+    <p>一个动画效果很赞的侧滑菜单库。</p>
+
+    <p><img src="https://camo.githubusercontent.com/cb6caa7a392d01d46bca9d9485c01fc173f55fac/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313638393932322f6576656e74732d6d656e755f312d312d362e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Yalantis/Context-Menu.Android">Context-Menu.Android</a></p>
+
+    <p>一个动画效果很赞的上下文菜单库。</p>
+
+    <p><img src="https://camo.githubusercontent.com/46c15734b552ce3afefa7efd1518909046b4677e/68747470733a2f2f6431337961637572716a676172612e636c6f756466726f6e742e6e65742f75736572732f3132353035362f73637265656e73686f74732f313738353237342f39396d696c65732d70726f66696c652d6c696768745f312d312d342e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/xiprox/WaniKani-for-Android">WaniKani-for-Android</a></p>
+
+    <p>一个做的很棒的学习日本汉字的App.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/crossle/KitKatEmoji">KitKatEmoji</a> (推荐人<a href="http://www.weibo.com/songxiaoming">@CrossleSong</a>)</p>
+
+    <p>Android KitKat emoji表情库</p>
+
+    <p><img src="https://raw.githubusercontent.com/crossle/KitKatEmoji/master/KitKatEmoji-sample/preview.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/r0adkll/Slidr">Slidr</a></p>
+
+    <p>一个方便你为Activity添加滑动后关闭的库。</p>
+
+    <p><img src="https://raw.githubusercontent.com/r0adkll/Slidr/master/images/slidr_gif.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/felipecsl/GifImageView">GifImageView</a></p>
+
+    <p>Android原生的ImageView是不能显示Gif图片，而这个GifImageView对ImageView进行了扩展可以显示Gif图片。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/akexorcist/Android-RoundCornerProgressBar">Android-RoundCornerProgressBar</a></p>
+
+    <p>一个漂亮的圆角水平进度条。</p>
+
+    <p><img src="https://raw.githubusercontent.com/akexorcist/Android-RoundCornerProgressBar/master/image/header.jpg" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/TannerPerrien/picasso-transformations">picasso-transformations</a></p>
+
+    <p>适用于Picasso图片加载库的图片转场动画库。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/AndroidDeveloperLB/ChipsLibrary">ChipsLibrary</a></p>
+
+    <p>在Android EditText中实现打Tag功能.</p>
+
+    <p><img src="https://camo.githubusercontent.com/304547454e09fa27bcc5dea41a8572d8d96ba219/68747470733a2f2f6c68332e676f6f676c6575736572636f6e74656e742e636f6d2f2d307469445852646a4539772f55454b53526455615336492f41414141414141416f71772f746874634b4d5753574b732f773339332d683638332d6e6f2f706e672e706e67" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/wasabeef/glide-transformations">glide-transformations</a></p>
+
+    <p>适用于Glide图片加载库的图片转场动画库。</p>
+
+    <p><img src="https://raw.githubusercontent.com/wasabeef/glide-transformations/master/art/demo.gif" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androiddevtools.cn">Android Studio 1.1 Preview 1</a></p>
+
+    <p>本次主要更新：</p>
+
+    <ol>
+      <li>在新建项目的时候创建的launcher图标会被作为@mipmap资源代替@drawable资源。</li>
+      <li>Link检查工具增加一些检查规则。</li>
+      <li>增加Android Wear的watch faces模版。</li>
+      <li>捉了许多只🐛。</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.imooc.com/view/263?from=itblog">Android属性动画赏析</a></p>
+
+    <p>动画几乎是一个好的App所不可缺少的一部分，它体现了一种更友好的交互方式，在iOS、Android L中动画的使用越来越多，特别是后者更是着重强调设计更好的动画。从3.0开始，Android就提供了一种更为强大的属性动画框架。本次课程，将向你介绍如何使用属性动画做出更好的动画</p>
+  </li>
+</ol>
+
+<h3 id="section-4">设计</h3>
+
+<h3 id="section-5">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://fontpair.co">FontPair</a></p>
+
+    <p>一个帮助设计师挑选Google字体的网站。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发技术周报 Issue#15]]></title>
@@ -663,175 +843,6 @@
     <p><a href="https://github.com/t32k/material-design-color-palette-sketch-plugin">material-design-color-palette-sketch-plugin</a></p>
 
     <p>Sketch app plugin for displaying Google material design color palette.</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#11]]></title>
-    <link href="http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11/"/>
-    <updated>2014-12-15T13:56:36+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11</id>
-    <content type="html"><![CDATA[<h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://droidyue.com/blog/2014/11/29/why-onsharedpreferencechangelistener-was-not-called/">Google为何这样设计OnSharedPreferenceChangeListener</a></p>
-
-    <p>之前使用OnSharedPreferenceChangeListener，遇到了点小问题，就是有些时候OnSharedPreferenceChangeListener没有被触发。最近花了点时间研究了一下，小做整理。本文将会介绍监听器不被触发的原因，解决方法，以及其中隐含的一些技术细节。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.isming.me/2014/12/12/import-library-to-android-studio/">导入开源库到基于Android Studio构建的项目中</a></p>
-
-    <p>前两天，谷歌发布了Android Studio 1.0的正式版，也有更多的人开始迁移到Android Studio进行开发。然而，网上很多的开源库,控件等还是以前的基于Eclipse进行开发，很多人不知道怎么导入到自己的基于Android Studio项目中来，微博上也有人私信我，让我来写写，正好今天回来的比较早，就写写吧。主要介绍一下常见的一些导包的场景。</p>
-  </li>
-  <li>
-    <p><a href="http://www.cnblogs.com/ct2011/p/4152323.html">Android批量打包提速 - 1分钟900个市场不是梦</a></p>
-
-    <p>使用Ant或者Gradle来给程序进行多渠道批量打包，通常都是在manifest文件中写入一个meta标签：<code>&lt;meta-data android:name="CHANNEL" android:value="xxx" /&gt;</code> meta的key值固定，通过循环改变meta中的value值来实现市场渠道的写入。Ant批量打包实现相对麻烦，以前写的时候多亏了<a href="http://www.cnblogs.com/qianxudetianxia/archive/2012/07/04/2573687.html">谦虚的天下-《App自动化之使用Ant编译项目多渠道打包》</a> 。如果没有这篇帖子，真不知道当时Ant要折腾多少回才能写好。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">上传Android或Java库到Maven central repository</a></p>
-
-    <p>主要介绍利用Sonatype将jar或aar提交到Maven的中央仓库。是不是希望将自己的jar或是aar传到maven官方库中，在The Central Repository中可以被其他人搜索使用呢，是的话，往下看吧。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://greenrobot.me/devpost/android-custom-layout/">深入解析Android的自定义布局</a></p>
-
-    <p>这篇文章是前Firefox Android工程师（现在跳槽去Facebook了） Lucas Rocha所写，文中对Android中常用的四种自定义布局方案进行了很好地分析，并结合这四种Android自定义布局方案所写的示例项目讲解了它们各自的优劣以及四种方案之间的比较。</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/devpost/java-faster-less-jvm-garbage/">Linkedin工程师是如何优化他们的Java代码的</a></p>
-
-    <p>最近在刷各大公司的技术博客的时候，我在Linkedin的技术博客上面发现了一篇很不错博文。这篇博文介绍了Linkedin信息流中间层Feed Mixer，它为Linkedin的Web主页，大学主页，公司主页以及客户端等多个分发渠道提供支撑（如下图所示）。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/column/details/android5.html">跟着ym学习Android5.0</a></p>
-
-    <p>跟着作者一步步学习Android 5.0开发。从创建模拟器开始，再到Material主题、Palette、AnimatedVectorDrawable、RecyclerView、CardView、Activity过渡动画、如何定义阴影等。</p>
-  </li>
-  <li>
-    <p><a href="http://qichaochen.github.io/2014/12/08/108-Android-Toolbar-DrawerLayout-01/">[Material Design]使用Toolbar + DrawerLayout快速实现高大上菜单侧滑</a></p>
-
-    <p>如果你有在关注一些遵循最新的Material Design设计规范的应用的话（如果没有，假设你有！），也许会发现有很多使用了看起来很舒服、很高大上的侧滑菜单动画效果。</p>
-  </li>
-  <li>
-    <p><a href="http://www.dgtle.com/article-5885-1.html">安卓中的 Cydia — Xposed 框架插件专题</a></p>
-
-    <p>大名鼎鼎的 Xposed，相信不少经常泡在各类安卓论坛的安卓粉们都听说过。在安卓进入 4.0 的时代后，不少“大神”也都会在自己做的 Rom 中添加这个 Xposed 软件。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/chrisbatt/AndroidFastImageProcessing">AndroidFastImageProcessing</a></p>
-
-    <p>A framework for speeding up image processing on android devices by taking advantage of shaders on the GPU.	</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/stephanenicolas/loglifecycle">loglifecycle</a></p>
-
-    <p>Logs all lifecycle methods of annotated Activities, Fragments, Services, Views, etc.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Narfss/ParallaxEverywhere">ParallaxEverywhere</a></p>
-
-    <p>Parallax everywhere is a library with alternative android widgets with parallax effects.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/adnan-SM/TimelyTextView">TimelyTextView</a></p>
-
-    <p>Animated TextView like Timely app.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Manabu-GT/ExpandableTextView">ExpandableTextView</a></p>
-
-    <p>ExpandableTextView是一个可以使开发人员能够轻松地创建可扩展/折叠的TextView效果，就像Google Play里用于显示App描述的TextView一样.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/googlesamples">Google Samples</a></p>
-
-    <p>Google在Github上发布了大量Demo，针对不同的特性，也包含了最新的API 21 (Lollipop).</p>
-  </li>
-</ol>
-
-<h3 id="section-2">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0正式版发布啦</a></p>
-
-    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a>	 	 </p>
-  </li>
-  <li>
-    <p><a href="https://github.com/airk000/gologcat">gologcat</a></p>
-
-    <p>一个由golang编写，可以在终端中彩色输出logcat的实用工具，支持自定义颜色。</p>
-  </li>
-  <li>
-    <p><a href="http://inloop.github.io/shadow4android/">Android 9-patch shadow generator</a></p>
-
-    <p>Android点9图片阴影生成器。</p>
-  </li>
-</ol>
-
-<h3 id="section-3">视频</h3>
-
-<ol>
-  <li>
-    <p><a href="http://v.youku.com/v_show/id_XODQ1MjI2MDQ0.html?f=23088492">精通Android触摸系统(中英字幕)</a></p>
-
-    <p><a href="http://www.weibo.com/oceancx?from=feed&amp;loc=nickname">@Ocean-藏心</a>同学历经3周的翻译,将1小时18分钟的视频,终于完成了. 简介:<a href="http://t.cn/RzxZs6E">的姊妹篇</a>，详细讲解了Android自定义事件处理的方方面面。配合<a href="http://blog.csdn.net/guolin_blog/">guolin</a> 大神CSDN的博客和上一个视频，让你对开发Android 自定义控件游刃有余。此外还有<a href="http://">@Trinea</a>大神的<a href="http://www.trinea.cn/android/touch-event-delivery-mechanism/">Android Touch事件传递机制</a>简略解读。</p>
-
-    <p>视频中用到的PPT(PDF版)下载地址：<a href="http://wugengxin.cn/download/pdf/android/PRE_andevcon_mastering-the-android-touch-system.pdf">http://wugengxin.cn/download/pdf/android/PRE_andevcon_mastering-the-android-touch-system.pdf</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.jikexueyuan.com/course/396.html">Android Studio 1.0 (稳定版)的使用</a></p>
-
-    <p>经过 2 年时间的研发，Google 终于在近日正式发布了面向 Android 开发者的集成开发环境 Android Studio 1.0（稳定版）。Android Studio 是 Google 开发的一款面向 Android 开发者的 IDE，支持 Windows、Mac、Linux 等操作系统，基于流行的 Java 语言集成开发环境 IntelliJ 搭建而成。该 IDE 在 2013 年 5 月的 Google I/O 开发者大会上首次露面，此间推出了若干个测试版，12 月 8 日发布的版本是 Android Studio 的首个稳定版。Google 称，相对于其他开发工具，Android Studio 更快、更具生产力，Android Studio 1.0 推出后，Google 将逐步放弃对原来主要的 Android 开发工具 Eclipse ADT 的支持。</p>
-  </li>
-</ol>
-
-<h3 id="section-4">设计</h3>
-
-<h4 id="section-5">文章</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.jianshu.com/p/a3b2422b5465?utm_campaign=hugo&amp;utm_medium=reader_share&amp;utm_content=note&amp;utm_source=weibo">关于Material Design，做到这四点便足以让用户惊喜</a></p>
-
-    <p>Material Design 主张将现实世界中的交互体验，应用到界面设计中来，以求用户的经验能够迁移，并更快习惯新系统。Teambition 已经根据 Material Design 重新设计了旗下所有的 Android 客户端产品。在实践过程中，设计和产品团队总结了一些值得分析的要点，与大家分享。</p>
-  </li>
-  <li>
-    <p><a href="http://www.cocoachina.com/special/design/">给程序员的设计学习指南</a></p>
-
-    <p>这是给 移动开发者 准备的设计学习指南。在这里你将接触到三大平台的设计规范、基础设计理论，以及设计实践，还有一些学习设计的资源。程序员为什么需要学习设计？理解设计能让程序员更上一层楼，能让TA与设计师的交流协作更高效愉快，甚至拥有独立开发面向大众的APP的能力。 <a href="http://www.cocoachina.com/programmer/20141113/10214.html">《程序员需要学习设计的5大理由》</a>。</p>
-  </li>
-  <li>
-    <p><a href="http://zhuanlan.zhihu.com/zhezhexiong/19565895">[无线手册-4] dp、sp、px傻傻分不清楚[完整]</a></p>
-
-    <p>做移动设计的同学，不管是原生app或者web app，应该对字体字号都是很头痛的问题。根本原因是，我们用唯一分辨率的电脑，设计各个不同尺寸大小分辨率的设备，那简直要疯掉了。 <a href="http://zhuanlan.zhihu.com/zhezhexiong/1956455">[无线手册-2]不得不说的icon-font</a> 	<a href="http://zhuanlan.zhihu.com/zhezhexiong/1956）4893">[无线手册-3] 移动App上的动画们</a></p>
-  </li>
-</ol>
-
-<h4 id="section-6">资源</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.androidicons.com/">250 free icons in 5 sizes and 14 colors</a></p>
-
-    <p>包含5种尺寸和14种颜色的250个免费icons。</p>
   </li>
 </ol>
 

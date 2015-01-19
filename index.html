@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="教程 Android Studio系列教程五–Gradle命令详解与导入第三方包 Android Studio + Gradle的组合用起来非常方便，很多第三方开源项目也早都迁移到了Studio，为此今天就来介绍下查看、编译并导入第三方开源项目的方法。 打造极致Material &hellip;">
+  <meta name="description" content="教程 Android性能优化之过渡绘制(一) 首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。 Android性能优化之过渡绘制(二) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,68 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/19/android-dev-weekly-issue-16/">Android开发技术周报 Issue#16</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-19T13:48:42+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/01/19/android-dev-weekly-issue-16/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-16/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androidperformance.com/android-performance-optimization-overdraw-1.html">Android性能优化之过渡绘制(一)</a></p>
+
+    <p>首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。</p>
+  </li>
+  <li>
+    <p><a href="http://www.androidperformance.com/android-performance-optimization-overdraw-2.html">Android性能优化之过渡绘制(二)</a></p>
+
+    <p>这篇文章从实战的角度，讲解了一个过渡绘制的优化过程。当然这里用到的只是很少的一部分，毕竟每个应用差别很大，优化方式也各不一样。所以这篇文章仅供参考，想把这块做好还是要下功夫的。不过令我比较欣慰的是，在公司内推行这个优化之后，我们Flyme内部的自带应用已经做得很好了，当然还是有不少界面有优化的空间，但总体还是比较满意的。</p>
+  </li>
+  <li>
+    <p><a href="http://stormzhang.com/devtools/2015/01/15/android-studio-tutorial6/">Android Studio系列教程六–Gradle多渠道打包</a></p>
+
+    <p>由于国内Android市场众多渠道，为了统计每个渠道的下载及其它数据统计，就需要我们针对每个渠道单独打包，如果让你打几十个市场的包岂不烦死了，不过有了Gradle，这再也不是事了</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/19/android-dev-weekly-issue-16/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -672,73 +734,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/24/android-dev-weekly-issue-8/">Android开发周报 Issue#8</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-24T10:56:01+08:00" pubdate data-updated="true">Nov 24<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/11/24/android-dev-weekly-issue-8/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/11/24/android-dev-weekly-issue-8/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.isming.me/2014/11/21/use-gradle-new/">使用gradle构建android项目（续）</a></p>
-
-    <p>在几个月之前，我已经写过一篇使用gradle构建android项目的博客了<a href="http://blog.isming.me/2014/05/20/android4gradle/">http://blog.isming.me/2014/05/20/android4gradle/</a>,那篇文章已经介绍了如何使用gradle进行项目构建，以及为谷歌会推荐使用gradle。当时android的gradle插件是0.11.0,现在插件的版本已经是0.14.3了，对于一些老的方法和api，有一些已经被移除，无法使用。因此有必要再写一篇博客介绍这些被移除的部分和替代方案。同时由于个人学识原因，当时没有介绍的一些技巧，其他功能，也会在本文中进行介绍。</p>
-  </li>
-  <li>
-    <p><a href="http://www.csdn.net/article/2014-11-21/2822753-material-design-libs/1">直接拿来用！十大Material Design开源项目</a></p>
-
-    <p>本文详细介绍了十个Material Design开源项目，从示例、FAB、菜单、动画、Ripple到Dialog，看被誉为“Google第一次在设计语言和规范上超越了Apple”的Material Design是如何逐渐成为App的一种全新设计标准。另外推荐大家去 Github 上 Star 或者 Fork <a href="https://github.com/lightSky/MaterialDesignCenter"><code>MaterialDesignCenter</code></a>这个项目，该收集整理了</p>
-  </li>
-  <li>
-    <p><a href="http://www.cnblogs.com/ct2011/p/4100132.html">放弃WebView，使用Crosswalk做富文本编辑器</a></p>
-
-    <p>Android WebView做普通浏览还好，做富文本编辑器（<code>document.body.contentEditable=true;</code>），常常会遇到各种奇葩的bug，而且很难修复。尽管Google在版本迭代中不断修复bug，但依旧没法用它来做富文本编辑。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.isming.me/2014/11/17/material-design-for-pre-lollipop-android/">在低版本android系统上实现Material设计应用</a></p>
-
-    <p>​Material Design真的很好看，动画效果真的很实用。前面也写了一些文章介绍如何编写Material风格的程序，但是很多都是一些新的api，低版本上面没有这些api，我们没办法使用。但是不用气馁，google官方，以及一些大牛，给我们提供了一些程序，让我们在低版本上面可以实现Material风格的程序，这里就给大家介绍一下。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/11/24/android-dev-weekly-issue-8/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -791,6 +786,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/19/android-dev-weekly-issue-16/">Android开发技术周报 Issue#16</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/12/android-dev-weekly-issue-15/">Android开发技术周报 Issue#15</a>
       </li>
     
@@ -804,10 +803,6 @@
     
       <li class="post">
         <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/22/android-dev-weekly-issue-12/">Android开发周报 Issue#12</a>
       </li>
     
   </ul>
