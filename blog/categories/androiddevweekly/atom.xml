@@ -4,7 +4,7 @@
   <title><![CDATA[Category: AndroidDevWeekly | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/androiddevweekly/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-01-19T15:53:58+08:00</updated>
+  <updated>2015-02-11T23:16:08+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,607 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#19]]></title>
+    <link href="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-19/"/>
+    <updated>2015-02-11T22:45:07+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-19</id>
+    <content type="html"><![CDATA[<h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.codekk.com/">Android开源项目源码解析</a></p>
+
+    <p>由<a href="https://github.com/Trinea">@Trinea</a>发起的Android开源项目源码解析项目，目前已校对发布的分析有：Volley源码解析、Android Universal Image Loader源码分析、Dagger源码解析、EventBus 源码解析、xUtils源码解析、ViewPagerindicator源码解析、HoloGraphLibrary源码解析、CircularFloatingActionMenu源码解析、PhotoView 源码解析、Android Lock Pattern源码解析以及公共技术点：Java动态代理、Java注解Annotation、View绘制流程、依赖注入和View时间传递等。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/guolin_blog/article/details/42238627">Android最佳性能实践(一)——合理管理内存</a></p>
+
+    <p>有不少朋友都问过我，怎样才能写出高性能的应用程序，如何避免程序出现OOM，或者当程序内存占用过高的时候该怎么样去排查。确实，一个优秀的应用程序，不仅仅要功能完成得好，性能问题也应该处理得恰到好处。为此，我也是阅读了不少Android官方给出的高性能编程建议，那么从本篇文章开始，我就准备开始写一个全新系列的博文，来把这些建议进行整理和分析，帮助大家能够写出更加出色的应用程序。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80627/">深入解析Android的自定义布局</a></p>
+
+    <p>这篇文章是前Firefox Android工程师（现在跳槽去Facebook了） <a href="http://lucasr.org/about">Lucas Rocha</a>所写，文中对Android中常用的四种自定义布局方案进行了很好地分析，并结合这四种Android自定义布局方案所写的示例项目讲解了它们各自的优劣以及四种方案之间的比较。看完这篇文章，也让我对Android 自定义布局有了进一步的了解，于是趁着兴头，我把它翻译成中文，<a href="http://lucasr.org/2014/05/12/custom-layouts-on-android/">原文链接在此</a>。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80634/">巧用Drawable 实现Android UI 元素间距效果</a></p>
+
+    <p>在大部分的移动UI或者Web UI都是基于网格概念而设计的。这种网格一般都是有一些对其的方块组成，然后它们组合成为一个块。使用网格这样的设计原则可以有助于对齐UI元素，提升UI的一致性，同时还能让用户更加容易的获取UI上面包含的内容。简而言之，网格是一个相当的强大的设计工具。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://ifeve.com/fun-modules/">模块化的乐趣</a>	</p>
+
+    <p>模块间的紧耦合是一种很糟糕的设计，而耦合的最坏表现就是模块间的循环依赖。幸运的是，有几种方法可以用来消除循环依赖，分别是回调函数，代码上移，代码下移。 接下来，我会为大家展示一个小例子。示例中，我会分别使用上述几种技术来消除循环依赖。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80630/">你的Android应用完全不需要那么多的权限</a>	
+ Android系统的权限从用户的角度来看有时候的确有点让人摸不着头脑。有时候可能你只需要做一些简单的事情（对联系人的信息进行编辑），却申请了远超你应用所需的权限（比如访问所有联系人信息的权限）。这很难不让用户对你保存戒备。</p>
+  </li>
+  <li>
+    <p><a href="http://stackvoid.com/performance-tuning-on-android/">Android App 性能优化实践</a>	
+ 本文从工具、布局优化、代码、View的绘制、电量、和Apk的大小等几个方面记录了Android App优化需要用到的工具和以及在实践中的Tips。</p>
+  </li>
+  <li>
+    <p><a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">MVC，MVP 和 MVVM 的图示</a></p>
+
+    <p>复杂的软件必须有清晰合理的架构，否则无法开发和维护。<a href="http://zh.wikipedia.org/wiki/MVC">MVC</a>（Model-View-Controller）是最常见的软件架构之一，业界有着广泛应用。它本身<a href="http://www.ruanyifeng.com/blog/2007/11/mvc.html">很容易理解</a>，但是要讲清楚，它与衍生的 MVP 和 MVVM 架构的区别就不容易了。</p>
+  </li>
+  <li>
+    <p><a href="http://www.androidperformance.com/build-rom-for-nexus5.html">为Nexus5编译AndroidL固件</a></p>
+
+    <p>接前一篇文章&lt;<a href="http://www.androidperformance.com/view-android-source-code-with-androidstudio.html">使用Android Studio查看Android Lollipop源码</a>&gt; , 我们知道,仅仅看代码,提高是比较有限的,而且理解起来也比较肤浅,往往过目就忘. 而自己写过的代码,往往会印象比较深刻,在写的时候也会比较容易理解流程. 所以我们在看代码的同时, 如果能修改代码, 在手机上跑起来并看到修改的效果,这无疑会加快看代码的效率和积极性. </p>
+  </li>
+  <li>
+    <p><a href="http://www.race604.com/communicate-with-remote-service-1/">与Sevice实现双向通信系列</a></p>
+
+    <p>经常有这样的应用场景，我们需要Client端调用Service完成一些事情，Service也可以通过回调通知客户端。</p>
+  </li>
+  <li>
+    <p><a href="http://zhengxiaopeng.com/2015/02/02/使用Gradle发布项目到JCenter仓库/">使用Gradle发布项目到JCenter仓库</a>	</p>
+
+    <p>这篇文章介绍通过Gradle把开源项目发布到公共仓库JCenter中，方便你我他的事情，我们都是很懒的嘛。JCenter现在是Android Studio中repositories的默认节点了，之前是Maven的，不过JCenter是兼容Maven的，所以放心使用。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/ZieIony/Carbon">Carbon</a></p>
+
+    <p>Material Design的兼容实现，支持Android 2.1+。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Stuart-campbell/RushOrm">RushOrm</a></p>
+
+    <p>一个ORM框架，核心功能：</p>
+
+    <ul>
+      <li>自定义字段 - 轻松实现定制字段,以便任何对象都可以被序列化到数据库</li>
+      <li>表关系
+        <ul>
+          <li>一对一</li>
+          <li>一对多</li>
+          <li>保存一个父对象会自动保存与之相关关联的子对象</li>
+        </ul>
+      </li>
+      <li>文件 - 轻松的保存长文本, JSON and bitmaps</li>
+      <li>升级 - 数据库升级支持通过注解去删除和重命名列名。</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://github.com/geftimov/android-patternview">android-patternview</a></p>
+
+    <p>图案密码解锁库。</p>
+
+    <p><img src="https://github.com/geftimov/android-patternview/raw/master/art/rsz_pattern_correct.png" alt="image" /><img src="https://github.com/geftimov/android-patternview/raw/master/art/rsz_mm.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/sbakhtiarov/gif-movie-view">gif-movie-view</a></p>
+
+    <p>可以显示Gif动画的自定义View。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/bytedeco/javacpp">JavaCPP</a></p>
+
+    <p>JavaCPP provides efficient access to native C++ inside Java, not unlike the way some C/C++ compilers interact with assembly language. No need to invent new languages such as with SWIG, SIP, C++/CLI, Cython, or RPython as required by cppyy. Instead, it exploits the syntactic and semantic similarities between Java and C++. Under the hood, it uses JNI, so it works with all implementations of Java SE, in addition to Android, Avian, and RoboVM (instructions).</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/qiujuer/Genius-Android">Genius-Android</a></p>
+
+    <p>Genius-Android 是 Android 中一些常用的的方法集合, Genius 提供6个基本板块：app(Ui)、animation(动画)、widget(Material控件)、command(命令行)］、net tool(Ping、Dns…)、util(常用方法,类)等。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dcloudio">5+ Runtime</a></p>
+
+    <p>5+ Runtime是DCloud推出的HTML5强化引擎，性能和功能都大幅领先phoneg*p，可以使用JS调用40W原生API，可以在低端机上流畅运行。点击视频观看低端机上如何流畅运行App。http://download.dcloud.net.cn/FastAndroid-mini.m4v 也可直接下载App在手机上体验：</p>
+
+    <p>功能演示：http://dcloud.io/helloh5/
+ UI演示：http://dcloud.io/hellomui/</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/alexzaitsev/freepager">freepager</a></p>
+
+    <p>对ViewPager进行了扩展，支持垂直切换page、垂直无限切换page、水平无线切换page和即可以垂直又可以水平无限切换page，支持ndroid 2.1.x (API 7) +系统。</p>
+
+    <p><img src="https://raw.githubusercontent.com/alexzaitsev/freepager/master/04.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/jenzz/Android-MaterialPreference">Android-MaterialPreference</a></p>
+
+    <p>一个自定义的，向后兼容的Material Design风格的Preference实现。</p>
+
+    <p><img src="https://camo.githubusercontent.com/e7d19d635dd16b8559b1f9c1982ca47ee55ddbe1/68747470733a2f2f7261772e6769746875622e636f6d2f6a656e7a7a2f416e64726f69642d4d6174657269616c507265666572656e63652f6d61737465722f6173736574732f53637265656e73686f74312e706e67" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/KlassenKonstantin/CollapseOnScroll">CollapseOnScroll</a></p>
+
+    <p>模仿Android Lollipop Contacts滚动效果的容器View。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/bboyfeiyu/AndroidEventBus">AndroidEventBus</a></p>
+
+    <p>一个Android平台的事件总线框架, 它简化了Activity、Fragment、Service等组件之间的交互，很大程度上降低了它们之间的耦合，使得我们的代码更加简洁，耦合性更低，提升我们的代码质量。</p>
+
+    <p><img src="https://camo.githubusercontent.com/1ba8becec515613cd83aa6b0273c67b058d0b6ab/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313530323033313235353038313130" alt="image" /></p>
+  </li>
+</ol>
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androiddevtools.cn">Android Studio 1.1 Beta 4</a></p>
+
+    <p>添加了对单元测试的支持以及修复了一些Bug。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ksoichiro/gradle-eclipse-aar-plugin">gradle-eclipse-aar-plugin</a>	
+ 一个可以让你在Eclipse中使用Android AAR格式库的Gradle插件。</p>
+  </li>
+  <li>
+    <p><a href="https://www.codota.com">Codota</a>	</p>
+
+    <p>一个代码片段搜索工具。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.imooc.com/view/312?from=itblog">细说多线程之Thread VS Runnable</a></p>
+
+    <p>本课程带领大家更加深入地学习Java多线程机制，深入理解创建线程的两种方式之间的差异，掌握线程的生命周期和守护线程的概念。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/226?from=itblog">千变万化的ViewPager切换动画</a></p>
+
+    <p>本课程将带领大家实现个性的ViewPager切换动画，首先介绍通过PageTransformer结合ViewPager.setPageTransformer来实现动画效果，然后教大家如何让其兼容到3.0以后，其中会涉及到属性动画等知识点；最后将介绍通过自定义ViewPager的方式来实现动画切换效果。</p>
+  </li>
+  <li>
+    <p><a href="http://v.youku.com/v_show/id_XODg1NTE5MjAw.html">android应用卡顿优化实践-何杰</a></p>
+
+    <p>Android应用的卡顿问题非常突出，所有用户都能感觉得到却又很难做量化卡顿的严重程度，过去的做法只是零星地发现和解决一些小点。DAU超亿级的UC浏览器在卡顿优化的过程中建立了一套衡量卡顿严重性的数据指标与监控分析机制，并藉此有针对性地落实了200+个性能优化点。这里会介绍卡顿监控与分析的方法、常见的卡顿案例与原因</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#18]]></title>
+    <link href="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-18/"/>
+    <updated>2015-02-11T22:41:41+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-18</id>
+    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/groovy-2-4-released">Groovy 2.4发布，支持Android开发</a></p>
+
+    <p>近日，Groovy编程语言的管理者Guillaume Laforge在博客上宣布了Groovy 2.4发布的消息。就在不久前，Pivotal宣布不再资助Groovy/Grails项目，Groovy 2.4将成为Pivotal资助下的最后一个主要的Groovy版本。Groovy 2.4最大的亮点就是对Android的支持，现在开发者可以完全使用Groovy编写Android应用了，而且与Java相比，可以省去很多样板代码。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://yanghui.name/blog/2015/02/01/2015-1-31-ali-technical-salon/">Android应用性能优化实践</a></p>
+
+    <p>周末跑去深圳参加了一场阿里主持的技术沙龙，主题是《如何构建高可用的APP》，沙龙中相关的ppt和视频可以在他们的微博中找到。沙龙中收获比较大的是有关UC的何杰分享的Android应用性能优化实践，和手Q web业务优化的解析。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.isming.me/2015/02/01/android-view-animation/">android动画-View Animation</a></p>
+
+    <p>视图动画（View Animation）,又称补间动画（Tween Animation）,即给出两个关键帧，通过一些算法将给定属性值在给定的时间内在两个关键帧间渐变。本文首先讲解各种基本动画的使用，其实介绍View动画的工作过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/tianzhijiexian/p/4128045.html">用开源项目ActivityOptionsICS让ActivityOptions的动画实现兼容</a></p>
+
+    <p>我之前写过一篇文章是讲解ActivityOption的api方法的（http://www.cnblogs.com/tianzhijiexian/p/4087917.html），当时吐槽各种动画不兼容，完全无视我们4.x或者2.x用户嘛，好在有开源库来帮助我们实现动画。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/wenda/detail/245687">android:clipToPadding属性的分析</a></p>
+
+    <p>ListView或GridView中android:clipToPadding属性的使用说明示例该属性的解释:Defines whether the ViewGroup will clip its drawing surface so as to exclude the padding area. 什么意思呢?就是说:clipToPadding属性定义了是否允许ViewGroup在padding中绘制,该值默认为true,即不允许.</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/xyang81/article/category/2759987">JNI/NDK开发指南</a></p>
+
+    <p>相信很多做过Java或Android开发的朋友经常会接触到JNI方面的技术，由其做过Android的朋友，为了应用的安全性，会将一些复杂的逻辑和算法通过本地代码（C或C++）来实现，然后打包成so动态库文件，并提供Java接口供应用层调用，这么做的目的主要就是为了提供应用的安全性，防止被反编译后被不法分子分析应用的逻辑。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/xyang81/article/details/42319789">Android NDK开发Crash错误定位</a></p>
+
+    <p>在Android开发中，程序Crash分三种情况：未捕获的异常、ANR（Application Not Responding）和闪退（NDK引发错误）。其中未捕获的异常根据logcat打印的堆栈信息很容易定位错误。ANR错误也好查，Android规定，应用与用户进行交互时，如果5秒内没有响应用户的操作，则会引发ANR错误，并弹出一个系统提示框，让用户选择继续等待或立即关闭程序。</p>
+  </li>
+  <li>
+    <p><a href="https://sobug.com/article/detail/7">Android APP安全测试入门</a></p>
+
+    <p>最近这两年移动端真是非常火，每个单位或多或少都会有那么几款App，对于我们Web安全攻城师来说，App安全也需要或多或少的了解一些。年初单位来了一位对App安全略有研究的小伙伴，某日闲来无事教了笔者几招，分享给大家。有句古语:”工欲善其事，必先利其器”，我们要研究App安全，没有几款高大上的神器是会非常麻烦的，因此本文主要给大家分享一下笔者学到的一些基础知识，主要是一些移动端测试辅助工具的使用。</p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/cn/author/黄文海">Java多线程编程模式实战指南</a></p>
+
+    <p>Active Object模式是一种异步编程模式。它通过对方法的调用与方法的执行进行解耦来提高并发性。若以任务的概念来说，Active Object模式的核心则是它允许任务的提交（相当于对异步方法的调用）和任务的执行（相当于异步方法的真正执行）分离。</p>
+  </li>
+</ol>
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/pedrovgs/TuentiTV">TuentiTV</a></p>
+
+    <p>一个Android TV应用。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/hongyangAndroid/Android-CircleMenu">Android-CircleMenu</a></p>
+
+    <p>自定义ViewGroup实现的圆形旋转菜单，支持跟随手指旋转以及快速旋转。</p>
+
+    <p><img src="https://raw.githubusercontent.com/hongyangAndroid/Android-CircleMenu/master/sample_zhy_CircleMenu/screen_shot.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/DWorkS/VolleyPlus">VolleyPlus</a></p>
+
+    <p>Volley的加强版，在Volley的基础上进行了扩展：</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/h6ah4i/android-verticalseekbar">VerticalSeekBar</a></p>
+
+    <p>垂直的SeekBar，支持2.3～5.0系统。</p>
+
+    <p><img src="https://github.com/h6ah4i/android-verticalseekbar/raw/master/pic/gb.png?raw=true" alt="Example on Android 2.3" width="200" />
+ <img src="https://github.com/h6ah4i/android-verticalseekbar/raw/master/pic/ics.png?raw=true" alt="Example on Android 4.0" width="200" />
+ <img src="https://github.com/h6ah4i/android-verticalseekbar/raw/master/pic/lollipop.png?raw=true" alt="Example on Android 5.0" width="200" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/rahulrj/ChromeOverflowMenu">ChromeOverflowMenu</a></p>
+
+    <p>模仿实现了Chrome的Overflow Menu的动画效果。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Avocarrot/json2view">json2view</a></p>
+
+    <p>json2view是一个非常简单的库，它可以将JSON文件转换为Android View，从而实现无需升级Apk就可以动态的更新View的样式。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/kymjs/KJFrameForAndroid">/KJFrameForAndroid</a></p>
+
+    <p>KJFrameForAndroid 又叫KJLibrary，是一个帮助快速开发的框架。使用KJFrameForAndroid，你可以轻松完成http请求、网络图片加载、数据库数据保存或读取。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/kymjs/CJFrameForAndroid">CJFrameForAndroid</a></p>
+
+    <p>CJFrameForAndroid 是一个实现android插件化开发的框架。使用CJFrameForAndroid，apk动态加载不再是难题，更重要的是可以轻松实现插件与APP项目之间的解耦。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/houkx/android-pluginmgr/">android-pluginmgr</a></p>
+
+    <p>android插件化开发的框架,实现apk动态加载。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/tianzhijiexian/ActivityOptionsICS">ActivityOptionsICS</a></p>
+
+    <p>ActivityOptions Animations的兼容库，支持Android api3.1+。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/chenupt/DragTopLayout">DragTopLayout</a></p>
+
+    <p>一个在ViewPager头部添加一个TopView用以显示头部菜单的控件，类型豌豆荚的应用详情页实现。</p>
+
+    <p><img src="https://raw.githubusercontent.com/chenupt/DragTopLayout/master/imgs/dragtop_1.1.0.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/zhaozhentao/InboxLayout">InboxLayout</a></p>
+
+    <p>模仿Google Inbox邮箱的上下拉返回效果，让你的app加入真正方便的手势操作。目前已支持底部为scrollview 顶部为listview和scrollview的情况,适用于大部分场景，正在做底部为listview的情况。</p>
+
+    <p><img src="https://raw.githubusercontent.com/zhaozhentao/InboxLayout/master/screenshot/pic.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/frankiesardo/icepick">icepick</a></p>
+
+    <p>一个通过注解来方便我们保存和恢复Android Instance状态的Library。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li><a href="http://www.androiddevtools.cn">Android Studio 1.1 Beta 2</a></li>
+</ol>
+
+<h3 id="section-4">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.tudou.com/programs/view/A-1wE18UWeA/">React.js Conf 2015 Keynote</a></p>
+
+    <p>React是Facebook开源的一个方便开发大型WebApp的框架。 </p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/308">Android图案解锁</a></p>
+
+    <p>本课程将带领大家通过自定义控件实现一个图案解锁的功能，包括自定义控件的使用、常见绘图操作、控件事件处理、监听器使用、以及综合案例的应用。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/264">多种多样的App主界面Tab实现方法</a>	
+ Tab选项卡几乎成为了App必备的一个功能，它的实现方法也是多种多样，本课程就将讲解迄今为止最主流的4种实现Tab的方法，包括ViewPager、Fragment、FragmentPagerAdapter和ViewPagerIndicator。</p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/cn/presentations/static-detection-method-for-android-app-vulnerabilities">安卓APP漏洞的静态检测方法</a></p>
+
+    <p>安卓系统凭借其灵活和开放的特性获得了市场的青睐，但开放性也意味着APP开发者需要为安全负更大的责任。一方面在安卓APP这个快速发展的领域有大量新手开发者的加入，另一方面即使经验丰富的开发者也难免犯错误，安卓应用的漏洞层出不穷，值得我们深入研究。由于安卓APP的功能越来越多，代码逻辑越来越复杂，漏洞常常隐藏在深处，只有触发到一系列特定条件后才会被触发。</p>
+  </li>
+</ol>
+
+<h3 id="section-5">小技巧</h3>
+
+<ol>
+  <li>
+    <p>查看task stack中当前正在运行的activity(<a href="http://weibo.com/brucefromsdu">@hi大头鬼hi</a>)</p>
+
+    <pre><code> adb shell dumpsys activity activities | sed -En -e '/Running activities/,/Run #0/p'
+</code></pre>
+  </li>
+  <li>
+    <p>Android使用Chrome远程调试Webview(<a href="http://weibo.com/brucefromsdu">@hi大头鬼hi</a>)</p>
+
+    <ol>
+      <li>chrome中输入<code>chrome://inspect/#devices</code></li>
+      <li>
+        <p>代码中需要开启webview debug </p>
+
+        <pre><code> if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.KITKAT) { 
+     WebView.setWebContentsDebuggingEnabled(true); 
+ }
+</code></pre>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android开发技术周报 Issue#17]]></title>
+    <link href="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-17/"/>
+    <updated>2015-01-19T14:38:55+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-17</id>
+    <content type="html"><![CDATA[<h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42555483">ART运行时垃圾收集（GC）过程分析</a></p>
+
+    <p>ART运行时与Dalvik虚拟机一样，都使用了Mark-Sweep算法进行垃圾回收，因此它们的垃圾回收流程在总体上是一致的。但是ART运行时对堆的划分更加细致，因而在此基础上实现了更多样的回收策略。不同的策略有不同的回收力度，力度越大的回收策略，每次回收的内存就越多，并且它们都有各自的使用情景。这样就可以使得每次执行GC时，可以最大限度地减少应用程序停顿。本文就详细分析ART运行时的垃圾收集过程。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/how-to-debug-http-and-https-traffic-on-android/">如何调试 Android 上 HTTP(S) 流量</a></p>
+
+    <p>在Android开发中我们常常会和API 打交道，可能你不想，但是这是避不开的。大部分情况下，调试发送网络请求和接收响应的过程都是十分痛苦的。有多少次我们经过调试发现API的调用失败仅仅是因为我们的编码错了或者丢失了一个HTTP头部参数？在调试的过程中，我们发现出现错误的原因千奇百怪。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42492621">ART运行时为新创建对象分配内存的过程分析</a></p>
+
+    <p>ART运行时和Dalvik虚拟机一样，在堆上为对象分配内存时都要解决内存碎片和内存不足问题。内存碎片问题可以使用dlmalloc技术解决。内存不足问题则通过垃圾回收和在允许范围内增长堆大小解决。由于垃圾回收会影响程序，因此ART运行时采用力度从小到大的进垃圾回收策略。</p>
+  </li>
+  <li>
+    <p><a href="http://hukai.me/android-performance-patterns/">Android性能优化典范</a></p>
+
+    <p>2015年伊始，Google发布了关于Android性能优化典范的专题，一共16个短视频，每个3-5分钟，帮助开发者创建更快更优秀的Android App。课程专题不仅仅介绍了Android系统中有关性能问题的底层工作原理，同时也介绍了如何通过工具来找出性能问题以及提升性能的建议。主要从三个方面展开，Android的渲染机制，内存与GC，电量优化。下面是对这些问题和建议的总结梳理。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/vector_yi/article/details/24719873">50个Android开发技巧(20 使用MVP模式)</a></p>
+
+    <p>随着UI创建技术的功能日益增强，UI层也履行着越来越多的职责。为了更好地细分视图(View)与模型(Model)的功能，让View专注于处理数据的可视化以及与用户的交互，同时让Model只关系数据的处理，基于MVC概念的MVP(Model-View-Presenter)模式应运而生。</p>
+  </li>
+  <li>
+    <p><a href="http://yanghui.name/blog/2015/01/20/android-developer-tools/">Android Developer Tools(开发人员工具)</a></p>
+
+    <p>在做Android开发的过程中，不可避免地需要使用到自带的android developer tools（开发人员工具），这是一个强大的开发辅助工具，随着android版本的更新，developer tools也集成了越来越多十分方便的调试功能，这里以android 4.4.4版本为例子，说说其中一部分我常用工具的使用.</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/tiimgreen/github-cheat-sheet/blob/master/README.zh-cn.md">GitHub秘籍</a></p>
+
+    <p>本秘籍收录了一些Git和Github非常酷同时又少有人知的功能。同时有英文、韩文、日文版本。</p>
+  </li>
+  <li>
+    <p><a href="http://stormzhang.com/android/2015/01/25/gradle-build-field/">Gradle自定义你的BuildConfig</a></p>
+
+    <p>在很早之前我发布了这篇博客<a href="http://stormzhang.com/android/2013/08/28/android-use-build-config/">Android BuildConfig.DEBUG的妙用</a>, 提到了Eclipse中通过BuildConfig.DEBUG字段用来调试Log非常好用，但是殊不知在Android Studio中通过Gradle这种用法更加强大。</p>
+  </li>
+  <li>
+    <p><a href="http://ifeve.com/google-guava/">Google Guava官方教程（中文版）</a></p>
+
+    <p>Guava工程包含了若干被Google的 Java项目广泛依赖 的核心库，例如：集合 [collections] 、缓存 [caching] 、原生类型支持 [primitives support] 、并发库 [concurrency libraries] 、通用注解 [common annotations] 、字符串处理 [string processing] 、I/O 等等。 所有这些工具每天都在被Google的工程师应用在产品服务中。</p>
+  </li>
+  <li>
+    <p><a href="http://www.infoq.com/cn/articles/High-Performance-Java-Inter-Thread-Communications">Java里快如闪电的线程间通讯</a></p>
+
+    <p>创建一个对开发人员友好的、简单轻量的线程间通讯框架，完全不用锁、同步器、信号量、等待和通知，在Java里开发一个轻量、无锁的线程内通讯框架；并且也没有队列、消息、事件或任何其他并发专用的术语或工具。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/7heaven/bitmapMesh">bitmapMesh</a></p>
+
+    <p>一个实现窗帘效果的库。</p>
+
+    <p><img src="https://raw.githubusercontent.com/7heaven/bitmapMesh/master/arts/arts2.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/MoshDev/AndroidIndicators">AndroidIndicators</a></p>
+
+    <p>一个可以给Title增效动画效果的库，已实现效果有左右切换、上下切换和3D切换效果。</p>
+
+    <p><img src="https://raw.githubusercontent.com/MoshDev/AndroidIndicators/master/snapshots/2015-01-12%2019_42_02.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/ryanhoo/Zhihu-Parallax-Animation">Zhihu-Parallax-Animation</a></p>
+
+    <p>知乎 Android 客户端启动页的视差动画效果实现.</p>
+
+    <p><img src="https://raw.githubusercontent.com/ryanhoo/Zhihu-Parallax-Animation/develop/images/zhihu-parallax-animation.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/itzikBraun/TutorialView">TutorialView</a></p>
+
+    <p>一个方便你给Activity添加功能说明的库。</p>
+
+    <p><img src="https://camo.githubusercontent.com/3ccafa15f750a95fa01b88b16077af5431e22f06/687474703a2f2f7261772e6769746875622e636f6d2f49747a696b427261756e2f5475746f7269616c566965772f6d61737465722f73637265656e5f73686f74732f6578616d706c652e676966" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/geftimov/android-pathview">android-pathview</a></p>
+
+    <p>一个可以显示路径动画的自定义View，同时也支持从SVG文件加载路径动画。</p>
+
+    <p><img src="https://raw.githubusercontent.com/geftimov/android-pathview/master/art/settings.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pwittchen/NetworkEvents">NetworkEvents</a></p>
+
+    <p>一个监听网络连接状态并且可以改变Wifi信号强度的库。	</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/yqritc/RecyclerView-FlexibleDivider">RecyclerView-FlexibleDivider</a></p>
+
+    <p>一个方便你控制RecyclerView中Item之间分割线样式的库。</p>
+
+    <p><img src="https://raw.githubusercontent.com/yqritc/RecyclerView-FlexibleDivider/master/sample/sample1.gif" alt="image" /><img src="https://raw.githubusercontent.com/yqritc/RecyclerView-FlexibleDivider/master/sample/sample2.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/yulu/Instagram_Filter">Instagram_Filter</a></p>
+
+    <p>一个使用OpenGL ES Shaders模仿了Instagram滤镜效果的项目。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/carlonzo/StikkyHeader">StikkyHeader</a></p>
+
+    <p>This is a very simple library for Android that allows you to stick an header to a scrollable view and easly apply animation to it</p>
+
+    <p>这是一个非常简单的库，可以让你轻松的给你一个可滚动的View添加stick Header并且可以添加动画效果。</p>
+
+    <p><img src="https://raw.githubusercontent.com/carlonzo/StikkyHeader/develop/readme/example1.gif" alt="image" /><img src="https://raw.githubusercontent.com/carlonzo/StikkyHeader/develop/readme/example2.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/nkzawa/socket.io-android-chat">socket.io-android-chat</a></p>
+  </li>
+</ol>
+
+ 	一个Socket.io的Demo项目。	
+
+<h3 id="section-2">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androiddevtools.cn">Android Studio 1.1 Preview 2</a></p>
+
+    <p>本次主要更新：</p>
+
+    <ol>
+      <li>Lint工具新增了几条检查规则。</li>
+      <li>又修复了十几个Bug。 </li>
+    </ol>
+
+    <p>具体更新详情见<a href="http://photo.weibo.com/5214309031/wbphotos/large/mid/3803387382973701/pid/005GSHYzjw1eona47dj7wj31kw2qe4qp">Android Studio 1.1 Preview 2 Release Notes</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/moallemi/gradle-advanced-build-version">gradle-advanced-build-version</a></p>
+
+    <p>可以帮你自动生成版本号和版本名称的插件。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.imooc.com/view/238?from=itblog">百度地图在Android中的使用</a></p>
+
+    <p>课程使用百度地图SDK，由浅入深的带领大家从申请百度地图API Key开始，一步一步实现地图在APP中的常见的功能，总体包括地图的引入、基本设置、模式的切换、定位的功能、方向传感器的结合、以及添加覆盖物。</p>
+  </li>
+</ol>
+
+<h1 id="section-4">设计</h1>
+<p>### 教程</p>
+
+<ol>
+  <li>
+    <p><a href="http://www.uisdc.com/comprehensive-material-design-note#368390-tsina-1-73915-ebfdadd9b239798c6a2035c828aafd11">重磅教程！帮你全面彻底搞定MATERIAL DESIGN的学习笔记</a></p>
+
+    <p>自从Material design发布以来，可乐橙就在一直收集相关素材与资源，研究别人的作品。这套设计风格非常鲜明，带有浓郁的Google式严谨和理性哲学，深得我心。</p>
+  </li>
+  <li>
+    <p><a href="http://www.uisdc.com/ps-icon-pixel-perfect#">小技巧！利用PS CS6的新功能保持ICON细节饱满完美</a></p>
+
+    <p>一些本来尺寸很大，质量很不错的高清png图片，经过缩小转为icon时却变得惨不忍睹。这对于高清控与细节控来说简直没法忍，今天分享一篇关于利用Photoshop cs6网格对齐功能绘制高清icon的文章。</p>
+  </li>
+</ol>
+
+<h3 id="section-5">资源</h3>
+
+<ol>
+  <li>
+    <p><a href="https://gitcafe.com/riku/Awesome-Sketch">Awesome-Sketch</a></p>
+
+    <p>这是一份为想学 Sketch 的设计师、前端工程师们准备的不完全列表，包含了 Sketch 视频、文章、手册等。</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发技术周报 Issue#16]]></title>
@@ -372,477 +973,6 @@
     <p><a href="https://github.com/abynim/SketchSquares">SketchSquares</a></p>
 
     <p>一个将Sketch的layers自动替换为Instagram照片的插件。</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#14]]></title>
-    <link href="http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14/"/>
-    <updated>2015-01-05T23:41:36+08:00</updated>
-    <id>http://www.inferjay.com/blog/2015/01/05/android-dev-weekly-issue-14</id>
-    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.infoq.com/cn/news/2015/01/java-date-format-with-caution">慎用Java日期格式化</a></p>
-
-    <p>这条留言实际指向了Twitter上的一个帖子，这个帖子提醒大家，如果使用了YYYY的格式符来格式化日期，那么就有可能用错格式了。Reddit的一位读者解释说，Twitter由于误用格式符，把当天的日期变成了2015年12月的某天。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42072975">ART运行时垃圾收集机制简要介绍和学习计划</a></p>
-
-    <p>为了学习ART运行时的垃圾收集机制，我们先把Dalvik虚拟机的垃圾收集机制研究了一遍。这是因为两者都使用到了Mark-Sweep算法，因此它们在概念上有很多一致的地方。然而在实现上，Dalvik虚拟机的垃圾收集机制要简单一些。这样我们就可以先从简单的Dalvik虚拟机垃圾收集机制入手，然后再逐步深入地学习复杂的ART运行时垃圾收集机制。</p>
-  </li>
-  <li>
-    <p><a href="http://www.jianshu.com/p/6c2b7d261e1a">Material Design in Action — 猿题库</a></p>
-
-    <p>猿题库很早之前就发布了 Android 版本的客户端，但猿题库的联合创始人，郭常圳 先生，并不认同 Android Design （或者现在的 Material Design），而且认为应用程序的设计规范，应当由开发商来规定。然而当我试用猿题库的时候发现，这个应用对其进行 Material Design 的适配，其实并不困难。因此就有了对其进行重新设计的念头。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.jobbole.com/78995/">正确使用Android性能分析工具——TraceView</a></p>
-
-    <p>最近公司app中有些列表在滑动的时候会有卡顿现象，我就开始着手解决这些问题，解决问题之前首先要分析列表滑动的性能瓶颈在什么地方。因为之前不会正确使用TraceView这个工具，主要是看不懂TraceView界面下方数据指标的值代表什么意思…以前我用StopWatch类来分析性能，现在觉得弱爆了…不过有些地方StopWatch工具类还是很简单好用的~</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://testerhome.com/topics/1756">Gradle 中的 task 依赖</a></p>
-
-    <p>文章讲解了如何自定义Gradle的task，以及怎样定义task之间的依赖关系。</p>
-  </li>
-  <li>
-    <p><a href="http://www.lightskystreet.com/2014/12/15/viewpager-anim/">动画系列 - ViewPger动画</a></p>
-
-    <p>本篇文章介绍的ViewPager动画，可以分为两类，第一类是针对于ViewPager的界面滑动动画(这个是PageTransformer的真正用途)，分析并比较了AndroidImageSlider和JazzyViewPager两种实现，第二类是对ViewPager中的内容进行动画处理，这个是这个是PageTransformer的巧妙应用，处理好了可以达到很棒的交互效果，示例是Yahoo天气的视差效果。</p>
-  </li>
-  <li>
-    <p><a href="http://www.csdn.net/article/2014-12-30/2823366-Locate-Android-NDK">如何定位Android NDK开发中遇到的错误</a></p>
-
-    <p>Android NDK中的错误定位对很多开发者来说是一件头疼的事，本文通过一个Demo程序详细讲解了NDK的错误是如何产生的，以及如何通过命令行工具定位NDK的问题所在。</p>
-  </li>
-  <li>
-    <p><a href="http://www.cnblogs.com/sunzn/archive/2013/05/10/3064129.html">Android 编程下 Touch 事件的分发和消费机制</a></p>
-
-    <p>Android 中与 Touch 事件相关的方法包括：dispatchTouchEvent(MotionEvent ev)、onInterceptTouchEvent(MotionEvent ev)、onTouchEvent(MotionEvent ev)；能够响应这些方法的控件包括：ViewGroup、View、Activity。</p>
-  </li>
-  <li>
-    <p><a href="http://weibo.com/p/1001603793195556321741">Android源码下载和编译总结</a></p>
-
-    <p>前几天常用的笔记本电脑挂了，要拿去维修，于是就准备用另一台备用电脑来重新下载和编译一下Android源码，以便工作研究之用。鉴于最近一直都有人问下载和编译Android源码的问题，并且我上一次写Android源码编译的文章已经是2011年的事情，于是就趁这个机会写篇文章总结一下。</p>
-  </li>
-</ol>
-
-<h3 id="section-2">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/wasabeef/awesome-android-ui">awesome-android-ui</a></p>
-
-    <p>一些 Android UI/UX 库的集合列表。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/nhachicha/android-native-dependencies">android-native-dependencies</a></p>
-
-    <p>一个解析和下载Android native 依赖的Gradle插件。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/xiprox/ErrorView">ErrorView</a></p>
-
-    <p>一个用来显示错误信息的自定义View，包含图标、主标题、自标题和重试按钮。</p>
-
-    <p><img src="https://raw.githubusercontent.com/xiprox/ErrorView/master/graphics/screenshots/ss_01.png" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/wangjiegulu/DraggableFlagView">DraggableFlagView</a></p>
-
-    <p>可拖拽的红点，（仿新版QQ，tab下面拖拽标记为已读的效果），拖拽一定的距离可以消失回调。</p>
-  </li>
-</ol>
-
-<h3 id="section-3">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="https://hyperfox.org/">Hyperfox</a></p>
-
-    <p>一个用Go 语言写的强悍的抓包工具！可以抓取https协议的！</p>
-
-    <p><img src="https://hyperfox.org/images/hyperfox-diagram.png" alt="image" /></p>
-  </li>
-</ol>
-
-<h3 id="section-4">设计</h3>
-
-<h3 id="section-5">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.tuyiyi.com/w/36011.html">大屏手机时代，如何重塑界面交互</a></p>
-
-    <p>这是一个大屏手机的时代。强调这件事情的意义在于，这已经成为事实。Medium上存在一份个人统计。在过去7年，新上市的手机屏幕尺寸越来越大。</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#13]]></title>
-    <link href="http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13/"/>
-    <updated>2014-12-29T10:18:59+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13</id>
-    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
-<ol>
-  <li>
-    <p><a href="http://www.infoq.com/cn/news/2014/12/oracle-java-jar-package">Oracle开始从Java运行时中移除JAR包</a></p>
-
-    <p>早在2012年8月，在Java平台首席架构师Mark Reinhold宣布<a href="http://openjdk.java.net/projects/jigsaw/">模块化项目Jigsaw</a>之后不久，<a href="http://openjdk.java.net/jeps/162">JEP 162</a>这一题为“准备模块化”的提案就指出，在Jigsaw项目中为模块化系统开发的代码不会集成到JDK 8中。那次延期直接将模块化支持推迟到JDK 9，最早也得到2016年。</p>
-  </li>
-  <li>
-    <p><a href="http://www.eoeandroid.com/thread-558758-1-1.html">android5.0让位，Android 6.0曝光这是神马情况？</a></p>
-
-    <p>　Android 5.0刚和我们见面没多久，下一代操作系统Android 6.0就曝光了。外媒报道称，谷歌另一个开发小组已经着手进行一款代号为“M”的系统的研发工作，而这个“M”很有可能就是Android 6.0的代号。据猜测，Android 6.0最主要的变化将会是优化车载表现，可直接安装在汽车当中，这样用户无需智能手机即可直接控制汽车。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.cnblogs.com/ct2011/p/4183553.html">将Eclipse代码导入到AndroidStudio的两种方式</a></p>
-
-    <p>说到使用AndroidStudio，除了新建的项目，我们都会面临的问题是原先Eclipse的代码该怎么导入到AndroidStudio中使用。Google为了让我们更加方便的使用AndroidStudio，提供了两种导入Eclipse代码的方式：一种兼容Eclipse，一种是全新的Android Gradle Project.</p>
-  </li>
-  <li>
-    <p><a href="http://www.importnew.com/14227.html">Java 注解指导手册 – 终极向导</a></p>
-
-    <p>在这篇文章中我们将阐述什么是Java注解，它们如何工作，怎么使用它们。我们将揭开Java注解的面纱，包括内建注解或称元注解，还将讨论Java8中与之相关的的新特性。最后，我们将实现自定义的注解，编写一个使用注解的处理程序（消费器），它通过java反射使用注解。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.jobbole.com/30940/">缓存、缓存算法和缓存框架简介</a></p>
-
-    <p>我们都听过 cache，当你问他们是什么是缓存的时候，他们会给你一个完美的答案，可是他们不知道缓存是怎么构建的，或者没有告诉你应该采用什么标准去选择缓存框架。在这篇文章，我们会去讨论缓存，缓存算法，缓存框架以及哪个缓存框架会更好。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://www.infoq.com/cn/news/2014/12/qq-mobile-practice">手机QQ的移动化实践之路</a></p>
-
-    <p>手机QQ的移动化实践之路】在刚刚结束的AS北京上，腾讯即时通讯平台部技术总监范瑞彬做了题为《手机QQ的移动化实践之路》的演讲，从移动环境的特点、如何做好接入、架构设计理念三个方面分享了手Q一路走来的诸多经验。演讲PPT下载：<a href="http://pan.baidu.com/s/1mgIDMtU">http://pan.baidu.com/s/1mgIDMtU</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.infoq.com/cn/news/2014/12/taobao-app-evolution">手机淘宝构架演化实践</a></p>
-
-    <p>阿里心石：手机淘宝构架演化实践】在本届ArchSummit中，来自阿里无线事业部的高级专家李敏（花名心石 @allblue_华丽地低调 ）与我们分享了《手机淘宝架构演化实践》，畅谈阿里巴巴无线从开始之初到成为日活上亿级别电商应用技术变迁和积累。演讲PPT下载：<a href="http://pan.baidu.com/s/1kTgMfMv">http://pan.baidu.com/s/1kTgMfMv</a></p>
-  </li>
-  <li>
-    <p><a href="http://www.testerhome.com/topics/1718">Gradle 学习专辑</a></p>
-
-    <p>该学习专辑包含：gradle 初步构建（一）、Java Project Gradle Emma、Android Project Gradle jacoco、Android Gradle Espresso tests、自由的使用 gradle 构建你的应用、Groovy 初探（一）、gradle 集成修改 Android Manifest.xml 打多个包实践和Gradle 编译交互小技巧等，并且还在持续更新中。</p>
-  </li>
-  <li>
-    <p><a href="http://tech.glowing.com/cn/dai-ma-gui-fan-he-androidxiang-mu-zhong-de-xie-ke-yong-gong-ju/">代码规范和Android项目中的一些可用工具</a></p>
-
-    <p>这里主要讲一下关于代码规范的相关问题，和在Android项目中如何利用一些工具进行规范和检查。代码规范不是一个Android项目特有的问题，所以前部分内容是不单针对Android的。</p>
-  </li>
-  <li>
-    <p><a href="http://stormzhang.gitcafe.com/devtools/2014/12/18/android-studio-tutorial4/">Android Studio系列教程四–Gradle基础</a></p>
-
-    <p><a href="http://weibo.com/zhangqi8">googdev</a>结合Stduio 1.0正式版与最新的Gradle语法通过自己的开源项目 <a href="https://github.com/stormzhang/9GAG">9GAG</a> 讲解了Gradle相关的知识，后续会介绍一种我常用的快速方便的编译查看第三方开源项目的方法，如何导入Android Studio，Gradle常用基本命令，多渠道打包配置等。</p>
-  </li>
-  <li>
-    <p><a href="http://top.jobbole.com/17733/">每个程序员至少阅读两次的 10 篇技术论文</a></p>
-
-    <p>这10篇论文包括：编程语言中的基本概念、为什么函数式编程重要、计算机编程的公理基础、分布式系统中的时间、时钟和事件顺序、理解类型、数据抽象和多态、符号表达式的递归函数，及其机器计算等。</p>
-  </li>
-</ol>
-
-<h3 id="section-2">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/oli107/material-range-bar">MaterialRangeBar</a></p>
-
-    <p>Android widget for selecting a range of values.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/StanKocken/SVG2Drawable">SVG2Drawable</a></p>
-
-    <p>Use a jar executable to create a Drawable class to display a SVG on Android.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/kageiit/gradle-robojava-plugin">gradle-robojava-plugin</a></p>
-
-    <p>Gradle plugin to integrate Robolectric tests into Android Studio。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/westlinkin/AndroidLocalizationer">AndroidLocalizationer</a></p>
-
-    <p>This is a Android Studio/ IntelliJ IDEA plugin to localize your Android app, translate your string resources automactically. <a href="https://plugins.jetbrains.com/plugin/7629">https://plugins.jetbrains.com/plugin/7629</a></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/telly/MrVector">MrVector</a></p>
-
-    <p>AKA VectorDrawableCompat: A 14+ backport of VectorDrawable.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/frogermcs/HelloMultidex">HelloMultidex</a></p>
-
-    <p>Example project for multi-dex project in Android.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/jasonpolites/gesture-imageview">gesture-imageview</a></p>
-
-    <p>Implements pinch-zoom, rotate, pan as an ImageView for Android 2.1+.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/nispok/slidingtabs">slidingtabs</a></p>
-
-    <p>Gradle port of Google’s SlidingTabLayout to display a custom ViewPager title strip.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/Malinskiy/SuperRecyclerView">SuperRecyclerView</a></p>
-
-    <p>Pumped up RecyclerView.This is an attempt to make RecyclerView easier to use.</p>
-
-    <p>Features built in:</p>
-
-    <ul>
-      <li>ProgressBar while adapter hasn’t been set</li>
-      <li>EmptyView if adapter is empty</li>
-      <li>SwipeRefreshLayout (Google’s one)</li>
-      <li>Infinite scrolling, when you reach the X last item, load more of them.</li>
-      <li>Swipe To Dismiss</li>
-      <li>Sticky headers (via <a href="https://github.com/eowise/recyclerview-stickyheaders">Eowise</a>, see sample)</li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="https://github.com/aicaprio/CurtainView">CurtainView</a></p>
-
-    <p>An android view,which can layer on any gravity for swiping.</p>
-  </li>
-</ol>
-
-<h3 id="section-3">工具</h3>
-
-<ol>
-  <li>
-    <p>国内几个Android SDK镜像</p>
-
-    <p>大连东软信息学院镜像服务器的地址: <code>http://mirrors.neusoft.edu.cn</code> 端口：80</p>
-
-    <pre><code>北京化工大学镜像服务器的地址: 
-1. IPv4: `http://ubuntu.buct.edu.cn/` 端口：80
-2. IPv4: `http://ubuntu.buct.cn/`   端口：80
-3. IPv6: `http://ubuntu.buct6.edu.cn/`  端口：80
-</code></pre>
-
-    <p>上海GDG镜像服务器地址:<code>http://sdk.gdgshanghai.com </code>  端口：8000</p>
-
-    <p><strong>使用方法</strong>：</p>
-
-    <ol>
-      <li>启动 Android SDK Manager ，打开主界面，依次选择『<strong>Tools</strong>』、『<strong>Options…</strong>』，弹出『<strong>Android SDK Manager - Settings</strong>』窗口；</li>
-      <li>在『<strong>Android SDK Manager - Settings</strong>』窗口中，在『<strong>HTTP Proxy Server」和「HTTP Proxy Port</strong>』输入框内填入上面镜像服务器地址和端口，并且选中『<strong>Force https://… sources to be fetched using http://…</strong>』复选框。设置完成后单击『<strong>Close</strong>』按钮关闭『<strong>Android SDK Manager - Settings</strong>』窗口返回到主界面；</li>
-      <li>依次选择『<strong>Packages</strong>』、『<strong>Reload</strong>』。</li>
-    </ol>
-  </li>
-  <li>
-    <p><a href="https://github.com/mcxiaoke/gradle-packer-plugin">gradle-packer-plugin Android 多渠道打包工具</a></p>
-
-    <p>gradle-packer-plugin 是Android多渠道打包工具Gradle插件，可方便的于自动化构建系统集成，通过很少的配置可实现如下功能 ：</p>
-
-    <ul>
-      <li>支持自动替换AndroidManifest文件中的meta-data字段实现多渠道打包</li>
-      <li>支持自定义多渠道打包输出的存放目录和最终APK文件名</li>
-      <li>支持自动修改versionName中的build版本号，实现版本号自动增长</li>
-    </ul>
-  </li>
-  <li>
-    <p><a href="https://gitter.im">Gitter.im</a></p>
-
-    <p>Chat, for GitHub.</p>
-
-    <p><img src="http://ww4.sinaimg.cn/bmiddle/005GSHYzjw1eniqp77z75j31kw0w74ii.jpg" alt="image" /></p>
-  </li>
-</ol>
-
-<h3 id="section-4">视频</h3>
-
-<ol>
-  <li><a href="http://v.youku.com/v_show/id_XNTMzMjYzMzM2.html">阿里技术沙龙第十六期《android插件化及动态部署—ATLAS 》伯奎</a></li>
-</ol>
-
-<h3 id="section-5">设计</h3>
-
-<h3 id="section-6">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://zhuanlan.zhihu.com/rijing/19845226">Sketch 制作扁平图标</a></p>
-
-    <p>用Sketch一步一步教你制作扁平图标，步骤很详细</p>
-  </li>
-  <li>
-    <p><a href="http://leonpd.lofter.com/post/20f397_4cb74d1">动效软件 Form 教程：概览与基础 patch 介绍</a></p>
-
-    <p>都说产品设计师的设计可以用 Axure + Sketch + Origami三者联动，完成原型、视觉和动效的一条龙工作，前一段时间也抽空学习了一下 Quartz Composer（以下简称 QC） + Origami，虽然有一定的上手难度，但是确实能够做出非常逼真的效果。</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#12]]></title>
-    <link href="http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12/"/>
-    <updated>2014-12-22T09:54:44+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12</id>
-    <content type="html"><![CDATA[<h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41822747">Dalvik虚拟机垃圾收集（GC）过程分析</a></p>
-
-    <p>前面我们分析了Dalvivk虚拟机堆的创建过程，以及Java对象在堆上的分配过程。这些知识是理解Dalvik虚拟机垃圾收集过程的基础。垃圾收集是一个复杂的过程，它要将那些不再被引用的对象进行回收。一方面要求Dalvik虚拟机能够标记出哪些对象是不再被引用的。另一方面要求Dalvik虚拟机尽快地回收内存，避免应用程序长时间停顿。本文就将详细分析Dalvik虚拟机是如何解决上述问题完成垃圾收集过程的。</p>
-  </li>
-  <li>
-    <p><a href="http://www.jianshu.com/p/c85984cf99e2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=writer_share&amp;utm_source=weibo">使用Android Studio查看Android Lollipop源码</a></p>
-
-    <p>作为Google的亲儿子,Nexus手机系列所收到的待遇大家有目共睹.Android5.0出来之后,Nexus5第一时间就升级到了最新的系统.那么作为Google亲儿子的Android Studio同样备受Google的重视,我也是第一时间从Eclipse转投到了Android Studio的怀抱中,从最初的测试版本一路升级到现在的1.0正式版本(今天发布了1.0.2,果断已经升级了),关于Android Studio的好处我就不用说了…</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/devnews/facebook-engineer-improve-android-app/">Facebook工程师是如何改进他们Android客户端的</a></p>
-
-    <p>作为世界上最大的社交网络，Facebook的Android客户端面临着各种各样的使用环境（地理环境、Android设备以及移动网络等环境的差异）。也正是这个原因，为了检测自家Android客户端在发展中国家的性能表现，Android的产品经理、工程师在2013年的时候去了一趟非洲。当时我看到这个新闻的时候觉得有点怪异，后来看到他们这篇博客才有点理解他们这样做的原因了。</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/devpost/i-dont-need-your-permission/">你的Android应用完全不需要那么多的权限</a></p>
-
-    <p>Android系统的权限从用户的角度来看有时候的确有点让人摸不着头脑。有时候可能你只需要做一些简单的事情（对联系人的信息进行编辑），却申请了远超你应用所需的权限（比如访问所有联系人信息的权限）。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://greenrobot.me/devpost/about-android-dex-method-number-limit/">关于 Android Dex 方法限制的一些总结</a></p>
-
-    <p>在了解这个问题之前我们先要来看看Android 应用编译的过程:1. IDE中的资源打包工具 (Android Asset Packaging Tool ，即图中的aapt) 会将应用中的资源文件进行编译，这些资源文件包括 AndroidManifest.xml文件，为Activity定义的 XML 文件等等。在这个编译过程中也会产生一个 R.java 文件，这样你就可以在你的Java代码中引用这些资源了。</p>
-  </li>
-  <li>
-    <p><a href="http://bobao.360.cn/learning/detail/122.html">安卓Hacking科普系列</a></p>
-
-    <p>本系列科普文章包含：<a href="http://bobao.360.cn/learning/detail/122.html">Part 1: 应用组件攻防</a>、<a href="http://bobao.360.cn/learning/detail/127.html">Part 2: Content Provider攻防</a>、<a href="http://bobao.360.cn/learning/detail/126.html">Part 3：Broadcast Receivers攻防</a>、<a href="http://bobao.360.cn/learning/detail/133.html">Part 4:非预期的信息泄露（边信道信息泄露）</a>、<a href="http://bobao.360.cn/learning/detail/138.html">Part 5:使用JDB调试Java应用</a>、<a href="http://bobao.360.cn/learning/detail/140.html">Part 6：调试Android应用</a>、<a href="http://bobao.360.cn/learning/detail/142.html">Part 7:攻击WebView</a>、<a href="http://bobao.360.cn/learning/detail/144.html">Part 8:Root的检测和绕过</a>、<a href="http://bobao.360.cn/learning/detail/150.html">Part9: 不安全的本地存储：Shared Preferences</a>、<a href="http://bobao.360.cn/learning/detail/152.html">Part 10:不安全的本地存储</a>等，还在更新中。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/golang/mobile">Go on Android</a></p>
-
-    <p>The Go mobile repository holds packages and build tools for using Go on Android.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/KeithYokoma/AccountAutoCompleteEditText">AccountAutoCompleteEditText</a></p>
-
-    <p>Just a simple implementation for use of auto complete text view with device account suggestion.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/pungrue26/SelectableRoundedImageView">SelectableRoundedImageView</a></p>
-
-    <p>Android ImageView that supports different radiuses on each corner. It also supports oval(and circle) shape and border. This would be especially useful for using inside CardView which should be rounded only top left and top right corners(Don’t forget to call setPreventCornerOverlap(false) on your cardview).</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/ObjectLayout/ObjectLayout">ObjectLayout</a></p>
-
-    <p>Java classes designed with optimizable object layout in mind 
-<a href="http://objectlayout.github.com/ObjectLayout/">http://objectlayout.github.com/ObjectLayout/</a>。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/glomadrian/MvpCleanArchitecture">MvpCleanArchitecture</a></p>
-
-    <p>A sample project using Clean architecture and MVP in Android。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/paveldudka/ViewStateSaveDemo">ViewStateSaveDemo</a></p>
-
-    <p>Simple Demo of how do you save View’s state in Android。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/jmolsmobile/LandscapeVideoCamera">LandscapeVideoCamera</a></p>
-
-    <p>Powerful custom Android Camera with granular control over the video quality and filesize, restricting recordings to landscape only.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/andkulikov/transitions-everywhere">transitions-everywhere</a></p>
-
-    <p>Backport of Transitions API from Android KitKat and Lollipop. Compatible with Android 2.2+。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/krschultz/android-proguard-snippets">android-proguard-snippets</a></p>
-
-    <p>Example Proguard configurations for common Android libraries。</p>
-  </li>
-</ol>
-
-<h3 id="section-2">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary/1-0rc4">Android Studio 1.0.2</a></p>
-
-    <p><strong>墙内下载地址：</strong><a href="http://www.androiddevtools.cn/#android-studio">http://www.androiddevtools.cn/#android-studio</a>	 	 </p>
-  </li>
-</ol>
-
-<h3 id="section-3">视频</h3>
-
-<ol>
-  <li>
-    <p><a href="http://v.youku.com/v_show/id_XODUxODEzMDQ4.html?f=23217955">Android DevBytes</a></p>
-
-    <p>墙内DevBytes视频更新啦！包括最新的《Android Vector Graphics》（难得有个华裔面孔！）、《Introducing Route 85》（Google面向iOS开发即将推出一系列视频）以及Auto和Wear（有车有表！）</p>
-  </li>
-</ol>
-
-<h3 id="section-4">设计</h3>
-
-<h4 id="section-5">工具</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.materialpalette.com">Material Design Color Palette Generator - Material Palette</a></p>
-
-    <p>一个可以快速搭配Material Design主题颜色的并且提供下载的在线网站.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/t32k/material-design-color-palette-sketch-plugin">material-design-color-palette-sketch-plugin</a></p>
-
-    <p>Sketch app plugin for displaying Google material design color palette.</p>
   </li>
 </ol>
 

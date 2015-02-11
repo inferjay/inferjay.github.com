@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="教程 Android性能优化之过渡绘制(一) 首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。 Android性能优化之过渡绘制(二) &hellip;">
+  <meta name="description" content="教程 Android开源项目源码解析 由@Trinea发起的Android开源项目源码解析项目，目前已校对发布的分析有：Volley源码解析、Android Universal Image Loader源码分析、Dagger源码解析、EventBus 源码解析、xUtils源码解析、 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,217 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-11T22:45:07+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/02/11/android-dev-weekly-issue-19/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-19/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.codekk.com/">Android开源项目源码解析</a></p>
+
+    <p>由<a href="https://github.com/Trinea">@Trinea</a>发起的Android开源项目源码解析项目，目前已校对发布的分析有：Volley源码解析、Android Universal Image Loader源码分析、Dagger源码解析、EventBus 源码解析、xUtils源码解析、ViewPagerindicator源码解析、HoloGraphLibrary源码解析、CircularFloatingActionMenu源码解析、PhotoView 源码解析、Android Lock Pattern源码解析以及公共技术点：Java动态代理、Java注解Annotation、View绘制流程、依赖注入和View时间传递等。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/guolin_blog/article/details/42238627">Android最佳性能实践(一)——合理管理内存</a></p>
+
+    <p>有不少朋友都问过我，怎样才能写出高性能的应用程序，如何避免程序出现OOM，或者当程序内存占用过高的时候该怎么样去排查。确实，一个优秀的应用程序，不仅仅要功能完成得好，性能问题也应该处理得恰到好处。为此，我也是阅读了不少Android官方给出的高性能编程建议，那么从本篇文章开始，我就准备开始写一个全新系列的博文，来把这些建议进行整理和分析，帮助大家能够写出更加出色的应用程序。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80627/">深入解析Android的自定义布局</a></p>
+
+    <p>这篇文章是前Firefox Android工程师（现在跳槽去Facebook了） <a href="http://lucasr.org/about">Lucas Rocha</a>所写，文中对Android中常用的四种自定义布局方案进行了很好地分析，并结合这四种Android自定义布局方案所写的示例项目讲解了它们各自的优劣以及四种方案之间的比较。看完这篇文章，也让我对Android 自定义布局有了进一步的了解，于是趁着兴头，我把它翻译成中文，<a href="http://lucasr.org/2014/05/12/custom-layouts-on-android/">原文链接在此</a>。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80634/">巧用Drawable 实现Android UI 元素间距效果</a></p>
+
+    <p>在大部分的移动UI或者Web UI都是基于网格概念而设计的。这种网格一般都是有一些对其的方块组成，然后它们组合成为一个块。使用网格这样的设计原则可以有助于对齐UI元素，提升UI的一致性，同时还能让用户更加容易的获取UI上面包含的内容。简而言之，网格是一个相当的强大的设计工具。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/02/11/android-dev-weekly-issue-19/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-11T22:41:41+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/02/11/android-dev-weekly-issue-18/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-18/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/groovy-2-4-released">Groovy 2.4发布，支持Android开发</a></p>
+
+    <p>近日，Groovy编程语言的管理者Guillaume Laforge在博客上宣布了Groovy 2.4发布的消息。就在不久前，Pivotal宣布不再资助Groovy/Grails项目，Groovy 2.4将成为Pivotal资助下的最后一个主要的Groovy版本。Groovy 2.4最大的亮点就是对Android的支持，现在开发者可以完全使用Groovy编写Android应用了，而且与Java相比，可以省去很多样板代码。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://yanghui.name/blog/2015/02/01/2015-1-31-ali-technical-salon/">Android应用性能优化实践</a></p>
+
+    <p>周末跑去深圳参加了一场阿里主持的技术沙龙，主题是《如何构建高可用的APP》，沙龙中相关的ppt和视频可以在他们的微博中找到。沙龙中收获比较大的是有关UC的何杰分享的Android应用性能优化实践，和手Q web业务优化的解析。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.isming.me/2015/02/01/android-view-animation/">android动画-View Animation</a></p>
+
+    <p>视图动画（View Animation）,又称补间动画（Tween Animation）,即给出两个关键帧，通过一些算法将给定属性值在给定的时间内在两个关键帧间渐变。本文首先讲解各种基本动画的使用，其实介绍View动画的工作过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/tianzhijiexian/p/4128045.html">用开源项目ActivityOptionsICS让ActivityOptions的动画实现兼容</a></p>
+
+    <p>我之前写过一篇文章是讲解ActivityOption的api方法的（http://www.cnblogs.com/tianzhijiexian/p/4087917.html），当时吐槽各种动画不兼容，完全无视我们4.x或者2.x用户嘛，好在有开源库来帮助我们实现动画。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/wenda/detail/245687">android:clipToPadding属性的分析</a></p>
+
+    <p>ListView或GridView中android:clipToPadding属性的使用说明示例该属性的解释:Defines whether the ViewGroup will clip its drawing surface so as to exclude the padding area. 什么意思呢?就是说:clipToPadding属性定义了是否允许ViewGroup在padding中绘制,该值默认为true,即不允许.</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/02/11/android-dev-weekly-issue-18/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/19/android-dev-weekly-issue-17/">Android开发技术周报 Issue#17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-19T14:38:55+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/01/19/android-dev-weekly-issue-17/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-17/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42555483">ART运行时垃圾收集（GC）过程分析</a></p>
+
+    <p>ART运行时与Dalvik虚拟机一样，都使用了Mark-Sweep算法进行垃圾回收，因此它们的垃圾回收流程在总体上是一致的。但是ART运行时对堆的划分更加细致，因而在此基础上实现了更多样的回收策略。不同的策略有不同的回收力度，力度越大的回收策略，每次回收的内存就越多，并且它们都有各自的使用情景。这样就可以使得每次执行GC时，可以最大限度地减少应用程序停顿。本文就详细分析ART运行时的垃圾收集过程。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/how-to-debug-http-and-https-traffic-on-android/">如何调试 Android 上 HTTP(S) 流量</a></p>
+
+    <p>在Android开发中我们常常会和API 打交道，可能你不想，但是这是避不开的。大部分情况下，调试发送网络请求和接收响应的过程都是十分痛苦的。有多少次我们经过调试发现API的调用失败仅仅是因为我们的编码错了或者丢失了一个HTTP头部参数？在调试的过程中，我们发现出现错误的原因千奇百怪。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42492621">ART运行时为新创建对象分配内存的过程分析</a></p>
+
+    <p>ART运行时和Dalvik虚拟机一样，在堆上为对象分配内存时都要解决内存碎片和内存不足问题。内存碎片问题可以使用dlmalloc技术解决。内存不足问题则通过垃圾回收和在允许范围内增长堆大小解决。由于垃圾回收会影响程序，因此ART运行时采用力度从小到大的进垃圾回收策略。</p>
+  </li>
+  <li>
+    <p><a href="http://hukai.me/android-performance-patterns/">Android性能优化典范</a></p>
+
+    <p>2015年伊始，Google发布了关于Android性能优化典范的专题，一共16个短视频，每个3-5分钟，帮助开发者创建更快更优秀的Android App。课程专题不仅仅介绍了Android系统中有关性能问题的底层工作原理，同时也介绍了如何通过工具来找出性能问题以及提升性能的建议。主要从三个方面展开，Android的渲染机制，内存与GC，电量优化。下面是对这些问题和建议的总结梳理。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/19/android-dev-weekly-issue-17/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -542,198 +753,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-09T16:26:58+08:00" pubdate data-updated="true">Dec 9<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote>
-  <p>提示：所有链接复制到迅雷里就可以下载<strong>无需翻墙</strong></p>
-</blockquote>
-
-<h2 id="sdk-tools">SDK Tools下载地址</h2>
-
-<h4 id="windows">Windows</h4>
-
-<p>安装版(官方推荐)：<a href="http://dl.google.com/android/installer_r24-windows.exe">http://dl.google.com/android/installer_r24-windows.exe</a></p>
-
-<p>绿色版：<a href="http://dl.google.com/android/android-sdk_r24-windows.zip">http://dl.google.com/android/android-sdk_r24-windows.zip</a></p>
-
-<h4 id="mac-os-x">Mac OS X</h4>
-<p><a href="http://dl.google.com/android/android-sdk_r24-macosx.zip">http://dl.google.com/android/android-sdk_r24-macosx.zip</a></p>
-
-<h4 id="linux">Linux</h4>
-<p><a href="http://dl.google.com/android/android-sdk_r24-linux.tgz">http://dl.google.com/android/android-sdk_r24-linux.tgz</a></p>
-
-<h2 id="android-studio">Android Studio下载地址</h2>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-08T11:10:12+08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/08/android-dev-weekly-issue-10/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">Android Apk 拆分机制</a></p>
-
-    <p>拆分机制比起使用 flavors，能让应用程序更有效地构建一些形式的多个apk。多 apk 只支持以下类型: 1.
-屏幕密度 2.ABI.使用新的拆分机制，构建同一个应用程序的hdpi版本和mdpi版本，能够共享很多的任务 （如 javac，dx，proguard）。此外，它会被认为是一个单一的variant，并且同一个测试程序将会被用来测试每​​个多APK。</p>
-  </li>
-  <li>
-    <p><a href="http://relex.me/using-manifestplaceholders/">使用manifestPlaceholders</a></p>
-
-    <p>在项目中我需要打包不同渠道的APK，需要在AndroidManifest中定义渠道名称，以便在java中调用。以前ant或gradle打包时动态改变渠道的思路是：正则AndroidManifest的特定字符然后替换.</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40424379">Property Anim详解</a></p>
-
-    <p>本篇文章将对PropertyAnimation进行全面深入的探讨，本篇文章可以分为两大块，从第六部分可以作为分界点。前五部分着重讲解了PropertyAnim的动画值的计算过程，ValueAnimator与ObjectAnimator以及TimeInterpolation与TypeEvaluator之间的介绍和比较，这几点是比较重要的，从第六部分开始是通过源码的角度分析了整个动画计算以及内部的处理细节，以及引出了对JakeWharton大神的NineOldAndroids 开源库的分析，如果你觉得太多，可以分开来看，有理解不准确的地方，欢迎大家指正。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/08/android-dev-weekly-issue-10/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-01T12:42:08+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/01/android-dev-weekly-issue-9/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
-
-    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
-  </li>
-  <li>
-    <p><a href="http://www.kuqin.com/shuoit/20140826/341828.html?url_type=39&amp;object_type=crawler&amp;pos=1">为什么Android的图片质量会比iPhone的差？</a></p>
-
-    <p>经常看到有人问：“安卓版微信发出去的图片怎么那么渣！比iPhone的差远了！”。不只是微信，很多应用安卓版的图片质量就是要比iPhone版逊色很多，这到底是怎么回事？</p>
-  </li>
-  <li>
-    <p><a href="http://qichaochen.github.io/2014/11/21/107-Facebook-Rebound-Demo/">[Material Design]使用Fackbook Rebound快速实现弹簧动画效果</a></p>
-
-    <p>Rebound是Facebook推出的一款Android的物理和动画库，于2013年10月在Mobile@Scale大会上正式发布，旨在解决笨重、缓慢的传统移动网络界面。Rebound不是一款通用物理库，但其弹簧模型在应用程序中引入了现实世界的物理，易于集成，创建的动画能够让人感觉到非常自然，并且可以和Material Design的设计原则呼应，可用于滚动条、切换开关、呼叫等场景下。</p>
-  </li>
-  <li>
-    <p><a href="http://stormzhang.com/devtools/2014/11/07/use-curl-debug/">使用curl来调试你的应用</a></p>
-
-    <p>我们在客户端开发过程中总免不了和后端进行api对接，有时候需要对返回的数据格式进行调试，有时候每次运行客户端来发送请求，这个未免效率太低，这里就来介绍一个好用的工具–curl。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/01/android-dev-weekly-issue-9/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -786,23 +805,23 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/19/android-dev-weekly-issue-17/">Android开发技术周报 Issue#17</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/19/android-dev-weekly-issue-16/">Android开发技术周报 Issue#16</a>
       </li>
     
       <li class="post">
         <a href="/blog/2015/01/12/android-dev-weekly-issue-15/">Android开发技术周报 Issue#15</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/01/05/android-dev-weekly-issue-14/">Android开发周报 Issue#14</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/29/android-dev-weekly-issue-13/">Android开发周报 Issue#13</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
       </li>
     
   </ul>
