@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="教程 Android性能优化之过渡绘制(一) 首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。 Android性能优化之过渡绘制(二) &hellip;">
+  <meta name="description" content="教程 如何检测一个APP：从解密到批量获取他人信息 在挖掘Android App的web端漏洞时，遇到一些看起来安全性做的比较好的应用会对http请求也会加密，这篇文章作者就提供了一个不错的基本的解决思路：反编译获取加密方式-》解密 -》添加logcat直接输出加密的内容。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,419 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-09T14:13:42+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/03/09/android-dev-weekly-issue-22/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/03/09/android-dev-weekly-issue-22/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.91ri.org/12472.html">如何检测一个APP：从解密到批量获取他人信息</a></p>
+
+    <p>在挖掘Android App的web端漏洞时，遇到一些看起来安全性做的比较好的应用会对http请求也会加密，这篇文章作者就提供了一个不错的基本的解决思路：反编译获取加密方式-》解密 -》添加logcat直接输出加密的内容。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/tianzhijiexian/p/4301113.html">用Path来绘制一些图形</a></p>
+
+    <p>Path是android中用来封装几何学路径的一个类，因为Path在图形绘制上占的比重还是相当大的。你可以用它来绘制各种样式的几何图形，做图表什么的都可以。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80668/">用PageTransformer打造更好的动画效果</a></p>
+
+    <p>Android的ViewPager类已经变成一个相当流行的Android应用组件了。它简单直观，并且提供了极好的功能。你可以经常在设置向导，图片画廊种看到它，它还是分开应用内容的良好方式。标准的ViewPager实现工作得非常出色，但是在Google工作的牛人创建了名为PageTransformer的类。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/innost/article/details/44081147">深入理解Android之Java Security（第一部分）</a></p>
+
+    <p>从事Android工作4年以来，只有前1年不到的时间是用C++在开发东西（主要是开发DLNA组件，目前我已将它们全部开源，参考http://blog.csdn.net/innost/article/details/40216763），后面的工作几乎都在用Java。自以为Java相关的东西都见过了，可前段时间有个朋友给我花了1个多小时讲解他们某套系统的安全体系结构，其中涉及到很多专业术语，比如Message Digest（消息摘要）、Digital Signature（数字签名）、KeyStore（恕我不知道翻译成什么好，还是用英文原称吧）、CA（Certificate Authority）等。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/03/09/android-dev-weekly-issue-22/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/02/android-dev-weekly-issue-21/">Android开发技术周报 Issue#21</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-02T13:50:42+08:00" pubdate data-updated="true">Mar 2<span>nd</span>, 2015</time>
+        
+           | <a href="/blog/2015/03/02/android-dev-weekly-issue-21/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/03/02/android-dev-weekly-issue-21/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://stormzhang.com/android/2015/03/01/android-reference-local-aar">Android模块化编程之引用本地的aar</a></p>
+
+    <p>随着项目越来越多，代码的复用就变得异常重要，这时候就要进行模块化编程，就是把一些通用的组件或者类库做成单独的模块，其他项目直接进行引用就好。针对Android开发最常见的就是Android Library，在Gradle出现之前引用Android Library的方式也很繁琐，但是有了Gradle一切变得非常简单方便。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.aaapei.com/article/2013/12/wei-xin-de-jsbridgeshi-xian">微信的jsbridge实现</a></p>
+
+    <p>android的webview api中有开放过一个addJavaScriptInterface函数,这个函数的作用是在页面的Window中注入一个JS对象,如果你的应用中使用了这个api,建议先看一下国内安全领域第一人黑哥的这篇文章<a href="http://hi.baidu.com/hi_heige/item/9baf99f063331d58c9f3379a">android webview 漏洞背后的节操</a>.</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/xiaanming/article/details/42833893">Android单点触控技术，对图片进行平移，缩放，旋转操作</a></p>
+
+    <p>相信大家使用多点对图片进行缩放，平移的操作很熟悉了，大部分大图的浏览都具有此功能，有些app还可以对图片进行旋转操作，QQ的大图浏览就可以对图片进行旋转操作，大家都知道对图片进行缩放，平移，旋转等操作可以使用Matrix来实现，Matrix就是一个3X3的矩阵，对图片的处理可分为四个基础变换操作，Translate(平移变换)、Rotate(旋转变换）、Scale (缩放变换)、Skew（错切变换）.</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/03/02/android-dev-weekly-issue-21/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/18/android-dev-weekly-issue-20/">Android开发技术周报 Issue#20</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-18T09:03:42+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/02/18/android-dev-weekly-issue-20/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/02/18/android-dev-weekly-issue-20/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.xda-developers.com/xposed-framework-for-android-lollipop-is-here/">Xposed Framework for Android Lollipop is Here!</a></p>
+
+    <p>Xposed框架是一款可以在不修改APK的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://drakeet.me/quick-return-like-as-seashell">用 RecyclerView 实现『贝壳单词』英语角的 Quick Return 效果</a></p>
+
+    <p>今天把『贝壳单词』中英语角的 quick return 效果剥离出来写了个 Demo，讲解使用 RecyclerView 和 nineoldandroids 自己动手写快速返回菜单。通过这篇文章你将了解到的知识有：1.RecyclerView 和其适配器的基本使用
+RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener()、4.nineoldandroids 这个强大 View 操作库的使用等。</p>
+  </li>
+  <li>
+    <p><a href="http://www.lightskystreet.com/2015/02/10/philm_mvp/">开源项目Philm的MVP架构分析</a></p>
+
+    <p>最近一直在研究ChrisBannes的开源项目<a href="https://github.com/chrisbanes/philm">Philm</a>，其整体架构是一套MVP的实现，因为自己也确实没有遇到过整个项目利用MVP搭建的架构，看到的更多是一些代码片段，这里就探讨Philm是如何结合Android实际问题来实现一种MVP架构，如有分析不准确的地方，欢迎指出，大家一起探讨。</p>
+  </li>
+  <li>
+    <p><a href="http://www.yrom.net/blog/2015/02/07/change-gradle-maven-repo-url/">Gradle 修改 Maven 仓库地址</a></p>
+
+    <p>近来迁移了一些项目到Android Studio，采用Gradle构建确实比原来的Ant方便许多。但是编译时下载依赖的网速又着实令人蛋疼不已。如果能切换到国内的Maven镜像仓库，如开源中国的Maven库，又或者是换成自建的Maven私服，那想必是极好的。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/02/18/android-dev-weekly-issue-20/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-11T22:45:07+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/02/11/android-dev-weekly-issue-19/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-19/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.codekk.com/">Android开源项目源码解析</a></p>
+
+    <p>由<a href="https://github.com/Trinea">@Trinea</a>发起的Android开源项目源码解析项目，目前已校对发布的分析有：Volley源码解析、Android Universal Image Loader源码分析、Dagger源码解析、EventBus 源码解析、xUtils源码解析、ViewPagerindicator源码解析、HoloGraphLibrary源码解析、CircularFloatingActionMenu源码解析、PhotoView 源码解析、Android Lock Pattern源码解析以及公共技术点：Java动态代理、Java注解Annotation、View绘制流程、依赖注入和View时间传递等。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/guolin_blog/article/details/42238627">Android最佳性能实践(一)——合理管理内存</a></p>
+
+    <p>有不少朋友都问过我，怎样才能写出高性能的应用程序，如何避免程序出现OOM，或者当程序内存占用过高的时候该怎么样去排查。确实，一个优秀的应用程序，不仅仅要功能完成得好，性能问题也应该处理得恰到好处。为此，我也是阅读了不少Android官方给出的高性能编程建议，那么从本篇文章开始，我就准备开始写一个全新系列的博文，来把这些建议进行整理和分析，帮助大家能够写出更加出色的应用程序。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80627/">深入解析Android的自定义布局</a></p>
+
+    <p>这篇文章是前Firefox Android工程师（现在跳槽去Facebook了） <a href="http://lucasr.org/about">Lucas Rocha</a>所写，文中对Android中常用的四种自定义布局方案进行了很好地分析，并结合这四种Android自定义布局方案所写的示例项目讲解了它们各自的优劣以及四种方案之间的比较。看完这篇文章，也让我对Android 自定义布局有了进一步的了解，于是趁着兴头，我把它翻译成中文，<a href="http://lucasr.org/2014/05/12/custom-layouts-on-android/">原文链接在此</a>。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80634/">巧用Drawable 实现Android UI 元素间距效果</a></p>
+
+    <p>在大部分的移动UI或者Web UI都是基于网格概念而设计的。这种网格一般都是有一些对其的方块组成，然后它们组合成为一个块。使用网格这样的设计原则可以有助于对齐UI元素，提升UI的一致性，同时还能让用户更加容易的获取UI上面包含的内容。简而言之，网格是一个相当的强大的设计工具。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/02/11/android-dev-weekly-issue-19/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-11T22:41:41+08:00" pubdate data-updated="true">Feb 11<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/02/11/android-dev-weekly-issue-18/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/02/11/android-dev-weekly-issue-18/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.infoq.com/cn/news/2015/01/groovy-2-4-released">Groovy 2.4发布，支持Android开发</a></p>
+
+    <p>近日，Groovy编程语言的管理者Guillaume Laforge在博客上宣布了Groovy 2.4发布的消息。就在不久前，Pivotal宣布不再资助Groovy/Grails项目，Groovy 2.4将成为Pivotal资助下的最后一个主要的Groovy版本。Groovy 2.4最大的亮点就是对Android的支持，现在开发者可以完全使用Groovy编写Android应用了，而且与Java相比，可以省去很多样板代码。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://yanghui.name/blog/2015/02/01/2015-1-31-ali-technical-salon/">Android应用性能优化实践</a></p>
+
+    <p>周末跑去深圳参加了一场阿里主持的技术沙龙，主题是《如何构建高可用的APP》，沙龙中相关的ppt和视频可以在他们的微博中找到。沙龙中收获比较大的是有关UC的何杰分享的Android应用性能优化实践，和手Q web业务优化的解析。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.isming.me/2015/02/01/android-view-animation/">android动画-View Animation</a></p>
+
+    <p>视图动画（View Animation）,又称补间动画（Tween Animation）,即给出两个关键帧，通过一些算法将给定属性值在给定的时间内在两个关键帧间渐变。本文首先讲解各种基本动画的使用，其实介绍View动画的工作过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.cnblogs.com/tianzhijiexian/p/4128045.html">用开源项目ActivityOptionsICS让ActivityOptions的动画实现兼容</a></p>
+
+    <p>我之前写过一篇文章是讲解ActivityOption的api方法的（http://www.cnblogs.com/tianzhijiexian/p/4087917.html），当时吐槽各种动画不兼容，完全无视我们4.x或者2.x用户嘛，好在有开源库来帮助我们实现动画。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/wenda/detail/245687">android:clipToPadding属性的分析</a></p>
+
+    <p>ListView或GridView中android:clipToPadding属性的使用说明示例该属性的解释:Defines whether the ViewGroup will clip its drawing surface so as to exclude the padding area. 什么意思呢?就是说:clipToPadding属性定义了是否允许ViewGroup在padding中绘制,该值默认为true,即不允许.</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/02/11/android-dev-weekly-issue-18/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/19/android-dev-weekly-issue-17/">Android开发技术周报 Issue#17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-19T14:38:55+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/01/19/android-dev-weekly-issue-17/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-17/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42555483">ART运行时垃圾收集（GC）过程分析</a></p>
+
+    <p>ART运行时与Dalvik虚拟机一样，都使用了Mark-Sweep算法进行垃圾回收，因此它们的垃圾回收流程在总体上是一致的。但是ART运行时对堆的划分更加细致，因而在此基础上实现了更多样的回收策略。不同的策略有不同的回收力度，力度越大的回收策略，每次回收的内存就越多，并且它们都有各自的使用情景。这样就可以使得每次执行GC时，可以最大限度地减少应用程序停顿。本文就详细分析ART运行时的垃圾收集过程。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/how-to-debug-http-and-https-traffic-on-android/">如何调试 Android 上 HTTP(S) 流量</a></p>
+
+    <p>在Android开发中我们常常会和API 打交道，可能你不想，但是这是避不开的。大部分情况下，调试发送网络请求和接收响应的过程都是十分痛苦的。有多少次我们经过调试发现API的调用失败仅仅是因为我们的编码错了或者丢失了一个HTTP头部参数？在调试的过程中，我们发现出现错误的原因千奇百怪。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42492621">ART运行时为新创建对象分配内存的过程分析</a></p>
+
+    <p>ART运行时和Dalvik虚拟机一样，在堆上为对象分配内存时都要解决内存碎片和内存不足问题。内存碎片问题可以使用dlmalloc技术解决。内存不足问题则通过垃圾回收和在允许范围内增长堆大小解决。由于垃圾回收会影响程序，因此ART运行时采用力度从小到大的进垃圾回收策略。</p>
+  </li>
+  <li>
+    <p><a href="http://hukai.me/android-performance-patterns/">Android性能优化典范</a></p>
+
+    <p>2015年伊始，Google发布了关于Android性能优化典范的专题，一共16个短视频，每个3-5分钟，帮助开发者创建更快更优秀的Android App。课程专题不仅仅介绍了Android系统中有关性能问题的底层工作原理，同时也介绍了如何通过工具来找出性能问题以及提升性能的建议。主要从三个方面展开，Android的渲染机制，内存与GC，电量优化。下面是对这些问题和建议的总结梳理。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/19/android-dev-weekly-issue-17/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -357,383 +770,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-26T12:53:00+08:00" pubdate data-updated="true">Dec 26<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/26/update-android-studio-fail/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/26/update-android-studio-fail/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天在G+中看到Android Studio又有更新了就心血来潮想去更新体验一下，可是无论我怎么点Check Update却一直提示<code>Connection failed. Please check your network connection and try again</code>，开始以为是由于G*W在捣乱，但是打开VPN后还是无法更新，然后开始Google了一下找到了下面的解决办法。</p>
-
-<p><img src="/images/notes_images/android-studio-update-error.png" alt="image" title="android-studio-update-error" /></p>
-
-<h3 id="mac-osx">Mac OSX</h3>
-<p>首先打开<code>Finder</code>在左边选择<code>Application</code>目录，在右边找到<code>Android Studio.app</code>,然后右击选择“显示包内容”如下图：</p>
-
-<p><img src="/images/notes_images/android_studio_in_finder.png" alt="alt text" title="android_studio_in_finder" /></p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/26/update-android-studio-fail/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/22/android-dev-weekly-issue-12/">Android开发周报 Issue#12</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-22T09:54:44+08:00" pubdate data-updated="true">Dec 22<span>nd</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/22/android-dev-weekly-issue-12/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/22/android-dev-weekly-issue-12/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41822747">Dalvik虚拟机垃圾收集（GC）过程分析</a></p>
-
-    <p>前面我们分析了Dalvivk虚拟机堆的创建过程，以及Java对象在堆上的分配过程。这些知识是理解Dalvik虚拟机垃圾收集过程的基础。垃圾收集是一个复杂的过程，它要将那些不再被引用的对象进行回收。一方面要求Dalvik虚拟机能够标记出哪些对象是不再被引用的。另一方面要求Dalvik虚拟机尽快地回收内存，避免应用程序长时间停顿。本文就将详细分析Dalvik虚拟机是如何解决上述问题完成垃圾收集过程的。</p>
-  </li>
-  <li>
-    <p><a href="http://www.jianshu.com/p/c85984cf99e2?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=writer_share&amp;utm_source=weibo">使用Android Studio查看Android Lollipop源码</a></p>
-
-    <p>作为Google的亲儿子,Nexus手机系列所收到的待遇大家有目共睹.Android5.0出来之后,Nexus5第一时间就升级到了最新的系统.那么作为Google亲儿子的Android Studio同样备受Google的重视,我也是第一时间从Eclipse转投到了Android Studio的怀抱中,从最初的测试版本一路升级到现在的1.0正式版本(今天发布了1.0.2,果断已经升级了),关于Android Studio的好处我就不用说了…</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/devnews/facebook-engineer-improve-android-app/">Facebook工程师是如何改进他们Android客户端的</a></p>
-
-    <p>作为世界上最大的社交网络，Facebook的Android客户端面临着各种各样的使用环境（地理环境、Android设备以及移动网络等环境的差异）。也正是这个原因，为了检测自家Android客户端在发展中国家的性能表现，Android的产品经理、工程师在2013年的时候去了一趟非洲。当时我看到这个新闻的时候觉得有点怪异，后来看到他们这篇博客才有点理解他们这样做的原因了。</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/devpost/i-dont-need-your-permission/">你的Android应用完全不需要那么多的权限</a></p>
-
-    <p>Android系统的权限从用户的角度来看有时候的确有点让人摸不着头脑。有时候可能你只需要做一些简单的事情（对联系人的信息进行编辑），却申请了远超你应用所需的权限（比如访问所有联系人信息的权限）。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/22/android-dev-weekly-issue-12/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/15/android-dev-weekly-issue-11/">Android开发周报 Issue#11</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-15T13:56:36+08:00" pubdate data-updated="true">Dec 15<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/15/android-dev-weekly-issue-11/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/15/android-dev-weekly-issue-11/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://droidyue.com/blog/2014/11/29/why-onsharedpreferencechangelistener-was-not-called/">Google为何这样设计OnSharedPreferenceChangeListener</a></p>
-
-    <p>之前使用OnSharedPreferenceChangeListener，遇到了点小问题，就是有些时候OnSharedPreferenceChangeListener没有被触发。最近花了点时间研究了一下，小做整理。本文将会介绍监听器不被触发的原因，解决方法，以及其中隐含的一些技术细节。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.isming.me/2014/12/12/import-library-to-android-studio/">导入开源库到基于Android Studio构建的项目中</a></p>
-
-    <p>前两天，谷歌发布了Android Studio 1.0的正式版，也有更多的人开始迁移到Android Studio进行开发。然而，网上很多的开源库,控件等还是以前的基于Eclipse进行开发，很多人不知道怎么导入到自己的基于Android Studio项目中来，微博上也有人私信我，让我来写写，正好今天回来的比较早，就写写吧。主要介绍一下常见的一些导包的场景。</p>
-  </li>
-  <li>
-    <p><a href="http://www.cnblogs.com/ct2011/p/4152323.html">Android批量打包提速 - 1分钟900个市场不是梦</a></p>
-
-    <p>使用Ant或者Gradle来给程序进行多渠道批量打包，通常都是在manifest文件中写入一个meta标签：<code>&lt;meta-data android:name="CHANNEL" android:value="xxx" /&gt;</code> meta的key值固定，通过循环改变meta中的value值来实现市场渠道的写入。Ant批量打包实现相对麻烦，以前写的时候多亏了<a href="http://www.cnblogs.com/qianxudetianxia/archive/2012/07/04/2573687.html">谦虚的天下-《App自动化之使用Ant编译项目多渠道打包》</a> 。如果没有这篇帖子，真不知道当时Ant要折腾多少回才能写好。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">上传Android或Java库到Maven central repository</a></p>
-
-    <p>主要介绍利用Sonatype将jar或aar提交到Maven的中央仓库。是不是希望将自己的jar或是aar传到maven官方库中，在The Central Repository中可以被其他人搜索使用呢，是的话，往下看吧。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/15/android-dev-weekly-issue-11/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Androoid Stidio 1.0正式版和SDK Tools R24下载地址</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-09T16:26:58+08:00" pubdate data-updated="true">Dec 9<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote>
-  <p>提示：所有链接复制到迅雷里就可以下载<strong>无需翻墙</strong></p>
-</blockquote>
-
-<h2 id="sdk-tools">SDK Tools下载地址</h2>
-
-<h4 id="windows">Windows</h4>
-
-<p>安装版(官方推荐)：<a href="http://dl.google.com/android/installer_r24-windows.exe">http://dl.google.com/android/installer_r24-windows.exe</a></p>
-
-<p>绿色版：<a href="http://dl.google.com/android/android-sdk_r24-windows.zip">http://dl.google.com/android/android-sdk_r24-windows.zip</a></p>
-
-<h4 id="mac-os-x">Mac OS X</h4>
-<p><a href="http://dl.google.com/android/android-sdk_r24-macosx.zip">http://dl.google.com/android/android-sdk_r24-macosx.zip</a></p>
-
-<h4 id="linux">Linux</h4>
-<p><a href="http://dl.google.com/android/android-sdk_r24-linux.tgz">http://dl.google.com/android/android-sdk_r24-linux.tgz</a></p>
-
-<h2 id="android-studio">Android Studio下载地址</h2>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/08/android-dev-weekly-issue-10/">Android开发周报 Issue#10</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-08T11:10:12+08:00" pubdate data-updated="true">Dec 8<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/08/android-dev-weekly-issue-10/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/08/android-dev-weekly-issue-10/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/41692535">Android Apk 拆分机制</a></p>
-
-    <p>拆分机制比起使用 flavors，能让应用程序更有效地构建一些形式的多个apk。多 apk 只支持以下类型: 1.
-屏幕密度 2.ABI.使用新的拆分机制，构建同一个应用程序的hdpi版本和mdpi版本，能够共享很多的任务 （如 javac，dx，proguard）。此外，它会被认为是一个单一的variant，并且同一个测试程序将会被用来测试每​​个多APK。</p>
-  </li>
-  <li>
-    <p><a href="http://relex.me/using-manifestplaceholders/">使用manifestPlaceholders</a></p>
-
-    <p>在项目中我需要打包不同渠道的APK，需要在AndroidManifest中定义渠道名称，以便在java中调用。以前ant或gradle打包时动态改变渠道的思路是：正则AndroidManifest的特定字符然后替换.</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40424379">Property Anim详解</a></p>
-
-    <p>本篇文章将对PropertyAnimation进行全面深入的探讨，本篇文章可以分为两大块，从第六部分可以作为分界点。前五部分着重讲解了PropertyAnim的动画值的计算过程，ValueAnimator与ObjectAnimator以及TimeInterpolation与TypeEvaluator之间的介绍和比较，这几点是比较重要的，从第六部分开始是通过源码的角度分析了整个动画计算以及内部的处理细节，以及引出了对JakeWharton大神的NineOldAndroids 开源库的分析，如果你觉得太多，可以分开来看，有理解不准确的地方，欢迎大家指正。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/08/android-dev-weekly-issue-10/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-01T12:42:08+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/01/android-dev-weekly-issue-9/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
-
-    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
-  </li>
-  <li>
-    <p><a href="http://www.kuqin.com/shuoit/20140826/341828.html?url_type=39&amp;object_type=crawler&amp;pos=1">为什么Android的图片质量会比iPhone的差？</a></p>
-
-    <p>经常看到有人问：“安卓版微信发出去的图片怎么那么渣！比iPhone的差远了！”。不只是微信，很多应用安卓版的图片质量就是要比iPhone版逊色很多，这到底是怎么回事？</p>
-  </li>
-  <li>
-    <p><a href="http://qichaochen.github.io/2014/11/21/107-Facebook-Rebound-Demo/">[Material Design]使用Fackbook Rebound快速实现弹簧动画效果</a></p>
-
-    <p>Rebound是Facebook推出的一款Android的物理和动画库，于2013年10月在Mobile@Scale大会上正式发布，旨在解决笨重、缓慢的传统移动网络界面。Rebound不是一款通用物理库，但其弹簧模型在应用程序中引入了现实世界的物理，易于集成，创建的动画能够让人感觉到非常自然，并且可以和Material Design的设计原则呼应，可用于滚动条、切换开关、呼叫等场景下。</p>
-  </li>
-  <li>
-    <p><a href="http://stormzhang.com/devtools/2014/11/07/use-curl-debug/">使用curl来调试你的应用</a></p>
-
-    <p>我们在客户端开发过程中总免不了和后端进行api对接，有时候需要对返回的数据格式进行调试，有时候每次运行客户端来发送请求，这个未免效率太低，这里就来介绍一个好用的工具–curl。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/01/android-dev-weekly-issue-9/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -786,23 +822,23 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2015/01/19/android-dev-weekly-issue-16/">Android开发技术周报 Issue#16</a>
+        <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/01/12/android-dev-weekly-issue-15/">Android开发技术周报 Issue#15</a>
+        <a href="/blog/2015/03/02/android-dev-weekly-issue-21/">Android开发技术周报 Issue#21</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2015/01/05/android-dev-weekly-issue-14/">Android开发周报 Issue#14</a>
+        <a href="/blog/2015/02/18/android-dev-weekly-issue-20/">Android开发技术周报 Issue#20</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/12/29/android-dev-weekly-issue-13/">Android开发周报 Issue#13</a>
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/12/26/update-android-studio-fail/">Android Studio 自动更新失败解决办法</a>
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a>
       </li>
     
   </ul>

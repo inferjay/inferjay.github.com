@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android开发技术周报 Issue#20 - 脉脉不得语的技术博客</title>
+  <meta name="author" content="inferjay">
+
+  
+  <meta name="description" content="新闻 Xposed Framework for Android Lollipop is Here! Xposed框架是一款可以在不修改APK的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。 教程 用 RecyclerView 实现『 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.inferjay.com/blog/2015/02/18/android-dev-weekly-issue-20">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="脉脉不得语的技术博客" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <!-- googleapis is fucked by gfw -->
+  <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52369435-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">脉脉不得语的技术博客</a></h1>
+  
+    <h2>心无所恃，随遇而安</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.inferjay.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Android开发技术周报 Issue#20</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-18T09:03:42+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3 id="section">新闻</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.xda-developers.com/xposed-framework-for-android-lollipop-is-here/">Xposed Framework for Android Lollipop is Here!</a></p>
+
+    <p>Xposed框架是一款可以在不修改APK的情况下影响程序运行（修改系统）的框架服务，基于它可以制作出许多功能强大的模块，且在功能不冲突的情况下同时运作。</p>
+  </li>
+</ol>
+
+<h3 id="section-1">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://drakeet.me/quick-return-like-as-seashell">用 RecyclerView 实现『贝壳单词』英语角的 Quick Return 效果</a></p>
+
+    <p>今天把『贝壳单词』中英语角的 quick return 效果剥离出来写了个 Demo，讲解使用 RecyclerView 和 nineoldandroids 自己动手写快速返回菜单。通过这篇文章你将了解到的知识有：1.RecyclerView 和其适配器的基本使用
+RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener()、4.nineoldandroids 这个强大 View 操作库的使用等。</p>
+  </li>
+  <li>
+    <p><a href="http://www.lightskystreet.com/2015/02/10/philm_mvp/">开源项目Philm的MVP架构分析</a></p>
+
+    <p>最近一直在研究ChrisBannes的开源项目<a href="https://github.com/chrisbanes/philm">Philm</a>，其整体架构是一套MVP的实现，因为自己也确实没有遇到过整个项目利用MVP搭建的架构，看到的更多是一些代码片段，这里就探讨Philm是如何结合Android实际问题来实现一种MVP架构，如有分析不准确的地方，欢迎指出，大家一起探讨。</p>
+  </li>
+  <li>
+    <p><a href="http://www.yrom.net/blog/2015/02/07/change-gradle-maven-repo-url/">Gradle 修改 Maven 仓库地址</a></p>
+
+    <p>近来迁移了一些项目到Android Studio，采用Gradle构建确实比原来的Ant方便许多。但是编译时下载依赖的网速又着实令人蛋疼不已。如果能切换到国内的Maven镜像仓库，如开源中国的Maven库，又或者是换成自建的Maven私服，那想必是极好的。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/aigestudio/article/details/43449123">为什么我们可以在非UI线程中更新UI</a></p>
+
+    <p>看到这样的标题…估计N多人会说我是逗比…因为很多盆友在学习Android（特别是从4.0之后开始入门的）的时候都会常看见或听到别人说我们更新UI呢要在UI线程（或者说主线程）中去更新UI，不要在子线程中更新UI，而Android官方呢也建议我们不要在非UI线程直接更新UI，为什么呢?</p>
+  </li>
+  <li>
+    <p><a href="http://ifeve.com/guava-base-1/">Guava 是个风火轮之基础工具(1)</a></p>
+
+    <p>Guava 是 Java 开发者的好朋友。虽然我在开发中使用 Guava 很长时间了，Guava API 的身影遍及我写的生产代码的每个角落，但是我用到的功能只是 Guava 的功能集中一个少的可怜的真子集，更别说我一直没有时间认真的去挖掘 Guava 的功能，没有时间去学习 Guava 的实现。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/guolin_blog/article/details/42238633">Android最佳性能实践(二)—分析内存的使用情况</a></p>
+
+    <p>由于Android是为移动设备开发的操作系统，我们在开发应用程序的时候应当始终把内存问题充分考虑在内。虽然Android系统拥有垃圾自动回收机制，但这并不意味着我们就可以完全忽略何时去分配或释放内存。即使我们全部按照上一篇文章中给出的编程建议来去编写程序，还是会很有可能出现内存泄露或其它类型的内存问题。所以，唯一能够解决问题的办法，就是尝试去分析应用程序的内存使用情况，那么本篇文章就会教大家如何进行分析。</p>
+  </li>
+  <li>
+    <p><a href="http://android.jobbole.com/80636/">Android 主线程之旅—PSVM</a></p>
+
+    <p>当碰到与Android主线程交互相关的Bug时，我决定好好去看看Android的主线程究竟是怎么一回事。这篇文章就是描述我的Android主线程之旅的第一部分。</p>
+  </li>
+  <li>
+    <p><a href="http://www.race604.com/annotation-processing/">Java注解处理器</a></p>
+
+    <p>Java中的注解(Annotation)是一个很神奇的东西，特别现在有很多Android库都是使用注解的方式来实现的。在这篇文章中，我将阐述怎样写一个注解处理器(Annotation Porcessor)。在这篇教程中，首先，我将向您解释什么是注解器，你可以利用这个强大的工具做什么以及不能做什么；然后，我将一步一步实现一个简单的注解器。</p>
+  </li>
+</ol>
+
+<!--more-->
+
+<ol>
+  <li>
+    <p><a href="http://www.eoeandroid.com/thread-557380-1-1.html">在 x86 上优化 Android 应用的方法和技巧</a></p>
+
+    <p>英特尔致力于帮助开发人员提供能够在英特尔架构上正常运行（甚至出色运行）的 Android 应用。 虽然英特尔主要致力于社区层面：优化 Dalvik Java、V8 引擎和 Bionic C；丰富代码库；为 IA 提供采用 32 位和 64 位内核的版本，他们同样提供了多种类型的新工具为 Android 开发人员提供帮助。 这些工具主要用于提高性能，使其超过面向 x86 的默认 ARM 转换层：libhoudini 所提供的性能。 </p>
+  </li>
+</ol>
+
+<h3 id="section-2">代码&amp;开源库</h3>
+
+<ol>
+  <li>
+    <p><a href="https://github.com/zhaozhentao/KugouLayout">KugouLayout</a></p>
+
+    <p>一个模仿酷狗播放器滑动返回的layout，可以让你的app有更丰富便捷的手势操作，支持activity滑动返回和普通layout的滑动显示/隐藏两种模式。</p>
+
+    <p><img src="https://raw.githubusercontent.com/zhaozhentao/KugouLayout/master/screenshot/screen2.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/linger1216/labelview">labelview</a></p>
+
+    <p>贴纸效果。</p>
+
+    <p><img src="https://raw.githubusercontent.com/linger1216/labelview/master/img/img2.png" alt="image" />	
+<!--	![image](https://github.com/linger1216/labelview/raw/master/img/img1.png)--></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/2dxgujun/AndroidTagGroup/">AndroidTagGroup</a></p>
+
+    <p>一个漂亮的标签组控件。</p>
+
+    <p><img src="https://camo.githubusercontent.com/6a4ce346d402597d71f3e523c4a404311a4cd25b/68747470733a2f2f7261772e6769746875622e636f6d2f32647867756a756e2f416e64726f696454616747726f75702f6d61737465722f6173736574732f64656d6f5f73637265656e73686f742e706e67" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/mwrlabs/drozer">drozer</a></p>
+
+    <p>一个Android安全测试框架。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pedrovgs/Lynx">Lynx</a></p>
+
+    <p>一个可以创建一个自定义View并显示所有日志信息的库。</p>
+
+    <p><img src="https://raw.githubusercontent.com/pedrovgs/Lynx/master/art/screenshot_demo_1.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/AizazAZ/Android-Ultra-Photo-Selector">Android-Ultra-Photo-Selector</a></p>
+
+    <p>一个图片选择器控件，支持选择多张图片、浏览设备上所有包含图片的文件夹、预览选择的图片并且支持缩放。</p>
+
+    <p><img src="https://raw.githubusercontent.com/AizazAZ/Android-Ultra-Photo-Selector/master/media/image1.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/shell-software/fab">fab</a></p>
+
+    <p>一个支持很多自定义属性的Floating Action Button控件。</p>
+
+    <p><img src="https://github.com/shell-software/fab/raw/master/demo/button_type_default.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/JorgeCastilloPrz/EasyMVP">EasyMVP</a></p>
+
+    <p>Linkedin工程师做的一个mvp示例demo.</p>
+
+    <p><img src="https://raw.githubusercontent.com/JorgeCastilloPrz/EasyMVP/master/art/screenshot_1.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pnc/IconButton">IconButton</a></p>
+
+    <p>一个Button的子类，支持更好控制over drawable位置的功能。</p>
+
+    <p><!--![image](https://raw.githubusercontent.com/pnc/IconButton/master/images/demo.png)--></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/lsjwzh/MaterialLoadingProgressBar">MaterialLoadingProgressBar</a></p>
+
+    <p>抽取的support-v4 v21 中的loading圈效果。</p>
+
+    <p><img src="https://raw.githubusercontent.com/lsjwzh/MaterialLoadingProgressBar/master/screen.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Kitdroid/ElasticScrollView">ElasticScrollView</a></p>
+
+    <p>带回弹效果的ScrollView。</p>
+
+    <p><img src="https://raw.githubusercontent.com/Kitdroid/ElasticScrollView/master/image/elastic_sample.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/Tikitoo/android-resources">android-resources</a></p>
+
+    <p>Android 开发资料收集汇总。</p>
+  </li>
+  <li>
+    <p><a href="https://github.com/glomadrian/dashed-circular-progress">dashed-circular-progress</a></p>
+
+    <p>圆形轨迹进度条控件。</p>
+
+    <p><img src="https://raw.githubusercontent.com/glomadrian/dashed-circular-progress/master/art/sample.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/FrederickRider/AutoCompleteBubbleText">AutoCompleteBubbleText</a>	</p>
+
+    <p><img src="https://raw.githubusercontent.com/FrederickRider/AutoCompleteBubbleText/master/images/Screenshot_1.png" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/PaNaVTEC/DrawableView">DrawableView</a></p>
+
+    <p>支持手写绘画的自定View，并且可以将绘画的结果保存为图片。</p>
+
+    <p><img src="https://raw.githubusercontent.com/PaNaVTEC/DrawableView/master/art/DrawableView.gif" alt="image" /></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/hanspeide/anytextview">anytextview</a></p>
+
+    <p>对TextView、EditText和Button进行了扩展，可以支持非系统字体。</p>
+  </li>
+</ol>
+
+<h3 id="section-3">工具</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.androiddevtools.cn">Android Studio 1.1 RC1</a></p>
+
+    <p>修复了一些Bug。</p>
+  </li>
+  <li>
+    <p><a href="https://jitpacio">JitPack.io</a></p>
+  </li>
+</ol>
+
+<p>　　JitPack根据需要构建GitHub项目并提供现成的软件包，方便你在Gradle,Maven和Sbt项目中使用包库。</p>
+
+<ol>
+  <li>
+    <p><a href="http://gerrithub.io">GerritHub</a></p>
+
+    <p>Github仓库代码Review工具。</p>
+  </li>
+</ol>
+
+<h3 id="section-4">视频</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.imooc.com/view/267?from=itblog">Android面试常客Handler详解</a></p>
+
+    <p>本课程将深入理解Android的Handler机制，并结合源码实例，讲解Looper、MessageqQueue、Handler之间的关系，同时介绍HandlerThread的原理和使用，并分析Handler在开发中遇到的异常的原因，最后从源码的角度分析一下Handler更新UI的流程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.imooc.com/view/303">Android自定义任意层级树形控件</a></p>
+
+    <p>本课程将带领大家通过ListView打造一个任意层级的树形控件，大家可以学到巧妙的设计思想以及数据结构的知识。课程中也包含如何巧妙的利用反射加注解将设计通用化，同时可以进一步加深对ListView适配器的理解.</p>
+  </li>
+</ol>
+
+<h3 id="section-5">设计</h3>
+
+<ol>
+  <li>
+    <p><a href="http://www.ui.cn/project.php?id=41420">Twitter视频功能设计流程全程剖析</a></p>
+
+    <p>在这7000字文章中，Twitter设计师展示了严谨的设计流程 以及 设计开发协作心得。Twitter设计流程值得学习的几点：1.原型设计驱动设计方向，可交互、便于测试、确定开发可行性。2.注重设计与开发的沟通，将很多设计师来做更好的开发工作转移给设计师，项目跟进扎实，与其在AE中死抠“设计”细节，不如简单制作大致原型，尽早协助开发调节效果，制作“产品”3.精雕细琢，750+静态设计变种，54份原型可见细心程度。4.问题汇总，bug发现，用户测试并非与设计师无关。5.任何棘手的实现问题，多揪着开发问，很多小发现影响却很大。</p>
+  </li>
+  <li>
+    <p><a href="http://www.uisdc.com/photoshop-efficient-operation-skills-2">四个不为人知的PHOTOSHOP高效操作秘籍（二）</a></p>
+
+    <p>首先花一小段文字来重申下 mac 和 win 的快捷键问题。两个操作系统下的 PS 是一样的，只不过 mac 下的快捷键 Command 在 win 下换成了 Ctrl，Option 换成了 Alt ，其他是没有区别的。本文所提的技巧对两个平台都是通用的！</p>
+  </li>
+</ol>
+
+<hr />
+<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-02-18T09:03:42+08:00" pubdate data-updated="true">Feb 18<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/androiddevweekly/'>AndroidDevWeekly</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+
+     
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_googleplus">Google+</a>
+<a class="jiathis_button_fb">Facebook</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+
+<a href="http://www.jiathis.com/share?uid=1983796" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	ralateuid:{
+		"tsina":"234959219"
+	},
+	shortUrl:true,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1983796" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  
+   
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/02/11/android-dev-weekly-issue-19/" title="Previous Post: Android开发技术周报 Issue#19">&laquo; Android开发技术周报 Issue#19</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/03/02/android-dev-weekly-issue-21/" title="Next Post: Android开发技术周报 Issue#21">Android开发技术周报 Issue#21 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am a Android Developer</p>
+</section>
+<section class="googleplus">
+
+  	
+  		<h1>
+        <a href="http://github.com/inferjay">
+            <img src="/images/GitHub-Mark-120px-plus.png" width="48" height="48">
+        </a>
+        <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+            <img src="/images/gprofile_button-48.png" width="48" height="48">
+        </a>
+    		<a href="https://twitter.com/inferjay">
+      		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
+    		</a>
+    		<a href="http://weibo.com/234959219">
+      			<img src="/images/weibo_64x64.png" width="48" height="48">
+    		</a>
+  		</h1>
+    
+    </br>
+    
+      <h1>
+        <a href="https://dribbble.com/inferjay/likes">
+          <img src="/images/dribbble-ball.png" width="48" height="48">
+        </a>
+        <a href="http://instagram.com/inferjay">
+            <img src="/images/instagram_logo.png" width="48" height="48">
+        </a>
+      </h1>
+    
+
+    <section>
+        <h1></h1>
+    </section>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/02/android-dev-weekly-issue-21/">Android开发技术周报 Issue#21</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/18/android-dev-weekly-issue-20/">Android开发技术周报 Issue#20</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/inferjay">@inferjay</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'inferjay',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - inferjay -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'inferjay';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.inferjay.com/blog/2015/02/18/android-dev-weekly-issue-20/';
+        var disqus_url = 'http://www.inferjay.com/blog/2015/02/18/android-dev-weekly-issue-20/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
