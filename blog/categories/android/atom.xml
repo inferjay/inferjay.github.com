@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Android | 脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-02-11T23:16:08+08:00</updated>
+  <updated>2015-03-12T13:37:46+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -815,7 +815,7 @@
 
 <p><code>RequestManager</code>维护了我们的一个<code>RequestQueue</code>的引用。<code>Volley</code>使用RequestQueue不仅处理了我们给Twitter的数据请求，而且也处理了我的的图片加载。</p>
 
-<h4 id="requestqueue">RequestQueue</h4>
+<h4 id="gsonrequest">GsonRequest</h4>
 
 <p>这个类虽然跟图片加载没有直接的关系，但是它是具有代表性，它是如何继承<code>Volley</code>的<code>Request</code>类去处理你的JSON解析。它使用GET请求到Twtter并获取<code>TwitterData</code>对象。</p>
 
