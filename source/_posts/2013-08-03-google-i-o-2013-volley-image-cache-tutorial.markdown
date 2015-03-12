@@ -53,7 +53,7 @@ Gooogle I/O 2013已经结束了，并且对于Android开发的未来它给我们
 
  ```RequestManager```维护了我们的一个```RequestQueue```的引用。```Volley```使用RequestQueue不仅处理了我们给Twitter的数据请求，而且也处理了我的的图片加载。
 
-####RequestQueue
+####GsonRequest
 
 这个类虽然跟图片加载没有直接的关系，但是它是具有代表性，它是如何继承```Volley```的```Request```类去处理你的JSON解析。它使用GET请求到Twtter并获取```TwitterData```对象。
 
