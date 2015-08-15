@@ -3,7 +3,7 @@ layout: post
 title: "Androoid Stidio 1.0正式版和SDK Tools r24下载地址"
 date: 2014-12-09 16:26:58 +0800
 comments: true
-categories: 
+categories: AndroidStudio SDKTools
 ---
 
 > 提示：所有链接复制到迅雷里就可以下载**无需翻墙**
