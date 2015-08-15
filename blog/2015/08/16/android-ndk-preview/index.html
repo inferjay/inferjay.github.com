@@ -118,6 +118,8 @@
 
 <p>While the new gradle plugin delivers some major performance improvements (and Android NDK build support), note that it also requires changes to the build file “DSL” (the way your build is described in your build.gradle files.) Not only will you need to modify your build.gradle files (a process we hope to automate before the plugin graduates from experimental to stable), but we anticipate making some additional incompatible changes along the way.</p>
 
+<!--more-->
+
 <p>Second, note also that Android Studio has not yet been updated to fully handle the experimental plugin. This means that for example the Project Structure Dialog, and various quick fixes which automatically update the build data, do not work correctly. You’ll need to edit your build.gradle files manually to configure your projects. As another example, the various templates which update the build files (such as New Module), have not yet been updated.</p>
 
 <p>Finally, there are still some known bugs in this build; when debugging with LLDB breakpoints do not always work on Windows; if you run into this, you can switch to GDB debugging as a temporary workaround.</p>
