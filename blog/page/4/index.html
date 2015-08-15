@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="一、Android编码规范 1.java代码中不出现中文，最多注释中可以出现中文 2.局部变量命名、静态成员变量命名 只能包含字母，单词首字母出第一个外，都为大写，其他字母都为小写 3.常量命名 只能包含字母和_，字母全部大写，单词之间用_隔开 4.layout中的id命名 命名模式为： &hellip;">
+  <meta name="description" content="Gooogle I/O 2013已经结束了，并且对于Android开发的未来它给我们留下了更大的期望。令人非常兴奋的是在今年的I/O大会上展示了一个叫Volley的库。Volley是一个处理和缓存网络请求的库，减少开发人员在实际的每一个应用中写同样的样板代码。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,54 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/">[译]Google　I/O 2013:Volley 图片缓存教程</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-03T11:28:00+08:00" pubdate data-updated="true">Aug 3<span>rd</span>, 2013</time>
+        
+           | <a href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Gooogle I/O 2013已经结束了，并且对于Android开发的未来它给我们留下了更大的期望。令人非常兴奋的是在今年的I/O大会上展示了一个叫<a href="https://android.googlesource.com/platform/frameworks/volley/"><code>Volley</code></a>的库。<code>Volley</code>是一个处理和缓存网络请求的库，减少开发人员在实际的每一个应用中写同样的样板代码。写样板代码是很无聊的并且也增加了开发人员出错的几率。Google是出于这些考虑创建了<code>Volley</code>。</p>
+
+<p>如果你还没有看过<a href="https://developers.google.com/events/io/sessions/325304728">Gooogle　I/O中关于Volley的介绍</a>，在继续这篇文章之前我建议你先去看看关于<code>Volley</code>的介绍，对它有一些基本的理解。</p>
+
+<p>在Google I/O介绍的时候，Ficus Kirpatrick讲了很多关于Volley如何的有助于图片加载。你会发现在Volley作为你的图片加载解决方案的时候，虽然Volley自己处理了L2的缓存，它需要但是没有包含L1的缓存。许多人会使用像<a href="https://github.com/nostra13/Android-Universal-Image-Loader">Universal Image Loader</a>或者<a href="https://github.com/square/picasso">Square`s newer Picasso</a>这些第三方的库去处理图片的加载；然而这些库通常已经同时处理了图片的加载和缓存。所以，我们如何使用Volley来替换图片的加载和缓存呢？首先，让我们看看Volley提供的便利的加载方法，我们稍后再看他们的不同之处。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/08/03/google-i-o-2013-volley-image-cache-tutorial/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -526,6 +574,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
       </li>
     
@@ -539,10 +591,6 @@
     
       <li class="post">
         <a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a>
       </li>
     
   </ul>

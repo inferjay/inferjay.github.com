@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="教程 如何检测一个APP：从解密到批量获取他人信息 在挖掘Android App的web端漏洞时，遇到一些看起来安全性做的比较好的应用会对http请求也会加密，这篇文章作者就提供了一个不错的基本的解决思路：反编译获取加密方式-》解密 -》添加logcat直接输出加密的内容。 &hellip;">
+  <meta name="description" content="We’ve just released another update to Android Studio 1.3’s canary channel, Release Candidate 1. This build contains a big new feature: Android NDK &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,115 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-16T00:48:52+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/08/16/android-ndk-preview/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/08/16/android-ndk-preview/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We’ve just released another update to Android Studio 1.3’s canary channel, Release Candidate 1.</p>
+
+<p>This build contains a big new feature: Android NDK support, with support for editing, running and debugging C and C++ code! Note however that NDK support is only preview quality, and will remain in preview status for the upcoming final 1.3 release. There are many significant limitations (described below), but we hope that the preview will be useful for many Android NDK developers even in its current state!</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>First, the Android NDK support only works with the new experimental Gradle plugin for Android (which in turn requires Gradle 2.5, released yesterday.)</p>
+
+<p>While the new gradle plugin delivers some major performance improvements (and Android NDK build support), note that it also requires changes to the build file “DSL” (the way your build is described in your build.gradle files.) Not only will you need to modify your build.gradle files (a process we hope to automate before the plugin graduates from experimental to stable), but we anticipate making some additional incompatible changes along the way.</p>
+
+<p>Second, note also that Android Studio has not yet been updated to fully handle the experimental plugin. This means that for example the Project Structure Dialog, and various quick fixes which automatically update the build data, do not work correctly. You’ll need to edit your build.gradle files manually to configure your projects. As another example, the various templates which update the build files (such as New Module), have not yet been updated.</p>
+
+<p>Finally, there are still some known bugs in this build; when debugging with LLDB breakpoints do not always work on Windows; if you run into this, you can switch to GDB debugging as a temporary workaround.</p>
+
+<h3 id="bundled-android-ndk">Bundled Android NDK</h3>
+
+<p>Historically, the Android NDK was distributed separately from the Android SDK, as a giant .zip file download, and installed in a separate location from where the Android SDK resides.</p>
+
+<p>In this release we’ve tried to unify this; the NDK should now be installed under the SDK home in “ndk-bundle”. We’ve updated the IDE built-in SDK Manager to let you install the NDK in the right place, and the Project Structure Dialog’s SDK Location panel (where you can edit the locations), now also offers a quick link to install it directly; just click on the Download hyperlink shown below:</p>
+
+<p>Note that the NDK is a large download (~1 GB!) so unless you have a really great network connection, prepare to be patient…</p>
+
+<p>Speaking of large downloads, note also that the IDE update patches from previous 1.3 builds to this one are really large: not only does this build contain all the new code to support Android NDK development, but it also contains LLDB binaries (~200 MB uncompressed). This is just a temporary situation; we’ll move these into the NDK.</p>
+
+<h3 id="how-to-get-started">How to get started</h3>
+
+<p>Since the Android NDK support depends on an experimental plugin, with an incompatible build file syntax which we know will change over the next few months, we have not added a simple way to create Android NDK projects. Instead, to explore the Android NDK support, either</p>
+
+<ol>
+  <li>
+    <p>Follow the <a href="http://tools.android.com/tech-docs/new-build-system/gradle-experimental">Experimental Gradle Plugin</a> document which describes how to modify your project to use the current version of the experimental plugin, or</p>
+  </li>
+  <li>
+    <p>Check out some of the existing Android NDK samples which have been updated to work with the new Gradle plugin.</p>
+  </li>
+</ol>
+
+<p>To check out the samples, invoke VCS &gt; Checkout from Version Control &gt; Git, and in the resulting dialog point to <a href="https://github.com/googlesamples/android-ndk.git">https://github.com/googlesamples/android-ndk.git</a> . Pick a location to check out the samples into. <strong>NOTE:</strong> At the end of the import the IDE will ask you whether you want to create a project from the checked out sources. Answer no. The android-ndk git project contains a large number of separate projects. Instead, once the import is done, go to File &gt; Open…, and navigate to (for example) the Teapot folder and select the file build.gradle in that folder. The project will now be opened and synced. This will take a while the first time as the new Gradle plugin and dependencies are downloaded. When you’re done you can look at the project sources and start exploring the IDE support for Android NDK.</p>
+
+<p>For example, in the Project View you’ll see that the project has a “jni” source set next to the normal “java” source set; that’s where you’ll find the native code:</p>
+
+<p><img src="/images/notes_images/ndk-jni-folder.png" alt="ndk-jni-folder" /></p>
+
+<p>You can now build &amp; run the project, and explore the various editing features:</p>
+
+<ul>
+  <li>Code completion</li>
+  <li>Code navigation (go to declaration, jump between header and implementation, etc)</li>
+  <li>Quick fixes</li>
+  <li>Intentions</li>
+  <li>Refactoring</li>
+  <li>Source format
+…</li>
+</ul>
+
+<p><img src="/images/notes_images/ndk-jni-editor-small.png" alt="ndk-jni-editor-small" /></p>
+
+<h3 id="debugging">Debugging</h3>
+
+<p>To debug the project, you’ll need to create a <strong>native</strong> run configuration. Invoke Run &gt; Edit Configurations…, then choose the Native configuration type:</p>
+
+<p><img src="/images/notes_images/ndk-native.png" alt="ndk-native" /></p>
+
+<p>Name the configuration, and choose the module to run. If you run into bugs with the LLDB debugger in this version of the IDE, you can try switching to the GDB debugger instead as a workaround.</p>
+
+<p><img src="/images/notes_images/ndk-native2.png" alt="ndk-native2" /></p>
+
+<p>原文链接：<a href="http://tools.android.com/tech-docs/android-ndk-preview">http://tools.android.com/tech-docs/android-ndk-preview</a></p>
+
+<hr />
+<p>版权声明：版权归原网站所有。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -694,82 +803,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/29/android-dev-weekly-issue-13/">Android开发周报 Issue#13</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-29T10:18:59+08:00" pubdate data-updated="true">Dec 29<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/29/android-dev-weekly-issue-13/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/29/android-dev-weekly-issue-13/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">新闻</h3>
-<ol>
-  <li>
-    <p><a href="http://www.infoq.com/cn/news/2014/12/oracle-java-jar-package">Oracle开始从Java运行时中移除JAR包</a></p>
-
-    <p>早在2012年8月，在Java平台首席架构师Mark Reinhold宣布<a href="http://openjdk.java.net/projects/jigsaw/">模块化项目Jigsaw</a>之后不久，<a href="http://openjdk.java.net/jeps/162">JEP 162</a>这一题为“准备模块化”的提案就指出，在Jigsaw项目中为模块化系统开发的代码不会集成到JDK 8中。那次延期直接将模块化支持推迟到JDK 9，最早也得到2016年。</p>
-  </li>
-  <li>
-    <p><a href="http://www.eoeandroid.com/thread-558758-1-1.html">android5.0让位，Android 6.0曝光这是神马情况？</a></p>
-
-    <p>　Android 5.0刚和我们见面没多久，下一代操作系统Android 6.0就曝光了。外媒报道称，谷歌另一个开发小组已经着手进行一款代号为“M”的系统的研发工作，而这个“M”很有可能就是Android 6.0的代号。据猜测，Android 6.0最主要的变化将会是优化车载表现，可直接安装在汽车当中，这样用户无需智能手机即可直接控制汽车。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.cnblogs.com/ct2011/p/4183553.html">将Eclipse代码导入到AndroidStudio的两种方式</a></p>
-
-    <p>说到使用AndroidStudio，除了新建的项目，我们都会面临的问题是原先Eclipse的代码该怎么导入到AndroidStudio中使用。Google为了让我们更加方便的使用AndroidStudio，提供了两种导入Eclipse代码的方式：一种兼容Eclipse，一种是全新的Android Gradle Project.</p>
-  </li>
-  <li>
-    <p><a href="http://www.importnew.com/14227.html">Java 注解指导手册 – 终极向导</a></p>
-
-    <p>在这篇文章中我们将阐述什么是Java注解，它们如何工作，怎么使用它们。我们将揭开Java注解的面纱，包括内建注解或称元注解，还将讨论Java8中与之相关的的新特性。最后，我们将实现自定义的注解，编写一个使用注解的处理程序（消费器），它通过java反射使用注解。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.jobbole.com/30940/">缓存、缓存算法和缓存框架简介</a></p>
-
-    <p>我们都听过 cache，当你问他们是什么是缓存的时候，他们会给你一个完美的答案，可是他们不知道缓存是怎么构建的，或者没有告诉你应该采用什么标准去选择缓存框架。在这篇文章，我们会去讨论缓存，缓存算法，缓存框架以及哪个缓存框架会更好。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/29/android-dev-weekly-issue-13/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -822,6 +855,10 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
       </li>
     
@@ -835,10 +872,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
     
       <li class="post">
         <a href="/blog/2015/02/11/android-dev-weekly-issue-19/">Android开发技术周报 Issue#19</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/11/android-dev-weekly-issue-18/">Android开发技术周报 Issue#18</a>
       </li>
     
   </ul>

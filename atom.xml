@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-03-29T04:41:25+08:00</updated>
+  <updated>2015-08-16T00:57:26+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Android NDK Preview]]></title>
+    <link href="http://www.inferjay.com/blog/2015/08/16/android-ndk-preview/"/>
+    <updated>2015-08-16T00:48:52+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/08/16/android-ndk-preview</id>
+    <content type="html"><![CDATA[<p>We’ve just released another update to Android Studio 1.3’s canary channel, Release Candidate 1.</p>
+
+<p>This build contains a big new feature: Android NDK support, with support for editing, running and debugging C and C++ code! Note however that NDK support is only preview quality, and will remain in preview status for the upcoming final 1.3 release. There are many significant limitations (described below), but we hope that the preview will be useful for many Android NDK developers even in its current state!</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<p>First, the Android NDK support only works with the new experimental Gradle plugin for Android (which in turn requires Gradle 2.5, released yesterday.)</p>
+
+<p>While the new gradle plugin delivers some major performance improvements (and Android NDK build support), note that it also requires changes to the build file “DSL” (the way your build is described in your build.gradle files.) Not only will you need to modify your build.gradle files (a process we hope to automate before the plugin graduates from experimental to stable), but we anticipate making some additional incompatible changes along the way.</p>
+
+<p>Second, note also that Android Studio has not yet been updated to fully handle the experimental plugin. This means that for example the Project Structure Dialog, and various quick fixes which automatically update the build data, do not work correctly. You’ll need to edit your build.gradle files manually to configure your projects. As another example, the various templates which update the build files (such as New Module), have not yet been updated.</p>
+
+<p>Finally, there are still some known bugs in this build; when debugging with LLDB breakpoints do not always work on Windows; if you run into this, you can switch to GDB debugging as a temporary workaround.</p>
+
+<h3 id="bundled-android-ndk">Bundled Android NDK</h3>
+
+<p>Historically, the Android NDK was distributed separately from the Android SDK, as a giant .zip file download, and installed in a separate location from where the Android SDK resides.</p>
+
+<p>In this release we’ve tried to unify this; the NDK should now be installed under the SDK home in “ndk-bundle”. We’ve updated the IDE built-in SDK Manager to let you install the NDK in the right place, and the Project Structure Dialog’s SDK Location panel (where you can edit the locations), now also offers a quick link to install it directly; just click on the Download hyperlink shown below:</p>
+
+<p>Note that the NDK is a large download (~1 GB!) so unless you have a really great network connection, prepare to be patient…</p>
+
+<p>Speaking of large downloads, note also that the IDE update patches from previous 1.3 builds to this one are really large: not only does this build contain all the new code to support Android NDK development, but it also contains LLDB binaries (~200 MB uncompressed). This is just a temporary situation; we’ll move these into the NDK.</p>
+
+<h3 id="how-to-get-started">How to get started</h3>
+
+<p>Since the Android NDK support depends on an experimental plugin, with an incompatible build file syntax which we know will change over the next few months, we have not added a simple way to create Android NDK projects. Instead, to explore the Android NDK support, either</p>
+
+<ol>
+  <li>
+    <p>Follow the <a href="http://tools.android.com/tech-docs/new-build-system/gradle-experimental">Experimental Gradle Plugin</a> document which describes how to modify your project to use the current version of the experimental plugin, or</p>
+  </li>
+  <li>
+    <p>Check out some of the existing Android NDK samples which have been updated to work with the new Gradle plugin.</p>
+  </li>
+</ol>
+
+<p>To check out the samples, invoke VCS &gt; Checkout from Version Control &gt; Git, and in the resulting dialog point to <a href="https://github.com/googlesamples/android-ndk.git">https://github.com/googlesamples/android-ndk.git</a> . Pick a location to check out the samples into. <strong>NOTE:</strong> At the end of the import the IDE will ask you whether you want to create a project from the checked out sources. Answer no. The android-ndk git project contains a large number of separate projects. Instead, once the import is done, go to File &gt; Open…, and navigate to (for example) the Teapot folder and select the file build.gradle in that folder. The project will now be opened and synced. This will take a while the first time as the new Gradle plugin and dependencies are downloaded. When you’re done you can look at the project sources and start exploring the IDE support for Android NDK.</p>
+
+<p>For example, in the Project View you’ll see that the project has a “jni” source set next to the normal “java” source set; that’s where you’ll find the native code:</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/ndk-jni-folder.png" alt="ndk-jni-folder" /></p>
+
+<p>You can now build &amp; run the project, and explore the various editing features:</p>
+
+<ul>
+  <li>Code completion</li>
+  <li>Code navigation (go to declaration, jump between header and implementation, etc)</li>
+  <li>Quick fixes</li>
+  <li>Intentions</li>
+  <li>Refactoring</li>
+  <li>Source format
+…</li>
+</ul>
+
+<p><img src="http://www.inferjay.com/images/notes_images/ndk-jni-editor-small.png" alt="ndk-jni-editor-small" /></p>
+
+<h3 id="debugging">Debugging</h3>
+
+<p>To debug the project, you’ll need to create a <strong>native</strong> run configuration. Invoke Run &gt; Edit Configurations…, then choose the Native configuration type:</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/ndk-native.png" alt="ndk-native" /></p>
+
+<p>Name the configuration, and choose the module to run. If you run into bugs with the LLDB debugger in this version of the IDE, you can try switching to the GDB debugger instead as a workaround.</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/ndk-native2.png" alt="ndk-native2" /></p>
+
+<p>原文链接：<a href="http://tools.android.com/tech-docs/android-ndk-preview">http://tools.android.com/tech-docs/android-ndk-preview</a></p>
+
+<hr />
+<p>版权声明：版权归原网站所有。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android开发技术周报 Issue#22]]></title>
@@ -3115,127 +3194,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
 
     <p><img src="http://ww1.sinaimg.cn/mw1024/4b4d632fgw1elyr9qvsipg20kf08jdjf.gif" alt="image" /></p>
   </li>
-  <li>
-    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
-
-    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#5]]></title>
-    <link href="http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5/"/>
-    <updated>2014-11-05T17:45:47+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/11/05/android_dev_weekly_issue_5</id>
-    <content type="html"><![CDATA[<h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/xushuaic/article/details/40627389">进入Material Design时代</a></p>
-
-    <p>Material Design是Android 5.0系统的重头戏，并在以后App中将成为一种设计标准，而且随着已支持Android 5.0 Lollipop的Nexus 6的开售，Google希望开发者更快的支持Material Design，连续发了3篇文章，来帮助开发者如何在自己的App 中实现Material Design。并表示：expect Winter 2014 to be a big quarter for design on Android.</p>
-  </li>
-  <li>
-    <p><a href="http://www.liaohuqiu.net/cn/posts/how-does-android-caculate-the-size-of-child-view/">Android中View大小的确定过程</a></p>
-
-    <p>子View有一个期望的尺寸大小，父容器有尺寸大小约束，这两方面的约束协调，用来计算View的大小状态。根据父容器的尺寸状态，以及子View的LayoutParams，可以确定子View的大小和状态：MeasureSpec，并要求子View确定自身大小。调用子View的measure()方法，子View的onMeasure()方法也会被执行。子View在onMeasure()方法中，根据父容器给出的尺寸大小和约束，根据自身情况，确定最终的大小。父容器根据子View的确定的大小，最终确定自身大小。</p>
-  </li>
-  <li>
-    <p><a href="http://www.ticmy.com/?p=329">ScheduledThreadPoolExecutor实现原理</a></p>
-
-    <p>自jdk1.5开始，Java开始提供ScheduledThreadPoolExecutor类来支持周期性任务的调度，在这之前，这些工作需要依靠Timer/TimerTask或者其它第三方工具来完成。但Timer有着不少缺陷，如Timer是单线程模式，调度多个周期性任务时，如果某个任务耗时较久就会影响其它任务的调度；如果某个任务出现异常而没有被catch则可能导致唯一的线程死掉而所有任务都不会再被调度。ScheduledThreadPoolExecutor解决了很多Timer存在的缺陷。</p>
-  </li>
-  <li>
-    <p><a href="http://mogu.io/android-im-design">Android-IM架构设计</a></p>
-
-    <p>文章介绍了蘑菇街开源的IM项目Android客户端的整体架构和消息流程。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/vipzjyno1/article/details/23542617">Android 命名规范（提高代码可以读性）</a>	
- 刚接触android的时候，命名都是按照拼音来，所以有的时候想看懂命名的那个控件什么是什么用的，就要读一遍甚至好几遍才知道，这样的话，在代码的审查和修改过程中就会浪费不少不必要的时间。如果就是我一个人开发，一个人维护的话还好，可是如果一个项目是团队分工合作，这样让你的同事去看你的代码就更加吃力了，因为大家之间的编程方式不一样，所以，在开发过程中，命名规范统一尤为重要，最好是团队中统一好大家命名方法，这样对于日后的工作会轻松很多。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<h3 id="section-1">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/liaohuqiu/android-GridViewWithHeaderAndFooter">android-GridViewWithHeaderAndFooter</a></p>
-
-    <p>在HeaderGridView的基础上做了更改，可以addHeaderView()和addFooterView()的GridView来了。用法和ListView一样.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/torryharris/Skycons">Skycons</a></p>
-
-    <p>一组自定义的天气图标View库。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/PhilJay/ValueBar">ValueBar</a></p>
-
-    <p>一个漂亮的自定义View。工作原理类似于Seeker。支持API level 11+.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/percolate/caffeine">caffeine</a></p>
-
-    <p>一个可以加速Android开发的工具库。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/mogutt">TeamTalk</a></p>
-
-    <p>蘑菇街开源的 IM 项目 TeamTalk，包括 Android、iOS、Win、Mac 客户端以及 Server端、管理后台、环境自动部署，大赞！支持文字、音频、图片、表情、文件传输、屏幕振动、分组等，做聊天的同学可以看看.</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/pedant/sweet-alert-dialog">sweet-alert-dialog</a></p>
-
-    <p>Android版的SweetAlert，清新文艺，快意灵动的甜心弹框。</p>
-
-    <p><img src="https://github.com/pedant/sweet-alert-dialog/raw/master/change_type.gif" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/MobiDevelop/android-split-pane-layout">android-split-pane-layout</a></p>
-
-    <p>可以将2个子View之间的可用空间按照指定比例分割的自定义Layout。</p>
-  </li>
-</ol>
-
-<h3 id="section-2">视频</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/KevinChen9117/ikevin">Android DevBytes and Google IO视频</a></p>
-
-    <p>Youtube上的Google IO、跟Android相关的DevBytes、Android Design In Action和跟Android相关的DesignBytes视频，全部是720P的mp4. 包含英文字幕。</p>
-  </li>
-</ol>
-
-<h3 id="section-3">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.0 Released</a></p>
-
-    <p>Android Studio 0.9.0 released to the canary channel! 
- 这次发布添加了新版本的Android Gradle plugin 0.14.0，此外，修复了一些bug等。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/matheusjardimb/ios2android">ios2android</a></p>
-
-    <p>一个可以将iOS格式的切图转换为Android格式切图的Python脚本工具。</p>
-  </li>
-</ol>
-
-<h3 id="section-4">设计</h3>
-
-<h4 id="section-5">工具&amp;资源</h4>
-
-<ol>
   <li>
     <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
 

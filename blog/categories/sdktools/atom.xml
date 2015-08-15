@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: SDKTools | 脉脉不得语的技术博客]]></title>
+  <link href="http://www.inferjay.com/blog/categories/sdktools/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2015-08-16T00:57:26+08:00</updated>
+  <id>http://www.inferjay.com/</id>
+  <author>
+    <name><![CDATA[inferjay]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Androoid Stidio 1.0正式版和SDK Tools r24下载地址]]></title>
+    <link href="http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli/"/>
+    <updated>2014-12-09T16:26:58+08:00</updated>
+    <id>http://www.inferjay.com/blog/2014/12/09/androoid-stidio-1-0-and-sdk-tools-r24-download-urli</id>
+    <content type="html"><![CDATA[<blockquote>
+  <p>提示：所有链接复制到迅雷里就可以下载<strong>无需翻墙</strong></p>
+</blockquote>
+
+<h2 id="sdk-tools">SDK Tools下载地址</h2>
+
+<h4 id="windows">Windows</h4>
+
+<p>安装版(官方推荐)：<a href="http://dl.google.com/android/installer_r24-windows.exe">http://dl.google.com/android/installer_r24-windows.exe</a></p>
+
+<p>绿色版：<a href="http://dl.google.com/android/android-sdk_r24-windows.zip">http://dl.google.com/android/android-sdk_r24-windows.zip</a></p>
+
+<h4 id="mac-os-x">Mac OS X</h4>
+<p><a href="http://dl.google.com/android/android-sdk_r24-macosx.zip">http://dl.google.com/android/android-sdk_r24-macosx.zip</a></p>
+
+<h4 id="linux">Linux</h4>
+<p><a href="http://dl.google.com/android/android-sdk_r24-linux.tgz">http://dl.google.com/android/android-sdk_r24-linux.tgz</a></p>
+
+<h2 id="android-studio">Android Studio下载地址</h2>
+
+<!-- More -->
+
+<h4 id="windows-1">Windows</h4>
+
+<p>官方推荐下载安装版(包含SDT Tools)：<a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-bundle-135.1629389.exe">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-bundle-135.1629389.exe</a></p>
+
+<p>安装版(不包含SDT Tools)：<a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.exe">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.exe</a></p>
+
+<p>绿色版： <a href="http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-windows.zip">http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-windows.zip</a></p>
+
+<h4 id="mac-os-x-1">Mac OS X</h4>
+<p><a href="http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.dmg">http://dl.google.com/dl/android/studio/install/1.0.0/android-studio-ide-135.1629389.dmg</a></p>
+
+<h4 id="linux-1">Linux</h4>
+<p><a href="http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-linux.zip">http://dl.google.com/dl/android/studio/ide-zips/1.0.0/android-studio-ide-135.1629389-linux.zip</a></p>
+]]></content>
+  </entry>
+  
+</feed>
