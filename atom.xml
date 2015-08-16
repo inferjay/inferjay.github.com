@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-08-16T01:01:39+08:00</updated>
+  <updated>2015-08-16T11:14:31+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,286 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gradle Experimental Plugin User Guide]]></title>
+    <link href="http://www.inferjay.com/blog/2015/08/16/gradle-experimental-plugin-user-guide/"/>
+    <updated>2015-08-16T01:07:13+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/08/16/gradle-experimental-plugin-user-guide</id>
+    <content type="html"><![CDATA[<h3 id="contents">Contents</h3>
+
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#migrating-from-traditional-android-gradle-plugin">Migrating from Traditional Android Gradle Plugin</a></li>
+  <li><a href="ndk-integration">Ndk Integration</a>
+    <ol>
+      <li><a href="#known-linitations">Known Limitations</a></li>
+      <li><a href="#samples">Samples</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The new experimental plugin is based on Gradle’s new component model mechanism, while allows significant reduction in configuration time. It also includes NDK integration for building JNI applications. This user guides provides details on how to use it and highlights the difference between the new plugin and the original plugin.</p>
+
+<p><strong>WARNING:</strong> Note that this is plugin is at the experimental stage. The Gradle API for the new component model is not final, which means it’ll only work with a specific version of Gradle until the APIs are final.</p>
+
+<p>Additionally, the DSL is likely change significantly, as APIs to create the DSL are finalized.</p>
+
+<p>This is a very early preview of the plugin for feedback on performance and NDK integration.</p>
+
+<!--more-->
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>Gradle 2.5 only</li>
+  <li>Android NDK r10e (if you are using NDK)</li>
+  <li>SDK with Build Tools at least version 19.0.0 and we aim to minimize the amount of changes needed for the migration process in the future. Some features may require a more recent version.</li>
+</ul>
+
+<h3 id="migrating-from-traditional-android-gradle-plugin">Migrating from Traditional Android Gradle Plugin</h3>
+
+<p>A typical Android Studio project may have a directory structure as follows. File that needs to be change is highlighted in red:</p>
+
+<p>There are some significant changes in the DSL between the new plugin and the traditional one.</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/gradle-project-folder-tree.png" alt="image" /></p>
+
+<p><strong>./gradle/wrapper/gradle-wrapper.properties</strong></p>
+
+<ul>
+  <li>The new plugin supports only gradle-2.5.</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#Wed Apr 10 15:27:10 PDT 2013
+</span><span class="line">distributionBase=GRADLE_USER_HOME
+</span><span class="line">distributionPath=wrapper/dists
+</span><span class="line">zipStoreBase=GRADLE_USER_HOME
+</span><span class="line">zipStorePath=wrapper/dists
+</span><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-2.5-all.zip</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p><strong>./build.gradle</strong></p>
+
+<ul>
+  <li>Classpath for the plugin is com.android.tools.build:gradle-experimental instead of com.android.tools.build:gradle.</li>
+  <li>The current version is 0.2.0.</li>
+</ul>
+
+<p><img src="http://www.inferjay.com/images/notes_images/gradle-project-top-level-gradle-build-file-content.png" alt="image" /></p>
+
+<p><strong>./app/build.gradle</strong>
+There are significant changes to the DSL of the plugin.  We understand that many of the changes are frustrating and seem unnecessary, and our goal is to remove some of these current changes to minimize the migration process from the traditional plugin in the future.</p>
+
+<p>DSL Changes:</p>
+
+<ul>
+  <li>Plugin name is <code>com.android.model.application</code> instead of <code>com.android.application</code>.  Or use <code>apply plugin: 'com.android.model.library'</code> if you want to create an Android aar library.</li>
+  <li>Configuration is wrapped with the <code>model { }</code> block</li>
+  <li>Most properties require the = operator</li>
+  <li>Adding elements to a Collection should be done using the += operator.</li>
+</ul>
+
+<p>Current DSL Limitations that will hopefully go away:</p>
+
+<ul>
+  <li>buildTypes, productFlavors and signingConfigs must be place outside of the  <code>android { }</code> block.</li>
+  <li>Nested options within the <code>android { }</code> block must be configured using the with keyword.</li>
+  <li>Properties are only set with their direct types only, with no way to accept other types and adapting them. For instance:
+    <ul>
+      <li>Properties of type File accepts only File instead of File and String objects.</li>
+      <li>minSdkVersion cannot directly receive either an integer or string (for codename).</li>
+    </ul>
+  </li>
+  <li>Creating a buildType or productFlavor requires calling the create method.  Modifying an existing one such as the release and debug buildType can be done using the just the name.</li>
+  <li>The DSL for modifying variants and their tasks is very, very limited right now.</li>
+</ul>
+
+<p><img src="http://www.inferjay.com/images/notes_images/gradle-project-app-build-gradle.png" alt="image" /></p>
+
+<h3 id="ndk-integration">Ndk Integration</h3>
+
+<p>The experimental plugin comes with NDK integration for creating native applications.  To use the NDK integration:</p>
+
+<ul>
+  <li>Use the SDK Manager inside Studio to download the NDK.</li>
+  <li>Set ndk.dir in local.properties or the <code>ANDROID_NDK_HOME</code> environment variable to the directory containing the NDK.</li>
+  <li>Add an <code>android.ndk</code> block to the model in build.gradle. </li>
+</ul>
+
+<h3 id="known-limitations">Known Limitations</h3>
+
+<p>There’s no support for NDK-only modules. The only supported project types are hybrid app projects and hybrid Library Projects.</p>
+
+<ul>
+  <li>Consumed Library project don’t impact compilation of jni code in the consuming project (ie the AAR so files are simply packaged in the APK)</li>
+  <li>No support for creating and depending on static libraries</li>
+  <li>No support for using a NDK modules like cpu_features</li>
+  <li>No support for integrating external build systems.</li>
+</ul>
+
+<p>The build.gradle of a simple NDK application may look like this:</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/gradke-project-android-ndk-model-name.png" alt="image" /></p>
+
+<p>*Note that the moduleName is <strong>required</strong>.  It determines the name of the resulting native library.</p>
+
+<p>By default, it will look in src/main/jni for C/C++ file.  Configure android.sources to change the source directory.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">model {
+</span><span class="line">    android {
+</span><span class="line">        compileSdkVersion = 22
+</span><span class="line">        buildToolsVersion = "22.0.1"
+</span><span class="line">    }
+</span><span class="line">    android.ndk {
+</span><span class="line">        moduleName = "native"
+</span><span class="line">    }
+</span><span class="line">    android.sources {
+</span><span class="line">        main {
+</span><span class="line">            jni {
+</span><span class="line">                source {
+</span><span class="line">                    srcDir 'src'
+</span><span class="line">                }
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">}</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Various build options can be set within the <code>android.ndk { }</code> block.  For example, </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">model {
+</span><span class="line">    android {
+</span><span class="line">        compileSdkVersion = 22
+</span><span class="line">        buildToolsVersion = "22.0.1"
+</span><span class="line">    }
+</span><span class="line">    android.ndk {
+</span><span class="line">        // All configurations that can be changed in android.ndk.
+</span><span class="line">        moduleName = "native"
+</span><span class="line">        toolchain = "clang"
+</span><span class="line">        toolchainVersion = "3.5"
+</span><span class="line">        // Note that CFlags has a capital C, which is inconsistent with
+</span><span class="line">        // the naming convention of other properties.  This is a
+</span><span class="line">        // technical limitation that will be resolved
+</span><span class="line">        CFlags += "-DCUSTOM_DEFINE"
+</span><span class="line">        cppFlags += "-DCUSTOM_DEFINE"
+</span><span class="line">        ldFlags += "-L/custom/lib/path"
+</span><span class="line">        ldLibs += "log"
+</span><span class="line">        stl = "stlport_static"
+</span><span class="line">    }
+</span><span class="line">    android.buildTypes {
+</span><span class="line">        release {
+</span><span class="line">            ndk.with {
+</span><span class="line">                debuggable = true
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">    android.productFlavors {
+</span><span class="line">        create("arm") {
+</span><span class="line">            ndk.with {
+</span><span class="line">                // You can customize the NDK configurations for each
+</span><span class="line">                // productFlavors and buildTypes.
+</span><span class="line">                abiFilters += "armeabi-v7a"
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">        create("fat") {
+</span><span class="line">            // If ndk.abiFilters is not configured, the application
+</span><span class="line">            // compile and package all suppported ABI.
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">
+</span><span class="line">    // You can modify the NDK configuration for each variant.
+</span><span class="line">    components.android {
+</span><span class="line">        binaries.afterEach { binary -&gt;
+</span><span class="line">            binary.mergedNdkConfig.cppFlags.add(
+</span><span class="line">                    "-DVARIANT=\"" + binary.name + "\"")
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">}		</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="samples">Samples</h3>
+
+<p>Additional samples can be found at <a href="https://github.com/googlesamples/android-ndk">https://github.com/googlesamples/android-ndk</a>.</p>
+
+<p>原文链接：<a href="http://tools.android.com/tech-docs/new-build-system/gradle-experimental">http://tools.android.com/tech-docs/new-build-system/gradle-experimental</a></p>
+
+<hr />
+<p>版权声明：版权归原网站所有。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Android NDK Preview]]></title>
@@ -3035,176 +3315,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
   </li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#6]]></title>
-    <link href="http://www.inferjay.com/blog/2014/11/10/android-dev-weekly-issue-6/"/>
-    <updated>2014-11-10T16:45:18+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/11/10/android-dev-weekly-issue-6</id>
-    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
-
-<ol>
-  <li>
-    <p><a href="http://linux.cn/article-4172-1.html">Android 5.0 Lollipop源代码发布</a></p>
-
-    <p>Google将最新的Android 5.0 Lollipop系统源代码上传在公开的<a href="http://source.android.com/source/index.html">Android Open Source Project(AOSP) 库</a>。</p>
-  </li>
-  <li>
-    <p><a href="http://linux.cn/article-4168-1.html">Android 5.0 Lollipop 安全特性详解</a></p>
-
-    <p>Android 5.0 Lollipop 正式版发布在即，根据 Google 的说法，Android 5.0 是 Android 历史上最为重大的版本变更，带来了全新的设计风格，全新的软件运行环境，更好的续航能力以及大量的细节改进。可能关于 Material Design、ART 模式等等新特性你已经有所了解，但是我们今天要聊的是 5.0 的另一个重大变革，关于安全性的改进。</p>
-  </li>
-  <li>
-    <p><a href="http://www.pingwest.com/copresence-is-airdrop-between-android-ios/">Copresence: Google 正为 iOS 和 Android 之间数据通讯架设的桥梁</a></p>
-
-    <p>Google 最近被人发现正在开发的名为「Copresence」的功能，未来很有可能成为跨移动操作系统数据传输的最好解决方案。Copresence 的功能将允许 Android 和 iOS 操作系统设备之间互相传输文件、照片、发送导航定位、文字信息等多种类型的数据——并非通过互联网，而是更加本地化的点对点连接方式。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/AWCNTT/ArticleTranslateProject/blob/master/translated/Issue%23105/2014-11-06-Creating-a-Cards-UI-on-Android.md">在Android上创建卡片式UI</a></p>
-
-    <p>自从卡片式UI第一次在Google+ app上亮相，这种设计模式在Android社区上开始变得越来越火。很多人都热衷于这种设计模式并在他们的开发中使用。这不只归功于其时尚的外观，还有它实用之处。每张卡片拥有其相关的内容及其内容所触发的动作。换句话来说，每张卡片有它唯一的内容管理机制。</p>
-  </li>
-  <li>
-    <p><a href="http://www.codeceo.com/article/android-adb-shell.html">34个Android常用adb shell命令汇总</a></p>
-
-    <p>调试Android程序有时需要adb shell 命令，adb全称Android Debug Bridge ，就是起到调试桥的作用。通过adb我们可以在Eclipse中通过DDMS来调试Android程序，说白了就是debug工具。adb通过监听Socket TCP 5554等端口让IDE和Qemu通讯。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/isming/article/details/26985317"> 使用Gradle构建Android项目</a></p>
-
-    <p>Gradle是以Groovy为基础，面向java应用，基于DSL语法的自动化构建工具。是google引入，替换ant和maven的新工具，其依赖兼容maven和ivy。使用gradle的目的:更容易重用资源和代码；可以更容易创建不同的版本的程序，多个类型的apk包；更容易配置，扩展;更好的IDE集成;</p>
-  </li>
-  <li>
-    <p><a href="http://toughcoder.net/blog/2014/10/26/best-practices-to-support-multiple-screen/">适配多屏幕的最佳实践</a></p>
-
-    <p>对于Android应用开发来讲，比较头疼的，也是比较重要的一个工作就是要尽可能多的支持市场上的Android设备，由于Android的开放性，各种奇奇怪怪的设备都有，符合标准的，不符合标准的，行货，水货，山寨货鱼龙混杂，防不胜防。</p>
-  </li>
-  <li>
-    <p><a href="http://toughcoder.net/blog/2014/10/25/tricks-to-remove-duplicates/">如何有效的减少重复的代码</a></p>
-
-    <p>重复的代码一直都是可维护性的大敌，重构的重要任务之一也就是要去除掉重复的代码，有效的减少重复代码，可以大大提高软件的扩展性。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/isming/article/details/39404407">在android中画圆形图片的几种办法</a>	
- 在开发中经常会有一些需求,比如显示头像，显示一些特殊的需求,将图片显示成圆角或者圆形或者其他的一些形状。但是往往我们手上的图片或者从服务器获取到的图片都是方形的。这时候就需要我们自己进行处理，将图片处理成所需要的形状。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<h3 id="section-2">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/ajaysahani/MultiActionTextView">MultiActionTextView</a></p>
-
-    <p>MultiActionTextView 一个textview的开源库，可以分别给TextView中的某几个字设置点击事件。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/cymcsg/UltimateAndroid">UltimateAndroid</a></p>
-
-    <p>快速开发Android应用的框架，框架目前主要包含的功能有View Injection,ORM,异步网络请求和图片加载，自动化脚本测试,磁盘LRU等功能.同时提供了类似于TripleDes、Webview快速设置、Md5处理、String处理,Https处理等常用工具类，还有超过100多种UI控件效果。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/MustafaFerhan/DebugLog">DebugLog</a></p>
-
-    <p>DebugLog可以帮你创建更简单和更容易理解的调试日志，能够友好的显示调试信息所在类和函数。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/rengwuxian/MaterialEditText">MaterialEditText</a></p>
-
-    <p>Material Design风格的EditText。虽然AppCompat v21中也提供了 Material Design 的控件外观支持，其中包括 EditText 。但 AppCompat 中的 EditText 实在有点难用，因为它是通过 colorAccent 来自动为控件着色的，并没有提供设置颜色的api，因此需要通过为控件定制theme的方式来实现自定义控件颜色。 另外，除了外观上的变化， AppCompat 没有提供任何 Google Material Design Spec 中提到的特性。  </p>
-  </li>
-</ol>
-
-<h3 id="section-3">视频</h3>
-
-<ol>
-  <li>
-    <p><a href="http://v.youku.com/v_show/id_XODE5NDI1MTI4.html">GoogleFit APIs for Android</a></p>
-
-    <p>来自Google美女工程师的DevBytes系列《GoogleFit APIs for Android》视频共两集,现已搬至优酷，关注Google Fit的可以看内容，不感兴趣内容可以看美女，程序猿们我懂你们的！！！</p>
-  </li>
-</ol>
-
-<h3 id="section-4">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/intrications/material-design-icons-adt-template">material-design-icons-adt-template</a></p>
-
-    <p>Android Studio / Eclipse ADT template for including icon resources from <a href="https://github.com/google/material-design-icons">https://github.com/google/material-design-icons</a> in your project.</p>
-  </li>
-  <li>
-    <p><a href="http://tools.android.com/download/studio/canary">Android Studio 0.9.2 Released</a></p>
-
-    <p>Android Studio 0.9.1 released to the canary channel! </p>
-  </li>
-</ol>
-
-<h3 id="section-5">书</h3>
-
-<ol>
-  <li>
-    <p><a href="http://it-ebooks.info/book/646/">Pro Android Apps Performance Optimization</a></p>
-
-    <p>Today’s Android apps developers are often running into the need to refine, improve and optimize their apps performances. As more complex apps can be created, it is even more important for developers to deal with this critical issue. </p>
-  </li>
-</ol>
-
-<h3 id="section-6">设计</h3>
-
-<h4 id="section-7">文章</h4>
-
-<ol>
-  <li>
-    <p><a href="http://www.ui.cn/project.php?id=30796">熊氏切图法–一键导出App icon</a></p>
-
-    <p>做App设计的小伙伴有没有遇到这种情况呢，同一个icon要输出N种尺寸，用传统的方法批处理调整图片大小比较繁琐，不方便同时整体预览，如果后续修改了设计，又要重复一次这个批处理的过程，有没有一键输出所有尺寸的方法呢？本熊这就给大家推荐一种强大的技巧：智能对象+生成图像资源，是的，本熊不要脸的将其命名为“熊氏切图法”.</p>
-  </li>
-  <li>
-    <p><a href="http://www.ui.cn/project.php?id=30921">UE+UI设计流程之一二三</a></p>
-
-    <p>在做移动端app的设计过程中，经常会碰到一些二次返工或者时间的浪费，在这里分享下自己在项目中的流程经验，供遇到问题的小伙伴们参考。</p>
-  </li>
-  <li>
-    <p><a href="http://www.ui.cn/project.php?id=30538">从Material UI得到的设计感悟</a></p>
-
-    <p>如果你读过Google的Material设计文档，你就会发现其对细节和深度的注重。在文档中你能学到很多东西。其中最为重要的一项，就是其证明了编写复杂视觉风格指南是完全可能的。尽管可能困难重重，但还是可能的。特别是对于Google复杂多样的产品组合来说。</p>
-  </li>
-  <li>
-    <p><a href="http://www.ui.cn/project.php?id=30540">APP规范实例(详细的UI设计方法</a></p>
-
-    <p>设计是无限的，可作为借鉴，这一套UI设计规范，包含了界面布局、颜色、文字规范、按钮规范、图标规范、图片规范、列表规范、控件规范、弹出浮层，超级详细。大家可以借鉴下，学会自己设计一套APP设计规范，成为高级设计师。但是不要生搬硬套，毕竟不是一个产品，总之可参考的价值很高。</p>
-  </li>
-</ol>
-
-<h4 id="section-8">工具&amp;资源</h4>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/romashamin/Size-Marks-PS">Size-Marks-PS</a></p>
-
-    <p>Photoshop Javascript插件，可以以新建图层的方式直接在PS中标注尺寸。</p>
-
-    <p><img src="http://ww1.sinaimg.cn/mw1024/4b4d632fgw1elyr9qvsipg20kf08jdjf.gif" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="http://www.uisdc.com/21-photoshop-plugins-for-designer">高效神器！21款强大实用的PHOTOSHOP扩展插件</a></p>
-
-    <p>21款扩展插件，特别适合网页设计师。这些神器可以让平时复杂繁琐的操作变得更加简单.</p>
-  </li>
-</ol>
-
-<hr />
-<p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
 ]]></content>
   </entry>
   

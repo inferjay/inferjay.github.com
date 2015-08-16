@@ -1,0 +1,638 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Gradle Experimental Plugin User Guide - 脉脉不得语的技术博客</title>
+  <meta name="author" content="inferjay">
+
+  
+  <meta name="description" content="Contents Introduction Requirements Migrating from Traditional Android Gradle Plugin Ndk Integration Known Limitations Samples Introduction The new &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.inferjay.com/blog/2015/08/16/gradle-experimental-plugin-user-guide">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <link href="/atom.xml" rel="alternate" title="脉脉不得语的技术博客" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <!-- googleapis is fucked by gfw -->
+  <script src="http://cdn.staticfile.org/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.useso.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.useso.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-52369435-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">脉脉不得语的技术博客</a></h1>
+  
+    <h2>心无所恃，随遇而安</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:www.inferjay.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Gradle Experimental Plugin User Guide</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-16T01:07:13+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2015</time>
+        
+           | <a href="#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3 id="contents">Contents</h3>
+
+<ol>
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#migrating-from-traditional-android-gradle-plugin">Migrating from Traditional Android Gradle Plugin</a></li>
+  <li><a href="ndk-integration">Ndk Integration</a>
+    <ol>
+      <li><a href="#known-linitations">Known Limitations</a></li>
+      <li><a href="#samples">Samples</a></li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The new experimental plugin is based on Gradle’s new component model mechanism, while allows significant reduction in configuration time. It also includes NDK integration for building JNI applications. This user guides provides details on how to use it and highlights the difference between the new plugin and the original plugin.</p>
+
+<p><strong>WARNING:</strong> Note that this is plugin is at the experimental stage. The Gradle API for the new component model is not final, which means it’ll only work with a specific version of Gradle until the APIs are final.</p>
+
+<p>Additionally, the DSL is likely change significantly, as APIs to create the DSL are finalized.</p>
+
+<p>This is a very early preview of the plugin for feedback on performance and NDK integration.</p>
+
+<!--more-->
+
+<h3 id="requirements">Requirements</h3>
+
+<ul>
+  <li>Gradle 2.5 only</li>
+  <li>Android NDK r10e (if you are using NDK)</li>
+  <li>SDK with Build Tools at least version 19.0.0 and we aim to minimize the amount of changes needed for the migration process in the future. Some features may require a more recent version.</li>
+</ul>
+
+<h3 id="migrating-from-traditional-android-gradle-plugin">Migrating from Traditional Android Gradle Plugin</h3>
+
+<p>A typical Android Studio project may have a directory structure as follows. File that needs to be change is highlighted in red:</p>
+
+<p>There are some significant changes in the DSL between the new plugin and the traditional one.</p>
+
+<p><img src="/images/notes_images/gradle-project-folder-tree.png" alt="image" /></p>
+
+<p><strong>./gradle/wrapper/gradle-wrapper.properties</strong></p>
+
+<ul>
+  <li>The new plugin supports only gradle-2.5.</li>
+</ul>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">#Wed Apr 10 15:27:10 PDT 2013
+</span><span class="line">distributionBase=GRADLE_USER_HOME
+</span><span class="line">distributionPath=wrapper/dists
+</span><span class="line">zipStoreBase=GRADLE_USER_HOME
+</span><span class="line">zipStorePath=wrapper/dists
+</span><span class="line">distributionUrl=https\://services.gradle.org/distributions/gradle-2.5-all.zip</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p><strong>./build.gradle</strong></p>
+
+<ul>
+  <li>Classpath for the plugin is com.android.tools.build:gradle-experimental instead of com.android.tools.build:gradle.</li>
+  <li>The current version is 0.2.0.</li>
+</ul>
+
+<p><img src="/images/notes_images/gradle-project-top-level-gradle-build-file-content.png" alt="image" /></p>
+
+<p><strong>./app/build.gradle</strong>
+There are significant changes to the DSL of the plugin.  We understand that many of the changes are frustrating and seem unnecessary, and our goal is to remove some of these current changes to minimize the migration process from the traditional plugin in the future.</p>
+
+<p>DSL Changes:</p>
+
+<ul>
+  <li>Plugin name is <code>com.android.model.application</code> instead of <code>com.android.application</code>.  Or use <code>apply plugin: 'com.android.model.library'</code> if you want to create an Android aar library.</li>
+  <li>Configuration is wrapped with the <code>model { }</code> block</li>
+  <li>Most properties require the = operator</li>
+  <li>Adding elements to a Collection should be done using the += operator.</li>
+</ul>
+
+<p>Current DSL Limitations that will hopefully go away:</p>
+
+<ul>
+  <li>buildTypes, productFlavors and signingConfigs must be place outside of the  <code>android { }</code> block.</li>
+  <li>Nested options within the <code>android { }</code> block must be configured using the with keyword.</li>
+  <li>Properties are only set with their direct types only, with no way to accept other types and adapting them. For instance:
+    <ul>
+      <li>Properties of type File accepts only File instead of File and String objects.</li>
+      <li>minSdkVersion cannot directly receive either an integer or string (for codename).</li>
+    </ul>
+  </li>
+  <li>Creating a buildType or productFlavor requires calling the create method.  Modifying an existing one such as the release and debug buildType can be done using the just the name.</li>
+  <li>The DSL for modifying variants and their tasks is very, very limited right now.</li>
+</ul>
+
+<p><img src="/images/notes_images/gradle-project-app-build-gradle.png" alt="image" /></p>
+
+<h3 id="ndk-integration">Ndk Integration</h3>
+
+<p>The experimental plugin comes with NDK integration for creating native applications.  To use the NDK integration:</p>
+
+<ul>
+  <li>Use the SDK Manager inside Studio to download the NDK.</li>
+  <li>Set ndk.dir in local.properties or the <code>ANDROID_NDK_HOME</code> environment variable to the directory containing the NDK.</li>
+  <li>Add an <code>android.ndk</code> block to the model in build.gradle. </li>
+</ul>
+
+<h3 id="known-limitations">Known Limitations</h3>
+
+<p>There’s no support for NDK-only modules. The only supported project types are hybrid app projects and hybrid Library Projects.</p>
+
+<ul>
+  <li>Consumed Library project don’t impact compilation of jni code in the consuming project (ie the AAR so files are simply packaged in the APK)</li>
+  <li>No support for creating and depending on static libraries</li>
+  <li>No support for using a NDK modules like cpu_features</li>
+  <li>No support for integrating external build systems.</li>
+</ul>
+
+<p>The build.gradle of a simple NDK application may look like this:</p>
+
+<p><img src="/images/notes_images/gradke-project-android-ndk-model-name.png" alt="image" /></p>
+
+<p>*Note that the moduleName is <strong>required</strong>.  It determines the name of the resulting native library.</p>
+
+<p>By default, it will look in src/main/jni for C/C++ file.  Configure android.sources to change the source directory.</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">model {
+</span><span class="line">    android {
+</span><span class="line">        compileSdkVersion = 22
+</span><span class="line">        buildToolsVersion = "22.0.1"
+</span><span class="line">    }
+</span><span class="line">    android.ndk {
+</span><span class="line">        moduleName = "native"
+</span><span class="line">    }
+</span><span class="line">    android.sources {
+</span><span class="line">        main {
+</span><span class="line">            jni {
+</span><span class="line">                source {
+</span><span class="line">                    srcDir 'src'
+</span><span class="line">                }
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">}</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Various build options can be set within the <code>android.ndk { }</code> block.  For example, </p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+<span class="line-number">20</span>
+<span class="line-number">21</span>
+<span class="line-number">22</span>
+<span class="line-number">23</span>
+<span class="line-number">24</span>
+<span class="line-number">25</span>
+<span class="line-number">26</span>
+<span class="line-number">27</span>
+<span class="line-number">28</span>
+<span class="line-number">29</span>
+<span class="line-number">30</span>
+<span class="line-number">31</span>
+<span class="line-number">32</span>
+<span class="line-number">33</span>
+<span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
+<span class="line-number">46</span>
+<span class="line-number">47</span>
+<span class="line-number">48</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">model {
+</span><span class="line">    android {
+</span><span class="line">        compileSdkVersion = 22
+</span><span class="line">        buildToolsVersion = "22.0.1"
+</span><span class="line">    }
+</span><span class="line">    android.ndk {
+</span><span class="line">        // All configurations that can be changed in android.ndk.
+</span><span class="line">        moduleName = "native"
+</span><span class="line">        toolchain = "clang"
+</span><span class="line">        toolchainVersion = "3.5"
+</span><span class="line">        // Note that CFlags has a capital C, which is inconsistent with
+</span><span class="line">        // the naming convention of other properties.  This is a
+</span><span class="line">        // technical limitation that will be resolved
+</span><span class="line">        CFlags += "-DCUSTOM_DEFINE"
+</span><span class="line">        cppFlags += "-DCUSTOM_DEFINE"
+</span><span class="line">        ldFlags += "-L/custom/lib/path"
+</span><span class="line">        ldLibs += "log"
+</span><span class="line">        stl = "stlport_static"
+</span><span class="line">    }
+</span><span class="line">    android.buildTypes {
+</span><span class="line">        release {
+</span><span class="line">            ndk.with {
+</span><span class="line">                debuggable = true
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">    android.productFlavors {
+</span><span class="line">        create("arm") {
+</span><span class="line">            ndk.with {
+</span><span class="line">                // You can customize the NDK configurations for each
+</span><span class="line">                // productFlavors and buildTypes.
+</span><span class="line">                abiFilters += "armeabi-v7a"
+</span><span class="line">            }
+</span><span class="line">        }
+</span><span class="line">        create("fat") {
+</span><span class="line">            // If ndk.abiFilters is not configured, the application
+</span><span class="line">            // compile and package all suppported ABI.
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">
+</span><span class="line">    // You can modify the NDK configuration for each variant.
+</span><span class="line">    components.android {
+</span><span class="line">        binaries.afterEach { binary -&gt;
+</span><span class="line">            binary.mergedNdkConfig.cppFlags.add(
+</span><span class="line">                    "-DVARIANT=\"" + binary.name + "\"")
+</span><span class="line">        }
+</span><span class="line">    }
+</span><span class="line">}		</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="samples">Samples</h3>
+
+<p>Additional samples can be found at <a href="https://github.com/googlesamples/android-ndk">https://github.com/googlesamples/android-ndk</a>.</p>
+
+<p>原文链接：<a href="http://tools.android.com/tech-docs/new-build-system/gradle-experimental">http://tools.android.com/tech-docs/new-build-system/gradle-experimental</a></p>
+
+<hr />
+<p>版权声明：版权归原网站所有。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">inferjay</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-16T01:07:13+08:00" pubdate data-updated="true">Aug 16<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/gradle/'>Gradle</a>, <a class='category' href='/blog/categories/ndk/'>NDK</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+
+     
+      <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_googleplus">Google+</a>
+<a class="jiathis_button_fb">Facebook</a>
+<a class="jiathis_button_tsina">新浪微博</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+
+<a href="http://www.jiathis.com/share?uid=1983796" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	data_track_clickback:true,
+	summary:"",
+	ralateuid:{
+		"tsina":"234959219"
+	},
+	shortUrl:true,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1983796" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+  
+   
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/08/16/android-ndk-preview/" title="Previous Post: Android NDK Preview">&laquo; Android NDK Preview</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am a Android Developer</p>
+</section>
+<section class="googleplus">
+
+  	
+  		<h1>
+        <a href="http://github.com/inferjay">
+            <img src="/images/GitHub-Mark-120px-plus.png" width="48" height="48">
+        </a>
+        <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+            <img src="/images/gprofile_button-48.png" width="48" height="48">
+        </a>
+    		<a href="https://twitter.com/inferjay">
+      		<img src="/images/twitter-bird-500x500.png" width="48" height="48">
+    		</a>
+    		<a href="http://weibo.com/234959219">
+      			<img src="/images/weibo_64x64.png" width="48" height="48">
+    		</a>
+  		</h1>
+    
+    </br>
+    
+      <h1>
+        <a href="https://dribbble.com/inferjay/likes">
+          <img src="/images/dribbble-ball.png" width="48" height="48">
+        </a>
+        <a href="http://instagram.com/inferjay">
+            <img src="/images/instagram_logo.png" width="48" height="48">
+        </a>
+      </h1>
+    
+
+    <section>
+        <h1></h1>
+    </section>
+</section><section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/08/16/gradle-experimental-plugin-user-guide/">Gradle Experimental Plugin User Guide</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/02/android-dev-weekly-issue-21/">Android开发技术周报 Issue#21</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/02/18/android-dev-weekly-issue-20/">Android开发技术周报 Issue#20</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/inferjay">@inferjay</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'inferjay',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+<section class="googleplus googleplus-hidden">
+  <h1>
+    <a href="https://plus.google.com/inferjay@gmail.com?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - inferjay -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'inferjay';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://www.inferjay.com/blog/2015/08/16/gradle-experimental-plugin-user-guide/';
+        var disqus_url = 'http://www.inferjay.com/blog/2015/08/16/gradle-experimental-plugin-user-guide/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
