@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="Contents Introduction Requirements Migrating from Traditional Android Gradle Plugin Ndk Integration Known Limitations Samples Introduction The new &hellip;">
+  <meta name="description" content="找到一个好的 Android Application 架构并非易事。Google 似乎并不是非常关心这个，所以没有官方推荐模式之外的活动生命周期管理。 Finding a good architecture for Android applications is not easy. Google &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,68 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/08/18/flux-architecture-on-android/">Flux Architecture on Android</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-08-18T22:23:42+08:00" pubdate data-updated="true">Aug 18<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/08/18/flux-architecture-on-android/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/08/18/flux-architecture-on-android/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>找到一个好的 Android Application 架构并非易事。Google 似乎并不是非常关心这个，所以没有官方推荐模式之外的活动生命周期管理。</p>
+
+<p>Finding a good architecture for Android applications is not easy. Google seems to not care much about it, so there is no official recommendation on patterns beyond Activities lifecycle management.</p>
+
+<p>但是为你的应用定义一个架构是很重要的。不管你喜不喜欢，<strong>每一个应用都应该有一个架构</strong>。So you’d better be the one defining it than let it just emerge.</p>
+
+<p>But defining an architecture for your application is important. Like it or not, <strong>every application is going to have an architecture</strong>. So you’d better be the one defining it than let it just emerge.</p>
+
+<h2 id="today-clean-architecture">Today: Clean Architecture</h2>
+
+<p>当前的趋势是适应 <strong><a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong>，在2012年Bob大叔为Web应用提出的建议。</p>
+
+<p>Current trend is to adapt <strong><a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong>, a 2012 Uncle Bob proposal for web applications.</p>
+
+<p>我发现在大多数 Android 应用中 Clean Architecture 都有点被<strong>过渡设计</strong>了。</p>
+
+<p>I find Clean Architecture a little bit <strong>over-engineered</strong> for most of the Android apps out there.</p>
+
+<p>典型的移动应用相比 Web 应用活的更短。移动App技术正在如此之快的不断发展，今天发布的任何应用程序会在十二个月之后被完全抛弃。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/08/18/flux-architecture-on-android/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -673,73 +735,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/01/12/android-dev-weekly-issue-15/">Android开发技术周报 Issue#15</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-12T09:59:10+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2015</time>
-        
-           | <a href="/blog/2015/01/12/android-dev-weekly-issue-15/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/12/android-dev-weekly-issue-15/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">教程</h3>
-
-<ol>
-  <li>
-    <p><a href="http://stormzhang.com/devtools/2015/01/05/android-studio-tutorial5/">Android Studio系列教程五–Gradle命令详解与导入第三方包</a></p>
-
-    <p>Android Studio + Gradle的组合用起来非常方便，很多第三方开源项目也早都迁移到了Studio，为此今天就来介绍下查看、编译并导入第三方开源项目的方法。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/qiujuer/article/details/42471119">打造极致Material Design动画风格Button</a></p>
-
-    <p>在我的文章中曾经有两篇关于Material Design风格的按钮实现。在第一章中只是简单的实现了动画的波纹效果，而在第二篇中对此进行了一定的扩充与优化，最后实现可以自动移动到中心位置的动画；虽然两者都可用，但是在我的使用中却发现了一定的问题，如有些位置点击会出现波纹速度的运算上的问题。</p>
-  </li>
-  <li>
-    <p><a href="http://www.osforce.cn/group/9/thread/1065?fr=weibo&amp;mu=140910XRNWcD">Android开发-API指南-AIDL</a></p>
-
-    <p>Android 接口定义语言 AIDL（Android Interface Definition Language）与其他已有的 IDL 很类似。 客户端和服务端可以通过由它定义的编程接口来达成共识，以便通过进程间通讯（IPC）完成相互通讯。 在 Android 系统中，通常一个进程不允许直接访问另一个进程的内存。 因此为了能够实现对话，进程需要把对象分解为操作系统可以识别的原生数据，在跨越进程边界后再组装起来。 实现组装的代码非常枯燥无趣，因此 Android 通过 AIDL 可有助于完成这一过程。</p>
-  </li>
-  <li>
-    <p><a href="http://www.osforce.cn/group/9/thread/1053?fr=weibo&amp;mu=140910XRNWcD">Android Proguard 详解</a></p>
-
-    <p>Java代码是非常容易反编译的。为了很好的保护Java源代码，我们往往会对编译好的class文件进行混淆处理。ProGuard是一个混淆代码的开源项目。它的主要作用就是混淆，当然它还能对字节码进行缩减体积、优化等，但那些对于我们来说都算是次要的功能。官网网址是：http://proguard.sourceforge.net/</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/01/12/android-dev-weekly-issue-15/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -792,6 +787,10 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/08/18/flux-architecture-on-android/">Flux Architecture on Android</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/08/16/gradle-experimental-plugin-user-guide/">Gradle Experimental Plugin User Guide</a>
       </li>
     
@@ -805,10 +804,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
     
       <li class="post">
         <a href="/blog/2015/03/02/android-dev-weekly-issue-21/">Android开发技术周报 Issue#21</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/02/18/android-dev-weekly-issue-20/">Android开发技术周报 Issue#20</a>
       </li>
     
   </ul>

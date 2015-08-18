@@ -4,7 +4,7 @@
   <title><![CDATA[脉脉不得语的技术博客]]></title>
   <link href="http://www.inferjay.com/atom.xml" rel="self"/>
   <link href="http://www.inferjay.com/"/>
-  <updated>2015-08-16T11:14:31+08:00</updated>
+  <updated>2015-08-19T01:17:13+08:00</updated>
   <id>http://www.inferjay.com/</id>
   <author>
     <name><![CDATA[inferjay]]></name>
@@ -12,6 +12,328 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Flux Architecture on Android]]></title>
+    <link href="http://www.inferjay.com/blog/2015/08/18/flux-architecture-on-android/"/>
+    <updated>2015-08-18T22:23:42+08:00</updated>
+    <id>http://www.inferjay.com/blog/2015/08/18/flux-architecture-on-android</id>
+    <content type="html"><![CDATA[<p>找到一个好的 Android Application 架构并非易事。Google 似乎并不是非常关心这个，所以没有官方推荐模式之外的活动生命周期管理。</p>
+
+<p>Finding a good architecture for Android applications is not easy. Google seems to not care much about it, so there is no official recommendation on patterns beyond Activities lifecycle management.</p>
+
+<p>但是为你的应用定义一个架构是很重要的。不管你喜不喜欢，<strong>每一个应用都应该有一个架构</strong>。So you’d better be the one defining it than let it just emerge.</p>
+
+<p>But defining an architecture for your application is important. Like it or not, <strong>every application is going to have an architecture</strong>. So you’d better be the one defining it than let it just emerge.</p>
+
+<h2 id="today-clean-architecture">Today: Clean Architecture</h2>
+
+<p>当前的趋势是适应 <strong><a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong>，在2012年Bob大叔为Web应用提出的建议。</p>
+
+<p>Current trend is to adapt <strong><a href="https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">Clean Architecture</a></strong>, a 2012 Uncle Bob proposal for web applications.</p>
+
+<p>我发现在大多数 Android 应用中 Clean Architecture 都有点被<strong>过渡设计</strong>了。</p>
+
+<p>I find Clean Architecture a little bit <strong>over-engineered</strong> for most of the Android apps out there.</p>
+
+<p>典型的移动应用相比 Web 应用活的更短。移动App技术正在如此之快的不断发展，今天发布的任何应用程序会在十二个月之后被完全抛弃。</p>
+
+<!--more-->
+
+<p>Typically <strong>mobile apps live shorter than web apps</strong>. Mobile technology is evolving so fast that any app released today is going to be completely deprecated in twelve months. </p>
+
+<p>移动应用通常都做的很少。数据消耗的使用场景占有很高的比例。从 API 获取数据，然后显示给用户。读的多，写的少。</p>
+
+<p>Mobile apps usually <strong>do very little</strong>. A very high percent of use cases are just for data consuming. Get data from API, show data to user. Lot of reads, very little writes. </p>
+
+<p>因此它的<strong>业务逻辑并不复杂</strong>。至少不会像后端应用程序那么复杂。那么你必须处理一些平台的问题：内存，存储，暂停，恢复，网络，位置等，但是这些并不是你的App的业务逻辑。在每一个App中都会有这些。</p>
+
+<p>As a result its <strong>business logic is not complex</strong>. At least not as complex as backend apps. Well you have to deal with platform issues: memory, storage, pause, resume, network, location, etc. But that is not your app business logic. You have all of that in every app.</p>
+
+<p>如此看来，大部分的App将不会从复杂分层或作业优先执行队列中获益。</p>
+
+<p>So it seems that most of the apps out there will not benefit from things like  complex layer divisions or job priority execution queues.</p>
+
+<p>他们可能只需要一个简单的方法来轻松地组织代码，高效地协同工作和更容易的找到Bug。</p>
+
+<p>They may just need a <strong>simple way to organise code, work together efficiently and find bugs easily</strong>.</p>
+
+<h2 id="introducing-flux-architectureflux">Introducing Flux Architecture（Flux架构简介）</h2>
+
+<p><strong><a href="https://facebook.github.io/flux/docs/overview.html">Flux Architecture</a></strong>被 Facebook 用来构建他们自己的客户端的 Web 应用。像 <em>Clean Architecture</em> 它并不太适合移动应用，但是它的功能和简单非常适合应用在 Android Projects。</p>
+
+<p><strong><a href="https://facebook.github.io/flux/docs/overview.html">Flux Architecture</a></strong> is used by Facebook to build their client- side web applications. Like <em>Clean Architecture</em> it is not intended for mobile apps, but its features and simplicity will allow us to adapt it very well to Android projects.</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/flux-graph-simple.png" alt="image" /></p>
+
+<p>理解 Flux 的两个关键特性：</p>
+
+<ul>
+  <li>
+    <p>数据流总是单向的。</p>
+
+    <p>单向的数据流是 Flux Architecture 的核心，这也使得它非常容易学习。</p>
+  </li>
+  <li>
+    <p>应用被分成三个主要部分：</p>
+
+    <ul>
+      <li><strong>View</strong>: 应用接口. 它创建响应用户交互的动作。</li>
+      <li><strong>Dispatcher</strong>: 所有动作的控制中枢，它的职责是保证所有动作能够成功到达每个 Store。</li>
+      <li><strong>Store</strong>: 维持应用在一个特定领域的状态。根据当前的状态作出相应的动作，执行业务逻辑以及当业务逻辑完成时发出 <em>change</em> 事件。该事件用于更新其视图界面。</li>
+    </ul>
+  </li>
+</ul>
+
+<p>There are two <strong>key features</strong> to understand Flux:</p>
+
+<ul>
+  <li>
+    <p>The data flow is always <strong>unidirectional</strong>.</p>
+
+    <p>An <a href="https://www.youtube.com/watch?v=i__969noyAM">unidirectional data flow</a> is the <strong>core</strong> of the Flux architecture and is what makes it so easy to learn. 
+It also provides great advantages when testing the application as discussed below.</p>
+  </li>
+  <li>
+    <p>The application is divided into <strong>three main parts</strong>:</p>
+
+    <ul>
+      <li><strong>View</strong>: Application interface. It create actions in response to user interactions.</li>
+      <li><strong>Dispatcher</strong>: Central hub through which pass all actions and whose responsibility is to make them arrive to every Store.</li>
+      <li><strong>Store</strong>: Maintain the state for a particular application domain. They respond to actions according to current state, execute business logic and emit a <em>change</em> event when they are done. This event is used by the view to update its interface.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>这三部分通过 <strong>Actions</strong> 进行通讯：这个 Aciton 包含了简单的原始对象，明确的类型以及与它关联的数据。</p>
+
+<p>This three parts communicate through <strong>Actions</strong>: Simple plain objects, identified by a type, containing the data related to that action.</p>
+
+<h2 id="flux-android-architectureflux-android">Flux Android Architecture(Flux Android架构)</h2>
+
+<p>在开发 Android 应用过程中使用 Flux 原则的主要目标是构建一个在简单性和易扩展性和测试之间有着良好平衡的应用架构。</p>
+
+<p>The main target of using Flux principles on Android development is to build an architecture with a good balance between simplicity and ease of scale and test. </p>
+
+<p>首先是把 <strong>Flux 的元素跟 Android 应用的组建做一个映射</strong>。</p>
+
+<p>First step is to <strong>map Flux elements with Android app components</strong>.</p>
+
+<p>下面这2个元素是很容易理解和实现的。</p>
+
+<ul>
+  <li><strong>View</strong>: Activity or Fragment</li>
+  <li><strong>Dispatcher</strong>: 一个事件总线. 在我的示例中我将使用 Otto，但是任何其他实现也是可以的。</li>
+</ul>
+
+<p>Two of this elements are very easy to figure out and implement.</p>
+
+<ul>
+  <li><strong>View</strong>: Activity or Fragment</li>
+  <li><strong>Dispatcher</strong>: An event bus. I will use Otto in my examples but any other implementation should be fine. </li>
+</ul>
+
+<h3 id="actions">Actions(动作)</h3>
+
+<p>Acitons 相对与其他两个元素也不是很复杂。它将被用以下2个主要属性实现为一个简单的 POJOs：</p>
+
+<ul>
+  <li>Type: 一个 <code>String</code> 代表事件的类型.</li>
+  <li>Data: 一个 <code>Map</code> 用来承载这个action.</li>
+</ul>
+
+<p>Actions are not complex either. They will be implemented as simple POJOs with two main attributes:</p>
+
+<ul>
+  <li>Type: a <code>String</code> identifying the type of event.</li>
+  <li>Data: a <code>Map</code> with the payload for this action.</li>
+</ul>
+
+<p>例如，一个典型的显示用户详情的 action，它看起来像是这样：</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="n">Bundle</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bundle</span><span class="o">();</span>
+</span><span class="line"><span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;USER_ID&quot;</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+</span><span class="line"><span class="n">Action</span> <span class="n">action</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ViewAction</span><span class="o">(</span><span class="s">&quot;SHOW_USER&quot;</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>For example, a typical action to show some User details will look like this:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class="java"><span class="line"><span class="n">Bundle</span> <span class="n">data</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bundle</span><span class="o">();</span>
+</span><span class="line"><span class="n">data</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">&quot;USER_ID&quot;</span><span class="o">,</span> <span class="n">id</span><span class="o">);</span>
+</span><span class="line"><span class="n">Action</span> <span class="n">action</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ViewAction</span><span class="o">(</span><span class="s">&quot;SHOW_USER&quot;</span><span class="o">,</span> <span class="n">data</span><span class="o">);</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<h3 id="stores">Stores(商店)</h3>
+
+<p>这或许是 Flux 里最难理解的一个概念。</p>
+
+<p>This is perhaps the <strong>most difficult</strong> to get Flux concept. </p>
+
+<p>此外，如果你之前有使用过 Clean Architecture，接受起来也不会感到不舒服的，因为 Stores 将承担先前分层结构中不同层次的责任。</p>
+
+<p>Also if you have worked with Clean Architecture before it also will be uncomfortable to accept, because Stores will assume responsibilities that were previously separated into different layers.</p>
+
+<p>Stores 包含应用的状态和业务逻辑。它类似 <em>rich data models</em> 但是它可以管理<strong>各种各样的对象</strong>的状态，不仅仅如此。</p>
+
+<p>Stores contain the <strong>status of the application and its business logic</strong>. They are similar to <em>rich data models</em> but they can manage the status of <strong>various objects</strong>, not just one. </p>
+
+<p>Stores 通过 Dispatcher 来发出一个 Actions，执行业务逻辑以及代表结果的 <em>change</em> 事件。</p>
+
+<p>Stores <strong>react to Actions emitted by the Dispatcher</strong>, execute business logic and emit a change event as result.</p>
+
+<p>Stores 仅仅输出这个单一事件： <em>change</em> .任何其他组件感兴趣商店内部状态必须监听这个事件并使用它来得到所需要的数据。</p>
+
+<p>Stores only output is this single event: <em>change</em>. Any other component interested in a Store internal status must listen to this event and use it to get the data it needs. </p>
+
+<p>没有其他系统组件需要知道任何与应用有关的状态。</p>
+
+<p>No other component of the system should need to know anything about the status of the application.</p>
+
+<p>最后，Stores 必须暴漏一个用来获取应用状态的接口。通过这种方式，视图元素可以询问 Stores 以及更新响应到应用UI。</p>
+
+<p>Finally, stores must <strong>expose an interface</strong> to obtain application Status. This way, view elements can query the Stores and update application UI in response.</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/flux-store.png" alt="image" /></p>
+
+<p>例如，在一个酒馆发现应用的一个 SearchStore 将被用来记录搜索到的条目，搜索结果和搜索历史。在这个应用的 ReviewedStore 里将包含一个reviewed的酒馆列表和必要的业务逻辑，例如，按照review进行排序。</p>
+
+<p>For example, in a Pub Discovery App a SearchStore will be used to keep track of searched item, search results and the history of past searches. In the same application a ReviewedStore will contain a list of reviewed pubs and the necessary logic to, for example, sort by review.</p>
+
+<p>然后有一个重要的概念要牢记：<strong>Stores 不是一个仓库</strong>。他们的责任不是从外部数据源获取数据而是仅仅记录可以提供数据的actions。</p>
+
+<p>However there is one important concept to keep in mind: <strong>Stores are not Repositories</strong>. Their responsibility is <em>not</em> to get data from an external source (API or DB) but only keep track of data provided by actions. </p>
+
+<p>那么Flus应用是怎么获取数据的呢？</p>
+
+<p>So how Flux application obtain data?</p>
+
+<h3 id="network-requests-and-asynchronous-calls">Network requests and asynchronous calls(网络请求和异步调用)</h3>
+
+<p>在最初的架构图中我故意跳过了这一部分：<strong>网络调用</strong>。下面的架构图在最初的架构图之上添加了更多的细节：</p>
+
+<p>In the initial Flux graph I intentionally skipped one part: <strong>network calls</strong>. Next graph completes first one adding more details:</p>
+
+<p><img src="http://www.inferjay.com/images/notes_images/flux-graph-complete.png" alt="image" /></p>
+
+<p>异步的网络调用是从 <strong>Actions Creator</strong> 被触发的。一个Network Adapter使用异步调用相应的API并将结果返回给 Actions Creator。</p>
+
+<p>Asynchronous network calls are triggered from an <strong>Actions Creator</strong>.
+A Network Adapter makes the asynchronous call to the corresponding API and returns the result to the Actions Creator. </p>
+
+<p>最后Actions Creator分发相应类型的 Action 和返回的数据。</p>
+
+<p>Finally the Actions Creator dispatch the corresponding typed Action with returned data.</p>
+
+<p>所有的网络请求和异步调用都工作在 Stores之外有2个主要优点：</p>
+
+<ul>
+  <li>
+    <p><strong>你的 Stores 完全是同步的</strong>: 这使得 Stores 内部的业务逻辑非常容易理解。Bugs也非常容易定位。而且，由于<strong>所有的状态改变都是同步的</strong>，测试一个 Stores 也变成了一件非常容易的工作：运行 actions 并 断言 预期的最终状态。</p>
+  </li>
+  <li>
+    <p><strong>所有的 actions 都从一个Action Creator 被触发</strong>: 在同一个点上创建和运行所有用户 actions极大的降低了查找错误的困难。忘记在类里探究找出一个 action 是从哪里发出的吧。<strong>一切都从这里开始</strong>。而且，由于异步调用发出 <em>之前</em> ，一切出自于 Action Creator 都是同步的。这是一个巨大的成功，这显著的提高了代码的可追溯性和可测试性。</p>
+  </li>
+</ul>
+
+<p>Having all the network and asynchronous work out of the Stores has has <strong>two main advantages</strong>:</p>
+
+<ul>
+  <li>
+    <p><strong>Your Stores are completely synchronous</strong>: This makes the logic inside a Store very easy to follow. Bugs will be much easier to trace. And since <strong>all state changes will be synchronous</strong> testing a Store becomes an easy job: launch actions and assert expected final state.</p>
+  </li>
+  <li>
+    <p><strong>All actions are triggered from an Action Creator</strong>: Having a single point at which you create and launch all user actions greatly simplifies finding errors. 
+Forget about digging into classes to find out where an action is originated. <strong>Everything starts here</strong>. And because asynchronous calls occur <em>before</em>, everything that comes out of ActionCreator is synchronous. This is a huge win that significantly improves traceability and testability of the code.</p>
+  </li>
+</ul>
+
+<h2 id="show-me-the-code-to-do-appto-do-app">Show me the code: To-Do App(展示我的代码：To-Do App)</h2>
+
+<p><a href="https://github.com/lgvalle/android-flux-todo-app">在这个例子中</a>你会发现一个典型的在Android里使用Flux架构实现的<strong>To-Do App</strong>。</p>
+
+<p><a href="https://github.com/lgvalle/android-flux-todo-app">In this example</a> you will find a classical <strong>To-Do App</strong> implemented on Android using a Flux Architecture. </p>
+
+<p>我试图保持项目尽可能简单，只是为了展示这种架构如何能产生<strong>非常良好的应用程序组织架构</strong>。</p>
+
+<p>关于这一实现的一些评论：</p>
+
+<ul>
+  <li>
+    <p><code>Dispatcher</code> 是使用 Otto 总线实现的。任何总线实现都可以工作。</p>
+  </li>
+  <li>
+    <p>有一个 <code>ActionsCreator</code> 类来帮助我们创建 <code>Actions</code> 并发布到 <code>Dispatcher</code>。这是一个在Flux里相当常见的让事情组织有序的模型。</p>
+  </li>
+  <li>
+    <p><code>Actions</code> 的类型是 <code>String</code> 常量。它可能不是最好的实现但是是最快速和帮助保持事情简单的实现。</p>
+  </li>
+</ul>
+
+<p>Same thing with <code>Actions</code> data: 它们仅仅是一个用 <code>String</code> 作为键和 <code>Object</code> 作为值的 <code>HashMap</code>。这也迫使Stores构造和提取实际数据看起来很丑陋。当然，这也不是类型安全的，但再一次保持了例子可以很容易理解。</p>
+
+<p>I tried to keep the project as simple as possible just to show how this architecture can produce <strong>very well organised apps</strong>. </p>
+
+<p>Some comments about implementation:</p>
+
+<ul>
+  <li>
+    <p>The <code>Dispatcher</code> is implemented using Otto Bus. Any bus implementation will mostly work. There is a <strong>Flux restriction</strong> on events I’m not applying here. On original Flux definition dispatching an event before previous one has finish is forbidden and will throw an exception. To keep the project simple I’m not implementing that here.</p>
+  </li>
+  <li>
+    <p>There is an <code>ActionsCreator</code> class to help creating <code>Actions</code> and posting them into the <code>Dispatcher</code>. It is a pretty common pattern in Flux which keeps things organised.</p>
+  </li>
+  <li>
+    <p><code>Actions</code> types are just <code>String</code> constants. It is probably not the best implementation but is quick and helps keeping things simple.</p>
+  </li>
+</ul>
+
+<p>Same thing with <code>Actions</code> data: they are just a <code>HashMap</code> with a <code>String</code> key and <code>Object</code> as a value. This forces ugly castings on Stores to extract actual data. Of course, this is not type safe but again, keeps the example easy to understand.</p>
+
+<h2 id="conclusion">Conclusion(总结)</h2>
+
+<p>不可能有最佳的Android应用程序架构。还有就是最好的架构是相对于当前的应用程序来说的。它是让你与你的队友轻松协作，保质保量的按时完成项目并且尽可能少的产生bugs。</p>
+
+<p>There is <strong>no such thing as the Best Architecture for an Android app</strong>. 
+There <em>is</em> the Best Architecture for your current app. And it is the one that let you collaborate with your teammates easily, finish the project on time, with quality and as less bugs as possible.</p>
+
+<p>我相信Flux对于所有这一切都是是非常好的。
+I believe Flux is very good for all of that.</p>
+
+<h2 id="sample-source-code">Sample source code(示例代码)</h2>
+
+<p><strong><a href="https://github.com/lgvalle/android-flux-todo-app">https://github.com/lgvalle/android-flux-todo-app</a></strong></p>
+
+<h2 id="further-reading">Further Reading(补充资料):</h2>
+<ul>
+  <li><a href="https://facebook.github.io/flux/docs/overview.html">Facebook Flux Overview</a></li>
+  <li><a href="https://facebook.github.io/flux/docs/testing-flux-applications.html#content">Testing Flux Applications</a></li>
+  <li><a href="http://blogs.atlassian.com/2014/08/flux-architecture-step-by-step/">Flux architecture Step by Step</a></li>
+  <li>[Async Requests and Flux] (http://www.code-experience.com/async-requests-with-react-js-and-flux-revisited/)</li>
+  <li><a href="http://armueller.github.io/android/2015/03/29/flux-and-android.html">Flux and Android</a></li>
+</ul>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>特别感谢我的同事<a href="https://twitter.com/MicheleBertoli">Michele Bertoli</a>花时间给我介绍 Flux 以及校对这篇文章。</p>
+
+<p>Special thanks to my colleague <a href="https://twitter.com/MicheleBertoli">Michele Bertoli</a> for taking the time to introduce me to Flux and for reviewing this post.</p>
+
+<p>原文地址:<a href="http://lgvalle.xyz/2015/08/04/flux-architecture/">http://lgvalle.xyz/2015/08/04/flux-architecture/</a></p>
+
+<p>关于本文</p>
+
+<p>由于本人英语水平比较烂，翻译的时候有可能会曲解原作者的意思，建议英语好的大牛飘过此文去看原文，欢迎大家吐槽和拍砖，觉得译文中有那些地方我翻译的不妥的地方欢迎回复指正，我们相互学习～～～</p>
+
+<hr />
+<p>版权声明：原创译文欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Gradle Experimental Plugin User Guide]]></title>
@@ -3163,158 +3485,6 @@ RV、2.适配多种 Item View 类型写法、3.mRecyclerView.setOnScrollListener
 
 <hr />
 <p>版权声明：欢迎自由转载-非商用-非衍生-保持署名 | <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/deed.zh">Creative Commons BY-NC-ND 3.0</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Android开发周报 Issue#7]]></title>
-    <link href="http://www.inferjay.com/blog/2014/11/17/android-dev-weekly-issue-7/"/>
-    <updated>2014-11-17T16:31:09+08:00</updated>
-    <id>http://www.inferjay.com/blog/2014/11/17/android-dev-weekly-issue-7</id>
-    <content type="html"><![CDATA[<h3 id="section">新闻</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.csdn.net/article/2014-11-14/2822647-12-great-lollipop-apis/1">盘点最受开发者喜爱的Android 5.0 Lollipop API</a></p>
-
-    <p>作为Android系统的一次重大升级，Android 5.0 Lollipop突出采用全新的Material Design设计语言，不但在视觉和操作上更胜一筹，还包含扩展UI工具包供开发者使用，为应用添加3D实时阴影，可缩放矢量“drawbles”以及流畅的动画效果。本文着重介绍了其中值得开发者深爱的12款API，赶紧一睹为快吧！</p>
-  </li>
-  <li>
-    <p><a href="http://news.cnblogs.com/n/508431/">.NET开源了，VS开始支持Android和iOS编程并自带Android模拟器</a></p>
-
-    <p>北京时间今天凌晨的 Connect (); 大会上，多少程序员的假想成为现实。.NET 开源，集成 Clang 和 LLVM 并且自带 Android 模拟器，这意味着 Visual Studio 这个当下最好没有之一的 IDE 正式支持编写 Android 和 iOS 程序。</p>
-  </li>
-  <li>
-    <p><a href="http://digi.it.sohu.com/20141113/n405991228.shtml">Android 5.0正式开启：Nexus系列最早更新</a>	
- 从谷歌给出的公告来看，今天就将会有用户收到Android 5.0的更新提示，而首批设备包含了Nexus 4、Nexus 5、Nexus 7以及Nexus 10。值得一提的是，今天早些时候，摩托罗拉也开始向Moto G的用户提供5.0系统的升级，随后到来的是Moto X，很快LG的G3也将得到系统的升级。</p>
-  </li>
-</ol>
-
-<h3 id="section-1">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/xiaanming/article/details/41084843#0-tsina-1-26268-397232819ff9a47a7b7e80a40613cfe1">Android 那些你所不知道的Bitmap对象详解</a></p>
-
-    <p>我们知道Android系统分配给每个应用程序的内存是有限的，Bitmap作为消耗内存大户，我们对Bitmap的管理稍有不当就可能引发OutOfMemoryError，而Bitmap对象在不同的Android版本中存在一些差异，今天就给大家介绍下这些差异，并提供一些在使用Bitmap的需要注意的地方。</p>
-  </li>
-  <li>
-    <p><a href="http://greenrobot.me/category/devpost/">如何给你的Android 安装文件（APK）瘦身</a></p>
-
-    <p>Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.isming.me/tags/material-design/">创建Material Design风格的Android应用系列文章</a></p>
-
-    <p>随着Android 5.0的发布，Android Developer网站也更新了，增加了创建Material Design风格的Android应用指南,也更新了Support Library，在support library增加了一些Material Design风格的控件和动画等，这里给大家简单介绍一下怎样开发aterial Design风格的Android应用。</p>
-  </li>
-</ol>
-
-<!--more-->
-
-<ol>
-  <li>
-    <p><a href="http://www.importnew.com/13107.html">从Java代码到字节码（1）</a></p>
-
-    <p>理解Java代码是如何被编译为字节码并在Java虚拟机（JVM）上执行是非常重要的，这将帮助理解你的程序是如何执行的。这样的理解不仅仅能够让你在逻辑上更好的掌握语言特性，而且能够有机会理解在做出重要决定时所需的权衡以及相应的副作用。</p>
-  </li>
-  <li>
-    <p><a href="http://www.pedant.cn/2014/07/04/webview-js-java-interface-research/">在WebView中如何让JS与Java安全地互相调用</a></p>
-
-    <p>在现在安卓应用原生开发中，为了追求开发的效率以及移植的便利性，使用WebView作为业务内容展示与交互的主要载体是个不错的折中方案。那么在这种Hybrid(混合式) App中，难免就会遇到页面JS需要与Java相互调用，调用Java方法去做那部分网页JS不能完成的功能。</p>
-  </li>
-  <li>
-    <p><a href="http://droidyue.com/blog/2014/11/08/understanding-garbage-collection-output-messages-in-android/">译文：理解Android中垃圾回收日志信息</a></p>
-
-    <p>如果你是一名Android开发者并且常常看程序日志的话，你会经常在logcat的调试日志窗口看到像 <code>GC_CONCURRENT freed 178K, 41% free 3673K/6151K, external 0K/0K, paused 2ms+2ms</code> 这样的日志信息，这就是Android系统垃圾回收的部分输出信息，本文将具体介绍这些日志信息的每一部分的含义来帮助帮助大家更好地了解垃圾回收的运行情况。</p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/t12x3456/article/details/40837287">Android 使用android-support-multidex解决Dex超出方法数的限制问题,让你的应用不再爆棚</a></p>
-
-    <p>随着应用不断迭代，业务线的扩展,应用越来越大(比如集成了各种第三方sdk或者公共支持的jar包,项目耦合性高，重复作用的类越来越多)，相信很多人都遇到过如下的错误: <code>java.lang.IllegalArgumentException: method ID not in [0, 0xffff]: 65536 </code> 没错，你的应用中的Dex 文件方法数超过了最大值65536的上限,简单来说，应用爆棚了.</p>
-  </li>
-</ol>
-
-<h3 id="section-2">代码&amp;开源库</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/lightSky/MaterialDesignCenter">MaterialDesignCenter</a></p>
-
-    <p>收集整理了Android Material Design相关的设计资源、视频教程、译文教程和开源库等。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/BlueMor/Android-PullLayout">Android-PullLayout</a></p>
-
-    <p>仿UC天气下拉和微信下拉眼睛</p>
-
-    <p><img src="https://raw.githubusercontent.com/BlueMor/Android-PullLayout/master/screenshoot/123.gif" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/pedant/safe-java-js-webview-bridge">safe-java-js-webview-bridge</a></p>
-
-    <p>抛弃使用高风险的WebView addJavascriptInterface方法，利用onJsPrompt解析纯JSON字符串，来实现网页JS层反射调用Java方法，同时通过对js层调用函数及回调函数的包装，支持方法参数传入所有已知的类型，包括number、string、boolean、object、function。</p>
-  </li>
-  <li>
-    <p><a href="https://github.com/lzyzsd/CircleProgress">CircleProgress</a></p>
-
-    <p>各种样式的自定义圆形进度条。</p>
-
-    <p><img src="https://raw.githubusercontent.com/lzyzsd/CircleProgress/master/demos/circle_progress.gif" alt="image" /></p>
-  </li>
-  <li>
-    <p><a href="https://github.com/kyleduo/SwitchButton">SwitchButton</a></p>
-
-    <p>同时支持Material Design和iOS7风格的SwitchButton。</p>
-
-    <p><img src="https://raw.githubusercontent.com/kyleduo/SwitchButton/master/preview/easy_to_style.png" alt="image" /></p>
-  </li>
-</ol>
-
-<h3 id="section-3">视频</h3>
-
-<ol>
-  <li>
-    <p><a href="http://www.jikexueyuan.com/course/364.html?hmsr=sina_weibo_VisualStudio">使用Visual Studio 2015开发Android应用</a></p>
-
-    <p>2014年的微软Connect();在线开发者大会在11月12日和11月13日举行。在大会上，微软公布了很多新的特性和功能。其中最吸引人的是.Net开源和Android模拟器。显示了微软更开放的战略思想。并突出了微软CEO移动优先和云优先的理念。</p>
-  </li>
-</ol>
-
-<h3 id="section-4">工具</h3>
-
-<ol>
-  <li>
-    <p><a href="https://github.com/akonior/icon-version">icon-version</a></p>
-
-    <p>可以给Android的App图标添加版本号和变种名字的Android gradle插件。</p>
-
-    <p><img src="https://github.com/akonior/icon-version/raw/master/doc/icon-version-screenshot.png" alt="image" /></p>
-  </li>
-</ol>
-
-<h3 id="section-5">书</h3>
-
-<ol>
-  <li>
-    <p><a href="http://snowdream86.gitbooks.io/github-cheat-sheet/content/zh/index.html">GitHub秘籍</a></p>
-
-    <p>本秘籍收录了一些Git和Github非常酷同时又少有人知的功能。灵感来自于Zach Holman在2012年Aloha Ruby Conference和2013年WDCNZ上所做的演讲：Git and GitHub Secrets(slides)和More Git and GitHub Secrets(slides)。</p>
-  </li>
-</ol>
-
-<h3 id="section-6">设计</h3>
-
-<h4 id="section-7">文章</h4>
-
-<ol>
-  <li>
-    <p><a href="http://mux.baidu.com/?p=3367">切图小贴士</a></p>
-
-    <p>用户手中看到的产品界面，并非设计师呕心沥血创作的效果图，而是一个个单独的切图经由开发同学技术实现。切图作为设计师与开发者之间的桥梁，它的作用很关键，合适的切图、精准的位置可以最大限度的还原效果图的设计，精妙的切图更会有事半功倍的效果哦！	</p>
-  </li>
-</ol>
-
 ]]></content>
   </entry>
   
