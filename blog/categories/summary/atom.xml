@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Summary | 脉脉不得语的技术博客]]></title>
+  <link href="http://www.inferjay.com/blog/categories/summary/atom.xml" rel="self"/>
+  <link href="http://www.inferjay.com/"/>
+  <updated>2016-01-01T08:03:45+08:00</updated>
+  <id>http://www.inferjay.com/</id>
+  <author>
+    <name><![CDATA[inferjay]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[OnDestroy 2015, OnStart 2016!]]></title>
+    <link href="http://www.inferjay.com/blog/2016/01/01/ondestroy-2015-onstart-2016/"/>
+    <updated>2016-01-01T00:41:25+08:00</updated>
+    <id>http://www.inferjay.com/blog/2016/01/01/ondestroy-2015-onstart-2016</id>
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/5db51f96jw1ezj0a2oo83j218g0xcaci.jpg" alt="2015 to 2016" /></p>
+
+<!--more-->
+
+<p>PS:题图来自网络</p>
+
+<h2 id="ondestroy-2015">OnDestroy 2015</h2>
+
+<p>这几天也一直在脑子里回想自己这一年都做了什么，却不知该从何写起…</p>
+
+<p>2015年充满 Bug 的一年…</p>
+
+<h3 id="section">2次帝都之行</h3>
+
+<ul>
+  <li>
+    <p>4月底参加北京 GDG 的 Material Design 专题活动，见到了<a href="https://github.com/rengwuxian">@扔物线</a> 凯哥 和 <a href="https://www.zhihu.com/people/GeoffreyR">NovaDNG</a> ，从他们的分享中学到很多关于 Material Design 的知识，活动结束后跟凯哥聊了很多，社区、Android开发技术周报以及想在郑州组织GDG的想法；之后还跟<a href="http://weibo.com/powerpkm">潘文烨</a>面了个基，又抽空去逛了一圈天安门广场、故宫、景山公园和圆明园。在即将离开帝都下火车站候车厅楼梯的时候左脚一滑，Oh,Shit！Bug(脚崴了)，得到列车乘务员和一位不知姓名医生的帮助。之后去医院检查轻微骨折，在家休息了半个月。</p>
+  </li>
+  <li>
+    <p>11月初参加北京 GDG DevFest 2015活动，跟邓凡平老师、段建华(技术小黑屋)、吴晶(Android笔记)面基和交流收获很多，向北京GDG组织者恺哥(韩国恺)和朝哥(周朝)请教了关于组织 GDG 相关的事情和一些经验。又是在离开帝都时遇到一个 Bug，车票卖完了😂。帝都人民是有多么舍不得我不想让我走啊…我还会回来的…😄</p>
+  </li>
+</ul>
+
+<h3 id="android-">Android 开发技术周报</h3>
+
+<p>这一年年初从我的 Blog 迁移到了独立网站，这一年总共发布48期周报和1期特刊，从最开始的每天几十UV到某一天最高2100多UV，这中间我有放弃的念头</p>
+
+<h3 id="androiddevtools">AndroidDevTools</h3>
+
+<p>收集添加多少个开发工具记不太清了，增加了搜索功能，增加了返回顶部功能，由于XCodeGhost事件的出现，避免大家对此事件的担心，给所以从 Google 官网同步过来的 Android Studio 和 SDK Tools等开发工具加上官网公布的 <code>SHA-1／MD5</code> 校验码以及官网公布的 <code>SHA-1／MD5</code> 校验码截图，目前总共收到了社区内264位热心<a href="http://www.androiddevtools.cn/donate.html#donate-list">小伙伴们</a>的捐赠，这些捐赠除去域名和一些其他维护费用，其余将全部反馈回社区。</p>
+
+<h3 id="gdg">郑州GDG</h3>
+
+<p>在几个组织者小伙伴的一起努力下终于筹办了郑州GDG的第一次活动 DevFest 2015，报名67人，当天实际到场28人（男生：22人 女生：6人），这只是一个开始，咱且看明年。</p>
+
+<h3 id="section-1">感情</h3>
+
+<p>依旧 <code>NullPointerException</code></p>
+
+<h3 id="section-2">生活</h3>
+
+<p>越来越不规律，睡得越来越晚…</p>
+
+<p>又特么胖了十几斤，这一定是 Bug😭</p>
+
+<h3 id="section-3">技术</h3>
+
+<p>在公司的项目中小试了一把 MVP，但是还有很多需要思考的地方。</p>
+
+<h3 id="section-4">阅读</h3>
+
+<p>粗略的看了《<a href="http://www.ituring.com.cn/book/1485">Node 与 Express开发</a>》、《<a href="http://producter.io">Producter</a>》、《<a href="https://book.douban.com/subject/26541801/">增长黑客</a>》、《<a href="https://book.douban.com/subject/25975454/">九败一胜</a>》以及还没看完的《<a href="http://book.douban.com/subject/3748247/">把时间当作朋友</a>》、《<a href="">把你的英语用起来</a>》、《<a href="https://book.douban.com/subject/25986284/">单页 Web 应用</a>》和《<a href="https://book.douban.com/subject/25836269/">西文字体</a>》。</p>
+
+<h3 id="section-5">致谢</h3>
+
+<p>感谢那个列车乘务员和那位不知道姓名的医生在我脚崴时的帮助，世界因为有你们而变得不一样；谢谢文烨同学请我吃的意面，感谢凯哥、恺哥(韩国恺)、朝哥(周朝)和盟盟感谢你们在我们组织郑州GDG活动过程中的帮助，谢谢你们！</p>
+
+<h2 id="onstart-2016">OnStart 2016</h2>
+
+<h3 id="section-6">技术</h3>
+
+<ul>
+  <li>认真学学 RxJava</li>
+  <li>在应用架构方面还要有更多思考</li>
+  <li>点点 Web 开发的技能树</li>
+  <li>将工作中的心得经验和学习记录到 Blog</li>
+</ul>
+
+<h3 id="androiddevtools-1">AndroidDevTools</h3>
+
+<ul>
+  <li>网站界面和布局改版</li>
+  <li>增加工具使用教程</li>
+  <li>收集更多好用的工具</li>
+</ul>
+
+<h3 id="android">Android开技术周报</h3>
+
+<ul>
+  <li>网站界面和布局改版</li>
+  <li>增加搜索功能</li>
+  <li>发布更多特刊</li>
+</ul>
+
+<h3 id="gdg-1">郑州GDG</h3>
+
+<ul>
+  <li>筹备更多的活动，吸引更多的小伙伴参与进来</li>
+</ul>
+
+<h3 id="section-7">感情</h3>
+
+<ul>
+  <li>争取修复 <code>NullPointerException</code> 的 Bug</li>
+</ul>
+
+<h3 id="section-8">生活</h3>
+
+<ul>
+  <li>带爸妈出去旅游</li>
+  <li>早睡早起</li>
+  <li>恢复跑步</li>
+  <li>减掉那该死的十斤</li>
+</ul>
+
+<h3 id="section-9">阅读</h3>
+
+<ul>
+  <li>把没看完的书看完，争取读更多的书，因为人丑</li>
+</ul>
+
+<h1 id="fighting">Fighting！</h1>
+]]></content>
+  </entry>
+  
+</feed>
