@@ -1,0 +1,10 @@
+<section >
+	<h1>友情链接</h1>
+	   	<ul id="friendly_link">
+		    {% for title in site.friendly_link_titles %}
+		      	<li class="post">
+		        	<a href="{{ site.friendly_link_urls[forloop.index0] }}" target="_blank">{{ title }}</a>
+		      	</li>
+		    {% endfor %}
+	 	 </ul>
+</section>
