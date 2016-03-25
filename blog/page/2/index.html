@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="教程 Android性能优化之过渡绘制(一) 首先将讲解一下GPU过渡绘制，也是开发者最直接接触的部分吧，这个内容将分为两个部分来将讲，第一部分初步讲解一下gpu过渡绘制的原理，和一些优化建议，第二部分将用实际例子来讲解优化GPU过渡绘制的一般步骤。 Android性能优化之过渡绘制(二) &hellip;">
+  <meta name="description" content="教程 ART运行时垃圾收集（GC）过程分析 ART运行时与Dalvik虚拟机一样，都使用了Mark-Sweep算法进行垃圾回收，因此它们的垃圾回收流程在总体上是一致的。但是ART运行时对堆的划分更加细致，因而在此基础上实现了更多样的回收策略。不同的策略有不同的回收力度，力度越大的回收策略， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/19/android-dev-weekly-issue-17/">Android开发技术周报 Issue#17</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-19T14:38:55+08:00" pubdate data-updated="true">Jan 19<span>th</span>, 2015</time>
+        
+           | <a href="/blog/2015/01/19/android-dev-weekly-issue-17/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2015/01/19/android-dev-weekly-issue-17/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">教程</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42555483">ART运行时垃圾收集（GC）过程分析</a></p>
+
+    <p>ART运行时与Dalvik虚拟机一样，都使用了Mark-Sweep算法进行垃圾回收，因此它们的垃圾回收流程在总体上是一致的。但是ART运行时对堆的划分更加细致，因而在此基础上实现了更多样的回收策略。不同的策略有不同的回收力度，力度越大的回收策略，每次回收的内存就越多，并且它们都有各自的使用情景。这样就可以使得每次执行GC时，可以最大限度地减少应用程序停顿。本文就详细分析ART运行时的垃圾收集过程。</p>
+  </li>
+  <li>
+    <p><a href="http://greenrobot.me/devpost/how-to-debug-http-and-https-traffic-on-android/">如何调试 Android 上 HTTP(S) 流量</a></p>
+
+    <p>在Android开发中我们常常会和API 打交道，可能你不想，但是这是避不开的。大部分情况下，调试发送网络请求和接收响应的过程都是十分痛苦的。有多少次我们经过调试发现API的调用失败仅仅是因为我们的编码错了或者丢失了一个HTTP头部参数？在调试的过程中，我们发现出现错误的原因千奇百怪。</p>
+  </li>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/42492621">ART运行时为新创建对象分配内存的过程分析</a></p>
+
+    <p>ART运行时和Dalvik虚拟机一样，在堆上为对象分配内存时都要解决内存碎片和内存不足问题。内存碎片问题可以使用dlmalloc技术解决。内存不足问题则通过垃圾回收和在允许范围内增长堆大小解决。由于垃圾回收会影响程序，因此ART运行时采用力度从小到大的进垃圾回收策略。</p>
+  </li>
+  <li>
+    <p><a href="http://hukai.me/android-performance-patterns/">Android性能优化典范</a></p>
+
+    <p>2015年伊始，Google发布了关于Android性能优化典范的专题，一共16个短视频，每个3-5分钟，帮助开发者创建更快更优秀的Android App。课程专题不仅仅介绍了Android系统中有关性能问题的底层工作原理，同时也介绍了如何通过工具来找出性能问题以及提升性能的建议。主要从三个方面展开，Android的渲染机制，内存与GC，电量优化。下面是对这些问题和建议的总结梳理。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/19/android-dev-weekly-issue-17/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -667,73 +734,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-12-01T12:42:08+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2014</time>
-        
-           | <a href="/blog/2014/12/01/android-dev-weekly-issue-9/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
-
-    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
-  </li>
-  <li>
-    <p><a href="http://www.kuqin.com/shuoit/20140826/341828.html?url_type=39&amp;object_type=crawler&amp;pos=1">为什么Android的图片质量会比iPhone的差？</a></p>
-
-    <p>经常看到有人问：“安卓版微信发出去的图片怎么那么渣！比iPhone的差远了！”。不只是微信，很多应用安卓版的图片质量就是要比iPhone版逊色很多，这到底是怎么回事？</p>
-  </li>
-  <li>
-    <p><a href="http://qichaochen.github.io/2014/11/21/107-Facebook-Rebound-Demo/">[Material Design]使用Fackbook Rebound快速实现弹簧动画效果</a></p>
-
-    <p>Rebound是Facebook推出的一款Android的物理和动画库，于2013年10月在Mobile@Scale大会上正式发布，旨在解决笨重、缓慢的传统移动网络界面。Rebound不是一款通用物理库，但其弹簧模型在应用程序中引入了现实世界的物理，易于集成，创建的动画能够让人感觉到非常自然，并且可以和Material Design的设计原则呼应，可用于滚动条、切换开关、呼叫等场景下。</p>
-  </li>
-  <li>
-    <p><a href="http://stormzhang.com/devtools/2014/11/07/use-curl-debug/">使用curl来调试你的应用</a></p>
-
-    <p>我们在客户端开发过程中总免不了和后端进行api对接，有时候需要对返回的数据格式进行调试，有时候每次运行客户端来发送请求，这个未免效率太低，这里就来介绍一个好用的工具–curl。</p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/12/01/android-dev-weekly-issue-9/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -788,6 +788,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/03/24/google-developer-study-jams/">30天入门 Android 开发， Google 与你一起圆梦</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/01/01/ondestroy-2015-onstart-2016/">OnDestroy 2015, OnStart 2016!</a>
       </li>
     
@@ -801,10 +805,6 @@
     
       <li class="post">
         <a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
       </li>
     
   </ul>

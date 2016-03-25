@@ -9,7 +9,7 @@
   <meta name="author" content="inferjay">
 
   
-  <meta name="description" content="文章 使用gradle构建android项目（续） 在几个月之前，我已经写过一篇使用gradle构建android项目的博客了http://blog.isming.me/2014/05/20/android4gradle/,那篇文章已经介绍了如何使用gradle进行项目构建， &hellip;">
+  <meta name="description" content="文章 Dalvik虚拟机Java堆创建过程分析 使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -79,6 +79,73 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/01/android-dev-weekly-issue-9/">Android开发周报 Issue#9</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-01T12:42:08+08:00" pubdate data-updated="true">Dec 1<span>st</span>, 2014</time>
+        
+           | <a href="/blog/2014/12/01/android-dev-weekly-issue-9/#disqus_thread"
+             data-disqus-identifier="http://www.inferjay.com/blog/2014/12/01/android-dev-weekly-issue-9/">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3 id="section">文章</h3>
+
+<ol>
+  <li>
+    <p><a href="http://blog.csdn.net/luoshengyang/article/details/41581063">Dalvik虚拟机Java堆创建过程分析</a></p>
+
+    <p>使用C/C++开发应用程序最令头痛的问题就是内存管理。慎不留神，要么内存泄漏，要么内存破坏。虚拟机要解决的问题之一就是帮助应用程序自动分配和释放内存。为了达到这个目的，虚拟机在启动的时候向操作系统申请一大块内存当作对象堆。之后当应用程序创建对象时，虚拟机就会在堆上分配合适的内存块。而当对象不再使用时，虚拟机就会将它占用的内存块归还给堆。Dalvik虚拟机也不例外，本文就分析它的Java堆创建过程。</p>
+  </li>
+  <li>
+    <p><a href="http://www.kuqin.com/shuoit/20140826/341828.html?url_type=39&amp;object_type=crawler&amp;pos=1">为什么Android的图片质量会比iPhone的差？</a></p>
+
+    <p>经常看到有人问：“安卓版微信发出去的图片怎么那么渣！比iPhone的差远了！”。不只是微信，很多应用安卓版的图片质量就是要比iPhone版逊色很多，这到底是怎么回事？</p>
+  </li>
+  <li>
+    <p><a href="http://qichaochen.github.io/2014/11/21/107-Facebook-Rebound-Demo/">[Material Design]使用Fackbook Rebound快速实现弹簧动画效果</a></p>
+
+    <p>Rebound是Facebook推出的一款Android的物理和动画库，于2013年10月在Mobile@Scale大会上正式发布，旨在解决笨重、缓慢的传统移动网络界面。Rebound不是一款通用物理库，但其弹簧模型在应用程序中引入了现实世界的物理，易于集成，创建的动画能够让人感觉到非常自然，并且可以和Material Design的设计原则呼应，可用于滚动条、切换开关、呼叫等场景下。</p>
+  </li>
+  <li>
+    <p><a href="http://stormzhang.com/devtools/2014/11/07/use-curl-debug/">使用curl来调试你的应用</a></p>
+
+    <p>我们在客户端开发过程中总免不了和后端进行api对接，有时候需要对返回的数据格式进行调试，有时候每次运行客户端来发送请求，这个未免效率太低，这里就来介绍一个好用的工具–curl。</p>
+  </li>
+</ol>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/12/01/android-dev-weekly-issue-9/">More &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -748,100 +815,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/09/15/android-weekly-issue-0/">Android开发周报 Issue#0</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-09-15T10:35:31+08:00" pubdate data-updated="true">Sep 15<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/09/15/android-weekly-issue-0/#disqus_thread"
-             data-disqus-identifier="http://www.inferjay.com/blog/2014/09/15/android-weekly-issue-0/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3 id="section">文章</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/luoshengyang/article/details/37613135">SEAndroid安全机制框架分析</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/singwhatiwanna/article/details/22597587">Android apk动态加载机制的研究</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/singwhatiwanna/article/details/38168103">Android View系统解析(上)</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/singwhatiwanna/article/details/38426471">Android View系统解析(下)</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/cym492224103/article/details/39177275">Android仿QQ5.0侧滑菜单ResideMenu源码分析</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/lmj623565791/article/details/39102591">Android ViewGroup事件分发机制 </a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/a396901990/article/details/38904543">ANDROID内存优化(大汇总——全)</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/lmj623565791/article/details/38067475">Android 属性动画（Property Animation） 完全解析 （上）</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/lmj623565791/article/details/38092093">Android 属性动画（Property Animation） 完全解析 （下）</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/lmj623565791/article/details/37970961">Android Fragment 真正的完全解析（上）</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/lmj623565791/article/details/37992017">Android Fragment 真正的完全解析（下）</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/a396901990/article/details/34139157">利用&amp;,^,~,«,»&gt;写出高效艺术的代码</a></p>
-  </li>
-</ol>
-
-<h3 id="section-1">技巧</h3>
-
-<ol>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/38300627">Fragment的懒加载</a></p>
-  </li>
-  <li>
-    <p><a href="http://blog.csdn.net/maosidiaoxian/article/details/39156563">去掉TextView中autolink的下划线</a></p>
-  </li>
-</ol>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/09/15/android-weekly-issue-0/">More &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/4/">&larr; Older</a>
@@ -896,6 +869,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/03/24/google-developer-study-jams/">30天入门 Android 开发， Google 与你一起圆梦</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/01/01/ondestroy-2015-onstart-2016/">OnDestroy 2015, OnStart 2016!</a>
       </li>
     
@@ -909,10 +886,6 @@
     
       <li class="post">
         <a href="/blog/2015/08/16/android-ndk-preview/">Android NDK Preview</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/03/09/android-dev-weekly-issue-22/">Android开发技术周报 Issue#22</a>
       </li>
     
   </ul>
