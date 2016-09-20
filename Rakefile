@@ -32,7 +32,7 @@ editor          = "open"
 # open ,使用系统默认编辑器
 # open -a Mou，使用Mou打开
 # open -a Byword，使用Byword打开
-# subl, 使用Sublime Text2打开 
+# subl, 使用Sublime Text2打开
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
@@ -128,7 +128,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "---"
   end
-  
+
   if #{editor}
     system "#{editor} #{filename}"
   end
@@ -273,7 +273,7 @@ desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do 
+  cd "#{deploy_dir}" do
     system "git pull"
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
@@ -288,9 +288,9 @@ multitask :push do
     puts "\n## Pushing generated #{deploy_dir} website"
     system "git push origin #{deploy_branch}"
     puts "\n## Github Pages deploy complete"
-    # gitcafe-pages mirrror #
-    system "git remote add gitcafe https://gitcafe.com/inferjay/inferjay.git >> /dev/null 2>&1"
-    system "git push -u gitcafe master:gitcafe-pages"
+    # coding-pages mirrror #
+    system "git remote add coding https://git.coding.net/inferjay/inferjay.git >> /dev/null 2>&1"
+    system "git push coding master"
   end
 end
 
