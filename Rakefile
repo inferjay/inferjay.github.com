@@ -288,8 +288,8 @@ multitask :push do
     puts "\n## Pushing generated #{deploy_dir} website"
     system "git push origin #{deploy_branch}"
     puts "\n## Github Pages deploy complete"
-    # coding-pages mirrror #
-    system "git remote add coding https://git.coding.net/inferjay/inferjay.git >> /dev/null 2>&1"
+    # coding-pages mirror #
+    system "git remote add coding git@git.coding.net:inferjay/inferjay.git >> /dev/null 2>&1"
     system "git push coding master"
   end
 end
